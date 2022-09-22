@@ -12,6 +12,7 @@
 		D42A4E9128DCA44300B0ACA9 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E9028DCA44300B0ACA9 /* ViewRouter.swift */; };
 		D42A4E9328DCA4D600B0ACA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E9228DCA4D600B0ACA9 /* SceneDelegate.swift */; };
 		D42A4E9528DCA52300B0ACA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E9428DCA52300B0ACA9 /* AppDelegate.swift */; };
+		D44FD21328DD111700C6556A /* succullent.obj in Resources */ = {isa = PBXBuildFile; fileRef = D44FD21228DD111700C6556A /* succullent.obj */; };
 		D4E8171928D9F7F600775EFA /* wateringApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8171828D9F7F600775EFA /* wateringApp.swift */; };
 		D4E8171D28D9F7F600775EFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E8171C28D9F7F600775EFA /* Assets.xcassets */; };
 		D4E8172028D9F7F600775EFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E8171F28D9F7F600775EFA /* Preview Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		D42A4E9028DCA44300B0ACA9 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		D42A4E9228DCA4D600B0ACA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D42A4E9428DCA52300B0ACA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D44FD21228DD111700C6556A /* succullent.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = succullent.obj; sourceTree = "<group>"; };
 		D4E8171528D9F7F600775EFA /* watering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E8171828D9F7F600775EFA /* wateringApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wateringApp.swift; sourceTree = "<group>"; };
 		D4E8171C28D9F7F600775EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 		D4E8176228DA01C500775EFA /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				D44FD21228DD111700C6556A /* succullent.obj */,
 				D4E8176328DA026400775EFA /* WaterSound.mp3 */,
 				D4E8176428DA026400775EFA /* DoneSound.mp3 */,
 			);
@@ -328,6 +331,7 @@
 				D4E8172028D9F7F600775EFA /* Preview Assets.xcassets in Resources */,
 				D4E8171D28D9F7F600775EFA /* Assets.xcassets in Resources */,
 				D4E8176628DA026400775EFA /* DoneSound.mp3 in Resources */,
+				D44FD21328DD111700C6556A /* succullent.obj in Resources */,
 				D4E8176128DA018500775EFA /* RainDrops.sks in Resources */,
 				D4E8175F28DA014C00775EFA /* Assets.xcassets in Resources */,
 				D4E8176528DA026400775EFA /* WaterSound.mp3 in Resources */,
