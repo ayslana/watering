@@ -1,0 +1,744 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		450E8D9228CF53EA00BFDAE4 /* InfoUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450E8D9028CF53EA00BFDAE4 /* InfoUser+CoreDataClass.swift */; };
+		450E8D9328CF53EA00BFDAE4 /* InfoUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450E8D9128CF53EA00BFDAE4 /* InfoUser+CoreDataProperties.swift */; };
+		450E8D9528CF594200BFDAE4 /* FirstVisitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450E8D9428CF594200BFDAE4 /* FirstVisitView.swift */; };
+		4515077128CF6CEC0076DCC4 /* PersonNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515077028CF6CEC0076DCC4 /* PersonNameView.swift */; };
+		4515077328CF7A0A0076DCC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4515077228CF7A0A0076DCC4 /* LaunchScreen.storyboard */; };
+		4571032D28D0CB1A003475C7 /* PlantNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4571032C28D0CB1A003475C7 /* PlantNameView.swift */; };
+		D9B1E9F728D3996900180B6D /* PlantType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1E9F628D3996900180B6D /* PlantType.swift */; };
+		D9B1EA0A28D88B1200180B6D /* PushMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1EA0928D88B1200180B6D /* PushMessaging.swift */; };
+		D9B1EA0F28D891FB00180B6D /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = D9B1EA0E28D891FB00180B6D /* FirebaseMessaging */; };
+		D9B1EA1128D9DF1500180B6D /* RainDrops.sks in Resources */ = {isa = PBXBuildFile; fileRef = D9B1EA1028D9DF1500180B6D /* RainDrops.sks */; };
+		D9B1EA1328D9DF2800180B6D /* LegacySceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1EA1228D9DF2800180B6D /* LegacySceneView.swift */; };
+		D9B1EA1528D9DF4200180B6D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1EA1428D9DF4200180B6D /* Model.swift */; };
+		D9B1EA1728D9DF5300180B6D /* WaterWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1EA1628D9DF5300180B6D /* WaterWave.swift */; };
+		D9B1EA1928D9DF6100180B6D /* RainLightningScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1EA1828D9DF6100180B6D /* RainLightningScene.swift */; };
+		D9B1EA1B28D9E00800180B6D /* PrincipalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1EA1A28D9E00800180B6D /* PrincipalView.swift */; };
+		D9B1EA2528D9F62700180B6D /* Lowpoly_tree_sample.dae in Resources */ = {isa = PBXBuildFile; fileRef = D9B1EA2428D9F62700180B6D /* Lowpoly_tree_sample.dae */; };
+		D9B1EA2B28DC842500180B6D /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1EA2A28DC842500180B6D /* ViewRouter.swift */; };
+		D9B1EA2D28DC84B700180B6D /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1EA2C28DC84B700180B6D /* MotherView.swift */; };
+		D9F92E8528C78FB700EACD8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F92E8428C78FB700EACD8B /* AppDelegate.swift */; };
+		D9F92E8728C78FB700EACD8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F92E8628C78FB700EACD8B /* SceneDelegate.swift */; };
+		D9F92E8928C78FB700EACD8B /* SplashInitialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F92E8828C78FB700EACD8B /* SplashInitialScreen.swift */; };
+		D9F92E8F28C78FB700EACD8B /* Wattering_plant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9F92E8D28C78FB700EACD8B /* Wattering_plant.xcdatamodeld */; };
+		D9F92E9128C78FB800EACD8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F92E9028C78FB800EACD8B /* Assets.xcassets */; };
+		D9F92E9F28C78FB800EACD8B /* Wattering_plantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F92E9E28C78FB800EACD8B /* Wattering_plantTests.swift */; };
+		D9F92EA928C78FB800EACD8B /* Wattering_plantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F92EA828C78FB800EACD8B /* Wattering_plantUITests.swift */; };
+		D9F92EAB28C78FB800EACD8B /* Wattering_plantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F92EAA28C78FB800EACD8B /* Wattering_plantUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D9F92E9B28C78FB800EACD8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9F92E7928C78FB700EACD8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9F92E8028C78FB700EACD8B;
+			remoteInfo = "Wattering plant";
+		};
+		D9F92EA528C78FB800EACD8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9F92E7928C78FB700EACD8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9F92E8028C78FB700EACD8B;
+			remoteInfo = "Wattering plant";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		450E8D9028CF53EA00BFDAE4 /* InfoUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InfoUser+CoreDataClass.swift"; sourceTree = "<group>"; };
+		450E8D9128CF53EA00BFDAE4 /* InfoUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InfoUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		450E8D9428CF594200BFDAE4 /* FirstVisitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVisitView.swift; sourceTree = "<group>"; };
+		4515077028CF6CEC0076DCC4 /* PersonNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonNameView.swift; sourceTree = "<group>"; };
+		4515077228CF7A0A0076DCC4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4571032C28D0CB1A003475C7 /* PlantNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantNameView.swift; sourceTree = "<group>"; };
+		D9B1E9F628D3996900180B6D /* PlantType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantType.swift; sourceTree = "<group>"; };
+		D9B1EA0928D88B1200180B6D /* PushMessaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushMessaging.swift; sourceTree = "<group>"; };
+		D9B1EA0C28D8900600180B6D /* Wattering plant.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Wattering plant.entitlements"; sourceTree = "<group>"; };
+		D9B1EA1028D9DF1500180B6D /* RainDrops.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RainDrops.sks; sourceTree = "<group>"; };
+		D9B1EA1228D9DF2800180B6D /* LegacySceneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegacySceneView.swift; sourceTree = "<group>"; };
+		D9B1EA1428D9DF4200180B6D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D9B1EA1628D9DF5300180B6D /* WaterWave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterWave.swift; sourceTree = "<group>"; };
+		D9B1EA1828D9DF6100180B6D /* RainLightningScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainLightningScene.swift; sourceTree = "<group>"; };
+		D9B1EA1A28D9E00800180B6D /* PrincipalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalView.swift; sourceTree = "<group>"; };
+		D9B1EA2428D9F62700180B6D /* Lowpoly_tree_sample.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Lowpoly_tree_sample.dae; sourceTree = "<group>"; };
+		D9B1EA2A28DC842500180B6D /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		D9B1EA2C28DC84B700180B6D /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
+		D9F92E8128C78FB700EACD8B /* Wattering plant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wattering plant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9F92E8428C78FB700EACD8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D9F92E8628C78FB700EACD8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D9F92E8828C78FB700EACD8B /* SplashInitialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInitialScreen.swift; sourceTree = "<group>"; };
+		D9F92E8E28C78FB700EACD8B /* Wattering_plant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Wattering_plant.xcdatamodel; sourceTree = "<group>"; };
+		D9F92E9028C78FB800EACD8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D9F92E9528C78FB800EACD8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9F92E9A28C78FB800EACD8B /* Wattering plantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wattering plantTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9F92E9E28C78FB800EACD8B /* Wattering_plantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wattering_plantTests.swift; sourceTree = "<group>"; };
+		D9F92EA428C78FB800EACD8B /* Wattering plantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wattering plantUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9F92EA828C78FB800EACD8B /* Wattering_plantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wattering_plantUITests.swift; sourceTree = "<group>"; };
+		D9F92EAA28C78FB800EACD8B /* Wattering_plantUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wattering_plantUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9F92E7E28C78FB700EACD8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B1EA0F28D891FB00180B6D /* FirebaseMessaging in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9F92E9728C78FB800EACD8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9F92EA128C78FB800EACD8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D9B1E9F528D3994000180B6D /* ChoosePlantType */ = {
+			isa = PBXGroup;
+			children = (
+				D9B1E9F628D3996900180B6D /* PlantType.swift */,
+			);
+			path = ChoosePlantType;
+			sourceTree = "<group>";
+		};
+		D9B1E9FD28D39FC600180B6D /* Plants */ = {
+			isa = PBXGroup;
+			children = (
+				D9B1EA0628D4B8C200180B6D /* Main Screen */,
+			);
+			path = Plants;
+			sourceTree = "<group>";
+		};
+		D9B1EA0628D4B8C200180B6D /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D9B1EA2428D9F62700180B6D /* Lowpoly_tree_sample.dae */,
+				D9B1EA1A28D9E00800180B6D /* PrincipalView.swift */,
+				D9B1EA1028D9DF1500180B6D /* RainDrops.sks */,
+				D9B1EA1228D9DF2800180B6D /* LegacySceneView.swift */,
+				D9B1EA1428D9DF4200180B6D /* Model.swift */,
+				D9B1EA1628D9DF5300180B6D /* WaterWave.swift */,
+				D9B1EA1828D9DF6100180B6D /* RainLightningScene.swift */,
+			);
+			path = "Main Screen";
+			sourceTree = "<group>";
+		};
+		D9B1EA0B28D88B3200180B6D /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				D9B1EA0928D88B1200180B6D /* PushMessaging.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		D9F723DB28D26FCC0016D9E0 /* Splash-Person-Plant */ = {
+			isa = PBXGroup;
+			children = (
+				D9F92E8828C78FB700EACD8B /* SplashInitialScreen.swift */,
+				4515077028CF6CEC0076DCC4 /* PersonNameView.swift */,
+				4571032C28D0CB1A003475C7 /* PlantNameView.swift */,
+			);
+			path = "Splash-Person-Plant";
+			sourceTree = "<group>";
+		};
+		D9F723DC28D270180016D9E0 /* FirstView */ = {
+			isa = PBXGroup;
+			children = (
+				450E8D9428CF594200BFDAE4 /* FirstVisitView.swift */,
+			);
+			path = FirstView;
+			sourceTree = "<group>";
+		};
+		D9F92E7828C78FB700EACD8B = {
+			isa = PBXGroup;
+			children = (
+				D9B1EA2C28DC84B700180B6D /* MotherView.swift */,
+				D9B1EA2A28DC842500180B6D /* ViewRouter.swift */,
+				D9B1E9FD28D39FC600180B6D /* Plants */,
+				450E8D9028CF53EA00BFDAE4 /* InfoUser+CoreDataClass.swift */,
+				450E8D9128CF53EA00BFDAE4 /* InfoUser+CoreDataProperties.swift */,
+				D9B1EA0B28D88B3200180B6D /* Notifications */,
+				D9F92E8328C78FB700EACD8B /* Wattering plant */,
+				D9F92E9D28C78FB800EACD8B /* Wattering plantTests */,
+				D9F92EA728C78FB800EACD8B /* Wattering plantUITests */,
+				D9F92E8228C78FB700EACD8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D9F92E8228C78FB700EACD8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9F92E8128C78FB700EACD8B /* Wattering plant.app */,
+				D9F92E9A28C78FB800EACD8B /* Wattering plantTests.xctest */,
+				D9F92EA428C78FB800EACD8B /* Wattering plantUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9F92E8328C78FB700EACD8B /* Wattering plant */ = {
+			isa = PBXGroup;
+			children = (
+				D9B1EA0C28D8900600180B6D /* Wattering plant.entitlements */,
+				D9B1E9F528D3994000180B6D /* ChoosePlantType */,
+				D9F723DC28D270180016D9E0 /* FirstView */,
+				D9F723DB28D26FCC0016D9E0 /* Splash-Person-Plant */,
+				D9F92E8428C78FB700EACD8B /* AppDelegate.swift */,
+				D9F92E8628C78FB700EACD8B /* SceneDelegate.swift */,
+				4515077228CF7A0A0076DCC4 /* LaunchScreen.storyboard */,
+				D9F92E9028C78FB800EACD8B /* Assets.xcassets */,
+				D9F92E9528C78FB800EACD8B /* Info.plist */,
+				D9F92E8D28C78FB700EACD8B /* Wattering_plant.xcdatamodeld */,
+			);
+			path = "Wattering plant";
+			sourceTree = "<group>";
+		};
+		D9F92E9D28C78FB800EACD8B /* Wattering plantTests */ = {
+			isa = PBXGroup;
+			children = (
+				D9F92E9E28C78FB800EACD8B /* Wattering_plantTests.swift */,
+			);
+			path = "Wattering plantTests";
+			sourceTree = "<group>";
+		};
+		D9F92EA728C78FB800EACD8B /* Wattering plantUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D9F92EA828C78FB800EACD8B /* Wattering_plantUITests.swift */,
+				D9F92EAA28C78FB800EACD8B /* Wattering_plantUITestsLaunchTests.swift */,
+			);
+			path = "Wattering plantUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D9F92E8028C78FB700EACD8B /* Wattering plant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9F92EAE28C78FB800EACD8B /* Build configuration list for PBXNativeTarget "Wattering plant" */;
+			buildPhases = (
+				D9F92E7D28C78FB700EACD8B /* Sources */,
+				D9F92E7E28C78FB700EACD8B /* Frameworks */,
+				D9F92E7F28C78FB700EACD8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Wattering plant";
+			packageProductDependencies = (
+				D9B1EA0E28D891FB00180B6D /* FirebaseMessaging */,
+			);
+			productName = "Wattering plant";
+			productReference = D9F92E8128C78FB700EACD8B /* Wattering plant.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D9F92E9928C78FB800EACD8B /* Wattering plantTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9F92EB128C78FB800EACD8B /* Build configuration list for PBXNativeTarget "Wattering plantTests" */;
+			buildPhases = (
+				D9F92E9628C78FB800EACD8B /* Sources */,
+				D9F92E9728C78FB800EACD8B /* Frameworks */,
+				D9F92E9828C78FB800EACD8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9F92E9C28C78FB800EACD8B /* PBXTargetDependency */,
+			);
+			name = "Wattering plantTests";
+			productName = "Wattering plantTests";
+			productReference = D9F92E9A28C78FB800EACD8B /* Wattering plantTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D9F92EA328C78FB800EACD8B /* Wattering plantUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9F92EB428C78FB800EACD8B /* Build configuration list for PBXNativeTarget "Wattering plantUITests" */;
+			buildPhases = (
+				D9F92EA028C78FB800EACD8B /* Sources */,
+				D9F92EA128C78FB800EACD8B /* Frameworks */,
+				D9F92EA228C78FB800EACD8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9F92EA628C78FB800EACD8B /* PBXTargetDependency */,
+			);
+			name = "Wattering plantUITests";
+			productName = "Wattering plantUITests";
+			productReference = D9F92EA428C78FB800EACD8B /* Wattering plantUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D9F92E7928C78FB700EACD8B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					D9F92E8028C78FB700EACD8B = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					D9F92E9928C78FB800EACD8B = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = D9F92E8028C78FB700EACD8B;
+					};
+					D9F92EA328C78FB800EACD8B = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = D9F92E8028C78FB700EACD8B;
+					};
+				};
+			};
+			buildConfigurationList = D9F92E7C28C78FB700EACD8B /* Build configuration list for PBXProject "Wattering plant" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D9F92E7828C78FB700EACD8B;
+			packageReferences = (
+				D9B1EA0D28D891FB00180B6D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = D9F92E8228C78FB700EACD8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D9F92E8028C78FB700EACD8B /* Wattering plant */,
+				D9F92E9928C78FB800EACD8B /* Wattering plantTests */,
+				D9F92EA328C78FB800EACD8B /* Wattering plantUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D9F92E7F28C78FB700EACD8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4515077328CF7A0A0076DCC4 /* LaunchScreen.storyboard in Resources */,
+				D9B1EA2528D9F62700180B6D /* Lowpoly_tree_sample.dae in Resources */,
+				D9F92E9128C78FB800EACD8B /* Assets.xcassets in Resources */,
+				D9B1EA1128D9DF1500180B6D /* RainDrops.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9F92E9828C78FB800EACD8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9F92EA228C78FB800EACD8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9F92E7D28C78FB700EACD8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				450E8D9328CF53EA00BFDAE4 /* InfoUser+CoreDataProperties.swift in Sources */,
+				D9F92E8928C78FB700EACD8B /* SplashInitialScreen.swift in Sources */,
+				4515077128CF6CEC0076DCC4 /* PersonNameView.swift in Sources */,
+				450E8D9228CF53EA00BFDAE4 /* InfoUser+CoreDataClass.swift in Sources */,
+				D9F92E8528C78FB700EACD8B /* AppDelegate.swift in Sources */,
+				D9B1EA1328D9DF2800180B6D /* LegacySceneView.swift in Sources */,
+				D9B1EA1528D9DF4200180B6D /* Model.swift in Sources */,
+				450E8D9528CF594200BFDAE4 /* FirstVisitView.swift in Sources */,
+				D9B1EA2B28DC842500180B6D /* ViewRouter.swift in Sources */,
+				D9B1EA1728D9DF5300180B6D /* WaterWave.swift in Sources */,
+				D9F92E8728C78FB700EACD8B /* SceneDelegate.swift in Sources */,
+				D9B1EA0A28D88B1200180B6D /* PushMessaging.swift in Sources */,
+				D9B1EA1B28D9E00800180B6D /* PrincipalView.swift in Sources */,
+				D9F92E8F28C78FB700EACD8B /* Wattering_plant.xcdatamodeld in Sources */,
+				4571032D28D0CB1A003475C7 /* PlantNameView.swift in Sources */,
+				D9B1E9F728D3996900180B6D /* PlantType.swift in Sources */,
+				D9B1EA2D28DC84B700180B6D /* MotherView.swift in Sources */,
+				D9B1EA1928D9DF6100180B6D /* RainLightningScene.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9F92E9628C78FB800EACD8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9F92E9F28C78FB800EACD8B /* Wattering_plantTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9F92EA028C78FB800EACD8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9F92EAB28C78FB800EACD8B /* Wattering_plantUITestsLaunchTests.swift in Sources */,
+				D9F92EA928C78FB800EACD8B /* Wattering_plantUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D9F92E9C28C78FB800EACD8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9F92E8028C78FB700EACD8B /* Wattering plant */;
+			targetProxy = D9F92E9B28C78FB800EACD8B /* PBXContainerItemProxy */;
+		};
+		D9F92EA628C78FB800EACD8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9F92E8028C78FB700EACD8B /* Wattering plant */;
+			targetProxy = D9F92EA528C78FB800EACD8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D9F92EAC28C78FB800EACD8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D9F92EAD28C78FB800EACD8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D9F92EAF28C78FB800EACD8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Wattering plant/Wattering plant.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Wattering plant/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xcode.leticiafirstprogram.edu.Wattering-plant";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D9F92EB028C78FB800EACD8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Wattering plant/Wattering plant.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Wattering plant/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xcode.leticiafirstprogram.edu.Wattering-plant";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D9F92EB228C78FB800EACD8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SMA3U9UPC8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xcode.leticiafirstprogram.edu.Wattering-plantTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wattering plant.app/Wattering plant";
+			};
+			name = Debug;
+		};
+		D9F92EB328C78FB800EACD8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SMA3U9UPC8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xcode.leticiafirstprogram.edu.Wattering-plantTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wattering plant.app/Wattering plant";
+			};
+			name = Release;
+		};
+		D9F92EB528C78FB800EACD8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SMA3U9UPC8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xcode.leticiafirstprogram.edu.Wattering-plantUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Wattering plant";
+			};
+			name = Debug;
+		};
+		D9F92EB628C78FB800EACD8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SMA3U9UPC8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xcode.leticiafirstprogram.edu.Wattering-plantUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Wattering plant";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D9F92E7C28C78FB700EACD8B /* Build configuration list for PBXProject "Wattering plant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9F92EAC28C78FB800EACD8B /* Debug */,
+				D9F92EAD28C78FB800EACD8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9F92EAE28C78FB800EACD8B /* Build configuration list for PBXNativeTarget "Wattering plant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9F92EAF28C78FB800EACD8B /* Debug */,
+				D9F92EB028C78FB800EACD8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9F92EB128C78FB800EACD8B /* Build configuration list for PBXNativeTarget "Wattering plantTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9F92EB228C78FB800EACD8B /* Debug */,
+				D9F92EB328C78FB800EACD8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9F92EB428C78FB800EACD8B /* Build configuration list for PBXNativeTarget "Wattering plantUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9F92EB528C78FB800EACD8B /* Debug */,
+				D9F92EB628C78FB800EACD8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D9B1EA0D28D891FB00180B6D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D9B1EA0E28D891FB00180B6D /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9B1EA0D28D891FB00180B6D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		D9F92E8D28C78FB700EACD8B /* Wattering_plant.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D9F92E8E28C78FB700EACD8B /* Wattering_plant.xcdatamodel */,
+			);
+			currentVersion = D9F92E8E28C78FB700EACD8B /* Wattering_plant.xcdatamodel */;
+			path = Wattering_plant.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D9F92E7928C78FB700EACD8B /* Project object */;
+}
