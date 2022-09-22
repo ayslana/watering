@@ -22,11 +22,6 @@ struct PrincipalView: View {
 //    @State var isSucess: Bool = false
     @State var isPressed: Bool = false
     @State var audioPlayer: AVAudioPlayer?
-    let graycolor = Color(red: 48/255, green: 48/255, blue: 48/255)
-    let bluewater = Color(red: 97/255, green: 165/255, blue: 194/255)
-    let darkgreen = Color(red: 77/255, green: 93/255, blue: 83/255)
-    let bluesky = Color(red: 169/255, green: 214/255, blue: 229/255)
-    let lightgreen = Color(red: 143/255, green: 151/255, blue: 121/255)
 
     var rainLightningScene: SKScene {
         let scene = RainLightningScene.shared
@@ -51,7 +46,9 @@ struct PrincipalView: View {
                 Group {
                   Text("Bom dia, User!") +
                     Text(" Plantinha").foregroundColor(Theme.primary) +
-                  Text(" está sem receber água há dois dias.")
+                  Text(" está sem receber água há") +
+                Text(" dois ").bold() +
+                Text("dias.")
                 }
                     .multilineTextAlignment(.center)
                     .foregroundColor(Theme.font)
