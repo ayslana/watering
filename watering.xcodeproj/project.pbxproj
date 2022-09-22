@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45A34D0A28DCE015009F40F4 /* Lowpoly_tree_sample.dae in Resources */ = {isa = PBXBuildFile; fileRef = 45A34D0928DCE015009F40F4 /* Lowpoly_tree_sample.dae */; };
 		D42A4E8D28DBFAD900B0ACA9 /* ChoosePlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E8C28DBFAD900B0ACA9 /* ChoosePlantView.swift */; };
 		D42A4E8F28DCA3B700B0ACA9 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E8E28DCA3B700B0ACA9 /* MotherView.swift */; };
 		D42A4E9128DCA44300B0ACA9 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E9028DCA44300B0ACA9 /* ViewRouter.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45A34D0928DCE015009F40F4 /* Lowpoly_tree_sample.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Lowpoly_tree_sample.dae; sourceTree = "<group>"; };
 		D42A4E8C28DBFAD900B0ACA9 /* ChoosePlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlantView.swift; sourceTree = "<group>"; };
 		D42A4E8E28DCA3B700B0ACA9 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
 		D42A4E9028DCA44300B0ACA9 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		D4E8174E28D9FDA800775EFA /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				45A34D0928DCE015009F40F4 /* Lowpoly_tree_sample.dae */,
 				D4E8176228DA01C500775EFA /* Sounds */,
 				D4E8175D28DA014C00775EFA /* Assets.xcassets */,
 				D4E8176028DA018500775EFA /* RainDrops.sks */,
@@ -331,6 +334,7 @@
 				D4E8176128DA018500775EFA /* RainDrops.sks in Resources */,
 				D4E8175F28DA014C00775EFA /* Assets.xcassets in Resources */,
 				D4E8176528DA026400775EFA /* WaterSound.mp3 in Resources */,
+				45A34D0A28DCE015009F40F4 /* Lowpoly_tree_sample.dae in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -40,7 +40,7 @@ struct RegisterPlantView: View {
                     
                     Spacer().frame(height: 100)
 
-                    NavigationLink(destination: PlantType().navigationBarHidden(true), label: {
+                    NavigationLink(destination: ChoosePlantView().navigationBarHidden(true), label: {
                         Text("Próximo")
                             .foregroundColor(Theme.primary)
                             .padding()

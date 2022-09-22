@@ -109,7 +109,7 @@ struct ChoosePlantView: View {
                         
                         NavigationLink (
                             
-                            destination : PrincipalView().navigationBarHidden(true),
+                            destination : WateringView().navigationBarHidden(true),
                                 label : {
                                     
                                     Text ("Próximo")
