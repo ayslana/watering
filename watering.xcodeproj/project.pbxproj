@@ -7,15 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D42A4E8D28DBFAD900B0ACA9 /* ChoosePlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E8C28DBFAD900B0ACA9 /* ChoosePlantView.swift */; };
+		D42A4E8F28DCA3B700B0ACA9 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E8E28DCA3B700B0ACA9 /* MotherView.swift */; };
+		D42A4E9128DCA44300B0ACA9 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E9028DCA44300B0ACA9 /* ViewRouter.swift */; };
+		D42A4E9328DCA4D600B0ACA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E9228DCA4D600B0ACA9 /* SceneDelegate.swift */; };
+		D42A4E9528DCA52300B0ACA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E9428DCA52300B0ACA9 /* AppDelegate.swift */; };
 		D4E8171928D9F7F600775EFA /* wateringApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8171828D9F7F600775EFA /* wateringApp.swift */; };
-		D4E8171B28D9F7F600775EFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8171A28D9F7F600775EFA /* ContentView.swift */; };
 		D4E8171D28D9F7F600775EFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E8171C28D9F7F600775EFA /* Assets.xcassets */; };
 		D4E8172028D9F7F600775EFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E8171F28D9F7F600775EFA /* Preview Assets.xcassets */; };
-		D4E8172228D9F7F600775EFA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8172128D9F7F600775EFA /* Persistence.swift */; };
 		D4E8172528D9F7F600775EFA /* watering.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4E8172328D9F7F600775EFA /* watering.xcdatamodeld */; };
 		D4E8172F28D9F7F600775EFA /* wateringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8172E28D9F7F600775EFA /* wateringTests.swift */; };
 		D4E8173928D9F7F600775EFA /* wateringUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8173828D9F7F600775EFA /* wateringUITests.swift */; };
 		D4E8173B28D9F7F600775EFA /* wateringUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8173A28D9F7F600775EFA /* wateringUITestsLaunchTests.swift */; };
+		D4E8174928D9FBEF00775EFA /* RegisterPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8174828D9FBEF00775EFA /* RegisterPlantView.swift */; };
+		D4E8174B28D9FC1500775EFA /* RegisterPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8174A28D9FC1500775EFA /* RegisterPersonView.swift */; };
+		D4E8174D28D9FC3E00775EFA /* FirstAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8174C28D9FC3E00775EFA /* FirstAccessView.swift */; };
+		D4E8175228D9FF9800775EFA /* DropWaterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8175128D9FF9800775EFA /* DropWaterModel.swift */; };
+		D4E8175428D9FFE300775EFA /* WateringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8175328D9FFE300775EFA /* WateringView.swift */; };
+		D4E8175628DA004000775EFA /* PlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8175528DA004000775EFA /* PlantView.swift */; };
+		D4E8175828DA007000775EFA /* WaterWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8175728DA007000775EFA /* WaterWaveView.swift */; };
+		D4E8175B28DA00AD00775EFA /* RainSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8175A28DA00AD00775EFA /* RainSceneView.swift */; };
+		D4E8175F28DA014C00775EFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E8175D28DA014C00775EFA /* Assets.xcassets */; };
+		D4E8176128DA018500775EFA /* RainDrops.sks in Resources */ = {isa = PBXBuildFile; fileRef = D4E8176028DA018500775EFA /* RainDrops.sks */; };
+		D4E8176528DA026400775EFA /* WaterSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4E8176328DA026400775EFA /* WaterSound.mp3 */; };
+		D4E8176628DA026400775EFA /* DoneSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4E8176428DA026400775EFA /* DoneSound.mp3 */; };
+		D4E8176828DA055300775EFA /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8176728DA055300775EFA /* NotificationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,18 +52,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D42A4E8C28DBFAD900B0ACA9 /* ChoosePlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlantView.swift; sourceTree = "<group>"; };
+		D42A4E8E28DCA3B700B0ACA9 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
+		D42A4E9028DCA44300B0ACA9 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		D42A4E9228DCA4D600B0ACA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D42A4E9428DCA52300B0ACA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4E8171528D9F7F600775EFA /* watering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E8171828D9F7F600775EFA /* wateringApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wateringApp.swift; sourceTree = "<group>"; };
-		D4E8171A28D9F7F600775EFA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D4E8171C28D9F7F600775EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4E8171F28D9F7F600775EFA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D4E8172128D9F7F600775EFA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D4E8172428D9F7F600775EFA /* watering.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = watering.xcdatamodel; sourceTree = "<group>"; };
 		D4E8172A28D9F7F600775EFA /* wateringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wateringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E8172E28D9F7F600775EFA /* wateringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wateringTests.swift; sourceTree = "<group>"; };
 		D4E8173428D9F7F600775EFA /* wateringUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wateringUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E8173828D9F7F600775EFA /* wateringUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wateringUITests.swift; sourceTree = "<group>"; };
 		D4E8173A28D9F7F600775EFA /* wateringUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wateringUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D4E8174828D9FBEF00775EFA /* RegisterPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantView.swift; sourceTree = "<group>"; };
+		D4E8174A28D9FC1500775EFA /* RegisterPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPersonView.swift; sourceTree = "<group>"; };
+		D4E8174C28D9FC3E00775EFA /* FirstAccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAccessView.swift; sourceTree = "<group>"; };
+		D4E8175128D9FF9800775EFA /* DropWaterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropWaterModel.swift; sourceTree = "<group>"; };
+		D4E8175328D9FFE300775EFA /* WateringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WateringView.swift; sourceTree = "<group>"; };
+		D4E8175528DA004000775EFA /* PlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantView.swift; sourceTree = "<group>"; };
+		D4E8175728DA007000775EFA /* WaterWaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterWaveView.swift; sourceTree = "<group>"; };
+		D4E8175A28DA00AD00775EFA /* RainSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainSceneView.swift; sourceTree = "<group>"; };
+		D4E8175D28DA014C00775EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4E8176028DA018500775EFA /* RainDrops.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RainDrops.sks; sourceTree = "<group>"; };
+		D4E8176328DA026400775EFA /* WaterSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WaterSound.mp3; sourceTree = "<group>"; };
+		D4E8176428DA026400775EFA /* DoneSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DoneSound.mp3; sourceTree = "<group>"; };
+		D4E8176728DA055300775EFA /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +130,16 @@
 		D4E8171728D9F7F600775EFA /* watering */ = {
 			isa = PBXGroup;
 			children = (
+				D4E8175028D9FDCE00775EFA /* Controllers */,
+				D4E8174F28D9FDB700775EFA /* Models */,
+				D4E8174E28D9FDA800775EFA /* Assets */,
+				D4E8174728D9FB6300775EFA /* Views */,
 				D4E8171828D9F7F600775EFA /* wateringApp.swift */,
-				D4E8171A28D9F7F600775EFA /* ContentView.swift */,
 				D4E8171C28D9F7F600775EFA /* Assets.xcassets */,
-				D4E8172128D9F7F600775EFA /* Persistence.swift */,
 				D4E8172328D9F7F600775EFA /* watering.xcdatamodeld */,
 				D4E8171E28D9F7F600775EFA /* Preview Content */,
+				D42A4E9228DCA4D600B0ACA9 /* SceneDelegate.swift */,
+				D42A4E9428DCA52300B0ACA9 /* AppDelegate.swift */,
 			);
 			path = watering;
 			sourceTree = "<group>";
@@ -131,6 +167,58 @@
 				D4E8173A28D9F7F600775EFA /* wateringUITestsLaunchTests.swift */,
 			);
 			path = wateringUITests;
+			sourceTree = "<group>";
+		};
+		D4E8174728D9FB6300775EFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D4E8174828D9FBEF00775EFA /* RegisterPlantView.swift */,
+				D4E8174A28D9FC1500775EFA /* RegisterPersonView.swift */,
+				D4E8174C28D9FC3E00775EFA /* FirstAccessView.swift */,
+				D4E8175328D9FFE300775EFA /* WateringView.swift */,
+				D4E8175528DA004000775EFA /* PlantView.swift */,
+				D4E8175728DA007000775EFA /* WaterWaveView.swift */,
+				D4E8175A28DA00AD00775EFA /* RainSceneView.swift */,
+				D42A4E8C28DBFAD900B0ACA9 /* ChoosePlantView.swift */,
+				D42A4E8E28DCA3B700B0ACA9 /* MotherView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D4E8174E28D9FDA800775EFA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D4E8176228DA01C500775EFA /* Sounds */,
+				D4E8175D28DA014C00775EFA /* Assets.xcassets */,
+				D4E8176028DA018500775EFA /* RainDrops.sks */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D4E8174F28D9FDB700775EFA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D4E8175128D9FF9800775EFA /* DropWaterModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D4E8175028D9FDCE00775EFA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4E8176728DA055300775EFA /* NotificationController.swift */,
+				D42A4E9028DCA44300B0ACA9 /* ViewRouter.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D4E8176228DA01C500775EFA /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				D4E8176328DA026400775EFA /* WaterSound.mp3 */,
+				D4E8176428DA026400775EFA /* DoneSound.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +327,10 @@
 			files = (
 				D4E8172028D9F7F600775EFA /* Preview Assets.xcassets in Resources */,
 				D4E8171D28D9F7F600775EFA /* Assets.xcassets in Resources */,
+				D4E8176628DA026400775EFA /* DoneSound.mp3 in Resources */,
+				D4E8176128DA018500775EFA /* RainDrops.sks in Resources */,
+				D4E8175F28DA014C00775EFA /* Assets.xcassets in Resources */,
+				D4E8176528DA026400775EFA /* WaterSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,10 +355,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4E8172228D9F7F600775EFA /* Persistence.swift in Sources */,
-				D4E8171B28D9F7F600775EFA /* ContentView.swift in Sources */,
+				D4E8175228D9FF9800775EFA /* DropWaterModel.swift in Sources */,
+				D42A4E9128DCA44300B0ACA9 /* ViewRouter.swift in Sources */,
+				D42A4E8D28DBFAD900B0ACA9 /* ChoosePlantView.swift in Sources */,
+				D4E8174B28D9FC1500775EFA /* RegisterPersonView.swift in Sources */,
+				D4E8174928D9FBEF00775EFA /* RegisterPlantView.swift in Sources */,
+				D42A4E9328DCA4D600B0ACA9 /* SceneDelegate.swift in Sources */,
+				D42A4E8F28DCA3B700B0ACA9 /* MotherView.swift in Sources */,
+				D4E8175B28DA00AD00775EFA /* RainSceneView.swift in Sources */,
+				D42A4E9528DCA52300B0ACA9 /* AppDelegate.swift in Sources */,
+				D4E8175828DA007000775EFA /* WaterWaveView.swift in Sources */,
 				D4E8172528D9F7F600775EFA /* watering.xcdatamodeld in Sources */,
+				D4E8174D28D9FC3E00775EFA /* FirstAccessView.swift in Sources */,
+				D4E8176828DA055300775EFA /* NotificationController.swift in Sources */,
 				D4E8171928D9F7F600775EFA /* wateringApp.swift in Sources */,
+				D4E8175628DA004000775EFA /* PlantView.swift in Sources */,
+				D4E8175428D9FFE300775EFA /* WateringView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
