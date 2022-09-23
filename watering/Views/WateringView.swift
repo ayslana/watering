@@ -13,7 +13,7 @@ import SpriteKit
 
 
 struct WateringView: View {
-    @State var modelo = DropWaterModel(id: 0, modelName: "Lowpoly_tree_sample.dae")
+
     @State var progress: CGFloat = 0.1
     @State var startAnimation: CGFloat = 0
     @State var isComplete: Bool = false
@@ -22,6 +22,10 @@ struct WateringView: View {
     @State var audioPlayer: AVAudioPlayer?
     @State var audioPlayer2: AVAudioPlayer?
     @State var dayWatering = ""
+    let idPlant: Int
+    let typePlant: String
+    let modelNamePlant: String
+
 
     var rainLightningScene: SKScene {
         let scene = RainSceneView.shared
@@ -92,6 +96,7 @@ struct WateringView: View {
     var treeView: some View {
         //INSERÇÃO DO MODELO 3D
         PlantView(scene: {
+            let modelo = DropWaterModel(id: idPlant, type: typePlant, modelName: modelNamePlant)
             let scene = SCNScene(named: modelo.modelName)!
             scene.background.contents = UIColor.clear
             return scene
@@ -175,7 +180,7 @@ struct WateringView: View {
 
 struct WateringView_Previews: PreviewProvider {
     static var previews: some View {
-        WateringView()
+        WateringView(idPlant: 0, typePlant: "", modelNamePlant: "")
     }
 }
 

@@ -15,7 +15,7 @@ struct MotherView: View {
             if viewRouter.currentPage == "FirstVisitView" {
                 FirstAccessView()
             } else if viewRouter.currentPage == "PrincipalView" {
-                WateringView()
+                WateringView(idPlant: 0, typePlant: "", modelNamePlant: "")
             }
         }
     }

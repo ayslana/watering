@@ -9,6 +9,13 @@ import Foundation
 
 struct DropWaterModel : Identifiable {
     var id: Int
-    var modelName : String
+    var type: String
+    var modelName: String
 }
 
+var PlantsType = [
+    DropWaterModel(id: 0, type: "Flor", modelName: "flower"),
+    DropWaterModel(id: 1, type: "Suculenta", modelName: "succullent"),
+    DropWaterModel(id: 2, type: "Frutífera", modelName: "plants"),
+    DropWaterModel(id: 3, type: "Cacto", modelName: "cactus")
+]
