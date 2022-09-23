@@ -10,7 +10,7 @@ import SwiftUI
 
 class ViewRouter: ObservableObject {
     
-    @Published var currentPage: String
+    @Published var currentPage: String = ""
     
     init() {
         if !UserDefaults.standard.bool(forKey: "didLaunchBefore") {

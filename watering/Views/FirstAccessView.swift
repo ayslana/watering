@@ -13,43 +13,31 @@ struct FirstAccessView: View {
     
     @State var offset : CGSize = .zero
     @State var showHome = false
-    
-    
     var body: some View {
-        
         NavigationView {
-            
             ZStack {
                 Theme.firstview
-                
                 .clipShape(LiquidSwipe(offset: offset))
                 .ignoresSafeArea()
                 .overlay(
-                
                     Image(systemName: "chevron.left")
                         .font(.title.bold())
                         .foregroundColor(Theme.primary)
                         .frame(width: 50, height: 50)
                         .contentShape(Rectangle())
                         .gesture(DragGesture().onChanged({ (value) in
-                            
                             withAnimation(.interactiveSpring(response: 0.7, dampingFraction: 0.6, blendDuration: 0.6)){
                                 offset = value.translation
                             }
-                            
                         }).onEnded({(value) in
-                            
                             let screen = UIScreen.main.bounds
-                            
                             withAnimation(.spring()){
-                                
                                 if -offset.width > screen.width / 2 {
                                     offset.width = -screen.height
                                     showHome.toggle()
                                 } else {
                                     offset = .zero
                                 }
-
                             }
                         }))
                         .offset(x: 15, y: -40)
@@ -59,7 +47,6 @@ struct FirstAccessView: View {
                     ,alignment: .topTrailing
                 )
                 .padding(.trailing)
-                
                 if showHome {
                     RegisterPersonView()
                 }
@@ -80,18 +67,14 @@ struct FirstAccessView: View {
                             }
                             
                         }).onEnded({(value) in
-                            
                             let screen = UIScreen.main.bounds
-                            
                             withAnimation(.spring()){
-                                
                                 if -offset.width > screen.width / 2 {
                                     offset.width = -screen.height
                                     showHome.toggle()
                                 } else {
                                     offset = .zero
                                 }
-
                             }
                         }))
                         .offset(x: 15, y: -40)
@@ -115,18 +98,14 @@ struct FirstAccessView_Preview : PreviewProvider {
 }
 
 struct LiquidSwipe: Shape {
-
     var offset : CGSize
     
     var animatableData: CGSize.AnimatableData {
         get{return offset.animatableData}
         set{offset.animatableData = newValue}
     }
-    
     func path(in rect: CGRect) -> Path {
         return Path{path in
-
-            
             let width = rect.width + (-offset.width >  0 ? offset.width : 0)
             
             path.move(to: CGPoint(x: 0, y: 0))

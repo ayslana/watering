@@ -9,12 +9,11 @@ import SwiftUI
 
 struct MotherView: View {
     @EnvironmentObject var viewRouter: ViewRouter
-    
     var body: some View {
         VStack {
             if viewRouter.currentPage == "FirstAccessView" {
                 FirstAccessView()
-            } else if viewRouter.currentPage == "WateringView" {
+            } else if viewRouter.currentPage == "PrincipalView" {
                 WateringView(idPlant: 0, typePlant: "", modelNamePlant: "")
             }
         }

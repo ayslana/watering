@@ -60,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		4502B0B328DD50D700F54CD2 /* plants.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = plants.dae; sourceTree = "<group>"; };
+		45F2827A28DDE090009B4875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D42A4E8C28DBFAD900B0ACA9 /* ChoosePlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlantView.swift; sourceTree = "<group>"; };
 		D42A4E8E28DCA3B700B0ACA9 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
 		D42A4E9028DCA44300B0ACA9 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
@@ -157,6 +158,7 @@
 		D4E8171728D9F7F600775EFA /* watering */ = {
 			isa = PBXGroup;
 			children = (
+				45F2827A28DDE090009B4875 /* Info.plist */,
 				D4C7458328DD67FB00C9C144 /* CoreData */,
 				D4E8175028D9FDCE00775EFA /* Controllers */,
 				D4E8174F28D9FDB700775EFA /* Models */,
@@ -166,8 +168,6 @@
 				D4E8171C28D9F7F600775EFA /* Assets.xcassets */,
 				D4E8172328D9F7F600775EFA /* watering.xcdatamodeld */,
 				D4E8171E28D9F7F600775EFA /* Preview Content */,
-				D42A4E9228DCA4D600B0ACA9 /* SceneDelegate.swift */,
-				D42A4E9428DCA52300B0ACA9 /* AppDelegate.swift */,
 				D45D349F28DD81400088EB65 /* Persistence.swift */,
 			);
 			path = watering;
@@ -176,6 +176,8 @@
 		D4E8171E28D9F7F600775EFA /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				D42A4E9228DCA4D600B0ACA9 /* SceneDelegate.swift */,
+				D42A4E9428DCA52300B0ACA9 /* AppDelegate.swift */,
 				D4E8171F28D9F7F600775EFA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -572,9 +574,11 @@
 				DEVELOPMENT_TEAM = U2M84KZ35U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = watering/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -601,9 +605,11 @@
 				DEVELOPMENT_TEAM = U2M84KZ35U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = watering/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
