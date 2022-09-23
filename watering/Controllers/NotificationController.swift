@@ -24,8 +24,8 @@ struct NotificationController {
 
     func doNotification()  {
         let content = UNMutableNotificationContent()
-        content.title = ""
-        content.subtitle = ""
+        content.title = "Sua plantinha está com sede 😟"
+        content.subtitle = "Lembre-se de aguá-la hoje!"
         content.sound = UNNotificationSound.default
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)

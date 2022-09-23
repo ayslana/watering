@@ -16,6 +16,12 @@
 		D42A4E9128DCA44300B0ACA9 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E9028DCA44300B0ACA9 /* ViewRouter.swift */; };
 		D42A4E9328DCA4D600B0ACA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E9228DCA4D600B0ACA9 /* SceneDelegate.swift */; };
 		D42A4E9528DCA52300B0ACA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E9428DCA52300B0ACA9 /* AppDelegate.swift */; };
+		D4BA1F1228DD725200D7CD46 /* cactusobj.obj in Resources */ = {isa = PBXBuildFile; fileRef = D4BA1F1128DD725200D7CD46 /* cactusobj.obj */; };
+		D4BA1F1428DD726000D7CD46 /* succullentobj.obj in Resources */ = {isa = PBXBuildFile; fileRef = D4BA1F1328DD726000D7CD46 /* succullentobj.obj */; };
+		D4BA1F1628DD740F00D7CD46 /* plantobj.obj in Resources */ = {isa = PBXBuildFile; fileRef = D4BA1F1528DD740F00D7CD46 /* plantobj.obj */; };
+		D4BA1F1828DD74D400D7CD46 /* flowerobj.obj in Resources */ = {isa = PBXBuildFile; fileRef = D4BA1F1728DD74D400D7CD46 /* flowerobj.obj */; };
+		D4C7458628DD681300C9C144 /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4C7458428DD681300C9C144 /* UserModel.xcdatamodeld */; };
+		D4C7458A28DD68EF00C9C144 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C7458928DD68EF00C9C144 /* CoreDataStack.swift */; };
 		D4E8171928D9F7F600775EFA /* wateringApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8171828D9F7F600775EFA /* wateringApp.swift */; };
 		D4E8171D28D9F7F600775EFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E8171C28D9F7F600775EFA /* Assets.xcassets */; };
 		D4E8172028D9F7F600775EFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E8171F28D9F7F600775EFA /* Preview Assets.xcassets */; };
@@ -65,6 +71,14 @@
 		D42A4E9028DCA44300B0ACA9 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		D42A4E9228DCA4D600B0ACA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D42A4E9428DCA52300B0ACA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4BA1F1128DD725200D7CD46 /* cactusobj.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cactusobj.obj; sourceTree = "<group>"; };
+		D4BA1F1328DD726000D7CD46 /* succullentobj.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = succullentobj.obj; sourceTree = "<group>"; };
+		D4BA1F1528DD740F00D7CD46 /* plantobj.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plantobj.obj; sourceTree = "<group>"; };
+		D4BA1F1728DD74D400D7CD46 /* flowerobj.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flowerobj.obj; sourceTree = "<group>"; };
+		D4C7458528DD681300C9C144 /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
+		D4C7458728DD687B00C9C144 /* UserEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D4C7458828DD687B00C9C144 /* UserEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D4C7458928DD68EF00C9C144 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		D4E8171528D9F7F600775EFA /* watering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E8171828D9F7F600775EFA /* wateringApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wateringApp.swift; sourceTree = "<group>"; };
 		D4E8171C28D9F7F600775EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,6 +129,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4C7458328DD67FB00C9C144 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D4C7458728DD687B00C9C144 /* UserEntity+CoreDataClass.swift */,
+				D4C7458828DD687B00C9C144 /* UserEntity+CoreDataProperties.swift */,
+				D4C7458428DD681300C9C144 /* UserModel.xcdatamodeld */,
+				D4C7458928DD68EF00C9C144 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		D4E8170C28D9F7F600775EFA = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +163,7 @@
 		D4E8171728D9F7F600775EFA /* watering */ = {
 			isa = PBXGroup;
 			children = (
+				D4C7458328DD67FB00C9C144 /* CoreData */,
 				D4E8175028D9FDCE00775EFA /* Controllers */,
 				D4E8174F28D9FDB700775EFA /* Models */,
 				D4E8174E28D9FDA800775EFA /* Assets */,
@@ -223,6 +249,10 @@
 		D4E8176228DA01C500775EFA /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				D4BA1F1528DD740F00D7CD46 /* plantobj.obj */,
+				D4BA1F1728DD74D400D7CD46 /* flowerobj.obj */,
+				D4BA1F1328DD726000D7CD46 /* succullentobj.obj */,
+				D4BA1F1128DD725200D7CD46 /* cactusobj.obj */,
 				4502B0AD28DD498F00F54CD2 /* cactus.dae */,
 				4502B0B328DD50D700F54CD2 /* plants.dae */,
 				4502B0B528DD515100F54CD2 /* flower.dae */,
@@ -337,11 +367,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4BA1F1628DD740F00D7CD46 /* plantobj.obj in Resources */,
+				D4BA1F1228DD725200D7CD46 /* cactusobj.obj in Resources */,
 				D4E8172028D9F7F600775EFA /* Preview Assets.xcassets in Resources */,
 				D4E8171D28D9F7F600775EFA /* Assets.xcassets in Resources */,
 				4502B0AC28DD498600F54CD2 /* succullent.dae in Resources */,
 				D4E8176628DA026400775EFA /* DoneSound.mp3 in Resources */,
 				4502B0B628DD515100F54CD2 /* flower.dae in Resources */,
+				D4BA1F1428DD726000D7CD46 /* succullentobj.obj in Resources */,
+				D4BA1F1828DD74D400D7CD46 /* flowerobj.obj in Resources */,
 				D4E8176128DA018500775EFA /* RainDrops.sks in Resources */,
 				D4E8175F28DA014C00775EFA /* Assets.xcassets in Resources */,
 				4502B0B428DD50D700F54CD2 /* plants.dae in Resources */,
@@ -374,6 +408,7 @@
 				D4E8175228D9FF9800775EFA /* DropWaterModel.swift in Sources */,
 				D42A4E9128DCA44300B0ACA9 /* ViewRouter.swift in Sources */,
 				D42A4E8D28DBFAD900B0ACA9 /* ChoosePlantView.swift in Sources */,
+				D4C7458A28DD68EF00C9C144 /* CoreDataStack.swift in Sources */,
 				D4E8174B28D9FC1500775EFA /* RegisterPersonView.swift in Sources */,
 				D4E8174928D9FBEF00775EFA /* RegisterPlantView.swift in Sources */,
 				D42A4E9328DCA4D600B0ACA9 /* SceneDelegate.swift in Sources */,
@@ -386,6 +421,7 @@
 				D4E8176828DA055300775EFA /* NotificationController.swift in Sources */,
 				D4E8171928D9F7F600775EFA /* wateringApp.swift in Sources */,
 				D4E8175628DA004000775EFA /* PlantView.swift in Sources */,
+				D4C7458628DD681300C9C144 /* UserModel.xcdatamodeld in Sources */,
 				D4E8175428D9FFE300775EFA /* WateringView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -713,6 +749,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		D4C7458428DD681300C9C144 /* UserModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D4C7458528DD681300C9C144 /* UserModel.xcdatamodel */,
+			);
+			currentVersion = D4C7458528DD681300C9C144 /* UserModel.xcdatamodel */;
+			path = UserModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		D4E8172328D9F7F600775EFA /* watering.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

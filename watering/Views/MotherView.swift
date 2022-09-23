@@ -12,9 +12,9 @@ struct MotherView: View {
     
     var body: some View {
         VStack {
-            if viewRouter.currentPage == "FirstVisitView" {
+            if viewRouter.currentPage == "FirstAccessView" {
                 FirstAccessView()
-            } else if viewRouter.currentPage == "PrincipalView" {
+            } else if viewRouter.currentPage == "WateringView" {
                 WateringView(idPlant: 0, typePlant: "", modelNamePlant: "")
             }
         }
