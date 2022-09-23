@@ -4,8 +4,8 @@
   <contributor>
    <authoring_tool>SceneKit Collada Exporter v1.0</authoring_tool>
   </contributor>
-  <created>2022-09-23T02:30:29Z</created>
-  <modified>2022-09-23T02:30:29Z</modified>
+  <created>2022-09-23T09:35:17Z</created>
+  <modified>2022-09-23T09:35:17Z</modified>
   <unit meter="1.000000"/>
   <up_axis>Y_UP</up_axis>
  </asset>
@@ -22,31 +22,6 @@
    </optics>
   </camera>
  </library_cameras>
- <library_lights>
-  <light id="Sun-light" name="Sun">
-   <technique_common>
-    <directional>
-     <color>1 1 1</color>
-    </directional>
-   </technique_common>
-   <extra>
-    <technique profile="SceneKit">
-     <attenuationStart>0</attenuationStart>
-     <attenuationEnd>0</attenuationEnd>
-     <attenuationFalloffExponent>2</attenuationFalloffExponent>
-     <intensity>1000</intensity>
-     <shadow>
-      <enable>0</enable>
-      <color>0 0 0 1</color>
-      <shadowRadius>3</shadowRadius>
-      <zNear>1</zNear>
-      <zFar>100</zFar>
-      <orthographicScale>1</orthographicScale>
-     </shadow>
-    </technique>
-   </extra>
-  </light>
- </library_lights>
  <library_materials>
   <material id="Material-material" name="Material">
    <instance_effect url="#effect_Material-material"/>
@@ -56,9 +31,9 @@
   <effect id="effect_Material-material">
    <profile_COMMON>
     <technique sid="common">
-     <lambert>
+     <phong>
       <diffuse>
-       <color>0.8 0.8 0.8 1</color>
+       <color>1 1 1 1</color>
       </diffuse>
       <transparency>
        <float>1</float>
@@ -66,7 +41,7 @@
       <index_of_refraction>
        <float>1</float>
       </index_of_refraction>
-     </lambert>
+     </phong>
     </technique>
    </profile_COMMON>
    <extra>
@@ -165,10 +140,6 @@
  </library_geometries>
  <library_visual_scenes>
   <visual_scene id="scene11">
-   <node id="Sun" name="Sun">
-    <matrix>0.9999999 0 0 0 0 -4.371139e-08 1 13.89446 0 -1 -4.371139e-08 10.17511 0 0 0 1 </matrix>
-    <instance_light url="#Sun-light"/>
-   </node>
    <node id="Camera" name="Camera">
     <matrix>-0.1428537 -0.02966991 0.9892991 16.89423 -0.005387817 0.9995591 0.02919963 4.839732 -0.989729 -0.001158886 -0.1429506 -2.726094 0 0 0 1 </matrix>
     <instance_camera url="#Camera-camera"/>
@@ -264,8 +235,14 @@
     </instance_geometry>
    </node>
    <node id="Vert_001" name="Vert-001">
-    <matrix>0.9989921 -0.04488045 -0.0006415979 -0.5753871 0.04487863 0.998989 -0.002623643 0.01863003 0.0007586996 0.002592205 0.9999964 -0.02155682 0 0 0 1 </matrix>
-    <instance_geometry url="#geometry6"/>
+    <matrix>0.9989921 -0.04488047 -0.0006415981 -0.5753871 0.04487864 0.998989 -0.002623643 0.01863003 0.0007586998 0.002592205 0.9999964 -0.02155682 0 0 0 1 </matrix>
+    <instance_geometry url="#geometry6">
+     <bind_material>
+      <technique_common>
+       <instance_material symbol="geometryElement10" target="#Material-material"/>
+      </technique_common>
+     </bind_material>
+    </instance_geometry>
    </node>
   </visual_scene>
  </library_visual_scenes>

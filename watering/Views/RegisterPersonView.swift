@@ -49,7 +49,7 @@ struct NameUser : View {
             .foregroundColor(Theme.primary)
             .font(.system(size: 20, design: .rounded))
 
-        TextField(" ", text: $textFieldPerson)
+        TextField("", text: $textFieldPerson)
             .multilineTextAlignment(.center)
             .foregroundColor(.gray)
             .font(.system(size: 15, design: .rounded))

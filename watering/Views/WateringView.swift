@@ -41,10 +41,10 @@ struct WateringView: View {
             Theme.secondary.ignoresSafeArea()
             VStack {
                 Group {
-                    Text("Bom dia, User!").foregroundColor(Theme.primary) +
-                    Text(" Plantinha").foregroundColor(Theme.primary) +
-                    Text(" está sem receber água desde : ").foregroundColor(Theme.primary) +
-                    Text("\(dayWatering)").bold()
+                    Text("Bom dia, Narely!").foregroundColor(Theme.primary) +
+                    Text(" Fiona").foregroundColor(Theme.primary) +
+                    Text(" está sem receber água desde: ").foregroundColor(Theme.primary) +
+                    Text("\(dayWatering)")
                 }
                     .multilineTextAlignment(.center)
                     .foregroundColor(Theme.font)

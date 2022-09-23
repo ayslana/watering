@@ -7,19 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4502B0AC28DD498600F54CD2 /* succullent.dae in Resources */ = {isa = PBXBuildFile; fileRef = 4502B0AB28DD498600F54CD2 /* succullent.dae */; };
-		4502B0AE28DD498F00F54CD2 /* cactus.dae in Resources */ = {isa = PBXBuildFile; fileRef = 4502B0AD28DD498F00F54CD2 /* cactus.dae */; };
 		4502B0B428DD50D700F54CD2 /* plants.dae in Resources */ = {isa = PBXBuildFile; fileRef = 4502B0B328DD50D700F54CD2 /* plants.dae */; };
-		4502B0B628DD515100F54CD2 /* flower.dae in Resources */ = {isa = PBXBuildFile; fileRef = 4502B0B528DD515100F54CD2 /* flower.dae */; };
 		D42A4E8D28DBFAD900B0ACA9 /* ChoosePlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E8C28DBFAD900B0ACA9 /* ChoosePlantView.swift */; };
 		D42A4E8F28DCA3B700B0ACA9 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E8E28DCA3B700B0ACA9 /* MotherView.swift */; };
 		D42A4E9128DCA44300B0ACA9 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E9028DCA44300B0ACA9 /* ViewRouter.swift */; };
 		D42A4E9328DCA4D600B0ACA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E9228DCA4D600B0ACA9 /* SceneDelegate.swift */; };
 		D42A4E9528DCA52300B0ACA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E9428DCA52300B0ACA9 /* AppDelegate.swift */; };
-		D4BA1F1228DD725200D7CD46 /* cactusobj.obj in Resources */ = {isa = PBXBuildFile; fileRef = D4BA1F1128DD725200D7CD46 /* cactusobj.obj */; };
-		D4BA1F1428DD726000D7CD46 /* succullentobj.obj in Resources */ = {isa = PBXBuildFile; fileRef = D4BA1F1328DD726000D7CD46 /* succullentobj.obj */; };
-		D4BA1F1628DD740F00D7CD46 /* plantobj.obj in Resources */ = {isa = PBXBuildFile; fileRef = D4BA1F1528DD740F00D7CD46 /* plantobj.obj */; };
-		D4BA1F1828DD74D400D7CD46 /* flowerobj.obj in Resources */ = {isa = PBXBuildFile; fileRef = D4BA1F1728DD74D400D7CD46 /* flowerobj.obj */; };
+		D45D34A028DD81400088EB65 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45D349F28DD81400088EB65 /* Persistence.swift */; };
+		D45D34A428DDB04B0088EB65 /* succullent.dae in Resources */ = {isa = PBXBuildFile; fileRef = D45D34A328DDB04B0088EB65 /* succullent.dae */; };
+		D45D34A628DDB32B0088EB65 /* flower.dae in Resources */ = {isa = PBXBuildFile; fileRef = D45D34A528DDB32B0088EB65 /* flower.dae */; };
+		D45D34A828DDB3480088EB65 /* cactus.dae in Resources */ = {isa = PBXBuildFile; fileRef = D45D34A728DDB3480088EB65 /* cactus.dae */; };
 		D4C7458628DD681300C9C144 /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4C7458428DD681300C9C144 /* UserModel.xcdatamodeld */; };
 		D4C7458A28DD68EF00C9C144 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C7458928DD68EF00C9C144 /* CoreDataStack.swift */; };
 		D4E8171928D9F7F600775EFA /* wateringApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8171828D9F7F600775EFA /* wateringApp.swift */; };
@@ -62,19 +59,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4502B0AB28DD498600F54CD2 /* succullent.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = succullent.dae; sourceTree = "<group>"; };
-		4502B0AD28DD498F00F54CD2 /* cactus.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = cactus.dae; sourceTree = "<group>"; };
 		4502B0B328DD50D700F54CD2 /* plants.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = plants.dae; sourceTree = "<group>"; };
-		4502B0B528DD515100F54CD2 /* flower.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = flower.dae; sourceTree = "<group>"; };
 		D42A4E8C28DBFAD900B0ACA9 /* ChoosePlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlantView.swift; sourceTree = "<group>"; };
 		D42A4E8E28DCA3B700B0ACA9 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
 		D42A4E9028DCA44300B0ACA9 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		D42A4E9228DCA4D600B0ACA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D42A4E9428DCA52300B0ACA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D4BA1F1128DD725200D7CD46 /* cactusobj.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cactusobj.obj; sourceTree = "<group>"; };
-		D4BA1F1328DD726000D7CD46 /* succullentobj.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = succullentobj.obj; sourceTree = "<group>"; };
-		D4BA1F1528DD740F00D7CD46 /* plantobj.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plantobj.obj; sourceTree = "<group>"; };
-		D4BA1F1728DD74D400D7CD46 /* flowerobj.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flowerobj.obj; sourceTree = "<group>"; };
+		D45D349F28DD81400088EB65 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		D45D34A328DDB04B0088EB65 /* succullent.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = succullent.dae; sourceTree = "<group>"; };
+		D45D34A528DDB32B0088EB65 /* flower.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = flower.dae; sourceTree = "<group>"; };
+		D45D34A728DDB3480088EB65 /* cactus.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = cactus.dae; sourceTree = "<group>"; };
 		D4C7458528DD681300C9C144 /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
 		D4C7458728DD687B00C9C144 /* UserEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D4C7458828DD687B00C9C144 /* UserEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -174,6 +168,7 @@
 				D4E8171E28D9F7F600775EFA /* Preview Content */,
 				D42A4E9228DCA4D600B0ACA9 /* SceneDelegate.swift */,
 				D42A4E9428DCA52300B0ACA9 /* AppDelegate.swift */,
+				D45D349F28DD81400088EB65 /* Persistence.swift */,
 			);
 			path = watering;
 			sourceTree = "<group>";
@@ -249,14 +244,10 @@
 		D4E8176228DA01C500775EFA /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				D4BA1F1528DD740F00D7CD46 /* plantobj.obj */,
-				D4BA1F1728DD74D400D7CD46 /* flowerobj.obj */,
-				D4BA1F1328DD726000D7CD46 /* succullentobj.obj */,
-				D4BA1F1128DD725200D7CD46 /* cactusobj.obj */,
-				4502B0AD28DD498F00F54CD2 /* cactus.dae */,
+				D45D34A328DDB04B0088EB65 /* succullent.dae */,
 				4502B0B328DD50D700F54CD2 /* plants.dae */,
-				4502B0B528DD515100F54CD2 /* flower.dae */,
-				4502B0AB28DD498600F54CD2 /* succullent.dae */,
+				D45D34A728DDB3480088EB65 /* cactus.dae */,
+				D45D34A528DDB32B0088EB65 /* flower.dae */,
 				D4E8176328DA026400775EFA /* WaterSound.mp3 */,
 				D4E8176428DA026400775EFA /* DoneSound.mp3 */,
 			);
@@ -367,20 +358,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4BA1F1628DD740F00D7CD46 /* plantobj.obj in Resources */,
-				D4BA1F1228DD725200D7CD46 /* cactusobj.obj in Resources */,
+				D45D34A828DDB3480088EB65 /* cactus.dae in Resources */,
+				D45D34A628DDB32B0088EB65 /* flower.dae in Resources */,
 				D4E8172028D9F7F600775EFA /* Preview Assets.xcassets in Resources */,
 				D4E8171D28D9F7F600775EFA /* Assets.xcassets in Resources */,
-				4502B0AC28DD498600F54CD2 /* succullent.dae in Resources */,
 				D4E8176628DA026400775EFA /* DoneSound.mp3 in Resources */,
-				4502B0B628DD515100F54CD2 /* flower.dae in Resources */,
-				D4BA1F1428DD726000D7CD46 /* succullentobj.obj in Resources */,
-				D4BA1F1828DD74D400D7CD46 /* flowerobj.obj in Resources */,
+				D45D34A428DDB04B0088EB65 /* succullent.dae in Resources */,
 				D4E8176128DA018500775EFA /* RainDrops.sks in Resources */,
 				D4E8175F28DA014C00775EFA /* Assets.xcassets in Resources */,
 				4502B0B428DD50D700F54CD2 /* plants.dae in Resources */,
 				D4E8176528DA026400775EFA /* WaterSound.mp3 in Resources */,
-				4502B0AE28DD498F00F54CD2 /* cactus.dae in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +400,7 @@
 				D4E8174928D9FBEF00775EFA /* RegisterPlantView.swift in Sources */,
 				D42A4E9328DCA4D600B0ACA9 /* SceneDelegate.swift in Sources */,
 				D42A4E8F28DCA3B700B0ACA9 /* MotherView.swift in Sources */,
+				D45D34A028DD81400088EB65 /* Persistence.swift in Sources */,
 				D4E8175B28DA00AD00775EFA /* RainSceneView.swift in Sources */,
 				D42A4E9528DCA52300B0ACA9 /* AppDelegate.swift in Sources */,
 				D4E8175828DA007000775EFA /* WaterWaveView.swift in Sources */,

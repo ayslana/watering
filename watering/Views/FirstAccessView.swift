@@ -70,7 +70,7 @@ struct FirstAccessView: View {
                     Text("Antes de iniciarmos, precisamos de três informações.")
                         .multilineTextAlignment(.leading)
                         .foregroundColor(.white)
-                        .font(.system(size: 25, design: .rounded))
+                        .font(.system(size: 30, design: .rounded))
                         .padding(.trailing)
                         .offset(x: -15)
                         .gesture(DragGesture().onChanged({ (value) in
