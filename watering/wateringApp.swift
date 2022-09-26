@@ -13,7 +13,6 @@ struct wateringApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MotherView()
-        }
+            MotherView().environmentObject(ViewRouter())        }
     }
 }
