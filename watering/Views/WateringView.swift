@@ -22,9 +22,11 @@ struct WateringView: View {
     @State var audioPlayer: AVAudioPlayer?
     @State var audioPlayer2: AVAudioPlayer?
     @State var dayWatering = ""
+    @State var savedUsername: String
+    @State var savedNamePlant: String
+    let modelNamePlant: String
     let idPlant: Int
     let typePlant: String
-    let modelNamePlant: String
 
 
     var rainLightningScene: SKScene {
@@ -41,20 +43,24 @@ struct WateringView: View {
             Theme.secondary.ignoresSafeArea()
             VStack {
                 Group {
-                    Text("Bom dia, Narely!").foregroundColor(Theme.primary) +
-                    Text(" Fiona").foregroundColor(Theme.primary) +
+                    Text("Bom dia, \(savedUsername)!").foregroundColor(Theme.primary) +
+                    Text("\(savedNamePlant)").foregroundColor(Theme.primary) +
                     Text(" está sem receber água desde: ").foregroundColor(Theme.primary) +
                     Text("\(dayWatering)")
                 }
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(Theme.font)
-                    .padding()
-                    .font(.system(size: 20, design: .rounded))
-                
+                .multilineTextAlignment(.center)
+                .foregroundColor(Theme.font)
+                .padding()
+                .font(.system(size: 20, design: .rounded))
+                .onAppear {
+                    savedUsername = UserDefaults.standard.string(forKey: "userName") ?? ""
+                    savedNamePlant = UserDefaults.standard.string(forKey: "plantName") ?? ""
+                }
+
                 Spacer().frame(height: 40)
                 treeView
             }
-            
+
             if !isComplete {
                 waterWaveView
             }
@@ -169,18 +175,19 @@ struct WateringView: View {
                     self.isComplete = false
                     self.progress = 0.1
                     self.dayWatering = "\(Date.now.formatted(.dateTime.weekday(.wide).hour().minute().second()))"
+
                 }
             }
             .onDisappear() {
                 self.isSucess = false
             }
     }
-    
+
 }
 
 struct WateringView_Previews: PreviewProvider {
     static var previews: some View {
-        WateringView(idPlant: 0, typePlant: "", modelNamePlant: "")
+        WateringView(savedUsername: "", savedNamePlant: "", modelNamePlant: "", idPlant: 0, typePlant: "")
     }
 }
 
@@ -189,4 +196,3 @@ extension UIScreen {
     static let screenHeight = UIScreen.main.bounds.size.height
     static let screenSize = UIScreen.main.bounds.size
 }
-

@@ -14,12 +14,18 @@ struct MotherView: View {
             if viewRouter.currentPage == "FirstAccessView" {
                 FirstAccessView()
             } else if viewRouter.currentPage == "WateringView" {
-                WateringView(idPlant: 0, typePlant: "", modelNamePlant: "")
+                WateringView(
+                    savedUsername: "",
+                    savedNamePlant: "",
+                    modelNamePlant: UserDefaults.standard.value(forKey: "modelNamePlant") as? String ?? "",
+                    idPlant: 0,
+                    typePlant: ""
+                )
             }
         }
     }
-}
 
+}
 struct MotherView_Previews: PreviewProvider {
     static var previews: some View {
         MotherView().environmentObject(ViewRouter())

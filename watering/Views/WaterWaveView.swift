@@ -25,7 +25,7 @@ struct WaterWaveView: Shape {
         return Path{ path in
 
             path.move(to: .zero)
-
+            print("Progresso da planta: \(progress)")
             let progressHeight: CGFloat = (1 - progress) * rect.height
             let height = (waveHeight * rect.height)
 

@@ -9,38 +9,41 @@ import SwiftUI
 
 struct RegisterPlantView: View {
     
-    @State var textFieldPlant: String = ""
-    
+    @State var plantName: String = ""
+    @State var savedNamePlant: String = ""
+    let savedName: String
+
     var body: some View {
-        
+
         NavigationView {
-            
+
             ZStack (alignment: .top) {
                 Theme.secondary.ignoresSafeArea()
-                
+
                 VStack {
-                    
+
                     Text("Qual o nome da sua plantinha?")
                         .foregroundColor(Theme.primary)
                         .font(.system(size: 20, design: .rounded))
 
-                    TextField(" ", text: $textFieldPlant)
+                    TextField("", text: $plantName)
                         .foregroundColor(Theme.primary)
                         .multilineTextAlignment(.center)
                         .font(.system(size: 15, design: .rounded))
                         .padding()
+                        .onChange(of: plantName) { newValue in
+                            saveNamePlant()
+                        }
 
-                    
+
                     Divider()
-                        
+
                         .background(Theme.primary)
                         .frame(width: 300)
-                        
-                    
-                    
+
                     Spacer().frame(height: 100)
 
-                    NavigationLink(destination: ChoosePlantView().navigationBarHidden(true), label: {
+                    NavigationLink(destination: ChoosePlantView(savedName: savedName, savedNamePlant: savedNamePlant).navigationBarHidden(true), label: {
                         Text("Próximo")
                             .foregroundColor(Theme.primary)
                             .padding()
@@ -48,24 +51,28 @@ struct RegisterPlantView: View {
                             .font(.system(size: 20, design: .rounded))
                             .overlay(RoundedRectangle(cornerRadius: 15)
                             .stroke(Theme.primary, lineWidth: 2))
-                        
+
                             .padding()
                             .cornerRadius(20)
                         }
                     )
                         }
-                
+
                 .padding()
-                    
+
                 }
                 Spacer().frame(height: 484)
             }
         }
+    func saveNamePlant() {
+        UserDefaults.standard.set(self.plantName, forKey: "plantName")
+    }
+
     }
 
 
 struct RegisterPlantView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterPlantView()
+        RegisterPlantView(savedNamePlant: "", savedName: "")
     }
 }

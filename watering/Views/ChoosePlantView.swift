@@ -4,7 +4,6 @@
 //
 //  Created by Ayslana Riene on 21/09/22.
 //
-
 import SwiftUI
 import SceneKit
 
@@ -16,6 +15,10 @@ struct ChoosePlantView: View {
     @State var idPlant: Int = 0
     @State var typePlant: String = ""
     @State var modelNamePlant: String = ""
+    @State var savedModelPlant: String = ""
+    let savedName: String
+    let savedNamePlant: String
+
     @Namespace var namespace
 
     var body: some View {
@@ -55,7 +58,7 @@ struct ChoosePlantView: View {
                             return scene
                         }(),
                             options: [.autoenablesDefaultLighting, .allowsCameraControl])
-                        .frame(width: UIScreen.main.bounds.width/1.8, height: UIScreen.main.bounds.height / 3.5 , alignment: .center)
+                        .frame(width: UIScreen.main.bounds.width/1.5, height: UIScreen.main.bounds.height / 4 , alignment: .center)
                         .cornerRadius(15)
                         .onTapGesture {
                             withAnimation(.spring()){
@@ -77,7 +80,8 @@ struct ChoosePlantView: View {
     var nextView: some View {
         VStack (alignment: .center){
             NavigationLink (
-                destination : WateringView(idPlant: idPlant, typePlant: selected.type, modelNamePlant: selected.modelName).navigationBarHidden(true),
+//                destination : WateringView(savedName: savedName, savedNamePlant: savedNamePlant, modelNamePlant: selected.modelName, idPlant: selected.id, typePlant: selected.type),
+                destination : WateringView(savedUsername: savedName, savedNamePlant: savedNamePlant, modelNamePlant: selected.modelName, idPlant: selected.id, typePlant: selected.type),
                     label : {
                         Text ("Próximo")
                             .foregroundColor(Theme.primary)
@@ -87,9 +91,16 @@ struct ChoosePlantView: View {
                                         .stroke(Theme.primary, lineWidth: 2))
                             .padding()
             })
+            .simultaneousGesture(TapGesture().onEnded{
+                self.idPlant = selected.id
+                self.typePlant = selected.type
+                self.modelNamePlant = selected.modelName
+                saveModelPlant()
+            })
             .navigationBarBackButtonHidden(true)
         }
     }
+
     var scalePlantView: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .center)){
             PlantView(scene: {
@@ -98,28 +109,33 @@ struct ChoosePlantView: View {
                 return scene
             }(),
                       options: [.autoenablesDefaultLighting, .allowsCameraControl])
-            .frame(width: UIScreen.main.bounds.width/0.8, height: UIScreen.main.bounds.height / 1.4 , alignment: .center)
+            .frame(width: UIScreen.main.bounds.width/0.8, height: UIScreen.main.bounds.height/1.5 , alignment: .center)
                 .matchedGeometryEffect(id: selected.id, in: namespace)
             HStack {
-                Button{
+                Button {
                     withAnimation(.spring()){
                         show.toggle()
                         self.idPlant = selected.id
                         self.typePlant = selected.type
                         self.modelNamePlant = selected.modelName
+                        saveModelPlant()
                     }
                 } label: {
                     RoundedRectangle(cornerRadius: 30)
                         .frame(width: 300, height: 490)
                         .foregroundColor(.white.opacity(0))
+                        .border(.red)
                 }
             }
         }
+    }
+    func saveModelPlant() {
+        UserDefaults.standard.set(self.modelNamePlant, forKey: "modelNamePlant")
     }
 }
 
 struct ChoosePlantView_Previews: PreviewProvider {
     static var previews: some View {
-        ChoosePlantView()
+        ChoosePlantView(savedName: "", savedNamePlant: "")
     }
 }
