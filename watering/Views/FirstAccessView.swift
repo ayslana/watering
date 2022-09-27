@@ -45,7 +45,23 @@ struct FirstAccessView: View {
                         .opacity(offset == .zero ? 1 : 0)
                     
                     ,alignment: .topTrailing
-                )
+                )                        .gesture(DragGesture().onChanged({ (value) in
+                    
+                    withAnimation(.interactiveSpring(response: 0.7, dampingFraction: 0.6, blendDuration: 0.6)){
+                        offset = value.translation
+                    }
+                    
+                }).onEnded({(value) in
+                    let screen = UIScreen.main.bounds
+                    withAnimation(.spring()){
+                        if -offset.width > screen.width / 2 {
+                            offset.width = -screen.height
+                            showHome.toggle()
+                        } else {
+                            offset = .zero
+                        }
+                    }
+                }))
                 .padding(.trailing)
                 if showHome {
                     RegisterPersonView()

@@ -27,7 +27,6 @@ struct RegisterPersonView: View {
             
             ZStack (alignment: .top){
                 Theme.secondary.ignoresSafeArea()
-                
                 NameUser()
                 
             }
@@ -38,7 +37,7 @@ struct RegisterPersonView: View {
 
 struct NameUser : View {
     
-    @State var textFieldPerson: String = ""
+    @State var personName: String = ""
 
     
     var body: some View {
@@ -49,11 +48,14 @@ struct NameUser : View {
             .foregroundColor(Theme.primary)
             .font(.system(size: 20, design: .rounded))
 
-        TextField("", text: $textFieldPerson)
+        TextField("", text: $personName)
             .multilineTextAlignment(.center)
             .foregroundColor(.gray)
             .font(.system(size: 15, design: .rounded))
             .padding()
+            .onChange(of: personName) { newValue in
+                saveName()
+            }
 
         
         Divider()
@@ -82,6 +84,10 @@ struct NameUser : View {
         Spacer().frame(height: 146)
         
         }
+    }
+    
+    func saveName() {
+        UserDefaults.standard.setPersonName(value: personName)
     }
     
 }

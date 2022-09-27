@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RegisterPlantView: View {
     
-    @State var textFieldPlant: String = ""
+    @State var plantName: String = ""
     
     var body: some View {
         
@@ -24,11 +24,14 @@ struct RegisterPlantView: View {
                         .foregroundColor(Theme.primary)
                         .font(.system(size: 20, design: .rounded))
 
-                    TextField(" ", text: $textFieldPlant)
+                    TextField("", text: $plantName)
                         .foregroundColor(Theme.primary)
                         .multilineTextAlignment(.center)
                         .font(.system(size: 15, design: .rounded))
                         .padding()
+                        .onChange(of: plantName) { newValue in
+                            savePlantName()
+                        }
 
                     
                     Divider()
@@ -53,7 +56,7 @@ struct RegisterPlantView: View {
                             .cornerRadius(20)
                         }
                     )
-                        }
+                }
                 
                 .padding()
                     
@@ -61,6 +64,11 @@ struct RegisterPlantView: View {
                 Spacer().frame(height: 484)
             }
         }
+    
+    func savePlantName() {
+        UserDefaults.standard.setPlantName(value: plantName)
+    }
+    
     }
 
 

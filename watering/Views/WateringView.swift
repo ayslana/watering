@@ -22,9 +22,7 @@ struct WateringView: View {
     @State var audioPlayer: AVAudioPlayer?
     @State var audioPlayer2: AVAudioPlayer?
     @State var dayWatering = ""
-    let idPlant: Int
-    let typePlant: String
-    let modelNamePlant: String
+    let notification = NotificationController()
 
 
     var rainLightningScene: SKScene {
@@ -41,10 +39,10 @@ struct WateringView: View {
             Theme.secondary.ignoresSafeArea()
             VStack {
                 Group {
-                    Text("Bom dia, Narely!").foregroundColor(Theme.primary) +
-                    Text(" Fiona").foregroundColor(Theme.primary) +
-                    Text(" está sem receber água desde: ").foregroundColor(Theme.primary) +
-                    Text("\(dayWatering)")
+                    Text("Olá, \(UserDefaults.standard.getPersonName() ?? "Unset").").foregroundColor(Theme.primary) +
+                    Text(" \(UserDefaults.standard.getPlantName() ?? "Unset" ) ").foregroundColor(Theme.primary) +
+                    Text("está sem receber água desde: ").foregroundColor(Theme.primary) +
+                    Text("\(UserDefaults.standard.getLastDate() ?? "muito tempo")" )
                 }
                     .multilineTextAlignment(.center)
                     .foregroundColor(Theme.font)
@@ -76,6 +74,7 @@ struct WateringView: View {
             }catch {
                 print("there was some error. The error was \(error)")
             }
+            notification.doNotification()
         }
         .onReceive(timer) { _ in
             if isPressed {
@@ -96,7 +95,7 @@ struct WateringView: View {
     var treeView: some View {
         //INSERÇÃO DO MODELO 3D
         PlantView(scene: {
-            let modelo = DropWaterModel(id: idPlant, type: typePlant, modelName: modelNamePlant)
+            let modelo = DropWaterModel(id: UserDefaults.standard.getPlantID() ?? 0, type: UserDefaults.standard.getPlantTypeName() ?? "", modelName: UserDefaults.standard.getPlantType() ?? "")
             let scene = SCNScene(named: modelo.modelName)!
             scene.background.contents = UIColor.clear
             return scene
@@ -169,6 +168,7 @@ struct WateringView: View {
                     self.isComplete = false
                     self.progress = 0.1
                     self.dayWatering = "\(Date.now.formatted(.dateTime.weekday(.wide).hour().minute().second()))"
+                    saveLastDate()
                 }
             }
             .onDisappear() {
@@ -176,11 +176,15 @@ struct WateringView: View {
             }
     }
     
+    func saveLastDate() {
+        UserDefaults.standard.setLastDate(value: dayWatering)
+    }
+    
 }
 
 struct WateringView_Previews: PreviewProvider {
     static var previews: some View {
-        WateringView(idPlant: 0, typePlant: "", modelNamePlant: "")
+        WateringView()
     }
 }
 
