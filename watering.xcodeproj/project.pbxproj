@@ -15,6 +15,9 @@
 		D45D34A028DD81400088EB65 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45D349F28DD81400088EB65 /* Persistence.swift */; };
 		D45D34A628DDB32B0088EB65 /* flower.dae in Resources */ = {isa = PBXBuildFile; fileRef = D45D34A528DDB32B0088EB65 /* flower.dae */; };
 		D45D34A828DDB3480088EB65 /* cactus.dae in Resources */ = {isa = PBXBuildFile; fileRef = D45D34A728DDB3480088EB65 /* cactus.dae */; };
+		D4800ACE28E4755C00669263 /* plants.scn in Resources */ = {isa = PBXBuildFile; fileRef = D4800ACD28E4755C00669263 /* plants.scn */; };
+		D4800AD028E4758800669263 /* cactus.scn in Resources */ = {isa = PBXBuildFile; fileRef = D4800ACF28E4758800669263 /* cactus.scn */; };
+		D4800AD228E4759600669263 /* flower.scn in Resources */ = {isa = PBXBuildFile; fileRef = D4800AD128E4759600669263 /* flower.scn */; };
 		D4E8171928D9F7F600775EFA /* wateringApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8171828D9F7F600775EFA /* wateringApp.swift */; };
 		D4E8171D28D9F7F600775EFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E8171C28D9F7F600775EFA /* Assets.xcassets */; };
 		D4E8172528D9F7F600775EFA /* watering.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4E8172328D9F7F600775EFA /* watering.xcdatamodeld */; };
@@ -65,6 +68,9 @@
 		D45D349F28DD81400088EB65 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D45D34A528DDB32B0088EB65 /* flower.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = flower.dae; sourceTree = "<group>"; };
 		D45D34A728DDB3480088EB65 /* cactus.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = cactus.dae; sourceTree = "<group>"; };
+		D4800ACD28E4755C00669263 /* plants.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = plants.scn; sourceTree = "<group>"; };
+		D4800ACF28E4758800669263 /* cactus.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = cactus.scn; sourceTree = "<group>"; };
+		D4800AD128E4759600669263 /* flower.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = flower.scn; sourceTree = "<group>"; };
 		D4E8171528D9F7F600775EFA /* watering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E8171828D9F7F600775EFA /* wateringApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wateringApp.swift; sourceTree = "<group>"; };
 		D4E8171C28D9F7F600775EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -219,8 +225,11 @@
 				D4F8943C28E3417800CD7216 /* succullent.dae */,
 				D4F8944028E3453E00CD7216 /* succullent.scn */,
 				4502B0B328DD50D700F54CD2 /* plants.dae */,
+				D4800ACD28E4755C00669263 /* plants.scn */,
 				D45D34A728DDB3480088EB65 /* cactus.dae */,
+				D4800ACF28E4758800669263 /* cactus.scn */,
 				D45D34A528DDB32B0088EB65 /* flower.dae */,
+				D4800AD128E4759600669263 /* flower.scn */,
 				D4E8176328DA026400775EFA /* WaterSound.mp3 */,
 				D4E8176428DA026400775EFA /* DoneSound.mp3 */,
 			);
@@ -335,8 +344,11 @@
 				D45D34A628DDB32B0088EB65 /* flower.dae in Resources */,
 				D4F8943D28E3417800CD7216 /* succullent.dae in Resources */,
 				D4E8171D28D9F7F600775EFA /* Assets.xcassets in Resources */,
+				D4800ACE28E4755C00669263 /* plants.scn in Resources */,
 				D4E8176628DA026400775EFA /* DoneSound.mp3 in Resources */,
 				D4E8176128DA018500775EFA /* RainDrops.sks in Resources */,
+				D4800AD028E4758800669263 /* cactus.scn in Resources */,
+				D4800AD228E4759600669263 /* flower.scn in Resources */,
 				D4F8944128E3453E00CD7216 /* succullent.scn in Resources */,
 				D4E8175F28DA014C00775EFA /* Assets.xcassets in Resources */,
 				4502B0B428DD50D700F54CD2 /* plants.dae in Resources */,
@@ -536,6 +548,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"watering/Assets\"";
@@ -567,6 +580,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"watering/Assets\"";

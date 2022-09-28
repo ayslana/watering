@@ -19,19 +19,49 @@ struct NotificationController {
             }
         }
     }
+<<<<<<< HEAD
 
+=======
+    
+    
+    
+>>>>>>> 2aa8ed99d11ad0fc710d6e4658136575e9e8dc24
     func doNotification()  {
         let content = UNMutableNotificationContent()
         content.title = "Sua plantinha está com sede 😟"
         content.subtitle = "Lembre-se de aguá-la hoje!"
-        content.sound = UNNotificationSound.default
         
+<<<<<<< HEAD
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 4.0, repeats: false)
+=======
+        var dateComponents = DateComponents()
+        dateComponents.calendar = Calendar.current
+>>>>>>> 2aa8ed99d11ad0fc710d6e4658136575e9e8dc24
         
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        dateComponents.hour = 08
         
+<<<<<<< HEAD
         UNUserNotificationCenter.current().add(request)
         print("Deu certo enviar")
     }
 }
 
+=======
+        let trigger = UNCalendarNotificationTrigger(
+            dateMatching: dateComponents, repeats: true)
+    
+        
+        let uuidString = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuidString,
+                                            content: content, trigger: trigger)
+        
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.add(request) { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+}
+>>>>>>> 2aa8ed99d11ad0fc710d6e4658136575e9e8dc24

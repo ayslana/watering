@@ -17,7 +17,6 @@ struct ChoosePlantView: View {
     @State var typePlant: String = ""
     @State var modelNamePlant: String = ""
     @Namespace var namespace
-    let notification = NotificationController()
     
     var body: some View {
         ZStack {
@@ -39,7 +38,7 @@ struct ChoosePlantView: View {
     }
     
     var cabeçalhoView: some View {
-        Text("Escolha a sua plantinha")
+        Text("Escolha o tipo da sua plantinha")
             .multilineTextAlignment(.center)
             .foregroundColor(Theme.primary)
             .font(.system(size: 20, design: .rounded))
@@ -59,7 +58,7 @@ struct ChoosePlantView: View {
                         .frame(width: UIScreen.main.bounds.width/1.8, height: UIScreen.main.bounds.height / 3.5 , alignment: .center)
                         .cornerRadius(15)
                         .onTapGesture {
-                            withAnimation(.spring()){
+                            withAnimation(.easeOut){
                                 show.toggle()
                                 selected = plant
                             }

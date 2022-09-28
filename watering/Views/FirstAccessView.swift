@@ -13,6 +13,7 @@ struct FirstAccessView: View {
     
     @State var offset : CGSize = .zero
     @State var showHome = false
+    
     var body: some View {
         NavigationView {
             ZStack {
