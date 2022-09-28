@@ -4,8 +4,8 @@
   <contributor>
    <authoring_tool>SceneKit Collada Exporter v1.0</authoring_tool>
   </contributor>
-  <created>2022-09-23T09:35:17Z</created>
-  <modified>2022-09-23T09:35:17Z</modified>
+  <created>2022-09-28T12:37:33Z</created>
+  <modified>2022-09-28T12:37:33Z</modified>
   <unit meter="1.000000"/>
   <up_axis>Y_UP</up_axis>
  </asset>
@@ -22,36 +22,6 @@
    </optics>
   </camera>
  </library_cameras>
- <library_materials>
-  <material id="Material-material" name="Material">
-   <instance_effect url="#effect_Material-material"/>
-  </material>
- </library_materials>
- <library_effects>
-  <effect id="effect_Material-material">
-   <profile_COMMON>
-    <technique sid="common">
-     <phong>
-      <diffuse>
-       <color>1 1 1 1</color>
-      </diffuse>
-      <transparency>
-       <float>1</float>
-      </transparency>
-      <index_of_refraction>
-       <float>1</float>
-      </index_of_refraction>
-     </phong>
-    </technique>
-   </profile_COMMON>
-   <extra>
-    <technique profile="SceneKit">
-     <litPerPixel>1</litPerPixel>
-     <ambient_diffuse_lock>0</ambient_diffuse_lock>
-    </technique>
-   </extra>
-  </effect>
- </library_effects>
  <library_geometries>
   <geometry id="geometry1">
    <mesh>
@@ -146,103 +116,43 @@
    </node>
    <node id="Cube_008" name="Cube-008">
     <matrix>0.01988755 0.001074727 0.05237635 -0.8379127 -0.005754372 -0.1347024 0.1547905 7.709666 0.00240429 -0.3312832 -0.06276914 0.2434831 0 0 0 1 </matrix>
-    <instance_geometry url="#geometry1">
-     <bind_material>
-      <technique_common>
-       <instance_material symbol="geometryElement5" target="#Material-material"/>
-      </technique_common>
-     </bind_material>
-    </instance_geometry>
+    <instance_geometry url="#geometry1"/>
    </node>
    <node id="Cube_007" name="Cube-007">
     <matrix>0.01997022 -0.003751741 0.05007729 -0.7732643 -0.00518658 0.1657355 0.1488771 2.119425 -0.002949152 -0.3168787 0.07727356 1.450463 0 0 0 1 </matrix>
-    <instance_geometry url="#geometry1">
-     <bind_material>
-      <technique_common>
-       <instance_material symbol="geometryElement5" target="#Material-material"/>
-      </technique_common>
-     </bind_material>
-    </instance_geometry>
+    <instance_geometry url="#geometry1"/>
    </node>
    <node id="Cube_006" name="Cube-006">
     <matrix>0.01997022 -0.003751741 0.05007729 -0.5854725 -0.00518658 0.1657355 0.1488771 3.073926 -0.002949152 -0.3168787 0.07727356 1.451034 0 0 0 1 </matrix>
-    <instance_geometry url="#geometry1">
-     <bind_material>
-      <technique_common>
-       <instance_material symbol="geometryElement5" target="#Material-material"/>
-      </technique_common>
-     </bind_material>
-    </instance_geometry>
+    <instance_geometry url="#geometry1"/>
    </node>
    <node id="Cube_005" name="Cube-005">
     <matrix>0.01849848 0.03713625 0.07857735 -0.7490199 -0.009084604 0.1805885 0.1304139 4.242824 -0.003111941 -0.3064362 0.08637793 1.52782 0 0 0 1 </matrix>
-    <instance_geometry url="#geometry1">
-     <bind_material>
-      <technique_common>
-       <instance_material symbol="geometryElement5" target="#Material-material"/>
-      </technique_common>
-     </bind_material>
-    </instance_geometry>
+    <instance_geometry url="#geometry1"/>
    </node>
    <node id="Cube_004" name="Cube-004">
     <matrix>0.01849848 0.03713625 0.07857735 -0.6016359 -0.009084604 0.1805885 0.1304139 5.725753 -0.003111941 -0.3064362 0.08637793 1.524799 0 0 0 1 </matrix>
-    <instance_geometry url="#geometry1">
-     <bind_material>
-      <technique_common>
-       <instance_material symbol="geometryElement5" target="#Material-material"/>
-      </technique_common>
-     </bind_material>
-    </instance_geometry>
+    <instance_geometry url="#geometry1"/>
    </node>
    <node id="Cube_003" name="Cube-003">
     <matrix>0.01978822 -0.001164987 0.05496556 -0.7933594 -0.0009938261 -0.3539919 0.02344093 6.513922 0.006468878 -0.05082078 -0.1645377 -1.35194 0 0 0 1 </matrix>
-    <instance_geometry url="#geometry1">
-     <bind_material>
-      <technique_common>
-       <instance_material symbol="geometryElement5" target="#Material-material"/>
-      </technique_common>
-     </bind_material>
-    </instance_geometry>
+    <instance_geometry url="#geometry1"/>
    </node>
    <node id="Cube_002" name="Cube-002">
     <matrix>0.01978822 -0.001164987 0.05496556 -0.7649815 -0.0009938261 -0.3539919 0.02344093 5.171266 0.006468878 -0.05082078 -0.1645377 -1.358246 0 0 0 1 </matrix>
-    <instance_geometry url="#geometry1">
-     <bind_material>
-      <technique_common>
-       <instance_material symbol="geometryElement5" target="#Material-material"/>
-      </technique_common>
-     </bind_material>
-    </instance_geometry>
+    <instance_geometry url="#geometry1"/>
    </node>
    <node id="Cube_001" name="Cube-001">
     <matrix>0.01978822 -0.001164987 0.05496556 -0.6830091 -0.0009938261 -0.3539919 0.02344093 4.041693 0.006468878 -0.05082078 -0.1645377 -1.339085 0 0 0 1 </matrix>
-    <instance_geometry url="#geometry1">
-     <bind_material>
-      <technique_common>
-       <instance_material symbol="geometryElement5" target="#Material-material"/>
-      </technique_common>
-     </bind_material>
-    </instance_geometry>
+    <instance_geometry url="#geometry1"/>
    </node>
    <node id="Cube_012" name="Cube-012">
     <matrix>0.01978822 -0.001164987 0.05496556 -0.4828337 -0.0009938261 -0.3539919 0.02344093 2.869272 0.006468878 -0.05082078 -0.1645377 -1.404717 0 0 0 1 </matrix>
-    <instance_geometry url="#geometry1">
-     <bind_material>
-      <technique_common>
-       <instance_material symbol="geometryElement5" target="#Material-material"/>
-      </technique_common>
-     </bind_material>
-    </instance_geometry>
+    <instance_geometry url="#geometry1"/>
    </node>
    <node id="Vert_001" name="Vert-001">
     <matrix>0.9989921 -0.04488047 -0.0006415981 -0.5753871 0.04487864 0.998989 -0.002623643 0.01863003 0.0007586998 0.002592205 0.9999964 -0.02155682 0 0 0 1 </matrix>
-    <instance_geometry url="#geometry6">
-     <bind_material>
-      <technique_common>
-       <instance_material symbol="geometryElement10" target="#Material-material"/>
-      </technique_common>
-     </bind_material>
-    </instance_geometry>
+    <instance_geometry url="#geometry6"/>
    </node>
   </visual_scene>
  </library_visual_scenes>

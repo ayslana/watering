@@ -9,7 +9,7 @@ import SwiftUI
 import SceneKit
 
 struct ChoosePlantView: View {
-
+    
     var columns = Array(repeating: GridItem(.flexible(), spacing: 15), count: 2)
     @State var selected: DropWaterModel = PlantsType[0]
     @State var show = false
@@ -17,30 +17,30 @@ struct ChoosePlantView: View {
     @State var typePlant: String = ""
     @State var modelNamePlant: String = ""
     @Namespace var namespace
-
+    
     var body: some View {
-    ZStack (alignment: .center){
-        Theme.secondary.ignoresSafeArea()
+        ZStack (alignment: .center){
+            Theme.secondary.ignoresSafeArea()
             Spacer().frame(width: 30, height: 30)
-            .padding([.leading,.top])
-        VStack {
-            cabeçalhoView
-            choosePlantView
-            if show {
-                VStack{
-                    scalePlantView
-                    nextView
+                .padding([.leading,.top])
+            VStack {
+                cabeçalhoView
+                choosePlantView
+                if show {
+                    VStack{
+                        scalePlantView
+                        nextView
+                    }
                 }
             }
         }
-    }
         .background(.white)
     }
-
+    
     var cabeçalhoView: some View {
-        Text("Escolha a sua plantinha")
-        .multilineTextAlignment(.center)
-        .foregroundColor(Theme.primary)
+        Text("Escolha o tipo da sua plantinha")
+            .multilineTextAlignment(.center)
+            .foregroundColor(Theme.primary)
             .font(.system(size: 20, design: .rounded))
             .padding()
     }
@@ -54,16 +54,16 @@ struct ChoosePlantView: View {
                             scene.background.contents = UIColor.clear
                             return scene
                         }(),
-                            options: [.autoenablesDefaultLighting, .allowsCameraControl])
+                                  options: [.autoenablesDefaultLighting, .allowsCameraControl])
                         .frame(width: UIScreen.main.bounds.width/1.8, height: UIScreen.main.bounds.height / 3.5 , alignment: .center)
                         .cornerRadius(15)
                         .onTapGesture {
-                            withAnimation(.spring()){
+                            withAnimation(.easeOut){
                                 show.toggle()
                                 selected = plant
                             }
-                            }
-                            .matchedGeometryEffect(id: plant.id, in: namespace)
+                        }
+                        .matchedGeometryEffect(id: plant.id, in: namespace)
                         Text(plant.type)
                             .multilineTextAlignment(.center)
                             .foregroundColor(Theme.primary)
@@ -77,16 +77,21 @@ struct ChoosePlantView: View {
     var nextView: some View {
         VStack (alignment: .center){
             NavigationLink (
-                destination : WateringView(idPlant: idPlant, typePlant: selected.type, modelNamePlant: selected.modelName).navigationBarHidden(true),
-                    label : {
-                        Text ("Próximo")
-                            .foregroundColor(Theme.primary)
-                            .frame(width: 200, height: 50)
-                            .font(.system(size: 20, design: .rounded))
-                            .overlay(RoundedRectangle(cornerRadius: 15)
-                                        .stroke(Theme.primary, lineWidth: 2))
-                            .padding()
-            })
+                destination : WateringView().navigationBarHidden(true),
+                label : {
+                    Text ("Próximo")
+                        .foregroundColor(Theme.primary)
+                        .frame(width: 200, height: 50)
+                        .font(.system(size: 20, design: .rounded))
+                        .overlay(RoundedRectangle(cornerRadius: 15)
+                            .stroke(Theme.primary, lineWidth: 2))
+                        .padding()
+                })
+            .simultaneousGesture(TapGesture().onEnded{
+                self.idPlant = selected.id
+                self.typePlant = selected.type
+                self.modelNamePlant = selected.modelName
+                savePlantType()})
             .navigationBarBackButtonHidden(true)
         }
     }
@@ -99,14 +104,11 @@ struct ChoosePlantView: View {
             }(),
                       options: [.autoenablesDefaultLighting, .allowsCameraControl])
             .frame(width: UIScreen.main.bounds.width/0.8, height: UIScreen.main.bounds.height / 1.4 , alignment: .center)
-                .matchedGeometryEffect(id: selected.id, in: namespace)
+            .matchedGeometryEffect(id: selected.id, in: namespace)
             HStack {
                 Button{
                     withAnimation(.spring()){
                         show.toggle()
-                        self.idPlant = selected.id
-                        self.typePlant = selected.type
-                        self.modelNamePlant = selected.modelName
                     }
                 } label: {
                     RoundedRectangle(cornerRadius: 30)
@@ -115,6 +117,13 @@ struct ChoosePlantView: View {
                 }
             }
         }
+    }
+    
+    func savePlantType() {
+        UserDefaults.standard.setPlantType(value: modelNamePlant)
+        UserDefaults.standard.setPlantTypeName(value: typePlant)
+        UserDefaults.standard.setPlantID(value: idPlant)
+        
     }
 }
 

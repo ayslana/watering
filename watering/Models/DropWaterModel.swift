@@ -14,8 +14,8 @@ struct DropWaterModel : Identifiable {
 }
 
 var PlantsType = [
-    DropWaterModel(id: 0, type: "Flor", modelName: "flower"),
-    DropWaterModel(id: 1, type: "Suculenta", modelName: "succullent"),
-    DropWaterModel(id: 2, type: "Frutífera", modelName: "plants"),
-    DropWaterModel(id: 3, type: "Cacto", modelName: "cactus")
+    DropWaterModel(id: 0, type: "Flor", modelName: "flower.scn"),
+    DropWaterModel(id: 1, type: "Suculenta", modelName: "succullent.scn"),
+    DropWaterModel(id: 2, type: "Frutífera", modelName: "plants.scn"),
+    DropWaterModel(id: 3, type: "Cacto", modelName: "cactus.scn")
 ]
