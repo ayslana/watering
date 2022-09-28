@@ -38,6 +38,8 @@ struct RegisterPersonView: View {
 struct NameUser : View {
     
     @State var personName: String = ""
+    let notification = NotificationController()
+
 
     
     var body: some View {
@@ -88,6 +90,7 @@ struct NameUser : View {
     
     func saveName() {
         UserDefaults.standard.setPersonName(value: personName)
+        notification.requestPermission()
     }
     
 }

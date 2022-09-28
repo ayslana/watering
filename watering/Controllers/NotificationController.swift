@@ -20,19 +20,32 @@ struct NotificationController {
         }
     }
     
-        
-
+    
+    
     func doNotification()  {
         let content = UNMutableNotificationContent()
         content.title = "Sua plantinha está com sede 😟"
         content.subtitle = "Lembre-se de aguá-la hoje!"
-        content.sound = UNNotificationSound.default
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        var dateComponents = DateComponents()
+        dateComponents.calendar = Calendar.current
         
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        dateComponents.hour = 08
         
-        UNUserNotificationCenter.current().add(request)
-    }
+        let trigger = UNCalendarNotificationTrigger(
+            dateMatching: dateComponents, repeats: true)
+    
+        
+        let uuidString = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuidString,
+                                            content: content, trigger: trigger)
+        
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.add(request) { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
         }
-
+    }
+    
+}
