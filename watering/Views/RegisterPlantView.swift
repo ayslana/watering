@@ -24,17 +24,17 @@ struct RegisterPlantView: View {
                     Group {
                         Text("Qual o nome da ")
                             .foregroundColor(Theme.primary)
-                            .font(.system(size: 28, design: .rounded))
+                            .font(.system(size: 24, design: .rounded))
                         Text("sua plantinha? ")
                             .foregroundColor(Theme.primary)
-                            .font(.system(size: 28, design: .rounded))
+                            .font(.system(size: 24, design: .rounded))
                     }
 
 
                     TextField("Digite Aqui", text: $plantName)
                         .foregroundColor(Theme.primary)
                         .multilineTextAlignment(.center)
-                        .font(.system(size: 24, design: .rounded))
+                        .font(.system(size: 20, design: .rounded))
                         .padding()
                         .onChange(of: plantName) { newValue in
                             savePlantName()

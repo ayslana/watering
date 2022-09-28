@@ -71,7 +71,7 @@
 		D4800ACD28E4755C00669263 /* plants.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = plants.scn; sourceTree = "<group>"; };
 		D4800ACF28E4758800669263 /* cactus.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = cactus.scn; sourceTree = "<group>"; };
 		D4800AD128E4759600669263 /* flower.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = flower.scn; sourceTree = "<group>"; };
-		D4E8171528D9F7F600775EFA /* watering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watering.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4E8171528D9F7F600775EFA /* Watering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E8171828D9F7F600775EFA /* wateringApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wateringApp.swift; sourceTree = "<group>"; };
 		D4E8171C28D9F7F600775EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4E8172428D9F7F600775EFA /* watering.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = watering.xcdatamodel; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 		D4E8171628D9F7F600775EFA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D4E8171528D9F7F600775EFA /* watering.app */,
+				D4E8171528D9F7F600775EFA /* Watering.app */,
 				D4E8172A28D9F7F600775EFA /* wateringTests.xctest */,
 				D4E8173428D9F7F600775EFA /* wateringUITests.xctest */,
 			);
@@ -239,9 +239,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D4E8171428D9F7F600775EFA /* watering */ = {
+		D4E8171428D9F7F600775EFA /* Watering */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4E8173E28D9F7F600775EFA /* Build configuration list for PBXNativeTarget "watering" */;
+			buildConfigurationList = D4E8173E28D9F7F600775EFA /* Build configuration list for PBXNativeTarget "Watering" */;
 			buildPhases = (
 				D4E8171128D9F7F600775EFA /* Sources */,
 				D4E8171228D9F7F600775EFA /* Frameworks */,
@@ -251,9 +251,9 @@
 			);
 			dependencies = (
 			);
-			name = watering;
+			name = Watering;
 			productName = watering;
-			productReference = D4E8171528D9F7F600775EFA /* watering.app */;
+			productReference = D4E8171528D9F7F600775EFA /* Watering.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D4E8172928D9F7F600775EFA /* wateringTests */ = {
@@ -328,7 +328,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D4E8171428D9F7F600775EFA /* watering */,
+				D4E8171428D9F7F600775EFA /* Watering */,
 				D4E8172928D9F7F600775EFA /* wateringTests */,
 				D4E8173328D9F7F600775EFA /* wateringUITests */,
 			);
@@ -418,12 +418,12 @@
 /* Begin PBXTargetDependency section */
 		D4E8172C28D9F7F600775EFA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D4E8171428D9F7F600775EFA /* watering */;
+			target = D4E8171428D9F7F600775EFA /* Watering */;
 			targetProxy = D4E8172B28D9F7F600775EFA /* PBXContainerItemProxy */;
 		};
 		D4E8173628D9F7F600775EFA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D4E8171428D9F7F600775EFA /* watering */;
+			target = D4E8171428D9F7F600775EFA /* Watering */;
 			targetProxy = D4E8173528D9F7F600775EFA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -695,7 +695,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4E8173E28D9F7F600775EFA /* Build configuration list for PBXNativeTarget "watering" */ = {
+		D4E8173E28D9F7F600775EFA /* Build configuration list for PBXNativeTarget "Watering" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4E8173F28D9F7F600775EFA /* Debug */,

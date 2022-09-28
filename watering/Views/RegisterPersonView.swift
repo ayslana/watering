@@ -52,12 +52,12 @@ struct NameUser : View {
                 Spacer().frame(height: 50)
                 Text("Qual o seu nome?")
                     .foregroundColor(Theme.primary)
-                    .font(.system(size: 28, design: .rounded))
+                    .font(.system(size: 24, design: .rounded))
 
                 TextField("Digite Aqui", text: $personName)
                     .multilineTextAlignment(.center)
                     .foregroundColor(.gray)
-                    .font(.system(size: 24, design: .rounded))
+                    .font(.system(size: 20, design: .rounded))
                     .padding()
                     .onChange(of: personName) { newValue in
                         saveName()

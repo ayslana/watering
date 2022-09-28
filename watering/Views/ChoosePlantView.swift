@@ -91,9 +91,7 @@ struct ChoosePlantView: View {
                 self.idPlant = selected.id
                 self.typePlant = selected.type
                 self.modelNamePlant = selected.modelName
-                savePlantType()
-                notification.requestPermission()
-                
+                savePlantType()                
             })
             .navigationBarBackButtonHidden(true)
         }
