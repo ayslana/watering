@@ -19,8 +19,6 @@ struct NotificationController {
             }
         }
     }
-    
-        
 
     func doNotification()  {
         let content = UNMutableNotificationContent()
@@ -28,11 +26,12 @@ struct NotificationController {
         content.subtitle = "Lembre-se de aguá-la hoje!"
         content.sound = UNNotificationSound.default
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 4.0, repeats: false)
         
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request)
+        print("Deu certo enviar")
     }
-        }
+}
 
