@@ -24,8 +24,9 @@ struct FirstAccessView: View {
                     Image(systemName: "chevron.left")
                         .font(.title.bold())
                         .foregroundColor(Theme.primary)
-                        .frame(width: 50, height: 50)
+                        .frame(width: 2, height: 2)
                         .contentShape(Rectangle())
+                    
                         .gesture(DragGesture().onChanged({ (value) in
                             withAnimation(.interactiveSpring(response: 0.7, dampingFraction: 0.6, blendDuration: 0.6)){
                                 offset = value.translation
@@ -67,39 +68,39 @@ struct FirstAccessView: View {
                 if showHome {
                     RegisterPersonView()
                 }
-                
-                VStack {
+                ZStack {
+                    VStack {
+                        Spacer().frame(height: 120)
+                        Text("Antes de iniciarmos, precisamos de três informações.")
+                            .multilineTextAlignment(.leading)
+                            .foregroundColor(.white)
+                            .font(.system(size: 30, design: .rounded))
+                            .padding(.trailing)
+                            .offset(x: -15)
+                            .gesture(DragGesture().onChanged({ (value) in
 
-                    Spacer().frame(height: 120)
-                    Text("Antes de iniciarmos, precisamos de três informações.")
-                        .multilineTextAlignment(.leading)
-                        .foregroundColor(.white)
-                        .font(.system(size: 30, design: .rounded))
-                        .padding(.trailing)
-                        .offset(x: -15)
-                        .gesture(DragGesture().onChanged({ (value) in
-                            
-                            withAnimation(.interactiveSpring(response: 0.7, dampingFraction: 0.6, blendDuration: 0.6)){
-                                offset = value.translation
-                            }
-                            
-                        }).onEnded({(value) in
-                            let screen = UIScreen.main.bounds
-                            withAnimation(.spring()){
-                                if -offset.width > screen.width / 2 {
-                                    offset.width = -screen.height
-                                    showHome.toggle()
-                                } else {
-                                    offset = .zero
+                                withAnimation(.interactiveSpring(response: 0.7, dampingFraction: 0.6, blendDuration: 0.6)){
+                                    offset = value.translation
                                 }
-                            }
-                        }))
-                        .offset(x: 15, y: -40)
-                        .foregroundColor(Theme.secondary)
-                        .opacity(offset == .zero ? 1 : 0)
-                    
-                    Spacer().frame(height: 100)
-                
+
+                            }).onEnded({(value) in
+                                let screen = UIScreen.main.bounds
+                                withAnimation(.spring()){
+                                    if -offset.width > screen.width / 2 {
+                                        offset.width = -screen.height
+                                        showHome.toggle()
+                                    } else {
+                                        offset = .zero
+                                    }
+                                }
+                            }))
+                            .offset(x: 15, y: -40)
+                            .foregroundColor(Theme.secondary)
+                            .opacity(offset == .zero ? 1 : 0)
+
+                        Spacer().frame(height: 100)
+
+                    }
                 }
             }
         }

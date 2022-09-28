@@ -22,7 +22,7 @@ struct WateringView: View {
     @State var audioPlayer: AVAudioPlayer?
     @State var audioPlayer2: AVAudioPlayer?
     @State var dayWatering = ""
-    let notification = NotificationController()
+    let notification: () = NotificationController().doNotification()
 
 
     var rainLightningScene: SKScene {
@@ -74,7 +74,6 @@ struct WateringView: View {
             }catch {
                 print("there was some error. The error was \(error)")
             }
-            notification.doNotification()
         }
         .onReceive(timer) { _ in
             if isPressed {
@@ -83,7 +82,7 @@ struct WateringView: View {
                         isComplete = true
                         isPressed = false
                         audioPlayer?.stop()
-
+                        self.notification
                     } else {
                         progress += 0.0003
                         isComplete = false
@@ -169,10 +168,12 @@ struct WateringView: View {
                     self.progress = 0.1
                     self.dayWatering = "\(Date.now.formatted(.dateTime.weekday(.wide).hour().minute().second()))"
                     saveLastDate()
+
                 }
             }
             .onDisappear() {
                 self.isSucess = false
+
             }
     }
     

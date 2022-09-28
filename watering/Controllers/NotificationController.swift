@@ -1,10 +1,3 @@
-//
-//  NotificationController.swift
-//  watering
-//
-//  Created by Ayslana Riene on 20/09/22.
-//
-
 import UserNotifications
 
 struct NotificationController {

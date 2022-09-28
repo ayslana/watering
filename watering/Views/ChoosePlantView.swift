@@ -19,7 +19,7 @@ struct ChoosePlantView: View {
     @Namespace var namespace
     
     var body: some View {
-        ZStack (alignment: .center){
+        ZStack {
             Theme.secondary.ignoresSafeArea()
             Spacer().frame(width: 30, height: 30)
                 .padding([.leading,.top])
@@ -91,7 +91,10 @@ struct ChoosePlantView: View {
                 self.idPlant = selected.id
                 self.typePlant = selected.type
                 self.modelNamePlant = selected.modelName
-                savePlantType()})
+                savePlantType()
+                notification.requestPermission()
+                
+            })
             .navigationBarBackButtonHidden(true)
         }
     }
