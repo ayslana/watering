@@ -9,7 +9,7 @@ import SwiftUI
 import SceneKit
 
 struct ChangePlantView: View {
-    
+
     var columns = Array(repeating: GridItem(.flexible(), spacing: 15), count: 2)
     @State var selected: DropWaterModel = PlantsType[0]
     @State var show = false
@@ -17,7 +17,7 @@ struct ChangePlantView: View {
     @State var typePlant: String = ""
     @State var modelNamePlant: String = ""
     @Namespace var namespace
-    
+
     var body: some View {
         ZStack {
             Theme.secondary.ignoresSafeArea()
@@ -36,9 +36,9 @@ struct ChangePlantView: View {
         }
         .background(.white)
     }
-    
+
     var cabeçalhoView: some View {
-        Text("Selecione o novo tipo da sua plantinha")
+        Text("Select your new plant type")
             .multilineTextAlignment(.center)
             .foregroundColor(Theme.primary)
             .font(.system(size: 20, design: .rounded))
@@ -79,7 +79,7 @@ struct ChangePlantView: View {
             NavigationLink (
                 destination : EditView().navigationBarBackButtonHidden(),
                 label : {
-                    Text ("Selecione")
+                    Text ("Select")
                         .foregroundColor(Theme.primary)
                         .frame(width: 200, height: 50)
                         .font(.system(size: 20, design: .rounded))
@@ -119,7 +119,7 @@ struct ChangePlantView: View {
             }
         }
     }
-    
+
     func savePlantType() {
         UserDefaults.standard.setPlantType(value: modelNamePlant)
         UserDefaults.standard.setPlantTypeName(value: typePlant)

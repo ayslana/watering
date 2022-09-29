@@ -193,8 +193,8 @@
 				D4E8174A28D9FC1500775EFA /* RegisterPersonView.swift */,
 				4518985E28E6283B009D3B4D /* NameUser.swift */,
 				D4E8174828D9FBEF00775EFA /* RegisterPlantView.swift */,
-				D4E8175328D9FFE300775EFA /* WateringView.swift */,
 				D42A4E8C28DBFAD900B0ACA9 /* ChoosePlantView.swift */,
+				D4E8175328D9FFE300775EFA /* WateringView.swift */,
 				45CBD11B28E5401F0015BA70 /* EditView.swift */,
 				451495E328E5D14B001DF3A8 /* ChangePlantView.swift */,
 			);

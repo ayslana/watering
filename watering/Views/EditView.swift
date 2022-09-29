@@ -46,7 +46,7 @@ struct EditView: View {
         }
     }
     var save: some View {
-        Text ("Salvar")
+        Text ("Save")
             .foregroundColor(Theme.primary)
             .frame(width: 200, height: 50)
             .font(.system(size: 20, design: .rounded))

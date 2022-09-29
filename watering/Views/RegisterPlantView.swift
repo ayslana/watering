@@ -30,10 +30,10 @@ struct RegisterPlantView: View {
     }
     var question: some View {
         Group {
-            Text("Qual o nome da ")
+            Text("What is the name of your plant?")
                 .foregroundColor(Theme.primary)
                 .font(.system(size: 24, design: .rounded))
-            Text("sua plantinha? ")
+            Text("of your plant?")
                 .foregroundColor(Theme.primary)
                 .font(.system(size: 24, design: .rounded))
         }
@@ -50,7 +50,7 @@ struct RegisterPlantView: View {
     }
     var navigation: some View {
         NavigationLink(destination: ChoosePlantView().navigationBarHidden(true), label: {
-            Text("Próximo")
+            Text("Next")
                 .foregroundColor(Theme.primary)
                 .padding()
                 .frame(width: 200, height: 50)

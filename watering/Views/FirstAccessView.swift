@@ -50,7 +50,7 @@ struct FirstAccessView: View {
         .navigationBarBackButtonHidden(true)
     }
     var apresetation: some View {
-        Text("Antes de iniciarmos, precisamos de três informações.")
+        Text("Before we start, we need three pieces of information.")
             .multilineTextAlignment(.leading)
             .foregroundColor(.white)
             .font(.system(size: 30, design: .rounded))

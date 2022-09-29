@@ -41,10 +41,10 @@ struct WateringView: View {
                 ZStack{
                     VStack {
                         Group {
-                            Text("Olá, \(UserDefaults.standard.getPersonName() ?? "Unset").").foregroundColor(Theme.primary)
+                            Text("Hello, \(UserDefaults.standard.getPersonName() ?? "Unset").").foregroundColor(Theme.primary)
                             Text(" \(UserDefaults.standard.getPlantName() ?? "Unset" ) ").foregroundColor(Theme.primary) +
-                            Text("está sem receber água desde: ").foregroundColor(Theme.primary)
-                            Text("\(UserDefaults.standard.getLastDate() ?? "muito tempo")" )
+                            Text("has not received water since: ").foregroundColor(Theme.primary)
+                            Text("\(UserDefaults.standard.getLastDate() ?? "long time")" )
                         }
                         .multilineTextAlignment(.center)
                         .foregroundColor(Theme.font)
@@ -157,6 +157,7 @@ struct WateringView: View {
                 Circle()
                     .stroke(Theme.font, lineWidth: 2))
             .gesture(onHoldGesture)
+            .scaleEffect(isPressed ? 1.2 : 1)
     }
     var animationRainView: some View {
         //ANIMAÇÃO DA CHUVA
