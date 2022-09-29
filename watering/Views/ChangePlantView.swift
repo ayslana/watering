@@ -1,14 +1,14 @@
 //
-//  ChoosePlantView.swift
-//  watering
+//  ChangePlantView.swift
+//  Watering
 //
-//  Created by Ayslana Riene on 21/09/22.
+//  Created by Narely Lima on 29/09/22.
 //
 
 import SwiftUI
 import SceneKit
 
-struct ChoosePlantView: View {
+struct ChangePlantView: View {
     
     var columns = Array(repeating: GridItem(.flexible(), spacing: 15), count: 2)
     @State var selected: DropWaterModel = PlantsType[0]
@@ -29,7 +29,7 @@ struct ChoosePlantView: View {
                 if show {
                     VStack{
                         scalePlantView
-                        nextView
+                        selectionPlant
                     }
                 }
             }
@@ -38,7 +38,7 @@ struct ChoosePlantView: View {
     }
     
     var cabeçalhoView: some View {
-        Text("Escolha o tipo da sua plantinha")
+        Text("Selecione o novo tipo da sua plantinha")
             .multilineTextAlignment(.center)
             .foregroundColor(Theme.primary)
             .font(.system(size: 20, design: .rounded))
@@ -54,7 +54,7 @@ struct ChoosePlantView: View {
                             scene.background.contents = UIColor.clear
                             return scene
                         }(),
-                        options: [.autoenablesDefaultLighting, .allowsCameraControl])
+                                  options: [.autoenablesDefaultLighting, .allowsCameraControl])
                         .frame(width: UIScreen.main.bounds.width/1.8, height: UIScreen.main.bounds.height / 3.5 , alignment: .center)
                         .cornerRadius(15)
                         .onTapGesture {
@@ -74,12 +74,12 @@ struct ChoosePlantView: View {
             .padding(.horizontal)
         }
     }
-    var nextView: some View {
+    var selectionPlant: some View {
         VStack (alignment: .center){
             NavigationLink (
-                destination : WateringView().navigationBarHidden(true),
+                destination : EditView().navigationBarBackButtonHidden(),
                 label : {
-                    Text ("Próximo")
+                    Text ("Selecione")
                         .foregroundColor(Theme.primary)
                         .frame(width: 200, height: 50)
                         .font(.system(size: 20, design: .rounded))
@@ -91,7 +91,7 @@ struct ChoosePlantView: View {
                 self.idPlant = selected.id
                 self.typePlant = selected.type
                 self.modelNamePlant = selected.modelName
-                savePlantType()                
+                savePlantType()
             })
             .navigationBarBackButtonHidden(true)
         }
@@ -127,8 +127,8 @@ struct ChoosePlantView: View {
     }
 }
 
-struct ChoosePlantView_Previews: PreviewProvider {
+struct ChangePlantView_Previews: PreviewProvider {
     static var previews: some View {
-        ChoosePlantView()
+        ChangePlantView()
     }
 }

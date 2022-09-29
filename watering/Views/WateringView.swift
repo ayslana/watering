@@ -35,61 +35,76 @@ struct WateringView: View {
     let timer = Timer.publish(every: 0.003, on: .main, in: .common).autoconnect()
 
     var body: some View {
-        ZStack(alignment: .bottom) {
-            Theme.secondary.ignoresSafeArea()
-            VStack {
-                Group {
-                    Text("Olá, \(UserDefaults.standard.getPersonName() ?? "Unset").").foregroundColor(Theme.primary) +
-                    Text(" \(UserDefaults.standard.getPlantName() ?? "Unset" ) ").foregroundColor(Theme.primary) +
-                    Text("está sem receber água desde: ").foregroundColor(Theme.primary) +
-                    Text("\(UserDefaults.standard.getLastDate() ?? "muito tempo")" )
+        NavigationView {
+            ZStack(alignment: .bottom) {
+                Theme.secondary.ignoresSafeArea()
+                ZStack{
+                    VStack {
+                        Group {
+                            Text("Olá, \(UserDefaults.standard.getPersonName() ?? "Unset").").foregroundColor(Theme.primary)
+                            Text(" \(UserDefaults.standard.getPlantName() ?? "Unset" ) ").foregroundColor(Theme.primary) +
+                            Text("está sem receber água desde: ").foregroundColor(Theme.primary)
+                            Text("\(UserDefaults.standard.getLastDate() ?? "muito tempo")" )
+                        }
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(Theme.font)
+                        .font(.system(size: 24, design: .rounded))
+                    }
+                    .offset(y: -UIScreen.main.bounds.height/2.4)
+                    .padding(5)
+                    VStack {
+                        treeView
+                    } .offset(y: -UIScreen.main.bounds.height/6)
                 }
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(Theme.font)
+
+                if !isComplete {
+                    waterWaveView
+                }
+                button
                     .padding()
-                    .font(.system(size: 20, design: .rounded))
-                
-                Spacer().frame(height: 40)
-                treeView
-            }
-            
-            if !isComplete {
-                waterWaveView
-            }
-            button
-                .padding()
-            if isComplete {
-                animationRainView
-                if isSucess {
+                if isComplete {
                     animationRainView
-                }
-            }
-        }
-        .navigationBarBackButtonHidden(true)
-        .onAppear {
-            //MUSICA DA AGUA SUBINDO
-            let soundURL = NSURL(fileURLWithPath: Bundle.main.path(forResource: "WaterSound", ofType: "mp3")!)
-            do{
-                audioPlayer = try AVAudioPlayer(contentsOf: soundURL as URL)
-            }catch {
-                print("there was some error. The error was \(error)")
-            }
-        }
-        .onReceive(timer) { _ in
-            if isPressed {
-                withAnimation(Animation.easeInOut(duration: 2)) {
-                    if progress >= 0.5 {
-                        isComplete = true
-                        isPressed = false
-                        audioPlayer?.stop()
-                        self.notification
-                    } else {
-                        progress += 0.0003
-                        isComplete = false
+                    if isSucess {
+                        animationRainView
                     }
                 }
             }
+            .navigationBarBackButtonHidden(true)
+            .onAppear {
+                //MUSICA DA AGUA SUBINDO
+                let soundURL = NSURL(fileURLWithPath: Bundle.main.path(forResource: "WaterSound", ofType: "mp3")!)
+                do{
+                    audioPlayer = try AVAudioPlayer(contentsOf: soundURL as URL)
+                }catch {
+                    print("there was some error. The error was \(error)")
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: EditView()) {
+                        Text("Edit")
+                            .foregroundColor(Theme.primary)
+                    }
+                }
+            }
+            .onReceive(timer) { _ in
+                if isPressed {
+                    withAnimation(Animation.easeInOut(duration: 2)) {
+                        if progress >= 0.5 {
+                            isComplete = true
+                            isPressed = false
+                            audioPlayer?.stop()
+                            self.notification
+                        } else {
+                            progress += 0.0003
+                            isComplete = false
+                        }
+                    }
+                }
+            }
+            
         }
+        .navigationBarBackButtonHidden()
     }
     var treeView: some View {
         //INSERÇÃO DO MODELO 3D
@@ -102,7 +117,6 @@ struct WateringView: View {
                   options: [.autoenablesDefaultLighting, .allowsCameraControl])
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.4 , alignment: .center)
     }
-
     var waterWaveView: some View {
         GeometryReader{ proxy in
             let size = proxy.size
