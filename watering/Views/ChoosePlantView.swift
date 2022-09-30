@@ -38,7 +38,7 @@ struct ChoosePlantView: View {
     }
     
     var cabeçalhoView: some View {
-        Text("Select your plant type")
+        Text("Choose your plant type")
             .multilineTextAlignment(.center)
             .foregroundColor(Theme.primary)
             .font(.system(size: 20, design: .rounded))
@@ -79,7 +79,7 @@ struct ChoosePlantView: View {
             NavigationLink (
                 destination : WateringView().navigationBarHidden(true),
                 label : {
-                    Text ("Select")
+                    Text ("Next")
                         .foregroundColor(Theme.primary)
                         .frame(width: 200, height: 50)
                         .font(.system(size: 20, design: .rounded))

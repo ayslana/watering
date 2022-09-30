@@ -13,7 +13,7 @@ import SpriteKit
 
 
 struct WateringView: View {
-
+    
     @State var progress: CGFloat = 0.1
     @State var startAnimation: CGFloat = 0
     @State var isComplete: Bool = false
@@ -23,8 +23,8 @@ struct WateringView: View {
     @State var audioPlayer2: AVAudioPlayer?
     @State var dayWatering = ""
     let notification: () = NotificationController().doNotification()
-
-
+    
+    
     var rainLightningScene: SKScene {
         let scene = RainSceneView.shared
         scene.size = UIScreen.screenSize
@@ -33,7 +33,7 @@ struct WateringView: View {
     }
     //    var items = [InfoUser]()
     let timer = Timer.publish(every: 0.003, on: .main, in: .common).autoconnect()
-
+    
     var body: some View {
         NavigationView {
             ZStack(alignment: .bottom) {
@@ -117,6 +117,7 @@ struct WateringView: View {
                   options: [.autoenablesDefaultLighting, .allowsCameraControl])
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.4 , alignment: .center)
     }
+    
     var waterWaveView: some View {
         GeometryReader{ proxy in
             let size = proxy.size
@@ -151,11 +152,11 @@ struct WateringView: View {
     var button: some View {
         Image(systemName: "drop")
             .font(.system(size: 30))
-            .foregroundColor(Theme.font)
+            .foregroundColor(Theme.primary)
             .padding(25)
             .overlay(
                 Circle()
-                    .stroke(Theme.font, lineWidth: 2))
+                    .stroke(Theme.primary, lineWidth: 2))
             .gesture(onHoldGesture)
             .scaleEffect(isPressed ? 1.2 : 1)
     }
@@ -183,12 +184,12 @@ struct WateringView: View {
                     self.progress = 0.1
                     self.dayWatering = "\(Date.now.formatted(.dateTime.weekday(.wide).hour().minute().second()))"
                     saveLastDate()
-
+                    
                 }
             }
             .onDisappear() {
                 self.isSucess = false
-
+                
             }
     }
     

@@ -16,8 +16,20 @@ class ViewRouter: ObservableObject {
         if !UserDefaults.standard.bool(forKey: "didLaunchBefore") {
             UserDefaults.standard.set(true, forKey: "didLaunchBefore")
             currentPage = "FirstAccessView"
-        } else {
-            currentPage = "WateringView"
+        }
+        else {
+            if (UserDefaults.standard.getPersonName() == nil) {
+                currentPage = "FirstAccessView"
+            }
+            else if (UserDefaults.standard.getPlantName() == nil) {
+                currentPage = "FirstAccessView"
+            }
+            else if (UserDefaults.standard.getPlantType() == nil) {
+                currentPage = "FirstAccessView"
+            }
+            else if UserDefaults.standard.bool(forKey: "didLaunchBefore") {
+                currentPage = "WateringView"
+            }
         }
     }
 }
