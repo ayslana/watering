@@ -154,8 +154,8 @@ struct WateringView: View {
             .font(.system(size: 30))
             .foregroundColor(Theme.primary)
             .padding(25)
-            .overlay(
-                Circle())
+            .background(Theme.secondary)
+            .cornerRadius(50)
             .gesture(onHoldGesture)
             .scaleEffect(isPressed ? 1.2 : 1)
     }
