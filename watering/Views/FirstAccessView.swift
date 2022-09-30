@@ -71,10 +71,10 @@ struct FirstAccessView: View {
                 ZStack {
                     VStack {
                         Spacer().frame(height: 120)
-                        Text("Antes de iniciarmos, precisamos de três informações.")
+                        Text("Welcome to Watering! Before we start, we need to ask you three questions.")
                             .multilineTextAlignment(.leading)
                             .foregroundColor(.white)
-                            .font(.system(size: 30, design: .rounded))
+                            .font(.system(size: 24, design: .rounded))
                             .padding(.trailing)
                             .offset(x: -15)
                             .gesture(DragGesture().onChanged({ (value) in

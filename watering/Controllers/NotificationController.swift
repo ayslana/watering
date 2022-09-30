@@ -17,8 +17,8 @@ struct NotificationController {
     
     func doNotification()  {
         let content = UNMutableNotificationContent()
-        content.title = "Sua plantinha está com sede 😟"
-        content.subtitle = "Lembre-se de aguá-la hoje!"
+        content.title = "\(UserDefaults.standard.getPlantName() ?? "") is thirsty 😟"
+        content.subtitle = "Remember to watering it today!"
         
         var dateComponents = DateComponents()
         dateComponents.calendar = Calendar.current

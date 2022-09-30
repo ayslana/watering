@@ -39,11 +39,11 @@ struct WateringView: View {
             Theme.secondary.ignoresSafeArea()
             VStack {
                 Group {
-                    Text("Olá,") +
-                    Text(" \(UserDefaults.standard.getPersonName() ?? "").").foregroundColor(Theme.primary) +
+                    Text("Hello,") +
+                    Text(" \(UserDefaults.standard.getPersonName() ?? "")!").foregroundColor(Theme.primary) +
                     Text(" \(UserDefaults.standard.getPlantName() ?? "" ) ").foregroundColor(Theme.primary) +
-                    Text("está sem receber água desde: ") +
-                    Text("\(UserDefaults.standard.getLastDate() ?? "muito tempo")"
+                    Text("has not received water since: ") +
+                    Text("\(UserDefaults.standard.getLastDate() ?? "a long time")"
                     ).foregroundColor(Theme.primary)
                 }
                 .multilineTextAlignment(.center)

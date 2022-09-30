@@ -22,16 +22,16 @@ struct RegisterPlantView: View {
                 VStack {
                     Spacer().frame(height: 50)
                     Group {
-                        Text("Qual o nome da ")
+                        Text("What is the name")
                             .foregroundColor(Theme.primary)
                             .font(.system(size: 24, design: .rounded))
-                        Text("sua plantinha? ")
+                        Text("of your plant? ")
                             .foregroundColor(Theme.primary)
                             .font(.system(size: 24, design: .rounded))
                     }
 
 
-                    TextField("Digite Aqui", text: $plantName)
+                    TextField("Type Here", text: $plantName)
                         .foregroundColor(Theme.primary)
                         .multilineTextAlignment(.center)
                         .font(.system(size: 20, design: .rounded))
@@ -45,7 +45,7 @@ struct RegisterPlantView: View {
                     Spacer().frame(height: 50)
 
                     NavigationLink(destination: ChoosePlantView().navigationBarHidden(true), label: {
-                        Text("Próximo")
+                        Text("Next")
                             .foregroundColor(Theme.primary)
                             .padding()
                             .frame(width: 200, height: 50)
