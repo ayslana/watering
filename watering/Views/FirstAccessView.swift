@@ -50,10 +50,10 @@ struct FirstAccessView: View {
         .navigationBarBackButtonHidden(true)
     }
     var apresetation: some View {
-        Text("Before we start, we need three pieces of information.")
+        Text("Welcome to Watering! Before we start, we need to ask three questions.")
             .multilineTextAlignment(.leading)
             .foregroundColor(.white)
-            .font(.system(size: 30, design: .rounded))
+            .font(.system(size: 24, design: .rounded))
             .padding(.trailing)
             .offset(x: -15)
             .gesture(onHoldGesture)

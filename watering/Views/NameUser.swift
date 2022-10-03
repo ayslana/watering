@@ -31,11 +31,11 @@ struct NameUser : View {
     var question: some View {
         Text("What is your name?")
             .foregroundColor(Theme.primary)
-            .font(.system(size: 24, design: .rounded))
+            .font(.system(size: 22, design: .rounded))
 
     }
     var digiteAqui: some View{
-        TextField("Type here", text: $personName)
+        TextField("Type Here", text: $personName)
             .multilineTextAlignment(.center)
             .foregroundColor(.gray)
             .font(.system(size: 20, design: .rounded))

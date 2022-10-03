@@ -32,10 +32,10 @@ struct RegisterPlantView: View {
         Group {
             Text("What is the name")
                 .foregroundColor(Theme.primary)
-                .font(.system(size: 24, design: .rounded))
+                .font(.system(size: 22, design: .rounded))
             Text("of your plant?")
                 .foregroundColor(Theme.primary)
-                .font(.system(size: 24, design: .rounded))
+                .font(.system(size: 22, design: .rounded))
         }
     }
     var digiteAqui: some View{

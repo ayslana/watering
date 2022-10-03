@@ -99,14 +99,15 @@ struct WateringView: View {
     var information: some View {
         VStack {
             Group {
-                Text("Hello, \(UserDefaults.standard.getPersonName() ?? "Unset").").foregroundColor(Theme.primary)
+                Text("Hello, ").foregroundColor(Theme.font) +
+                Text("\(UserDefaults.standard.getPersonName() ?? "Unset").").foregroundColor(Theme.primary)
                 Text(" \(UserDefaults.standard.getPlantName() ?? "Unset" ) ").foregroundColor(Theme.primary) +
-                Text("has not received water since: ").foregroundColor(Theme.primary)
+                Text("has not received water since: ").foregroundColor(Theme.font)
                 Text("\(UserDefaults.standard.getLastDate() ?? "long time")" )
             }
             .multilineTextAlignment(.center)
             .foregroundColor(Theme.font)
-            .font(.system(size: 24, design: .rounded))
+            .font(.system(size: 20, design: .rounded))
         }
 
     }
