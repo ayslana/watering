@@ -30,7 +30,7 @@ struct RegisterPlantView: View {
     }
     var question: some View {
         Group {
-            Text("What is the name of your plant?")
+            Text("What is the name")
                 .foregroundColor(Theme.primary)
                 .font(.system(size: 24, design: .rounded))
             Text("of your plant?")
@@ -39,7 +39,7 @@ struct RegisterPlantView: View {
         }
     }
     var digiteAqui: some View{
-        TextField("Digite Aqui", text: $plantName)
+        TextField("Type Here", text: $plantName)
             .foregroundColor(Theme.primary)
             .multilineTextAlignment(.center)
             .font(.system(size: 20, design: .rounded))

@@ -22,11 +22,12 @@ struct WateringView: View {
     @State var audioPlayer: AVAudioPlayer?
     @State var audioPlayer2: AVAudioPlayer?
     @State var dayWatering = ""
+    @State var valueAnimation: Bool = false
     let notification: () = NotificationController().doNotification()
     
     
     var rainLightningScene: SKScene {
-        let scene = RainSceneView.shared
+        let scene = RainSceneView()
         scene.size = UIScreen.screenSize
         scene.scaleMode = .fill
         return scene
@@ -39,35 +40,24 @@ struct WateringView: View {
             ZStack(alignment: .bottom) {
                 Theme.secondary.ignoresSafeArea()
                 ZStack{
-                    VStack {
-                        Group {
-                            Text("Hello, \(UserDefaults.standard.getPersonName() ?? "Unset").").foregroundColor(Theme.primary)
-                            Text(" \(UserDefaults.standard.getPlantName() ?? "Unset" ) ").foregroundColor(Theme.primary) +
-                            Text("has not received water since: ").foregroundColor(Theme.primary)
-                            Text("\(UserDefaults.standard.getLastDate() ?? "long time")" )
-                        }
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Theme.font)
-                        .font(.system(size: 24, design: .rounded))
-                    }
+                    information
                     .offset(y: -UIScreen.main.bounds.height/2.4)
                     .padding(5)
                     VStack {
                         treeView
                     } .offset(y: -UIScreen.main.bounds.height/6)
                 }
-
                 if !isComplete {
                     waterWaveView
                 }
                 button
                     .padding()
                 if isComplete {
-                    animationRainView
+                    animationRainView(nil, value: true)
                     if isSucess {
-                        animationRainView
+                        animationRainView(nil, value: true)
                     }
-                }
+                } 
             }
             .navigationBarBackButtonHidden(true)
             .onAppear {
@@ -89,7 +79,7 @@ struct WateringView: View {
             }
             .onReceive(timer) { _ in
                 if isPressed {
-                    withAnimation(Animation.easeInOut(duration: 2)) {
+                    withAnimation(Animation.easeInOut(duration: 1)) {
                         if progress >= 0.5 {
                             isComplete = true
                             isPressed = false
@@ -106,6 +96,20 @@ struct WateringView: View {
         }
         .navigationBarBackButtonHidden()
     }
+    var information: some View {
+        VStack {
+            Group {
+                Text("Hello, \(UserDefaults.standard.getPersonName() ?? "Unset").").foregroundColor(Theme.primary)
+                Text(" \(UserDefaults.standard.getPlantName() ?? "Unset" ) ").foregroundColor(Theme.primary) +
+                Text("has not received water since: ").foregroundColor(Theme.primary)
+                Text("\(UserDefaults.standard.getLastDate() ?? "long time")" )
+            }
+            .multilineTextAlignment(.center)
+            .foregroundColor(Theme.font)
+            .font(.system(size: 24, design: .rounded))
+        }
+
+    }
     var treeView: some View {
         //INSERÇÃO DO MODELO 3D
         PlantView(scene: {
@@ -121,7 +125,7 @@ struct WateringView: View {
     var waterWaveView: some View {
         GeometryReader{ proxy in
             let size = proxy.size
-            //FUNCAO QUE PERMITE QUE A ONDA CRESÇA
+            //FUNCAO QUE PERMITE QUE A ONDA SUBA NA TELA
             WaterWaveView(progress: progress, waveHeight: 0.025, offset: startAnimation)
                 .fill(Theme.water)
                 .opacity(0.5)
@@ -157,10 +161,39 @@ struct WateringView: View {
             .background(Theme.secondary)
             .cornerRadius(50)
             .gesture(onHoldGesture)
-            .scaleEffect(isPressed ? 1.2 : 1)
     }
-    var animationRainView: some View {
-        //ANIMAÇÃO DA CHUVA
+//    var animationRainView: some View {
+//        //ANIMAÇÃO DA CHUVA
+//        SpriteView(scene: rainLightningScene, options: [.allowsTransparency])
+//            .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
+//            .ignoresSafeArea()
+//            .onAppear {
+//                //SOM DO DONE
+//                let soundURL2 = NSURL(fileURLWithPath: Bundle.main.path(forResource: "DoneSound", ofType: "mp3")!)
+//                do{
+//                    audioPlayer2 = try AVAudioPlayer(contentsOf: soundURL2 as URL)
+//                    audioPlayer2?.play()
+//                }catch {
+//                    print("there was some error. The error was \(error)")
+//                }
+//            }
+//            .onAppear{
+//                //DEFINE O TEMPO DE PERMANENCIA DAS GOTINHAS
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+//                    self.startAnimation = 0
+//                    self.isSucess = true
+//                    self.isComplete = false
+//                    self.progress = 0.1
+//                    self.dayWatering = "\(Date.now.formatted(.dateTime.weekday(.wide).hour().minute().second()))"
+//                    saveLastDate()
+//
+//                }
+//            }
+//            .onDisappear() {
+//                self.isSucess = false
+//            }
+//    }
+    func animationRainView <valueAnimation>(_ animation: Animation?, value: valueAnimation) -> some View where valueAnimation : Equatable {
         SpriteView(scene: rainLightningScene, options: [.allowsTransparency])
             .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
             .ignoresSafeArea()
@@ -183,15 +216,13 @@ struct WateringView: View {
                     self.progress = 0.1
                     self.dayWatering = "\(Date.now.formatted(.dateTime.weekday(.wide).hour().minute().second()))"
                     saveLastDate()
-                    
+
                 }
             }
             .onDisappear() {
                 self.isSucess = false
-                
             }
     }
-    
     func saveLastDate() {
         UserDefaults.standard.setLastDate(value: dayWatering)
     }
