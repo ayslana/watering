@@ -8,52 +8,45 @@
 import SwiftUI
 import SceneKit
 
-
 struct EditView: View {
     @State var personName: String = "\(UserDefaults.standard.getPersonName() ?? "Unset")"
     @State var plantName: String = "\(UserDefaults.standard.getPlantName() ?? "Unset")"
     var body: some View {
-        NavigationView {
-            VStack {
-                NavigationLink(destination: ChangePlantView().navigationBarBackButtonHidden()) {
-                    treeView
-                        .offset(y: -100)
-                        .frame(height: UIScreen.main.bounds.height/1.7)
-                }
-                informations
-                NavigationLink (
-                    destination : WateringView().navigationBarBackButtonHidden(),
-                    label : {
-                        save
+        VStack {
+            informations
+            NavigationLink(destination: ChangePlantView()) {
+                treeView
+                    .frame(height: UIScreen.main.bounds.height/2)
+            }
+            .position(x: 200, y: -10)
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationLink(destination: WateringView().navigationBarBackButtonHidden(), label: { save })
+                    .transition(.move(edge: .trailing))
+                    .simultaneousGesture(TapGesture().onEnded{
+                        saveName()
+                        savePlantName()
                     })
-                .transition(.move(edge: .trailing))
-                .simultaneousGesture(TapGesture().onEnded{
-                    saveName()
-                    savePlantName()
-                })
             }
-        }.navigationBarBackButtonHidden()
-    }
-    
-    var informations: some View {
-        List {
-            Section(header: Text("Informations")) {
-                TextField("\(UserDefaults.standard.getPersonName() ?? "Unset")", text: $personName)
-                TextField("\(UserDefaults.standard.getPlantName() ?? "Unset")", text: $plantName)
-            }
-            .foregroundColor(Theme.primary)
-            .headerProminence(.increased)
         }
     }
+    var informations: some View {
+        List{
+            TextField("\(UserDefaults.standard.getPersonName() ?? "Unset")", text: $personName)
+                .foregroundColor(Theme.primary)
+                .listRowBackground(Theme.primary.opacity(0.2))
+            TextField("\(UserDefaults.standard.getPlantName() ?? "Unset")", text: $plantName)
+                .foregroundColor(Theme.primary)
+                .listRowBackground(Theme.primary.opacity(0.2))
+        }
+        .listStyle(.insetGrouped)
+        .scrollContentBackground(.hidden)
+    }
     var save: some View {
-        Text ("Save")
+        Text("Save")
             .foregroundColor(Theme.primary)
-            .frame(width: 200, height: 50)
-            .font(.system(size: 20, design: .rounded))
-            .overlay(RoundedRectangle(cornerRadius: 15)
-                .stroke(Theme.primary, lineWidth: 2))
-            .padding()
-                }
+    }
     var treeView: some View {
         //INSERÇÃO DO MODELO 3D
         PlantView(scene: {
@@ -63,7 +56,7 @@ struct EditView: View {
             return scene
         }(),
                   options: [.autoenablesDefaultLighting, .allowsCameraControl])
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.4 , alignment: .center)
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/2, alignment: .center)
     }
     func saveName() {
         UserDefaults.standard.setPersonName(value: personName)
@@ -71,7 +64,6 @@ struct EditView: View {
     func savePlantName() {
         UserDefaults.standard.setPlantName(value: plantName)
     }
-    
 }
 
 struct EditView_Previews: PreviewProvider {

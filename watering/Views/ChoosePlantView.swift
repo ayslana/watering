@@ -55,7 +55,7 @@ struct ChoosePlantView: View {
                             return scene
                         }(),
                         options: [.autoenablesDefaultLighting, .allowsCameraControl])
-                        .frame(width: UIScreen.main.bounds.width/1.8, height: UIScreen.main.bounds.height / 3.5 , alignment: .center)
+                        .frame(width: UIScreen.main.bounds.width/1.5, height: UIScreen.main.bounds.height / 3.5 , alignment: .center)
                         .cornerRadius(15)
                         .onTapGesture {
                             withAnimation(.easeOut){
@@ -63,11 +63,12 @@ struct ChoosePlantView: View {
                                 selected = plant
                             }
                         }
+                        //pesquisar pra que serve
                         .matchedGeometryEffect(id: plant.id, in: namespace)
                         Text(plant.type)
                             .multilineTextAlignment(.center)
                             .foregroundColor(Theme.primary)
-                            .font(.system(size: 15, design: .rounded))
+                            .font(.system(size: 20, design: .rounded))
                     }
                 }
             }

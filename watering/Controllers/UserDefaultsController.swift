@@ -4,6 +4,7 @@
 //
 //  Created by Ayslana Riene on 26/09/22.
 //
+//por que utilizar enum: https://www.hackingwithswift.com/read/0/14/enumerations
 
 import Foundation
 
@@ -17,11 +18,13 @@ extension UserDefaults {
         case plantTypeName = "plantTypeName"
         case lastDate = "lastDate"
     }
-
+    //As funcoes que começam com "set" sao responsaveis por pegar o valor digitado
+    //ou escolhido pelo usuario
     func setPersonName(value: String) {
         set(value, forKey: UserDefaultsKeys.nameUser.rawValue)
     }
-
+    //As funcoes que começam com "get" sao responsaveis por retornar o valor
+    //digitado ou escolhido pelo usuario
     func getPersonName() -> String? {
         return string(forKey: UserDefaultsKeys.nameUser.rawValue)
     }

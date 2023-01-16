@@ -77,7 +77,7 @@ struct ChangePlantView: View {
     var selectionPlant: some View {
         VStack (alignment: .center){
             NavigationLink (
-                destination : EditView().navigationBarBackButtonHidden(),
+                destination : EditView(),
                 label : {
                     Text ("Select")
                         .foregroundColor(Theme.primary)
