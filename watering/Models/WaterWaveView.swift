@@ -9,6 +9,11 @@ import Foundation
 import SceneKit
 import SwiftUI
 
+//struct que controla a onda
+//progress: avanço que a onda da por minuto
+//waveHeight: amplitude inicial da onda
+//Path: serve para desenhar formas personalizadas, no caso, nossa ondinha
+//https://www.hackingwithswift.com/books/ios-swiftui/creating-custom-paths-with-swiftui
 struct WaterWaveView: Shape {
     var progress: CGFloat
     var waveHeight: CGFloat
@@ -17,10 +22,12 @@ struct WaterWaveView: Shape {
         get {offset}
         set {offset = newValue}
     }
+    //Funcao responsavel por personalizar uma visualizacao retangular(CGRect)
     func path(in rect: CGRect) -> Path {
         return Path{ path in
             path.move(to: .zero)
             let progressHeight: CGFloat = (1 - progress) * rect.height
+            
             let height = (waveHeight * rect.height)
             for value in stride(from: 0, to: rect.width, by: 2){
                 let x: CGFloat = value

@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct FirstAccessView: View {
+    
     @State var offset : CGSize = .zero
     @State var showHome = false
     let notification = NotificationController()
@@ -25,7 +26,7 @@ struct FirstAccessView: View {
                             .frame(width: 2, height: 2)
                             .contentShape(Rectangle())
                             .gesture(onHoldGesture)
-                            .offset(x: 15, y: -40)
+                            .offset(x: -CGFloat(Int(UIScreen.main.bounds.width/50)), y: CGFloat(Int(UIScreen.main.bounds.height/12)))
                             .foregroundColor(.white)
                             .opacity(offset == .zero ? 1 : 0)
                         ,alignment: .topTrailing

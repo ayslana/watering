@@ -57,7 +57,7 @@ struct WateringView: View {
                     if isSucess {
                         animationRainView(nil, value: true)
                     }
-                } 
+                }
             }
             .navigationBarBackButtonHidden(true)
             .onAppear {
@@ -71,10 +71,8 @@ struct WateringView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: EditView()) {
-                        Text("Edit")
-                            .foregroundColor(Theme.primary)
-                    }
+                    NavigationLink(destination: EditView(), label: { Text("Edit")
+                        .foregroundColor(Theme.primary) })
                 }
             }
             .onReceive(timer) { _ in
@@ -92,9 +90,9 @@ struct WateringView: View {
                     }
                 }
             }
-            
         }
-        .navigationBarBackButtonHidden()
+        .accentColor(Theme.primary)
+//        .navigationBarBackButtonHidden()
     }
     var information: some View {
         VStack {
@@ -102,8 +100,8 @@ struct WateringView: View {
                 Text("Hello, ").foregroundColor(Theme.font) +
                 Text("\(UserDefaults.standard.getPersonName() ?? "Unset").").foregroundColor(Theme.primary)
                 Text(" \(UserDefaults.standard.getPlantName() ?? "Unset" ) ").foregroundColor(Theme.primary) +
-                Text("has not received water since: ").foregroundColor(Theme.font)
-                Text("\(UserDefaults.standard.getLastDate() ?? "long time")" )
+                Text("has not received water since: ").foregroundColor(Theme.primary)
+                Text("\(UserDefaults.standard.getLastDate() ?? "long time")" ).foregroundColor(Theme.primary)
             }
             .multilineTextAlignment(.center)
             .foregroundColor(Theme.font)
@@ -111,6 +109,7 @@ struct WateringView: View {
         }
 
     }
+
     var treeView: some View {
         //INSERÇÃO DO MODELO 3D
         PlantView(scene: {
@@ -129,7 +128,7 @@ struct WateringView: View {
             //FUNCAO QUE PERMITE QUE A ONDA SUBA NA TELA
             WaterWaveView(progress: progress, waveHeight: 0.025, offset: startAnimation)
                 .fill(Theme.water)
-                .opacity(0.5)
+                .opacity(0.3)
                 .ignoresSafeArea()
                 .frame(width: size.width, height: size.height, alignment: .center)
                 .onAppear{
@@ -163,37 +162,7 @@ struct WateringView: View {
             .cornerRadius(50)
             .gesture(onHoldGesture)
     }
-//    var animationRainView: some View {
-//        //ANIMAÇÃO DA CHUVA
-//        SpriteView(scene: rainLightningScene, options: [.allowsTransparency])
-//            .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
-//            .ignoresSafeArea()
-//            .onAppear {
-//                //SOM DO DONE
-//                let soundURL2 = NSURL(fileURLWithPath: Bundle.main.path(forResource: "DoneSound", ofType: "mp3")!)
-//                do{
-//                    audioPlayer2 = try AVAudioPlayer(contentsOf: soundURL2 as URL)
-//                    audioPlayer2?.play()
-//                }catch {
-//                    print("there was some error. The error was \(error)")
-//                }
-//            }
-//            .onAppear{
-//                //DEFINE O TEMPO DE PERMANENCIA DAS GOTINHAS
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
-//                    self.startAnimation = 0
-//                    self.isSucess = true
-//                    self.isComplete = false
-//                    self.progress = 0.1
-//                    self.dayWatering = "\(Date.now.formatted(.dateTime.weekday(.wide).hour().minute().second()))"
-//                    saveLastDate()
-//
-//                }
-//            }
-//            .onDisappear() {
-//                self.isSucess = false
-//            }
-//    }
+
     func animationRainView <valueAnimation>(_ animation: Animation?, value: valueAnimation) -> some View where valueAnimation : Equatable {
         SpriteView(scene: rainLightningScene, options: [.allowsTransparency])
             .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)

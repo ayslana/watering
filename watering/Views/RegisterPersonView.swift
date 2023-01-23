@@ -17,12 +17,9 @@ struct RegisterPersonView: View {
                 Theme.secondary.ignoresSafeArea()
                 NameUser()
             }
-            
         }.navigationBarBackButtonHidden(true)
     }
 }
-
-
 struct RegisterPersonView_Preview : PreviewProvider {
     static var previews: some View {
         RegisterPersonView()

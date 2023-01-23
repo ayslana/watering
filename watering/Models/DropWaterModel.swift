@@ -7,10 +7,14 @@
 
 import Foundation
 
+// É a struct que contem o modelo para conseguir categorizar nossos modelos 3D
+// Por ser parecido com um dicionario, nós conseguimos trabalhar com os itens
+// de mais simplificada
 struct DropWaterModel : Identifiable {
     var id: Int
     var type: String
     var modelName: String
+//    var timeWatering: Int
 }
 
 var PlantsType = [
