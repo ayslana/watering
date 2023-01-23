@@ -22,7 +22,7 @@ struct NotificationController {
         //UNMutableNotificationContent(): é a classe que permite a personalizacao da notificacao
         let content = UNMutableNotificationContent()
         content.title = "\(UserDefaults.standard.getPlantName() ?? "") is thirsty 😟"
-        content.subtitle = "Remember to watering it today!"
+        content.body = "Remember to watering it today!"
         //DateComponents(): é uma classe que representa uma data de diferentes formas: min, seg, horas...
         var dateComponents = DateComponents()
         dateComponents.calendar = Calendar.current
