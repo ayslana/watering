@@ -34,7 +34,7 @@ struct NotificationController {
         // especifica.
         // Logo, no calendario atual, quando der 8 horas a notificacao vai aparecer
         let trigger = UNCalendarNotificationTrigger(
-            dateMatching: dateComponents, repeats: false)
+            dateMatching: dateComponents, repeats: true)
         // O UUID() permite que cada notificacao tenha um identificador exclusivo
         // esse identificador serve para que no lugar de sempre criar uma notificacao nova
         // caso o valor tenha sido alterado, a notificacao seja apenas atualizada

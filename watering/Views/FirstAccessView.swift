@@ -37,6 +37,7 @@ struct FirstAccessView: View {
                     RegisterPersonView()
                         .simultaneousGesture(TapGesture().onEnded{
                             notification.requestPermission()
+                            notification.doNotification()
                         })
                 }
                 ZStack {
