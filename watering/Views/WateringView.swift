@@ -23,7 +23,6 @@ struct WateringView: View {
     @State var audioPlayer2: AVAudioPlayer?
     @State var dayWatering = ""
     @State var valueAnimation: Bool = false
-    let notification: () = NotificationController().doNotification()
     
     
     var rainLightningScene: SKScene {
@@ -82,7 +81,6 @@ struct WateringView: View {
                             isComplete = true
                             isPressed = false
                             audioPlayer?.stop()
-                            self.notification
                         } else {
                             progress += 0.0003
                             isComplete = false
