@@ -8,8 +8,8 @@
 import SwiftUI
 
 //A MotherView é uma view que define o fluxo do aplicativo
-struct MotherView: View {
-    @EnvironmentObject var viewRouter: ViewRouter
+struct RouterView: View {
+    @EnvironmentObject var viewRouter: RouterController
     //o @EnvironmentObject é uma propriedade que permite que você use
     //a variavel em diferentes locais, muitas vezes; e sempre atualizando
     //estado
@@ -20,7 +20,7 @@ struct MotherView: View {
             //se minha variavel currentPage, declarada na ViewRouter for igual
             //a string "FirstAccessView" eu chamo view FirstAccessView
             if viewRouter.currentPage == "FirstAccessView" {
-                FirstAccessView()
+                WelcomeView()
             } else if viewRouter.currentPage == "WateringView" {
                 WateringView()
             }
@@ -30,6 +30,6 @@ struct MotherView: View {
 
 struct MotherView_Previews: PreviewProvider {
     static var previews: some View {
-        MotherView().environmentObject(ViewRouter())
+        RouterView().environmentObject(RouterController())
     }
 }

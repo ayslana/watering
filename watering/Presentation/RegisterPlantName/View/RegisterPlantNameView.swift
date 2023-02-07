@@ -7,20 +7,20 @@
 
 import SwiftUI
 
-struct RegisterPlantView: View {
+struct RegisterPlantNameView: View {
     @State var plantName: String = ""
     var body: some View {
         NavigationView {
             ZStack {
-                Theme.secondary.ignoresSafeArea()
-                Theme.flower
+                ThemeEnum.secondary.ignoresSafeArea()
+                ThemeEnum.flower
                     .offset(x: UIScreen.main.bounds.width/2.5)
                 VStack {
                     Spacer().frame(height: 50)
                     question
                     digiteAqui
                     Divider()
-                        .background(Theme.primary)
+                        .background(ThemeEnum.primary)
                         .frame(width: 300)
                     Spacer().frame(height: 50)
                    navigation
@@ -31,16 +31,16 @@ struct RegisterPlantView: View {
     var question: some View {
         Group {
             Text("What is the name")
-                .foregroundColor(Theme.primary)
+                .foregroundColor(ThemeEnum.primary)
                 .font(.system(size: 22, design: .rounded))
             Text("of your plant?")
-                .foregroundColor(Theme.primary)
+                .foregroundColor(ThemeEnum.primary)
                 .font(.system(size: 22, design: .rounded))
         }
     }
     var digiteAqui: some View{
         TextField("Type Here", text: $plantName)
-            .foregroundColor(Theme.primary)
+            .foregroundColor(ThemeEnum.primary)
             .multilineTextAlignment(.center)
             .font(.system(size: 20, design: .rounded))
             .padding()
@@ -49,14 +49,14 @@ struct RegisterPlantView: View {
             }
     }
     var navigation: some View {
-        NavigationLink(destination: ChoosePlantView().navigationBarHidden(true), label: {
+        NavigationLink(destination: RegisterPlantTypeView().navigationBarHidden(true), label: {
             Text("Next")
-                .foregroundColor(Theme.primary)
+                .foregroundColor(ThemeEnum.primary)
                 .padding()
                 .frame(width: 200, height: 50)
                 .font(.system(size: 20, design: .rounded))
                 .overlay(RoundedRectangle(cornerRadius: 15)
-                    .stroke(Theme.primary, lineWidth: 2))
+                    .stroke(ThemeEnum.primary, lineWidth: 2))
                 .padding()
                 .cornerRadius(20)
         }
@@ -68,6 +68,6 @@ struct RegisterPlantView: View {
 }
 struct RegisterPlantView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterPlantView()
+        RegisterPlantNameView()
     }
 }

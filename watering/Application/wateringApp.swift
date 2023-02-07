@@ -9,10 +9,9 @@ import SwiftUI
 
 @main
 struct wateringApp: App {
-    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            MotherView().environmentObject(ViewRouter())        }
+            RouterView().environmentObject(RouterController())        }
     }
 }

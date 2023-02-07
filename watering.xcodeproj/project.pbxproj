@@ -8,16 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		4502B0B428DD50D700F54CD2 /* plants.dae in Resources */ = {isa = PBXBuildFile; fileRef = 4502B0B328DD50D700F54CD2 /* plants.dae */; };
-		451495E428E5D14B001DF3A8 /* ChangePlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451495E328E5D14B001DF3A8 /* ChangePlantView.swift */; };
-		451495E628E5D648001DF3A8 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451495E528E5D648001DF3A8 /* Theme.swift */; };
-		4518985F28E6283B009D3B4D /* NameUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518985E28E6283B009D3B4D /* NameUser.swift */; };
+		451495E428E5D14B001DF3A8 /* EditPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451495E328E5D14B001DF3A8 /* EditPlantView.swift */; };
+		451495E628E5D648001DF3A8 /* ThemeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451495E528E5D648001DF3A8 /* ThemeEnum.swift */; };
+		4518985F28E6283B009D3B4D /* UserNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518985E28E6283B009D3B4D /* UserNameView.swift */; };
 		4518986128E62934009D3B4D /* LiquidSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518986028E62934009D3B4D /* LiquidSwipe.swift */; };
-		45CBD11C28E5401F0015BA70 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CBD11B28E5401F0015BA70 /* EditView.swift */; };
-		D42A4E8D28DBFAD900B0ACA9 /* ChoosePlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E8C28DBFAD900B0ACA9 /* ChoosePlantView.swift */; };
-		D42A4E8F28DCA3B700B0ACA9 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E8E28DCA3B700B0ACA9 /* MotherView.swift */; };
-		D42A4E9128DCA44300B0ACA9 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E9028DCA44300B0ACA9 /* ViewRouter.swift */; };
-		D44B720D28E1ED6100FBD7A7 /* UserDefaultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44B720C28E1ED6100FBD7A7 /* UserDefaultsController.swift */; };
-		D45D34A028DD81400088EB65 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45D349F28DD81400088EB65 /* Persistence.swift */; };
+		45CBD11C28E5401F0015BA70 /* EditNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CBD11B28E5401F0015BA70 /* EditNameView.swift */; };
+		D42A4E8D28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E8C28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift */; };
+		D42A4E8F28DCA3B700B0ACA9 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E8E28DCA3B700B0ACA9 /* RouterView.swift */; };
+		D42A4E9128DCA44300B0ACA9 /* RouterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E9028DCA44300B0ACA9 /* RouterController.swift */; };
+		D44B720D28E1ED6100FBD7A7 /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44B720C28E1ED6100FBD7A7 /* UserDefaults+.swift */; };
 		D45D34A628DDB32B0088EB65 /* flower.dae in Resources */ = {isa = PBXBuildFile; fileRef = D45D34A528DDB32B0088EB65 /* flower.dae */; };
 		D45D34A828DDB3480088EB65 /* cactus.dae in Resources */ = {isa = PBXBuildFile; fileRef = D45D34A728DDB3480088EB65 /* cactus.dae */; };
 		D4800ACE28E4755C00669263 /* plants.scn in Resources */ = {isa = PBXBuildFile; fileRef = D4800ACD28E4755C00669263 /* plants.scn */; };
@@ -25,16 +24,15 @@
 		D4800AD228E4759600669263 /* flower.scn in Resources */ = {isa = PBXBuildFile; fileRef = D4800AD128E4759600669263 /* flower.scn */; };
 		D4E8171928D9F7F600775EFA /* wateringApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8171828D9F7F600775EFA /* wateringApp.swift */; };
 		D4E8171D28D9F7F600775EFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E8171C28D9F7F600775EFA /* Assets.xcassets */; };
-		D4E8172528D9F7F600775EFA /* watering.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4E8172328D9F7F600775EFA /* watering.xcdatamodeld */; };
 		D4E8172F28D9F7F600775EFA /* wateringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8172E28D9F7F600775EFA /* wateringTests.swift */; };
 		D4E8173928D9F7F600775EFA /* wateringUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8173828D9F7F600775EFA /* wateringUITests.swift */; };
 		D4E8173B28D9F7F600775EFA /* wateringUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8173A28D9F7F600775EFA /* wateringUITestsLaunchTests.swift */; };
-		D4E8174928D9FBEF00775EFA /* RegisterPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8174828D9FBEF00775EFA /* RegisterPlantView.swift */; };
-		D4E8174B28D9FC1500775EFA /* RegisterPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8174A28D9FC1500775EFA /* RegisterPersonView.swift */; };
-		D4E8174D28D9FC3E00775EFA /* FirstAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8174C28D9FC3E00775EFA /* FirstAccessView.swift */; };
+		D4E8174928D9FBEF00775EFA /* RegisterPlantNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8174828D9FBEF00775EFA /* RegisterPlantNameView.swift */; };
+		D4E8174B28D9FC1500775EFA /* RegisterUserNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8174A28D9FC1500775EFA /* RegisterUserNameView.swift */; };
+		D4E8174D28D9FC3E00775EFA /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8174C28D9FC3E00775EFA /* WelcomeView.swift */; };
 		D4E8175228D9FF9800775EFA /* DropWaterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8175128D9FF9800775EFA /* DropWaterModel.swift */; };
 		D4E8175428D9FFE300775EFA /* WateringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8175328D9FFE300775EFA /* WateringView.swift */; };
-		D4E8175628DA004000775EFA /* PlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8175528DA004000775EFA /* PlantView.swift */; };
+		D4E8175628DA004000775EFA /* PlantViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8175528DA004000775EFA /* PlantViewRepresentable.swift */; };
 		D4E8175828DA007000775EFA /* WaterWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8175728DA007000775EFA /* WaterWaveView.swift */; };
 		D4E8175B28DA00AD00775EFA /* RainSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8175A28DA00AD00775EFA /* RainSceneView.swift */; };
 		D4E8175F28DA014C00775EFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E8175D28DA014C00775EFA /* Assets.xcassets */; };
@@ -65,17 +63,16 @@
 
 /* Begin PBXFileReference section */
 		4502B0B328DD50D700F54CD2 /* plants.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = plants.dae; sourceTree = "<group>"; };
-		451495E328E5D14B001DF3A8 /* ChangePlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePlantView.swift; sourceTree = "<group>"; };
-		451495E528E5D648001DF3A8 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		4518985E28E6283B009D3B4D /* NameUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameUser.swift; sourceTree = "<group>"; };
+		451495E328E5D14B001DF3A8 /* EditPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlantView.swift; sourceTree = "<group>"; };
+		451495E528E5D648001DF3A8 /* ThemeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEnum.swift; sourceTree = "<group>"; };
+		4518985E28E6283B009D3B4D /* UserNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameView.swift; sourceTree = "<group>"; };
 		4518986028E62934009D3B4D /* LiquidSwipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiquidSwipe.swift; sourceTree = "<group>"; };
-		45CBD11B28E5401F0015BA70 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		45CBD11B28E5401F0015BA70 /* EditNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameView.swift; sourceTree = "<group>"; };
 		45F2827A28DDE090009B4875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		D42A4E8C28DBFAD900B0ACA9 /* ChoosePlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlantView.swift; sourceTree = "<group>"; };
-		D42A4E8E28DCA3B700B0ACA9 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
-		D42A4E9028DCA44300B0ACA9 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
-		D44B720C28E1ED6100FBD7A7 /* UserDefaultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsController.swift; sourceTree = "<group>"; };
-		D45D349F28DD81400088EB65 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		D42A4E8C28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantTypeView.swift; sourceTree = "<group>"; };
+		D42A4E8E28DCA3B700B0ACA9 /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
+		D42A4E9028DCA44300B0ACA9 /* RouterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterController.swift; sourceTree = "<group>"; };
+		D44B720C28E1ED6100FBD7A7 /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
 		D45D34A528DDB32B0088EB65 /* flower.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = flower.dae; sourceTree = "<group>"; };
 		D45D34A728DDB3480088EB65 /* cactus.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = cactus.dae; sourceTree = "<group>"; };
 		D4800ACD28E4755C00669263 /* plants.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = plants.scn; sourceTree = "<group>"; };
@@ -84,21 +81,20 @@
 		D4E8171528D9F7F600775EFA /* Watering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E8171828D9F7F600775EFA /* wateringApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wateringApp.swift; sourceTree = "<group>"; };
 		D4E8171C28D9F7F600775EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D4E8172428D9F7F600775EFA /* watering.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = watering.xcdatamodel; sourceTree = "<group>"; };
 		D4E8172A28D9F7F600775EFA /* wateringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wateringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E8172E28D9F7F600775EFA /* wateringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wateringTests.swift; sourceTree = "<group>"; };
 		D4E8173428D9F7F600775EFA /* wateringUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wateringUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E8173828D9F7F600775EFA /* wateringUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wateringUITests.swift; sourceTree = "<group>"; };
 		D4E8173A28D9F7F600775EFA /* wateringUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wateringUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D4E8174828D9FBEF00775EFA /* RegisterPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantView.swift; sourceTree = "<group>"; };
-		D4E8174A28D9FC1500775EFA /* RegisterPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPersonView.swift; sourceTree = "<group>"; };
-		D4E8174C28D9FC3E00775EFA /* FirstAccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAccessView.swift; sourceTree = "<group>"; };
+		D4E8174828D9FBEF00775EFA /* RegisterPlantNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantNameView.swift; sourceTree = "<group>"; };
+		D4E8174A28D9FC1500775EFA /* RegisterUserNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserNameView.swift; sourceTree = "<group>"; };
+		D4E8174C28D9FC3E00775EFA /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		D4E8175128D9FF9800775EFA /* DropWaterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropWaterModel.swift; sourceTree = "<group>"; };
 		D4E8175328D9FFE300775EFA /* WateringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WateringView.swift; sourceTree = "<group>"; };
-		D4E8175528DA004000775EFA /* PlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantView.swift; sourceTree = "<group>"; };
+		D4E8175528DA004000775EFA /* PlantViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantViewRepresentable.swift; sourceTree = "<group>"; };
 		D4E8175728DA007000775EFA /* WaterWaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterWaveView.swift; sourceTree = "<group>"; };
 		D4E8175A28DA00AD00775EFA /* RainSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainSceneView.swift; sourceTree = "<group>"; };
-		D4E8175D28DA014C00775EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4E8175D28DA014C00775EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets/Assets.xcassets; sourceTree = "<group>"; };
 		D4E8176028DA018500775EFA /* RainDrops.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RainDrops.sks; sourceTree = "<group>"; };
 		D4E8176328DA026400775EFA /* WaterSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WaterSound.mp3; sourceTree = "<group>"; };
 		D4E8176428DA026400775EFA /* DoneSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DoneSound.mp3; sourceTree = "<group>"; };
@@ -155,15 +151,13 @@
 		D4E8171728D9F7F600775EFA /* watering */ = {
 			isa = PBXGroup;
 			children = (
+				FE053DBF29927D0A006B233B /* Resources */,
+				FE053DC029927D2F006B233B /* Application */,
+				FE053DC129927D8D006B233B /* Presentation */,
+				FE053DDF29928586006B233B /* Data */,
+				FE053DDE2992856C006B233B /* Domain */,
+				FE053DD5299282CD006B233B /* Utils */,
 				45F2827A28DDE090009B4875 /* Info.plist */,
-				D4E8175028D9FDCE00775EFA /* Controllers */,
-				D4E8174F28D9FDB700775EFA /* Models */,
-				D4E8174E28D9FDA800775EFA /* Assets */,
-				D4E8174728D9FB6300775EFA /* Views */,
-				D4E8171828D9F7F600775EFA /* wateringApp.swift */,
-				D4E8171C28D9F7F600775EFA /* Assets.xcassets */,
-				D4E8172328D9F7F600775EFA /* watering.xcdatamodeld */,
-				D45D349F28DD81400088EB65 /* Persistence.swift */,
 			);
 			path = watering;
 			sourceTree = "<group>";
@@ -185,53 +179,12 @@
 			path = wateringUITests;
 			sourceTree = "<group>";
 		};
-		D4E8174728D9FB6300775EFA /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D4E8174C28D9FC3E00775EFA /* FirstAccessView.swift */,
-				4518986028E62934009D3B4D /* LiquidSwipe.swift */,
-				D4E8174A28D9FC1500775EFA /* RegisterPersonView.swift */,
-				4518985E28E6283B009D3B4D /* NameUser.swift */,
-				D4E8174828D9FBEF00775EFA /* RegisterPlantView.swift */,
-				D42A4E8C28DBFAD900B0ACA9 /* ChoosePlantView.swift */,
-				D4E8175328D9FFE300775EFA /* WateringView.swift */,
-				45CBD11B28E5401F0015BA70 /* EditView.swift */,
-				451495E328E5D14B001DF3A8 /* ChangePlantView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		D4E8174E28D9FDA800775EFA /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				D4E8176228DA01C500775EFA /* Sounds */,
-				D4E8175D28DA014C00775EFA /* Assets.xcassets */,
-				D4E8176028DA018500775EFA /* RainDrops.sks */,
-				451495E528E5D648001DF3A8 /* Theme.swift */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
 		D4E8174F28D9FDB700775EFA /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				D4E8175128D9FF9800775EFA /* DropWaterModel.swift */,
-				D4E8175728DA007000775EFA /* WaterWaveView.swift */,
-				D4E8175528DA004000775EFA /* PlantView.swift */,
-				D4E8175A28DA00AD00775EFA /* RainSceneView.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		D4E8175028D9FDCE00775EFA /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				D42A4E8E28DCA3B700B0ACA9 /* MotherView.swift */,
-				D4E8176728DA055300775EFA /* NotificationController.swift */,
-				D42A4E9028DCA44300B0ACA9 /* ViewRouter.swift */,
-				D44B720C28E1ED6100FBD7A7 /* UserDefaultsController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		D4E8176228DA01C500775EFA /* Sounds */ = {
@@ -249,6 +202,319 @@
 				D4E8176428DA026400775EFA /* DoneSound.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		FE053DBF29927D0A006B233B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D4E8176228DA01C500775EFA /* Sounds */,
+				D4E8176028DA018500775EFA /* RainDrops.sks */,
+				D4E8175D28DA014C00775EFA /* Assets.xcassets */,
+				D4E8171C28D9F7F600775EFA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FE053DC029927D2F006B233B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D4E8171828D9F7F600775EFA /* wateringApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FE053DC129927D8D006B233B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FE053DDD29928507006B233B /* Router */,
+				FE053DC229927DD1006B233B /* Welcome */,
+				FE053DC629927EAD006B233B /* RegisterUser */,
+				FE053DCB29927F63006B233B /* RegisterPlantName */,
+				FE053DCE29927FC2006B233B /* RegisterPlantType */,
+				FE053DD1299280C8006B233B /* PlantCare */,
+				FE053DD72992837F006B233B /* EditName */,
+				FE053DDA299283B1006B233B /* EditPlant */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FE053DC229927DD1006B233B /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				FE053DC329927DE6006B233B /* View */,
+				FE053DC429927DEF006B233B /* Controller */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		FE053DC329927DE6006B233B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE053DC529927DF9006B233B /* Components */,
+				D4E8174C28D9FC3E00775EFA /* WelcomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE053DC429927DEF006B233B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE053DC529927DF9006B233B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4518986028E62934009D3B4D /* LiquidSwipe.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FE053DC629927EAD006B233B /* RegisterUser */ = {
+			isa = PBXGroup;
+			children = (
+				FE053DC729927ED7006B233B /* View */,
+				FE053DC929927F03006B233B /* Controller */,
+			);
+			path = RegisterUser;
+			sourceTree = "<group>";
+		};
+		FE053DC729927ED7006B233B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE053DCA29927F44006B233B /* Components */,
+				D4E8174A28D9FC1500775EFA /* RegisterUserNameView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE053DC929927F03006B233B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE053DCA29927F44006B233B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4518985E28E6283B009D3B4D /* UserNameView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FE053DCB29927F63006B233B /* RegisterPlantName */ = {
+			isa = PBXGroup;
+			children = (
+				FE053DCC29927FA3006B233B /* View */,
+				FE053DCD29927FA9006B233B /* Controller */,
+			);
+			path = RegisterPlantName;
+			sourceTree = "<group>";
+		};
+		FE053DCC29927FA3006B233B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4E8174828D9FBEF00775EFA /* RegisterPlantNameView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE053DCD29927FA9006B233B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE053DCE29927FC2006B233B /* RegisterPlantType */ = {
+			isa = PBXGroup;
+			children = (
+				FE053DCF29928012006B233B /* View */,
+				FE053DD029928018006B233B /* Controller */,
+			);
+			path = RegisterPlantType;
+			sourceTree = "<group>";
+		};
+		FE053DCF29928012006B233B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D42A4E8C28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE053DD029928018006B233B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE053DD1299280C8006B233B /* PlantCare */ = {
+			isa = PBXGroup;
+			children = (
+				FE053DD329928120006B233B /* View */,
+				FE053DD229928119006B233B /* Controller */,
+			);
+			path = PlantCare;
+			sourceTree = "<group>";
+		};
+		FE053DD229928119006B233B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE053DD329928120006B233B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE053DD429928142006B233B /* Components */,
+				D4E8175328D9FFE300775EFA /* WateringView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE053DD429928142006B233B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D4E8175A28DA00AD00775EFA /* RainSceneView.swift */,
+				D4E8175728DA007000775EFA /* WaterWaveView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FE053DD5299282CD006B233B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FEFF6CCB29928C2C00FD050A /* Representable */,
+				FEFF6CCA29928C1700FD050A /* Singleton */,
+				FEFF6CC929928BB300FD050A /* Enums */,
+				FEFF6CC829928A2300FD050A /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FE053DD72992837F006B233B /* EditName */ = {
+			isa = PBXGroup;
+			children = (
+				FE053DD829928386006B233B /* View */,
+				FE053DD92992838C006B233B /* Controller */,
+			);
+			path = EditName;
+			sourceTree = "<group>";
+		};
+		FE053DD829928386006B233B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				45CBD11B28E5401F0015BA70 /* EditNameView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE053DD92992838C006B233B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE053DDA299283B1006B233B /* EditPlant */ = {
+			isa = PBXGroup;
+			children = (
+				FE053DDB29928409006B233B /* View */,
+				FE053DDC2992840E006B233B /* Controller */,
+			);
+			path = EditPlant;
+			sourceTree = "<group>";
+		};
+		FE053DDB29928409006B233B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				451495E328E5D14B001DF3A8 /* EditPlantView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE053DDC2992840E006B233B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE053DDD29928507006B233B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FE053DE0299286F4006B233B /* View */,
+				FE053DE1299286FC006B233B /* Controller */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FE053DDE2992856C006B233B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D4E8174F28D9FDB700775EFA /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FE053DDF29928586006B233B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FE053DE0299286F4006B233B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D42A4E8E28DCA3B700B0ACA9 /* RouterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE053DE1299286FC006B233B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D42A4E9028DCA44300B0ACA9 /* RouterController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FEFF6CC829928A2300FD050A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D44B720C28E1ED6100FBD7A7 /* UserDefaults+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FEFF6CC929928BB300FD050A /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				451495E528E5D648001DF3A8 /* ThemeEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		FEFF6CCA29928C1700FD050A /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				D4E8176728DA055300775EFA /* NotificationController.swift */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
+		FEFF6CCB29928C2C00FD050A /* Representable */ = {
+			isa = PBXGroup;
+			children = (
+				D4E8175528DA004000775EFA /* PlantViewRepresentable.swift */,
+			);
+			path = Representable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,24 +660,22 @@
 			files = (
 				4518986128E62934009D3B4D /* LiquidSwipe.swift in Sources */,
 				D4E8175228D9FF9800775EFA /* DropWaterModel.swift in Sources */,
-				45CBD11C28E5401F0015BA70 /* EditView.swift in Sources */,
-				D42A4E9128DCA44300B0ACA9 /* ViewRouter.swift in Sources */,
-				D44B720D28E1ED6100FBD7A7 /* UserDefaultsController.swift in Sources */,
-				451495E428E5D14B001DF3A8 /* ChangePlantView.swift in Sources */,
-				D42A4E8D28DBFAD900B0ACA9 /* ChoosePlantView.swift in Sources */,
-				D4E8174B28D9FC1500775EFA /* RegisterPersonView.swift in Sources */,
-				D4E8174928D9FBEF00775EFA /* RegisterPlantView.swift in Sources */,
-				D42A4E8F28DCA3B700B0ACA9 /* MotherView.swift in Sources */,
-				4518985F28E6283B009D3B4D /* NameUser.swift in Sources */,
-				D45D34A028DD81400088EB65 /* Persistence.swift in Sources */,
+				45CBD11C28E5401F0015BA70 /* EditNameView.swift in Sources */,
+				D42A4E9128DCA44300B0ACA9 /* RouterController.swift in Sources */,
+				D44B720D28E1ED6100FBD7A7 /* UserDefaults+.swift in Sources */,
+				451495E428E5D14B001DF3A8 /* EditPlantView.swift in Sources */,
+				D42A4E8D28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift in Sources */,
+				D4E8174B28D9FC1500775EFA /* RegisterUserNameView.swift in Sources */,
+				D4E8174928D9FBEF00775EFA /* RegisterPlantNameView.swift in Sources */,
+				D42A4E8F28DCA3B700B0ACA9 /* RouterView.swift in Sources */,
+				4518985F28E6283B009D3B4D /* UserNameView.swift in Sources */,
 				D4E8175B28DA00AD00775EFA /* RainSceneView.swift in Sources */,
 				D4E8175828DA007000775EFA /* WaterWaveView.swift in Sources */,
-				D4E8172528D9F7F600775EFA /* watering.xcdatamodeld in Sources */,
-				451495E628E5D648001DF3A8 /* Theme.swift in Sources */,
-				D4E8174D28D9FC3E00775EFA /* FirstAccessView.swift in Sources */,
+				451495E628E5D648001DF3A8 /* ThemeEnum.swift in Sources */,
+				D4E8174D28D9FC3E00775EFA /* WelcomeView.swift in Sources */,
 				D4E8176828DA055300775EFA /* NotificationController.swift in Sources */,
 				D4E8171928D9F7F600775EFA /* wateringApp.swift in Sources */,
-				D4E8175628DA004000775EFA /* PlantView.swift in Sources */,
+				D4E8175628DA004000775EFA /* PlantViewRepresentable.swift in Sources */,
 				D4E8175428D9FFE300775EFA /* WateringView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -752,19 +1016,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		D4E8172328D9F7F600775EFA /* watering.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				D4E8172428D9F7F600775EFA /* watering.xcdatamodel */,
-			);
-			currentVersion = D4E8172428D9F7F600775EFA /* watering.xcdatamodel */;
-			path = watering.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = D4E8170D28D9F7F600775EFA /* Project object */;
 }

@@ -37,7 +37,7 @@ struct WateringView: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: .bottom) {
-                Theme.secondary.ignoresSafeArea()
+                ThemeEnum.secondary.ignoresSafeArea()
                 ZStack{
                     information
                     .offset(y: -UIScreen.main.bounds.height/2.4)
@@ -70,8 +70,8 @@ struct WateringView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: EditView(), label: { Text("Edit")
-                        .foregroundColor(Theme.primary) })
+                    NavigationLink(destination: EditNameView(), label: { Text("Edit")
+                        .foregroundColor(ThemeEnum.primary) })
                 }
             }
             .onReceive(timer) { _ in
@@ -89,20 +89,20 @@ struct WateringView: View {
                 }
             }
         }
-        .accentColor(Theme.primary)
+        .accentColor(ThemeEnum.primary)
 //        .navigationBarBackButtonHidden()
     }
     var information: some View {
         VStack {
             Group {
-                Text("Hello, ").foregroundColor(Theme.font) +
-                Text("\(UserDefaults.standard.getPersonName() ?? "Unset").").foregroundColor(Theme.primary)
-                Text(" \(UserDefaults.standard.getPlantName() ?? "Unset" ) ").foregroundColor(Theme.primary) +
-                Text("has not received water since: ").foregroundColor(Theme.primary)
-                Text("\(UserDefaults.standard.getLastDate() ?? "long time")" ).foregroundColor(Theme.primary)
+                Text("Hello, ").foregroundColor(ThemeEnum.font) +
+                Text("\(UserDefaults.standard.getPersonName() ?? "Unset").").foregroundColor(ThemeEnum.primary)
+                Text(" \(UserDefaults.standard.getPlantName() ?? "Unset" ) ").foregroundColor(ThemeEnum.primary) +
+                Text("has not received water since: ").foregroundColor(ThemeEnum.primary)
+                Text("\(UserDefaults.standard.getLastDate() ?? "long time")" ).foregroundColor(ThemeEnum.primary)
             }
             .multilineTextAlignment(.center)
-            .foregroundColor(Theme.font)
+            .foregroundColor(ThemeEnum.font)
             .font(.system(size: 20, design: .rounded))
         }
 
@@ -110,7 +110,7 @@ struct WateringView: View {
 
     var treeView: some View {
         //INSERÇÃO DO MODELO 3D
-        PlantView(scene: {
+        PlantViewRepresentable(scene: {
             let modelo = DropWaterModel(id: UserDefaults.standard.getPlantID() ?? 0, type: UserDefaults.standard.getPlantTypeName() ?? "", modelName: UserDefaults.standard.getPlantType() ?? "")
             let scene = SCNScene(named: modelo.modelName)!
             scene.background.contents = UIColor.clear
@@ -125,7 +125,7 @@ struct WateringView: View {
             let size = proxy.size
             //FUNCAO QUE PERMITE QUE A ONDA SUBA NA TELA
             WaterWaveView(progress: progress, waveHeight: 0.025, offset: startAnimation)
-                .fill(Theme.water)
+                .fill(ThemeEnum.water)
                 .opacity(0.3)
                 .ignoresSafeArea()
                 .frame(width: size.width, height: size.height, alignment: .center)
@@ -154,9 +154,9 @@ struct WateringView: View {
     var button: some View {
         Image(systemName: "drop")
             .font(.system(size: 30))
-            .foregroundColor(Theme.primary)
+            .foregroundColor(ThemeEnum.primary)
             .padding(25)
-            .background(Theme.secondary)
+            .background(ThemeEnum.secondary)
             .cornerRadius(50)
             .gesture(onHoldGesture)
     }
