@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct FirstAccessView: View {
+struct WelcomeView: View {
     
     @State var offset : CGSize = .zero
     @State var showHome = false
@@ -16,13 +16,13 @@ struct FirstAccessView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Theme.firstview
+                ThemeEnum.firstview
                     .clipShape(LiquidSwipe(offset: offset))
                     .ignoresSafeArea()
                     .overlay(
                         Image(systemName: "chevron.left")
                             .font(.title.bold())
-                            .foregroundColor(Theme.primary)
+                            .foregroundColor(ThemeEnum.primary)
                             .frame(width: 2, height: 2)
                             .contentShape(Rectangle())
                             .gesture(onHoldGesture)
@@ -34,7 +34,7 @@ struct FirstAccessView: View {
                     .gesture(onHoldGesture)
                     .padding(.trailing)
                 if showHome {
-                    RegisterPersonView()
+                    RegisterUserNameView()
                         .simultaneousGesture(TapGesture().onEnded{
                             notification.requestPermission()
                             notification.doNotification()
@@ -60,7 +60,7 @@ struct FirstAccessView: View {
             .offset(x: -15)
             .gesture(onHoldGesture)
             .offset(x: 15, y: -40)
-            .foregroundColor(Theme.secondary)
+            .foregroundColor(ThemeEnum.secondary)
             .opacity(offset == .zero ? 1 : 0)
     }
     var onHoldGesture: some Gesture {
@@ -86,7 +86,7 @@ struct FirstAccessView: View {
 
 struct FirstAccessView_Preview : PreviewProvider {
     static var previews: some View {
-        FirstAccessView()
+        WelcomeView()
     }
 }
 

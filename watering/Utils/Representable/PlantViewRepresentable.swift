@@ -9,7 +9,7 @@ import Foundation
 import SceneKit
 import SwiftUI
 
-struct PlantView: UIViewRepresentable {
+struct PlantViewRepresentable: UIViewRepresentable {
     var scene: SCNScene
     var options: SceneView.Options
 

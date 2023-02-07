@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class ViewRouter: ObservableObject {
+class RouterController: ObservableObject {
     // ObservableObject é um protocolo que armazena uma instancia de um objeto.
     // Ele permite que que essas instancias sejam utilizadas em diferentes views
     // e quando essas instancias são alteradas a sua visualizacao é recarregada

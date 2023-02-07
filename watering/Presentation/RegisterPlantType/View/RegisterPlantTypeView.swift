@@ -8,7 +8,7 @@
 import SwiftUI
 import SceneKit
 
-struct ChoosePlantView: View {
+struct RegisterPlantTypeView: View {
     
     var columns = Array(repeating: GridItem(.flexible(), spacing: 15), count: 2)
     @State var selected: DropWaterModel = PlantsType[0]
@@ -20,7 +20,7 @@ struct ChoosePlantView: View {
     
     var body: some View {
         ZStack {
-            Theme.secondary.ignoresSafeArea()
+            ThemeEnum.secondary.ignoresSafeArea()
             Spacer().frame(width: 30, height: 30)
                 .padding([.leading,.top])
             VStack {
@@ -40,7 +40,7 @@ struct ChoosePlantView: View {
     var cabeçalhoView: some View {
         Text("Choose your plant type")
             .multilineTextAlignment(.center)
-            .foregroundColor(Theme.primary)
+            .foregroundColor(ThemeEnum.primary)
             .font(.system(size: 20, design: .rounded))
             .padding()
     }
@@ -49,7 +49,7 @@ struct ChoosePlantView: View {
             LazyVGrid(columns: columns, spacing: 15){
                 ForEach(PlantsType){ plant in
                     VStack (alignment: .center, spacing: 10){
-                        PlantView(scene: {
+                        PlantViewRepresentable(scene: {
                             let scene = SCNScene(named: plant.modelName)!
                             scene.background.contents = UIColor.clear
                             return scene
@@ -67,7 +67,7 @@ struct ChoosePlantView: View {
                         .matchedGeometryEffect(id: plant.id, in: namespace)
                         Text(plant.type)
                             .multilineTextAlignment(.center)
-                            .foregroundColor(Theme.primary)
+                            .foregroundColor(ThemeEnum.primary)
                             .font(.system(size: 20, design: .rounded))
                     }
                 }
@@ -81,11 +81,11 @@ struct ChoosePlantView: View {
                 destination : WateringView().navigationBarHidden(true),
                 label : {
                     Text ("Next")
-                        .foregroundColor(Theme.primary)
+                        .foregroundColor(ThemeEnum.primary)
                         .frame(width: 200, height: 50)
                         .font(.system(size: 20, design: .rounded))
                         .overlay(RoundedRectangle(cornerRadius: 15)
-                            .stroke(Theme.primary, lineWidth: 2))
+                            .stroke(ThemeEnum.primary, lineWidth: 2))
                         .padding()
                 })
             .simultaneousGesture(TapGesture().onEnded{
@@ -99,7 +99,7 @@ struct ChoosePlantView: View {
     }
     var scalePlantView: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .center)){
-            PlantView(scene: {
+            PlantViewRepresentable(scene: {
                 let scene = SCNScene(named: selected.modelName)!
                 scene.background.contents = UIColor.clear
                 return scene
@@ -130,6 +130,6 @@ struct ChoosePlantView: View {
 
 struct ChoosePlantView_Previews: PreviewProvider {
     static var previews: some View {
-        ChoosePlantView()
+        RegisterPlantTypeView()
     }
 }

@@ -8,13 +8,13 @@
 import SwiftUI
 import SceneKit
 
-struct EditView: View {
+struct EditNameView: View {
     @State var personName: String = "\(UserDefaults.standard.getPersonName() ?? "Unset")"
     @State var plantName: String = "\(UserDefaults.standard.getPlantName() ?? "Unset")"
     var body: some View {
         VStack {
             informations
-            NavigationLink(destination: ChangePlantView()) {
+            NavigationLink(destination: EditPlantView()) {
                 treeView
                     .frame(height: UIScreen.main.bounds.height/2)
             }
@@ -34,22 +34,22 @@ struct EditView: View {
     var informations: some View {
         List{
             TextField("\(UserDefaults.standard.getPersonName() ?? "Unset")", text: $personName)
-                .foregroundColor(Theme.primary)
-                .listRowBackground(Theme.primary.opacity(0.2))
+                .foregroundColor(ThemeEnum.primary)
+                .listRowBackground(ThemeEnum.primary.opacity(0.2))
             TextField("\(UserDefaults.standard.getPlantName() ?? "Unset")", text: $plantName)
-                .foregroundColor(Theme.primary)
-                .listRowBackground(Theme.primary.opacity(0.2))
+                .foregroundColor(ThemeEnum.primary)
+                .listRowBackground(ThemeEnum.primary.opacity(0.2))
         }
         .listStyle(.insetGrouped)
         .scrollContentBackground(.hidden)
     }
     var save: some View {
         Text("Save")
-            .foregroundColor(Theme.primary)
+            .foregroundColor(ThemeEnum.primary)
     }
     var treeView: some View {
         //INSERÇÃO DO MODELO 3D
-        PlantView(scene: {
+        PlantViewRepresentable(scene: {
             let modelo = DropWaterModel(id: UserDefaults.standard.getPlantID() ?? 0, type: UserDefaults.standard.getPlantTypeName() ?? "", modelName: UserDefaults.standard.getPlantType() ?? "")
             let scene = SCNScene(named: modelo.modelName)!
             scene.background.contents = UIColor.clear
@@ -68,6 +68,6 @@ struct EditView: View {
 
 struct EditView_Previews: PreviewProvider {
     static var previews: some View {
-        EditView()
+        EditNameView()
     }
 }

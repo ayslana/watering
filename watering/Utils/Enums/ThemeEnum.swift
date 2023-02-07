@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum Theme {
+enum ThemeEnum {
     static let primary = Color("Primary")
     static let secondary = Color("Secundary")
     static let water = Color("Water")

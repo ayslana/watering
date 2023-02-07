@@ -8,7 +8,7 @@
 import SwiftUI
 import SceneKit
 
-struct ChangePlantView: View {
+struct EditPlantView: View {
 
     var columns = Array(repeating: GridItem(.flexible(), spacing: 15), count: 2)
     @State var selected: DropWaterModel = PlantsType[0]
@@ -20,7 +20,7 @@ struct ChangePlantView: View {
 
     var body: some View {
         ZStack {
-            Theme.secondary.ignoresSafeArea()
+            ThemeEnum.secondary.ignoresSafeArea()
             Spacer().frame(width: 30, height: 30)
                 .padding([.leading,.top])
             VStack {
@@ -40,7 +40,7 @@ struct ChangePlantView: View {
     var cabeçalhoView: some View {
         Text("Select your new plant type")
             .multilineTextAlignment(.center)
-            .foregroundColor(Theme.primary)
+            .foregroundColor(ThemeEnum.primary)
             .font(.system(size: 20, design: .rounded))
             .padding()
     }
@@ -49,7 +49,7 @@ struct ChangePlantView: View {
             LazyVGrid(columns: columns, spacing: 15){
                 ForEach(PlantsType){ plant in
                     VStack (alignment: .center, spacing: 10){
-                        PlantView(scene: {
+                        PlantViewRepresentable(scene: {
                             let scene = SCNScene(named: plant.modelName)!
                             scene.background.contents = UIColor.clear
                             return scene
@@ -66,7 +66,7 @@ struct ChangePlantView: View {
                         .matchedGeometryEffect(id: plant.id, in: namespace)
                         Text(plant.type)
                             .multilineTextAlignment(.center)
-                            .foregroundColor(Theme.primary)
+                            .foregroundColor(ThemeEnum.primary)
                             .font(.system(size: 15, design: .rounded))
                     }
                 }
@@ -77,14 +77,14 @@ struct ChangePlantView: View {
     var selectionPlant: some View {
         VStack (alignment: .center){
             NavigationLink (
-                destination : EditView(),
+                destination : EditNameView(),
                 label : {
                     Text ("Select")
-                        .foregroundColor(Theme.primary)
+                        .foregroundColor(ThemeEnum.primary)
                         .frame(width: 200, height: 50)
                         .font(.system(size: 20, design: .rounded))
                         .overlay(RoundedRectangle(cornerRadius: 15)
-                            .stroke(Theme.primary, lineWidth: 2))
+                            .stroke(ThemeEnum.primary, lineWidth: 2))
                         .padding()
                 })
             .simultaneousGesture(TapGesture().onEnded{
@@ -98,7 +98,7 @@ struct ChangePlantView: View {
     }
     var scalePlantView: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .center)){
-            PlantView(scene: {
+            PlantViewRepresentable(scene: {
                 let scene = SCNScene(named: selected.modelName)!
                 scene.background.contents = UIColor.clear
                 return scene
@@ -129,6 +129,6 @@ struct ChangePlantView: View {
 
 struct ChangePlantView_Previews: PreviewProvider {
     static var previews: some View {
-        ChangePlantView()
+        EditPlantView()
     }
 }
