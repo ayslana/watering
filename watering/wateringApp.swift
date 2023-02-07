@@ -7,14 +7,12 @@
 
 import SwiftUI
 
-
+@main
 struct wateringApp: App {
-//    let persistenceController = PersistenceController.shared
+    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            MotherView()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-        }
+            MotherView().environmentObject(ViewRouter())        }
     }
 }
