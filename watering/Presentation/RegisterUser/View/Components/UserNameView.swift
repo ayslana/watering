@@ -14,7 +14,8 @@ struct UserNameView : View {
     var body: some View {
         ZStack{
             ThemeEnum.flower
-                .offset(x:UIScreen.main.bounds.width/2.5)
+                .resizable()
+                .scaledToFit()
             VStack {
                 Spacer().frame(height: 50)
                 question
@@ -24,7 +25,6 @@ struct UserNameView : View {
                     .frame(width: 300)
                 Spacer().frame(height: 50)
                 navigation
-
             }
         }
     }

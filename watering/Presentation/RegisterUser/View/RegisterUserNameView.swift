@@ -20,7 +20,7 @@ struct RegisterUserNameView: View {
         }.navigationBarBackButtonHidden(true)
     }
 }
-struct RegisterPersonView_Preview : PreviewProvider {
+struct RegisterUserNameView_Preview : PreviewProvider {
     static var previews: some View {
         RegisterUserNameView()
     }
