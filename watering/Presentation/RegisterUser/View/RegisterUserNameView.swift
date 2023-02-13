@@ -8,9 +8,12 @@
 import Foundation
 import SwiftUI
 
+// State -> Binding (structs)
+// StateObject -> ObservedObject (classes) //Primeira vez StateObject, outras vezes ObservedObject
 
 struct RegisterUserNameView: View {
-    @ObservedObject var controller = RegisterUserNameController()
+
+    @StateObject var controller = RegisterUserNameController()
 
     var body: some View {
         NavigationView {
@@ -47,8 +50,7 @@ struct RegisterUserNameView: View {
                         Divider()
                             .background(ThemeEnum.primary)
                             .frame(width: 300)
-                            .padding(.bottom, 50)
-
+                            .padding(.top, -10)
 
                         Spacer()
                             .frame(height: 50)
@@ -67,17 +69,14 @@ struct RegisterUserNameView: View {
                                         .cornerRadius(20)
                                 }
                         )
-                        .padding(.top, 50)
+                        .padding(.top, 100)
                     }
-
                 }//EOZ
                 .padding(.top, 200)
             }//EOZ
             .background(Color(UIColor.systemBackground))
             .navigationBarBackButtonHidden(true)
-
         }
-
     }
 
     struct RegisterUserNameView_Preview : PreviewProvider {
@@ -86,5 +85,6 @@ struct RegisterUserNameView: View {
         }
     }
 
+    
 
 }

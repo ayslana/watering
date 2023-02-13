@@ -13,6 +13,9 @@
 		4518986128E62934009D3B4D /* LiquidSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518986028E62934009D3B4D /* LiquidSwipe.swift */; };
 		45CBD11C28E5401F0015BA70 /* EditNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CBD11B28E5401F0015BA70 /* EditNameView.swift */; };
 		8521681C2996892600A409C7 /* RegisterUserNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8521681B2996892600A409C7 /* RegisterUserNameController.swift */; };
+		85AB4DBD299A7C19009416FA /* RegisterPlantNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */; };
+		85AB4DBE299A7C1B009416FA /* RegisterPlantNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */; };
+		85AB4DBF299A7C1C009416FA /* RegisterPlantNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */; };
 		D42A4E8D28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E8C28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift */; };
 		D42A4E8F28DCA3B700B0ACA9 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E8E28DCA3B700B0ACA9 /* RouterView.swift */; };
 		D42A4E9128DCA44300B0ACA9 /* RouterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E9028DCA44300B0ACA9 /* RouterController.swift */; };
@@ -69,6 +72,7 @@
 		45CBD11B28E5401F0015BA70 /* EditNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameView.swift; sourceTree = "<group>"; };
 		45F2827A28DDE090009B4875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8521681B2996892600A409C7 /* RegisterUserNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserNameController.swift; sourceTree = "<group>"; };
+		85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantNameController.swift; sourceTree = "<group>"; };
 		D42A4E8C28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantTypeView.swift; sourceTree = "<group>"; };
 		D42A4E8E28DCA3B700B0ACA9 /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		D42A4E9028DCA44300B0ACA9 /* RouterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterController.swift; sourceTree = "<group>"; };
@@ -132,6 +136,14 @@
 			isa = PBXGroup;
 			children = (
 				8521681B2996892600A409C7 /* RegisterUserNameController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		85AB4DBB299A796A009416FA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -299,8 +311,8 @@
 		FE053DCB29927F63006B233B /* RegisterPlantName */ = {
 			isa = PBXGroup;
 			children = (
+				85AB4DBB299A796A009416FA /* Controller */,
 				FE053DCC29927FA3006B233B /* View */,
-				FE053DCD29927FA9006B233B /* Controller */,
 			);
 			path = RegisterPlantName;
 			sourceTree = "<group>";
@@ -311,13 +323,6 @@
 				D4E8174828D9FBEF00775EFA /* RegisterPlantNameView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		FE053DCD29927FA9006B233B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		FE053DCE29927FC2006B233B /* RegisterPlantType */ = {
@@ -669,6 +674,7 @@
 				D4E8171928D9F7F600775EFA /* wateringApp.swift in Sources */,
 				D4E8175628DA004000775EFA /* PlantViewRepresentable.swift in Sources */,
 				D4E8175428D9FFE300775EFA /* WateringView.swift in Sources */,
+				85AB4DBD299A7C19009416FA /* RegisterPlantNameController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,6 +683,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4E8172F28D9F7F600775EFA /* wateringTests.swift in Sources */,
+				85AB4DBE299A7C1B009416FA /* RegisterPlantNameController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,6 +693,7 @@
 			files = (
 				D4E8173B28D9F7F600775EFA /* wateringUITestsLaunchTests.swift in Sources */,
 				D4E8173928D9F7F600775EFA /* wateringUITests.swift in Sources */,
+				85AB4DBF299A7C1C009416FA /* RegisterPlantNameController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

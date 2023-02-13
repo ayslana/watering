@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 public class RegisterUserNameController: ObservableObject {
-    @Published public var personName: String = ""
+    @Published var personName: String = ""
 
     func saveName() {
         UserDefaults.standard.setPersonName(value: personName)
