@@ -10,9 +10,9 @@
 		4502B0B428DD50D700F54CD2 /* plants.dae in Resources */ = {isa = PBXBuildFile; fileRef = 4502B0B328DD50D700F54CD2 /* plants.dae */; };
 		451495E428E5D14B001DF3A8 /* EditPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451495E328E5D14B001DF3A8 /* EditPlantView.swift */; };
 		451495E628E5D648001DF3A8 /* ThemeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451495E528E5D648001DF3A8 /* ThemeEnum.swift */; };
-		4518985F28E6283B009D3B4D /* UserNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518985E28E6283B009D3B4D /* UserNameView.swift */; };
 		4518986128E62934009D3B4D /* LiquidSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518986028E62934009D3B4D /* LiquidSwipe.swift */; };
 		45CBD11C28E5401F0015BA70 /* EditNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CBD11B28E5401F0015BA70 /* EditNameView.swift */; };
+		8521681C2996892600A409C7 /* RegisterUserNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8521681B2996892600A409C7 /* RegisterUserNameController.swift */; };
 		D42A4E8D28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E8C28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift */; };
 		D42A4E8F28DCA3B700B0ACA9 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E8E28DCA3B700B0ACA9 /* RouterView.swift */; };
 		D42A4E9128DCA44300B0ACA9 /* RouterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E9028DCA44300B0ACA9 /* RouterController.swift */; };
@@ -65,10 +65,10 @@
 		4502B0B328DD50D700F54CD2 /* plants.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = plants.dae; sourceTree = "<group>"; };
 		451495E328E5D14B001DF3A8 /* EditPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlantView.swift; sourceTree = "<group>"; };
 		451495E528E5D648001DF3A8 /* ThemeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEnum.swift; sourceTree = "<group>"; };
-		4518985E28E6283B009D3B4D /* UserNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameView.swift; sourceTree = "<group>"; };
 		4518986028E62934009D3B4D /* LiquidSwipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiquidSwipe.swift; sourceTree = "<group>"; };
 		45CBD11B28E5401F0015BA70 /* EditNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameView.swift; sourceTree = "<group>"; };
 		45F2827A28DDE090009B4875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8521681B2996892600A409C7 /* RegisterUserNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserNameController.swift; sourceTree = "<group>"; };
 		D42A4E8C28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantTypeView.swift; sourceTree = "<group>"; };
 		D42A4E8E28DCA3B700B0ACA9 /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		D42A4E9028DCA44300B0ACA9 /* RouterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterController.swift; sourceTree = "<group>"; };
@@ -128,6 +128,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8521681A2996891500A409C7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8521681B2996892600A409C7 /* RegisterUserNameController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		D4E8170C28D9F7F600775EFA = {
 			isa = PBXGroup;
 			children = (
@@ -274,8 +282,8 @@
 		FE053DC629927EAD006B233B /* RegisterUser */ = {
 			isa = PBXGroup;
 			children = (
+				8521681A2996891500A409C7 /* Controller */,
 				FE053DC729927ED7006B233B /* View */,
-				FE053DC929927F03006B233B /* Controller */,
 			);
 			path = RegisterUser;
 			sourceTree = "<group>";
@@ -283,25 +291,9 @@
 		FE053DC729927ED7006B233B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FE053DCA29927F44006B233B /* Components */,
 				D4E8174A28D9FC1500775EFA /* RegisterUserNameView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		FE053DC929927F03006B233B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		FE053DCA29927F44006B233B /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				4518985E28E6283B009D3B4D /* UserNameView.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		FE053DCB29927F63006B233B /* RegisterPlantName */ = {
@@ -668,11 +660,11 @@
 				D4E8174B28D9FC1500775EFA /* RegisterUserNameView.swift in Sources */,
 				D4E8174928D9FBEF00775EFA /* RegisterPlantNameView.swift in Sources */,
 				D42A4E8F28DCA3B700B0ACA9 /* RouterView.swift in Sources */,
-				4518985F28E6283B009D3B4D /* UserNameView.swift in Sources */,
 				D4E8175B28DA00AD00775EFA /* RainSceneView.swift in Sources */,
 				D4E8175828DA007000775EFA /* WaterWaveView.swift in Sources */,
 				451495E628E5D648001DF3A8 /* ThemeEnum.swift in Sources */,
 				D4E8174D28D9FC3E00775EFA /* WelcomeView.swift in Sources */,
+				8521681C2996892600A409C7 /* RegisterUserNameController.swift in Sources */,
 				D4E8176828DA055300775EFA /* NotificationController.swift in Sources */,
 				D4E8171928D9F7F600775EFA /* wateringApp.swift in Sources */,
 				D4E8175628DA004000775EFA /* PlantViewRepresentable.swift in Sources */,

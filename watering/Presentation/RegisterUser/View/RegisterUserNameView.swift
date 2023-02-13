@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct RegisterUserNameView: View {
-    @State var personName: String = ""
+    @ObservedObject var controller = RegisterUserNameController()
 
     var body: some View {
         NavigationView {
@@ -28,27 +28,21 @@ struct RegisterUserNameView: View {
 
                     Text("What is your name?")
                         .foregroundColor(ThemeEnum.primary)
-                        .font(.system(size: 22, design: .rounded))
-                        .fixedSize()
+                        .font(.title2)
 
-                    TextField("Type Here", text: $personName)
-                        .fixedSize()
+                    TextField("Type Here", text: $controller.personName)
                         .multilineTextAlignment(.center)
                         .foregroundColor(.gray)
-                        .font(.system(size: 20, design: .rounded))
+                        .font(.title3)
                         .padding()
-                        .onChange(of: personName) { newValue in
-                            saveName()
+                        .onChange(of: controller.personName) { newValue in
+                            controller.saveName()
                         }
 
-
-
                 } //EOV
-                //.frame(width: 400, height:500)
-                //.background(Color.red)
 
                 ZStack {
-                    if (!personName.isEmpty && personName.count >= 5) {
+                    if (!controller.personName.isEmpty && controller.personName.count >= 5) {
 
                         Divider()
                             .background(ThemeEnum.primary)
@@ -66,7 +60,7 @@ struct RegisterUserNameView: View {
                                         .foregroundColor(ThemeEnum.primary)
                                         .padding()
                                         .frame(width: 200, height: 50)
-                                        .font(.system(size: 20, design: .rounded))
+                                        .font(.title3)
                                         .overlay(RoundedRectangle(cornerRadius: 15)
                                             .stroke(ThemeEnum.primary, lineWidth: 2))
                                         .padding()
@@ -76,7 +70,7 @@ struct RegisterUserNameView: View {
                         .padding(.top, 50)
                     }
 
-                }
+                }//EOZ
                 .padding(.top, 200)
             }//EOZ
             .background(Color(UIColor.systemBackground))
@@ -84,11 +78,6 @@ struct RegisterUserNameView: View {
 
         }
 
-    }
-
-    func saveName() {
-        UserDefaults.standard.setPersonName(value: personName)
-        //notification.requestPermission()
     }
 
     struct RegisterUserNameView_Preview : PreviewProvider {
