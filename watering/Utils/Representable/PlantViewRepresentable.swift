@@ -22,6 +22,7 @@ struct PlantViewRepresentable: UIViewRepresentable {
         view.isJitteringEnabled = options.contains(.jitteringEnabled)
         view.isTemporalAntialiasingEnabled = options.contains(.temporalAntialiasingEnabled)
         view.scene = scene
+
         return view
     }
 
