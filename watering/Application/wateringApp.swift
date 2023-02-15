@@ -9,7 +9,12 @@ import SwiftUI
 
 @main
 struct wateringApp: App {
-
+    let notification = NotificationController()
+    
+        init() {
+            notification.requestPermission()
+        }
+    
     var body: some Scene {
         WindowGroup {
             RouterView().environmentObject(RouterController())        }
