@@ -14,4 +14,8 @@ public class RegisterPlantNameController: ObservableObject {
     func savePlantName() {
         UserDefaults.standard.setPlantName(value: plantName)
     }
+
+    func isSharingButton() -> Bool {
+        return !plantName.isEmpty && plantName.count >= 5
+    }
 }
