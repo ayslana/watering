@@ -12,11 +12,10 @@ struct RegisterPlantNameView: View {
     @StateObject var controller = RegisterPlantNameController()
 
     var body: some View {
-        NavigationView {
             ZStack {
                 //ThemeEnum.secondary.ignoresSafeArea()
                 ThemeEnum.flower
-                    //.offset(x: UIScreen.main.bounds.width/2.5)
+                //.offset(x: UIScreen.main.bounds.width/2.5)
                     .fixedSize()
                     .scaledToFit()
                     .alignmentGuide(.trailing) { dimension in
@@ -26,47 +25,58 @@ struct RegisterPlantNameView: View {
                 VStack {
                     Spacer().frame(height: 50)
                     Text("What is the name of your plant?")
-                        .foregroundColor(ThemeEnum.primary)
-                        .font(.title2)
-                    TextField("Type Here", text: $controller.plantName)
-                        .foregroundColor(ThemeEnum.primary)
+                        .foregroundColor(ThemeEnum.font)
                         .multilineTextAlignment(.center)
-                        .font(.title3)                        .padding()
+                        .lineLimit(nil)
+                        .font(.title2)
+                        .frame(
+                            width: UIScreen.main.bounds.width * 0.9
+                        )
+                    TextField("Type Here", text: $controller.plantName)
+                        .foregroundColor(ThemeEnum.font)
+                        .multilineTextAlignment(.center)
+                        .font(.body)
+                        .frame(
+                            width: UIScreen.main.bounds.width * 0.8
+                        )
                         .onChange(of: controller.plantName) { newValue in
                             controller.savePlantName()
                         }
 
+                    Divider()
+                        .background(ThemeEnum.primary)
+                        .frame(width: 300)
 
-                } //EOV
-                ZStack {
-                    if (!controller.plantName.isEmpty && controller.plantName.count >= 5) {
-                        Divider()
-                            .background(ThemeEnum.primary)
-                            .frame(width: 300)
-                            .padding(.top, -10)
-                        Spacer()
-                            .frame(height: 50)
-
-                        NavigationLink(destination: RegisterPlantTypeView().navigationBarHidden(true), label: {
-                                Text("Next")
-                                    .foregroundColor(ThemeEnum.primary)
-                                    .padding()
-                                    .frame(width: 200, height: 50)
-                                    .font(.title3)
-                                    .overlay(RoundedRectangle(cornerRadius: 15)
-                                        .stroke(ThemeEnum.primary, lineWidth: 2))
-                                    .padding()
-                                    .cornerRadius(20)
-                            }
-                        )
-                        .padding(.top,100)
+                    if controller.isSharingButton() == false{
+                        Text("Enter at least 5 characters")
+                            .foregroundColor(.red)
+                            .font(.caption2)
+                            .multilineTextAlignment(.center)
+                            .lineLimit(nil)
+                            .frame(
+                                width: UIScreen.main.bounds.width * 0.8
+                            )
                     }
-                }//EOZ
-                .padding(.top,200)
-            } //EOZ
-            .background(Color(UIColor.systemBackground))
-            .navigationBarBackButtonHidden(true)
-        }
+                }
+                if (controller.isSharingButton()) {
+
+                    NavigationLink(destination: RegisterPlantTypeView().navigationBarHidden(false), label: {
+                        Text("Next")
+                            .foregroundColor(ThemeEnum.primary)
+                            .padding()
+                            .frame(minWidth: 200, minHeight: 50)
+                            .font(.title3)
+                            .overlay(RoundedRectangle(cornerRadius: 15)
+                                .stroke(ThemeEnum.primary, lineWidth: 2))
+                            .padding()
+                            .cornerRadius(20)
+                    }
+                    ).offset(x: 0,y: 250)
+                }
+
+            }
+
+        .background(ThemeEnum.secondary)
     }
 }
 struct RegisterPlantNameView_Previews: PreviewProvider {
