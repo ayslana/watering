@@ -12,7 +12,7 @@ struct WelcomeView: View {
     
     @State var offset : CGSize = .zero
     @State var showHome = false
-    let notification = NotificationController()
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -36,8 +36,6 @@ struct WelcomeView: View {
                 if showHome {
                     RegisterUserNameView()
                         .simultaneousGesture(TapGesture().onEnded{
-                            notification.requestPermission()
-                            notification.doNotification()
                         })
                 }
                 ZStack {
