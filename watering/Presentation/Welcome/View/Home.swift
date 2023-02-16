@@ -3,7 +3,11 @@
 //  Watering
 //
 //  Created by Tales Valente on 14/02/23.
-//
+// Based on:
+//https://www.youtube.com/watch?v=VIqXC0tqbLo
+//https://www.youtube.com/watch?v=75hKctzSkwY
+//https://chat.openai.com/
+
 import SwiftUI
 import Foundation
 
@@ -36,7 +40,7 @@ struct Home: View {
     @GestureState var isDragging: Bool = false
 
     @State var fakeIndex: Int = 0
-    
+
     @State var currentIndex: Int = 0
 
 
