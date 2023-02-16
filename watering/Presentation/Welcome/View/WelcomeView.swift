@@ -45,8 +45,6 @@ struct WelcomeView_Preview : PreviewProvider {
                 if showHome {
                     RegisterUserNameView()
                         .simultaneousGesture(TapGesture().onEnded{
-                            notification.requestPermission()
-                            notification.doNotification()
                         })
                 }
                 ZStack {

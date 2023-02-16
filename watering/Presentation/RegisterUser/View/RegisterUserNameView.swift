@@ -16,67 +16,72 @@ struct RegisterUserNameView: View {
     @StateObject var controller = RegisterUserNameController()
 
     var body: some View {
-        NavigationView {
-            ZStack {
-                Image("Flower")
-                    //.resizable()
-                    .fixedSize()
-                    .scaledToFit()
-                    .alignmentGuide(.trailing) { dimension in
-                        dimension[.trailing] - 70
+        ZStack {
+            ThemeEnum.flower
+            //.resizable()
+                .fixedSize()
+                .scaledToFit()
+                .alignmentGuide(.trailing) { dimension in
+                    dimension[.trailing] - 70
+                }
+                .frame(alignment: .trailing)
+            VStack {
+                Spacer().frame(height: 50)
+
+                Text("What is your name?")
+                    .foregroundColor(ThemeEnum.font)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(nil)
+                    .font(.title2)
+                    .frame(
+                        width: UIScreen.main.bounds.width * 0.9
+                    )
+
+                TextField("Type Here", text: $controller.personName)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(ThemeEnum.font)
+                    .font(.body)
+                    .frame(
+                        width: UIScreen.main.bounds.width * 0.8
+                    )
+                    .onChange(of: controller.personName) { newValue in
+                        controller.saveName()
                     }
-                    .frame(alignment: .trailing)
-                VStack {
-                    Spacer().frame(height: 50)
 
-                    Text("What is your name?")
-                        .foregroundColor(ThemeEnum.primary)
-                        .font(.title2)
+                Divider()
+                    .background(ThemeEnum.primary)
+                    .frame(width: 300)
 
-                    TextField("Type Here", text: $controller.personName)
+                if controller.isSharingButton() == false{
+                    Text("Insert at least 5 characters")
+                        .foregroundColor(.red)
+                        .font(.caption2)
                         .multilineTextAlignment(.center)
-                        .foregroundColor(.gray)
-                        .font(.title3)
-                        .padding()
-                        .onChange(of: controller.personName) { newValue in
-                            controller.saveName()
-                        }
-
-                } //EOV
-
-                ZStack {
-                    if (!controller.personName.isEmpty && controller.personName.count >= 5) {
-
-                        Divider()
-                            .background(ThemeEnum.primary)
-                            .frame(width: 300)
-                            .padding(.top, -10)
-
-                        Spacer()
-                            .frame(height: 50)
-
-                        NavigationLink(destination: RegisterPlantNameView()
-                            .navigationBarHidden(true),
-                               label: {
-                                    Text("Next")
-                                        .foregroundColor(ThemeEnum.primary)
-                                        .padding()
-                                        .frame(width: 200, height: 50)
-                                        .font(.title3)
-                                        .overlay(RoundedRectangle(cornerRadius: 15)
-                                            .stroke(ThemeEnum.primary, lineWidth: 2))
-                                        .padding()
-                                        .cornerRadius(20)
-                                }
+                        .lineLimit(nil)
+                        .frame(
+                            width: UIScreen.main.bounds.width * 0.8
                         )
-                        .padding(.top, 100)
-                    }
-                }//EOZ
-                .padding(.top, 200)
-            }//EOZ
-            .background(Color(UIColor.systemBackground))
-            .navigationBarBackButtonHidden(true)
+                }
+            }
+            if (controller.isSharingButton()) {
+
+                NavigationLink(destination: RegisterPlantNameView()
+                    .navigationBarHidden(false),
+                               label: {
+                    Text("Next")
+                        .foregroundColor(ThemeEnum.primary)
+                        .padding()
+                        .frame(minWidth: 200, minHeight: 50)
+                        .font(.title3)
+                        .overlay(RoundedRectangle(cornerRadius: 15)
+                            .stroke(ThemeEnum.primary, lineWidth: 2))
+                        .padding()
+                        .cornerRadius(20)
+                }
+                ).offset(x: 0,y: 230)
+            }
         }
+        .background(ThemeEnum.secondary)
     }
 
     struct RegisterUserNameView_Preview : PreviewProvider {
