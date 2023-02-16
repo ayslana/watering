@@ -10,9 +10,10 @@
 		4502B0B428DD50D700F54CD2 /* plants.dae in Resources */ = {isa = PBXBuildFile; fileRef = 4502B0B328DD50D700F54CD2 /* plants.dae */; };
 		451495E428E5D14B001DF3A8 /* EditPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451495E328E5D14B001DF3A8 /* EditPlantView.swift */; };
 		451495E628E5D648001DF3A8 /* ThemeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451495E528E5D648001DF3A8 /* ThemeEnum.swift */; };
-		4518986128E62934009D3B4D /* LiquidSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518986028E62934009D3B4D /* LiquidSwipe.swift */; };
 		45CBD11C28E5401F0015BA70 /* EditNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CBD11B28E5401F0015BA70 /* EditNameView.swift */; };
 		8521681C2996892600A409C7 /* RegisterUserNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8521681B2996892600A409C7 /* RegisterUserNameController.swift */; };
+		858081FE299BC984008F4245 /* Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858081FD299BC984008F4245 /* Intro.swift */; };
+		85808200299BCA7D008F4245 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858081FF299BCA7D008F4245 /* Home.swift */; };
 		85AB4DBD299A7C19009416FA /* RegisterPlantNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */; };
 		85AB4DBE299A7C1B009416FA /* RegisterPlantNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */; };
 		85AB4DBF299A7C1C009416FA /* RegisterPlantNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */; };
@@ -68,10 +69,11 @@
 		4502B0B328DD50D700F54CD2 /* plants.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = plants.dae; sourceTree = "<group>"; };
 		451495E328E5D14B001DF3A8 /* EditPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlantView.swift; sourceTree = "<group>"; };
 		451495E528E5D648001DF3A8 /* ThemeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEnum.swift; sourceTree = "<group>"; };
-		4518986028E62934009D3B4D /* LiquidSwipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiquidSwipe.swift; sourceTree = "<group>"; };
 		45CBD11B28E5401F0015BA70 /* EditNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameView.swift; sourceTree = "<group>"; };
 		45F2827A28DDE090009B4875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8521681B2996892600A409C7 /* RegisterUserNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserNameController.swift; sourceTree = "<group>"; };
+		858081FD299BC984008F4245 /* Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
+		858081FF299BCA7D008F4245 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantNameController.swift; sourceTree = "<group>"; };
 		D42A4E8C28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantTypeView.swift; sourceTree = "<group>"; };
 		D42A4E8E28DCA3B700B0ACA9 /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
@@ -138,6 +140,14 @@
 				8521681B2996892600A409C7 /* RegisterUserNameController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		858081FC299BC969008F4245 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				858081FD299BC984008F4245 /* Intro.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		85AB4DBB299A796A009416FA /* Controller */ = {
@@ -261,6 +271,7 @@
 		FE053DC229927DD1006B233B /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				858081FC299BC969008F4245 /* Model */,
 				FE053DC329927DE6006B233B /* View */,
 				FE053DC429927DEF006B233B /* Controller */,
 			);
@@ -270,8 +281,8 @@
 		FE053DC329927DE6006B233B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FE053DC529927DF9006B233B /* Components */,
 				D4E8174C28D9FC3E00775EFA /* WelcomeView.swift */,
+				858081FF299BCA7D008F4245 /* Home.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -281,14 +292,6 @@
 			children = (
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		FE053DC529927DF9006B233B /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				4518986028E62934009D3B4D /* LiquidSwipe.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		FE053DC629927EAD006B233B /* RegisterUser */ = {
@@ -578,7 +581,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					D4E8171428D9F7F600775EFA = {
 						CreatedOnToolsVersion = 14.0;
@@ -602,6 +605,8 @@
 				Base,
 			);
 			mainGroup = D4E8170C28D9F7F600775EFA;
+			packageReferences = (
+			);
 			productRefGroup = D4E8171628D9F7F600775EFA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -655,7 +660,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4518986128E62934009D3B4D /* LiquidSwipe.swift in Sources */,
 				D4E8175228D9FF9800775EFA /* DropWaterModel.swift in Sources */,
 				45CBD11C28E5401F0015BA70 /* EditNameView.swift in Sources */,
 				D42A4E9128DCA44300B0ACA9 /* RouterController.swift in Sources */,
@@ -666,8 +670,10 @@
 				D4E8174928D9FBEF00775EFA /* RegisterPlantNameView.swift in Sources */,
 				D42A4E8F28DCA3B700B0ACA9 /* RouterView.swift in Sources */,
 				D4E8175B28DA00AD00775EFA /* RainSceneView.swift in Sources */,
+				858081FE299BC984008F4245 /* Intro.swift in Sources */,
 				D4E8175828DA007000775EFA /* WaterWaveView.swift in Sources */,
 				451495E628E5D648001DF3A8 /* ThemeEnum.swift in Sources */,
+				85808200299BCA7D008F4245 /* Home.swift in Sources */,
 				D4E8174D28D9FC3E00775EFA /* WelcomeView.swift in Sources */,
 				8521681C2996892600A409C7 /* RegisterUserNameController.swift in Sources */,
 				D4E8176828DA055300775EFA /* NotificationController.swift in Sources */,
@@ -824,7 +830,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALIDATE_PRODUCT = YES;
 			};

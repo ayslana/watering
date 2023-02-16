@@ -6,12 +6,21 @@
 //
 
 import SwiftUI
-
+import Foundation
 
 struct WelcomeView: View {
-    
-    @State var offset : CGSize = .zero
-    @State var showHome = false
+    var body: some View {
+        Home()
+    }
+}
+
+struct WelcomeView_Preview : PreviewProvider {
+    static var previews: some View {
+        WelcomeView()
+    }
+}
+
+    /*
     let notification = NotificationController()
     var body: some View {
         NavigationView {
@@ -81,12 +90,5 @@ struct WelcomeView: View {
                 }
             }
         })
-    }
-}
-
-struct FirstAccessView_Preview : PreviewProvider {
-    static var previews: some View {
-        WelcomeView()
-    }
-}
+    }*/
 
