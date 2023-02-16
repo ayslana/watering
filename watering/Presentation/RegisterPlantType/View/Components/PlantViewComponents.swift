@@ -19,8 +19,8 @@ struct PlantViewComponents {
         }(),
         options: [.autoenablesDefaultLighting])
         .frame(
-            width: UIScreen.main.bounds.width / (isBigPlant ? 0.8 : 1.5),
-            height: UIScreen.main.bounds.height / (isBigPlant ? 1.4 : 3.5),
+            minWidth: UIScreen.main.bounds.width / (isBigPlant ? 0.8 : 1.5),
+            minHeight: UIScreen.main.bounds.height / (isBigPlant ? 1.6 : 3.5),
             alignment: .center
         )
         .cornerRadius(15)
@@ -38,9 +38,10 @@ struct PlantViewComponents {
         scene.background.contents = UIColor.clear
 
         scene.rootNode.childNodes.forEach { node in
+
             let rotate = SCNAction.rotate(
                 by: CGFloat(GLKMathDegreesToRadians(30)),
-                around: SCNVector3(x: 0, y: 0.01, z: 0),
+                around: SCNVector3(x: 0, y: 0, z: 0),
                 duration: 1
             )
             let loop = SCNAction.repeatForever(rotate)

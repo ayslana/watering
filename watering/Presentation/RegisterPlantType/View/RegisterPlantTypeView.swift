@@ -16,14 +16,15 @@ struct RegisterPlantTypeView: View {
     var controller = PlantViewController()
 
     var body: some View {
-        VStack {
+        VStack{
             titleView
-            choosePlantView
             if isShowingOne {
-                VStack{
+                ScrollView(.vertical, showsIndicators: false){
                     bigPlantView
                     nextView
                 }
+            } else {
+                choosePlantView
             }
         }.background(ThemeEnum.secondary)
     }
@@ -31,6 +32,7 @@ struct RegisterPlantTypeView: View {
     var titleView: some View {
         Text("Choose your plant type")
             .multilineTextAlignment(.center)
+            .lineLimit(nil)
             .foregroundColor(ThemeEnum.primary)
             .font(.title3)
             .padding()
@@ -49,6 +51,7 @@ struct RegisterPlantTypeView: View {
                         )
                         Text(plant.type)
                             .multilineTextAlignment(.center)
+                            .lineLimit(nil)
                             .foregroundColor(ThemeEnum.primary)
                             .font(.body)
                     }
@@ -59,14 +62,16 @@ struct RegisterPlantTypeView: View {
     }
 
     var nextView: some View {
-        VStack (alignment: .center){
+
             NavigationLink (
                 destination : WateringView().navigationBarHidden(true),
                 label : {
                     Text ("Next")
                         .foregroundColor(ThemeEnum.primary)
-                        .frame(width: 200, height: 50)
-                        .font(.system(size: 20, design: .rounded))
+                        .frame(minWidth: 200, minHeight: 50)
+                        .font(.title3)
+                        .multilineTextAlignment(.center)
+                        .lineLimit(nil)
                         .overlay(RoundedRectangle(cornerRadius: 15)
                             .stroke(ThemeEnum.primary, lineWidth: 2))
                         .padding()
@@ -75,7 +80,7 @@ struct RegisterPlantTypeView: View {
                 controller.savePlantType()
             })
             .navigationBarBackButtonHidden(true)
-        }
+
     }
     var bigPlantView: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .center)){
@@ -89,8 +94,8 @@ struct RegisterPlantTypeView: View {
                 }
             } label: {
                 RoundedRectangle(cornerRadius: 30)
-                    .frame(width: 300, height: 490)
-                    .foregroundColor(.white.opacity(0))
+//                    .frame(minWidth: 300, minHeight: 200)
+                    .foregroundColor(.clear)
             }
         }
     }
