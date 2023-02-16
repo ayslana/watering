@@ -70,6 +70,14 @@ struct RegisterPlantTypeView: View {
                             .foregroundColor(ThemeEnum.primary)
                             .font(.system(size: 20, design: .rounded))
                     }
+                    .accessibilityRepresentation {
+                        Button(plant.type) {
+                            withAnimation(.easeOut){
+                                show.toggle()
+                                selected = plant
+                            }
+                        }
+                    }
                 }
             }
             .padding(.horizontal)

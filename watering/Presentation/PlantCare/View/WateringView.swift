@@ -58,6 +58,7 @@ struct WateringView: View {
                     }
                 }
             }
+            .accessibilityHint("Press the drop-shaped button to water your plant")
             .navigationBarBackButtonHidden(true)
             .onAppear {
                 //MUSICA DA AGUA SUBINDO

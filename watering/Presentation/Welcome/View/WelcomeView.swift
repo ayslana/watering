@@ -19,18 +19,28 @@ struct WelcomeView: View {
                 ThemeEnum.firstview
                     .clipShape(LiquidSwipe(offset: offset))
                     .ignoresSafeArea()
-                    .overlay(
+                    .overlay(alignment: .topTrailing) {
                         Image(systemName: "chevron.left")
                             .font(.title.bold())
                             .foregroundColor(ThemeEnum.primary)
                             .frame(width: 2, height: 2)
                             .contentShape(Rectangle())
                             .gesture(onHoldGesture)
-                            .offset(x: -CGFloat(Int(UIScreen.main.bounds.width/50)), y: CGFloat(Int(UIScreen.main.bounds.height/12)))
+                            .offset(
+                                x: -CGFloat(Int(UIScreen.main.bounds.width/50)),
+                                y: CGFloat(Int(UIScreen.main.bounds.height/12))
+                            )
                             .foregroundColor(.white)
                             .opacity(offset == .zero ? 1 : 0)
-                        ,alignment: .topTrailing
-                    )
+                            .accessibilityRepresentation {
+                                Button("Next") {
+                                    let screen = UIScreen.main.bounds
+                                    offset.width = -screen.height
+                                    showHome.toggle()
+                                }
+                            }
+                            .disabled(showHome)
+                    }
                     .gesture(onHoldGesture)
                     .padding(.trailing)
                 if showHome {
