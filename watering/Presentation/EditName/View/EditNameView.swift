@@ -9,61 +9,82 @@ import SwiftUI
 import SceneKit
 
 struct EditNameView: View {
-    @State var personName: String = "\(UserDefaults.standard.getPersonName() ?? "Unset")"
-    @State var plantName: String = "\(UserDefaults.standard.getPlantName() ?? "Unset")"
+    @StateObject var controller = EditNameController()
+    @Environment(\.dismiss) var dismiss
+
     var body: some View {
-        VStack {
-            informations
-            NavigationLink(destination: EditPlantView()) {
-                treeView
-                    .frame(height: UIScreen.main.bounds.height/2)
+        ScrollView {
+            VStack {
+                informations
+                NavigationLink(destination: EditPlantView()) {
+                    treeView
+                }
             }
-            .position(x: 200, y: -10)
         }
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationLink(destination: WateringView().navigationBarBackButtonHidden(), label: { save })
-                    .transition(.move(edge: .trailing))
-                    .simultaneousGesture(TapGesture().onEnded{
-                        saveName()
-                        savePlantName()
-                    })
+            ToolbarItem(placement: .primaryAction) {
+                if controller.isSomeNameLessThan3Char() {
+                    Text("Save")
+                        .foregroundColor(.secondary)
+                } else {
+                    Button("Save") {
+                        controller.saveNames()
+                        dismiss()
+                    }
+                }
             }
         }
     }
+
     var informations: some View {
         List{
-            TextField("\(UserDefaults.standard.getPersonName() ?? "Unset")", text: $personName)
-                .foregroundColor(ThemeEnum.primary)
-                .listRowBackground(ThemeEnum.primary.opacity(0.2))
-            TextField("\(UserDefaults.standard.getPlantName() ?? "Unset")", text: $plantName)
-                .foregroundColor(ThemeEnum.primary)
-                .listRowBackground(ThemeEnum.primary.opacity(0.2))
+            buildTextField(
+                placeholder: controller.buildUserNamePlanceholder(),
+                text: $controller.userName
+            )
+            buildTextField(
+                placeholder: controller.buildPlantNamePlaceholder(),
+                text: $controller.plantName
+            )
         }
         .listStyle(.insetGrouped)
         .scrollContentBackground(.hidden)
+        .frame(minHeight: UIScreen.main.bounds.height/3)
     }
-    var save: some View {
-        Text("Save")
-            .foregroundColor(ThemeEnum.primary)
-    }
+
     var treeView: some View {
-        //INSERÇÃO DO MODELO 3D
-        PlantViewRepresentable(scene: {
-            let modelo = DropWaterModel(id: UserDefaults.standard.getPlantID() ?? 0, type: UserDefaults.standard.getPlantTypeName() ?? "", modelName: UserDefaults.standard.getPlantType() ?? "")
-            let scene = SCNScene(named: modelo.modelName)!
-            scene.background.contents = UIColor.clear
-            return scene
-        }(),
-                  options: [.autoenablesDefaultLighting, .allowsCameraControl])
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/2, alignment: .center)
+        PlantViewRepresentable(
+            scene: {
+                let modelo = DropWaterModel(
+                    id: controller.plantID,
+                    type: controller.plantType,
+                    modelName: controller.plantModelName
+                )
+                let scene = SCNScene(named: modelo.modelName)!
+                scene.background.contents = UIColor.clear
+                return scene
+            }(),
+            options: [.autoenablesDefaultLighting]
+        )
+        .frame(
+            maxWidth: UIScreen.main.bounds.width,
+            minHeight: UIScreen.main.bounds.height/2,
+            alignment: .center
+        )
     }
-    func saveName() {
-        UserDefaults.standard.setPersonName(value: personName)
+
+    private func buildTextField(
+        placeholder: String,
+        text: Binding<String>
+    ) -> some View {
+        return TextField(
+            placeholder,
+            text: text
+        )
+        .foregroundColor(ThemeEnum.primary)
+        .listRowBackground(ThemeEnum.primary.opacity(0.2))
     }
-    func savePlantName() {
-        UserDefaults.standard.setPlantName(value: plantName)
-    }
+
 }
 
 struct EditView_Previews: PreviewProvider {
