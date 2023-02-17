@@ -19,14 +19,14 @@ struct Home: View {
             subTitle: "your routes",
             description: "View your collection route Follow, change or add to your route yourself",
             pic: "Pic1",
-            color: Color(.green)
+            color: ThemeEnum.primary
         ),
         Intro(
             title: "Quick Waste",
             subTitle: "Transfer Note",
             description: "Record oil collections easily and accurately. No more paper!",
             pic: "Pic2",
-            color: Color(.darkGray)
+            color: ThemeEnum.secondary
         ),
         Intro(
             title: "Invite",
@@ -91,7 +91,7 @@ struct Home: View {
                 Image(systemName: "chevron.left")
                     .font(.largeTitle)
                     .frame(width: 50, height: 50)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .contentShape(Rectangle())
                     .gesture(
                         DragGesture()
@@ -173,13 +173,16 @@ struct Home: View {
     @ViewBuilder
     func IntroView(intro: Intro)->some View {
 
-        VStack {
+        ZStack {
 
             Image(intro.pic)
             //Image("welcomeview_bg")
                 .resizable()
-                .aspectRatio(contentMode: .fit)
-                .padding(40)
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight:0, maxHeight: .infinity)
+                //.aspectRatio(contentMode: .fit)
+                //.padding(40)
 
 
             VStack(alignment: .leading, spacing: 0) {
