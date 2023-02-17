@@ -12,8 +12,9 @@
 		451495E628E5D648001DF3A8 /* ThemeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451495E528E5D648001DF3A8 /* ThemeEnum.swift */; };
 		45CBD11C28E5401F0015BA70 /* EditNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CBD11B28E5401F0015BA70 /* EditNameView.swift */; };
 		8521681C2996892600A409C7 /* RegisterUserNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8521681B2996892600A409C7 /* RegisterUserNameController.swift */; };
-		858081FE299BC984008F4245 /* Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858081FD299BC984008F4245 /* Intro.swift */; };
-		85808200299BCA7D008F4245 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858081FF299BCA7D008F4245 /* Home.swift */; };
+		85A19DC5299FA80000F7D31B /* TempFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A19DC3299FA7FD00F7D31B /* TempFiles.swift */; };
+		85A19DC8299FAE0E00F7D31B /* Liquid in Frameworks */ = {isa = PBXBuildFile; productRef = 85A19DC7299FAE0E00F7D31B /* Liquid */; };
+		85A19DCB299FAF6600F7D31B /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A19DCA299FAF6600F7D31B /* WelcomeController.swift */; };
 		85AB4DBD299A7C19009416FA /* RegisterPlantNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */; };
 		85AB4DBE299A7C1B009416FA /* RegisterPlantNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */; };
 		85AB4DBF299A7C1C009416FA /* RegisterPlantNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */; };
@@ -72,8 +73,8 @@
 		45CBD11B28E5401F0015BA70 /* EditNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameView.swift; sourceTree = "<group>"; };
 		45F2827A28DDE090009B4875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8521681B2996892600A409C7 /* RegisterUserNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserNameController.swift; sourceTree = "<group>"; };
-		858081FD299BC984008F4245 /* Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
-		858081FF299BCA7D008F4245 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		85A19DC3299FA7FD00F7D31B /* TempFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempFiles.swift; sourceTree = "<group>"; };
+		85A19DCA299FAF6600F7D31B /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantNameController.swift; sourceTree = "<group>"; };
 		D42A4E8C28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantTypeView.swift; sourceTree = "<group>"; };
 		D42A4E8E28DCA3B700B0ACA9 /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85A19DC8299FAE0E00F7D31B /* Liquid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,12 +144,12 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		858081FC299BC969008F4245 /* Model */ = {
+		85A19DC9299FAF4800F7D31B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				858081FD299BC984008F4245 /* Intro.swift */,
+				85A19DCA299FAF6600F7D31B /* WelcomeController.swift */,
 			);
-			path = Model;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		85AB4DBB299A796A009416FA /* Controller */ = {
@@ -203,6 +205,7 @@
 		D4E8173728D9F7F600775EFA /* wateringUITests */ = {
 			isa = PBXGroup;
 			children = (
+				85A19DC3299FA7FD00F7D31B /* TempFiles.swift */,
 				D4E8173828D9F7F600775EFA /* wateringUITests.swift */,
 				D4E8173A28D9F7F600775EFA /* wateringUITestsLaunchTests.swift */,
 			);
@@ -271,9 +274,8 @@
 		FE053DC229927DD1006B233B /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
-				858081FC299BC969008F4245 /* Model */,
+				85A19DC9299FAF4800F7D31B /* Controller */,
 				FE053DC329927DE6006B233B /* View */,
-				FE053DC429927DEF006B233B /* Controller */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -282,16 +284,8 @@
 			isa = PBXGroup;
 			children = (
 				D4E8174C28D9FC3E00775EFA /* WelcomeView.swift */,
-				858081FF299BCA7D008F4245 /* Home.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		FE053DC429927DEF006B233B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		FE053DC629927EAD006B233B /* RegisterUser */ = {
@@ -533,6 +527,9 @@
 			dependencies = (
 			);
 			name = Watering;
+			packageProductDependencies = (
+				85A19DC7299FAE0E00F7D31B /* Liquid */,
+			);
 			productName = watering;
 			productReference = D4E8171528D9F7F600775EFA /* Watering.app */;
 			productType = "com.apple.product-type.application";
@@ -606,6 +603,7 @@
 			);
 			mainGroup = D4E8170C28D9F7F600775EFA;
 			packageReferences = (
+				85A19DC6299FAE0E00F7D31B /* XCRemoteSwiftPackageReference "liquid" */,
 			);
 			productRefGroup = D4E8171628D9F7F600775EFA /* Products */;
 			projectDirPath = "";
@@ -670,12 +668,11 @@
 				D4E8174928D9FBEF00775EFA /* RegisterPlantNameView.swift in Sources */,
 				D42A4E8F28DCA3B700B0ACA9 /* RouterView.swift in Sources */,
 				D4E8175B28DA00AD00775EFA /* RainSceneView.swift in Sources */,
-				858081FE299BC984008F4245 /* Intro.swift in Sources */,
 				D4E8175828DA007000775EFA /* WaterWaveView.swift in Sources */,
 				451495E628E5D648001DF3A8 /* ThemeEnum.swift in Sources */,
-				85808200299BCA7D008F4245 /* Home.swift in Sources */,
 				D4E8174D28D9FC3E00775EFA /* WelcomeView.swift in Sources */,
 				8521681C2996892600A409C7 /* RegisterUserNameController.swift in Sources */,
+				85A19DCB299FAF6600F7D31B /* WelcomeController.swift in Sources */,
 				D4E8176828DA055300775EFA /* NotificationController.swift in Sources */,
 				D4E8171928D9F7F600775EFA /* wateringApp.swift in Sources */,
 				D4E8175628DA004000775EFA /* PlantViewRepresentable.swift in Sources */,
@@ -700,6 +697,7 @@
 				D4E8173B28D9F7F600775EFA /* wateringUITestsLaunchTests.swift in Sources */,
 				D4E8173928D9F7F600775EFA /* wateringUITests.swift in Sources */,
 				85AB4DBF299A7C1C009416FA /* RegisterPlantNameController.swift in Sources */,
+				85A19DC5299FA80000F7D31B /* TempFiles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1021,6 +1019,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		85A19DC6299FAE0E00F7D31B /* XCRemoteSwiftPackageReference "liquid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maustinstar/liquid";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		85A19DC7299FAE0E00F7D31B /* Liquid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85A19DC6299FAE0E00F7D31B /* XCRemoteSwiftPackageReference "liquid" */;
+			productName = Liquid;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D4E8170D28D9F7F600775EFA /* Project object */;
 }

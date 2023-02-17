@@ -1,0 +1,328 @@
+//
+//  firstAccessView.swift
+//  watering
+//
+//  Created by Ayslana Riene on 20/09/22.
+//
+/*
+import SwiftUI
+import Foundation
+
+struct WelcomeView: View {
+
+    @State var intros: [Intro] = [
+        Intro(
+            title: "Plan",
+            subTitle: "your routes",
+            description: "View your collection route Follow, change or add to your route yourself",
+            pic: "Pic1",
+            color: ThemeEnum.primary
+        ),
+        Intro(
+            title: "Quick Waste",
+            subTitle: "Transfer Note",
+            description: "Record oil collections easily and accurately. No more paper!",
+            pic: "Pic2",
+            color: ThemeEnum.secondary
+        ),
+        Intro(
+            title: "Invite",
+            subTitle: "restaurants",
+            description: "Know some restaurants who want to optimize oil collection? Invite them with one click",
+            pic: "Pic3",
+            color: Color(.yellow)
+        )
+    ]
+
+    @GestureState var isDragging: Bool = false
+
+    @State var fakeIndex: Int = 0
+
+    @State var currentIndex: Int = 0
+
+    @State var teste: Int = 0
+
+
+    var body: some View {
+        NavigationView {
+
+            ZStack {
+
+                ForEach(intros.indices.reversed(),id: \.self){ index in
+
+                    IntroView(intro: intros[index])
+                        .clipShape(LiquidShape(offset: intros[index].offset, curvePoint: fakeIndex == index ? 50 : 0))
+                        .padding(.trailing, fakeIndex == index ? 15 : 0) //TAMANHO DA BARRA LATERAL
+                        .ignoresSafeArea()
+                }
+            }
+            .overlay(
+                Button(action: {
+
+                },
+                       label: {
+
+                           Image(systemName: "chevron.left")
+                               .font(.largeTitle)
+                               .frame(width: 50, height: 50)
+                               .foregroundColor(.black)
+                               .contentShape(Rectangle())
+                               .gesture(
+                                DragGesture()
+                                    .updating($isDragging, body: { value, out, _ in
+                                        out = true
+                                    })
+                                    .onChanged({ value in
+                                        withAnimation(.interactiveSpring(response: 0.7, dampingFraction: 0.6, blendDuration: 0.6)){
+
+                                            intros[fakeIndex].offset = value.translation
+                                            print(intros[currentIndex].offset)
+                                        }
+                                    })
+                                    .onEnded({ value in
+                                        withAnimation(.spring()) {
+
+                                            if -intros[fakeIndex].offset.width > getRect().width / 2 {
+
+                                                intros[fakeIndex].offset.width = -getRect().height * 1.5
+
+                                                //Updating Index
+                                                fakeIndex += 1
+                                                //NavigationLink(destination: RegisterUserNameView())
+                                                //Updating Original index
+                                                if (currentIndex == intros.count - 3) {
+                                                    currentIndex = 0
+                                                } else {
+                                                    currentIndex += 1
+                                                }
+
+
+                                                //WHEN FAKE INDEX REACHES THE ELEMENT THAT IS BEFORE LAST ONE
+                                                //SHIFTING AGAIN TO FIRST LAST SO THAT IT WILL CREATE A FEEL LIKE INFINITE CARROUSEL
+                                                //TODO JUMP TO REGISTERNAMEVIEW
+                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                                                    if fakeIndex == (intros.count - 2) {
+
+                                                        for index in 0..<intros.count - 2 {
+                                                            intros[index].offset = .zero
+                                                        }
+                                                        //Updating Current INdex
+                                                        fakeIndex = 0
+                                                    }
+                                                }
+
+                                            }
+                                            else {
+                                                intros[fakeIndex].offset = .zero
+                                            }
+
+                                        }
+
+                                    })
+                               )
+
+                       })
+                .offset(y: 45)
+                .opacity(isDragging ? 0 : 1)
+                .animation(.linear, value: isDragging)
+
+                ,alignment: .topTrailing
+            )
+            .onAppear {
+                //INSERT LAST ELEMENT TO FIRST AND FIRST TO LAST
+
+                guard let first = intros.first else {
+                    return
+                }
+                guard var last = intros.last else {
+                    return
+                }
+
+                last.offset.width = -getRect().height * 1.5
+
+                intros.append(first)
+                intros.insert(last, at: 0)
+
+                fakeIndex = 1
+            }
+        }
+    }
+
+    @ViewBuilder
+    func IntroView(intro: Intro)->some View {
+
+        ZStack {
+
+            Image(intro.pic)
+            //Image("welcomeview_bg")
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight:0, maxHeight: .infinity)
+                //.aspectRatio(contentMode: .fit)
+                //.padding(40)
+
+
+            VStack(alignment: .leading, spacing: 0) {
+
+                Text(intro.title)
+                    .font(.system(size: 45))
+
+                Text(intro.subTitle)
+                    .font(.system(size: 50, weight: .bold))
+
+                Text(intro.description)
+                    .font(.system(size:20))
+                    .fontWeight(.semibold)
+                    .padding(.top)
+                    .frame(width: getRect().width - 100)
+                    .lineSpacing(8)
+
+            }
+            .foregroundColor(.white) //SHOULD BE WHITE W/ GREEN BG
+            .frame(maxWidth: . infinity, alignment: .leading)
+            .padding(.leading,20)
+            .padding([.trailing,.top])
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+
+            intro.color
+        )
+    }
+
+}
+
+extension View{
+    func getRect()->CGRect{
+        return UIScreen.main.bounds
+    }
+}
+
+struct NextView: View {
+    var body: some View {
+        Text("This is the next view")
+    }
+}
+
+struct WelcomeView_Preview : PreviewProvider {
+    static var previews: some View {
+        WelcomeView()
+    }
+}
+*/
+
+    /*
+    let notification = NotificationController()
+    var body: some View {
+        NavigationView {
+            ZStack {
+                ThemeEnum.firstview
+                    .clipShape(LiquidSwipe(offset: offset))
+                    .ignoresSafeArea()
+                    .overlay(
+                        Image(systemName: "chevron.left")
+                            .font(.title.bold())
+                            .foregroundColor(ThemeEnum.primary)
+                            .frame(width: 2, height: 2)
+                            .contentShape(Rectangle())
+                            .gesture(onHoldGesture)
+                            .offset(x: -CGFloat(Int(UIScreen.main.bounds.width/50)), y: CGFloat(Int(UIScreen.main.bounds.height/12)))
+                            .foregroundColor(.white)
+                            .opacity(offset == .zero ? 1 : 0)
+                        ,alignment: .topTrailing
+                    )
+                    .gesture(onHoldGesture)
+                    .padding(.trailing)
+                if showHome {
+                    RegisterUserNameView()
+                        .simultaneousGesture(TapGesture().onEnded{
+                        })
+                }
+                ZStack {
+                    VStack {
+                        Spacer().frame(height: 120)
+                        apresetation
+                        Spacer().frame(height: 100)
+                    }
+                }
+            }
+        }
+        .navigationBarBackButtonHidden(true)
+    }
+    var apresetation: some View {
+        Text("Welcome to Watering! Before we start, we need to ask three questions.")
+            .multilineTextAlignment(.leading)
+            .foregroundColor(.white)
+            .font(.system(size: 24, design: .rounded))
+            .padding(.trailing)
+            .offset(x: -15)
+            .gesture(onHoldGesture)
+            .offset(x: 15, y: -40)
+            .foregroundColor(ThemeEnum.secondary)
+            .opacity(offset == .zero ? 1 : 0)
+    }
+    var onHoldGesture: some Gesture {
+        DragGesture().onChanged({ (value) in
+
+            withAnimation(.interactiveSpring(response: 0.7, dampingFraction: 0.6, blendDuration: 0.6)){
+                offset = value.translation
+            }
+
+        }).onEnded({(value) in
+            let screen = UIScreen.main.bounds
+            withAnimation(.spring()){
+                if -offset.width > screen.width / 2 {
+                    offset.width = -screen.height
+                    showHome.toggle()
+                } else {
+                    offset = .zero
+                }
+            }
+        })
+    }*/
+
+/*
+struct LiquidSwipe: Shape {
+
+    var offset: CGSize
+    var curvePoint: CGFloat
+
+
+    var animatableData: AnimatablePair<CGSize.AnimatableData, CGFloat>{
+        get {
+            return AnimatablePair(offset.animatableData,curvePoint)
+        }
+        set {
+            offset.animatableData = newValue.first
+            curvePoint = newValue.second
+        }
+    }
+
+    func path(in rect: CGRect) -> Path {
+
+        return Path{path in
+
+            let width = rect.width + (-offset.width > 0 ? offset.width: 0)
+
+            path.move(to: CGPoint(x: 0, y: 0))
+            path.addLine(to: CGPoint(x: rect.width, y: 0))
+            path.addLine(to: CGPoint(x: rect.width, y: rect.height))
+            path.addLine(to: CGPoint(x: 0, y: rect.height))
+
+            let from = 80 + (offset.width)
+            path.move(to: CGPoint(x: rect.width, y: from > 80 ? 80: from))
+
+            var to = 180 + (offset.height) + (-offset.width)
+            to = to < 180 ? 180 : to
+
+            let mid : CGFloat = 80 + ((to - 80)/2)
+
+            path.addCurve(to: CGPoint(x: rect.width, y: to),
+                          control1: CGPoint(x: width - curvePoint, y: mid),
+                          control2: CGPoint(x: width - curvePoint, y: mid))
+        }
+
+    }
+}
+*/
