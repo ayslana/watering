@@ -45,6 +45,7 @@
 		D4E8176828DA055300775EFA /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8176728DA055300775EFA /* NotificationController.swift */; };
 		D4F8943D28E3417800CD7216 /* succullent.dae in Resources */ = {isa = PBXBuildFile; fileRef = D4F8943C28E3417800CD7216 /* succullent.dae */; };
 		D4F8944128E3453E00CD7216 /* succullent.scn in Resources */ = {isa = PBXBuildFile; fileRef = D4F8944028E3453E00CD7216 /* succullent.scn */; };
+		FEC15CA8299F9D590064D1C9 /* EditNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC15CA7299F9D580064D1C9 /* EditNameController.swift */; };
 		FED882622996799E00F6A02B /* PlantViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED882612996799E00F6A02B /* PlantViewComponents.swift */; };
 		FED8826429967BCF00F6A02B /* PlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8826329967BCF00F6A02B /* PlantViewController.swift */; };
 /* End PBXBuildFile section */
@@ -107,6 +108,7 @@
 		D4E8176728DA055300775EFA /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		D4F8943C28E3417800CD7216 /* succullent.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = succullent.dae; sourceTree = "<group>"; };
 		D4F8944028E3453E00CD7216 /* succullent.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = succullent.scn; sourceTree = "<group>"; };
+		FEC15CA7299F9D580064D1C9 /* EditNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditNameController.swift; path = watering/Presentation/RegisterPlantType/View/Components/EditNameController.swift; sourceTree = SOURCE_ROOT; };
 		FED882612996799E00F6A02B /* PlantViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantViewComponents.swift; sourceTree = "<group>"; };
 		FED8826329967BCF00F6A02B /* PlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlantViewController.swift; path = watering/Presentation/RegisterPlantType/View/Components/PlantViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -420,6 +422,7 @@
 		FE053DD92992838C006B233B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FEC15CA7299F9D580064D1C9 /* EditNameController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				D44B720D28E1ED6100FBD7A7 /* UserDefaults+.swift in Sources */,
 				451495E428E5D14B001DF3A8 /* EditPlantView.swift in Sources */,
 				D42A4E8D28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift in Sources */,
+				FEC15CA8299F9D590064D1C9 /* EditNameController.swift in Sources */,
 				D4E8174B28D9FC1500775EFA /* RegisterUserNameView.swift in Sources */,
 				D4E8174928D9FBEF00775EFA /* RegisterPlantNameView.swift in Sources */,
 				D42A4E8F28DCA3B700B0ACA9 /* RouterView.swift in Sources */,
