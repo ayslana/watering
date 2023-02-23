@@ -26,5 +26,7 @@ struct PlantViewRepresentable: UIViewRepresentable {
         return view
     }
 
-    func updateUIView(_ uiView: SCNView, context: Context) { }
+    func updateUIView(_ uiView: SCNView, context: Context) {
+        uiView.scene = scene
+    }
 }

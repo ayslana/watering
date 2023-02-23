@@ -23,7 +23,8 @@ struct WateringView: View {
     @State var audioPlayer2: AVAudioPlayer?
     @State var dayWatering = ""
     @State var valueAnimation: Bool = false
-    
+
+    @EnvironmentObject var userPlant: UserPlant
     
     var rainLightningScene: SKScene {
         let scene = RainSceneView()
@@ -70,8 +71,12 @@ struct WateringView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: EditNameView(), label: { Text("Edit")
-                        .foregroundColor(ThemeEnum.primary) })
+                    NavigationLink(
+                        destination: EditNameView().environmentObject(userPlant),
+                        label: {
+                            Text("Edit").foregroundColor(ThemeEnum.primary)
+                        }
+                    )
                 }
             }
             .onReceive(timer) { _ in

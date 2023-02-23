@@ -10,14 +10,31 @@ import SceneKit
 
 struct EditNameView: View {
     @StateObject var controller = EditNameController()
+    @EnvironmentObject var userPlant: UserPlant
+    @State private var showingAlert = false
+
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
         ScrollView {
             VStack {
                 informations
-                NavigationLink(destination: EditPlantView()) {
-                    treeView
+                NavigationLink(
+                    destination: EditPlantView().environmentObject(userPlant)
+                ){
+                    PlantViewRepresentable(
+                        scene: {
+                            let scene = SCNScene(named: userPlant.plant.modelName)!
+                            scene.background.contents = UIColor.clear
+                            return scene
+                        }(),
+                        options: [.autoenablesDefaultLighting]
+                    )
+                    .frame(
+                        maxWidth: UIScreen.main.bounds.width,
+                        minHeight: UIScreen.main.bounds.height/2,
+                        alignment: .center
+                    )
                 }
             }
         }
@@ -28,12 +45,25 @@ struct EditNameView: View {
                         .foregroundColor(.secondary)
                 } else {
                     Button("Save") {
-                        controller.saveNames()
-                        dismiss()
+                        showingAlert = true
+
+                    }
+                    .alert(isPresented: $showingAlert) {
+                        Alert(
+                            title: Text("Save the changes"),
+                            message: Text("Do you want to save the changes?"),
+                            primaryButton: .default(Text("Yes")) {
+                                controller.saveNames()
+                                userPlant.getPlant()
+                                dismiss()
+                            },
+                            secondaryButton: .cancel()
+                        )
                     }
                 }
             }
         }
+        .background(ThemeEnum.secondary)
     }
 
     var informations: some View {
@@ -52,26 +82,21 @@ struct EditNameView: View {
         .frame(minHeight: UIScreen.main.bounds.height/3)
     }
 
-    var treeView: some View {
-        PlantViewRepresentable(
-            scene: {
-                let modelo = DropWaterModel(
-                    id: controller.plantID,
-                    type: controller.plantType,
-                    modelName: controller.plantModelName
-                )
-                let scene = SCNScene(named: modelo.modelName)!
-                scene.background.contents = UIColor.clear
-                return scene
-            }(),
-            options: [.autoenablesDefaultLighting]
-        )
-        .frame(
-            maxWidth: UIScreen.main.bounds.width,
-            minHeight: UIScreen.main.bounds.height/2,
-            alignment: .center
-        )
-    }
+//    var treeView: some View {
+//        PlantViewRepresentable(
+//            scene: {
+//                let scene = SCNScene(named: userPlant.plant.modelName)!
+//                scene.background.contents = UIColor.clear
+//                return scene
+//            }(),
+//            options: [.autoenablesDefaultLighting]
+//        )
+//        .frame(
+//            maxWidth: UIScreen.main.bounds.width,
+//            minHeight: UIScreen.main.bounds.height/2,
+//            alignment: .center
+//        )
+//    }
 
     private func buildTextField(
         placeholder: String,
@@ -81,7 +106,7 @@ struct EditNameView: View {
             placeholder,
             text: text
         )
-        .foregroundColor(ThemeEnum.primary)
+        .foregroundColor(ThemeEnum.font)
         .listRowBackground(ThemeEnum.primary.opacity(0.2))
     }
 
