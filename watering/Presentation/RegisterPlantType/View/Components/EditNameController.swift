@@ -11,10 +11,6 @@ class EditNameController: ObservableObject {
     @Published var userName: String = "\(UserDefaults.standard.getPersonName() ?? "")"
     @Published var plantName: String = "\(UserDefaults.standard.getPlantName() ?? "")"
 
-    var plantID = UserDefaults.standard.getPlantID() ?? 0
-    var plantType = UserDefaults.standard.getPlantTypeName() ?? ""
-    var plantModelName = UserDefaults.standard.getPlantType() ?? ""
-
     func buildUserNamePlanceholder() -> String {
         if (userName == "") {
             return "Write your name"

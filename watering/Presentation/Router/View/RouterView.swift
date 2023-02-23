@@ -15,6 +15,7 @@ struct RouterView: View {
     //estado
     //https://www.hackingwithswift.com/quick-start/swiftui/how-to-use-environmentobject-to-share-data-between-views
     //essa é uma maneira mais eficaz de trabalhar com os mesmo dados em diferentes visualizacoes
+    @StateObject var userPlant = UserPlant()
     var body: some View {
         VStack {
             //se minha variavel currentPage, declarada na ViewRouter for igual
@@ -22,7 +23,7 @@ struct RouterView: View {
             if viewRouter.currentPage == "FirstAccessView" {
                 WelcomeView()
             } else if viewRouter.currentPage == "WateringView" {
-                WateringView()
+                WateringView().environmentObject(userPlant)
             }
         }
     }
