@@ -22,8 +22,11 @@ struct PlantViewRepresentable: UIViewRepresentable {
         view.isJitteringEnabled = options.contains(.jitteringEnabled)
         view.isTemporalAntialiasingEnabled = options.contains(.temporalAntialiasingEnabled)
         view.scene = scene
+
         return view
     }
 
-    func updateUIView(_ uiView: SCNView, context: Context) { }
+    func updateUIView(_ uiView: SCNView, context: Context) {
+        uiView.scene = scene
+    }
 }

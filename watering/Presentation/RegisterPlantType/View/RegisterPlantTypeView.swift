@@ -9,39 +9,32 @@ import SwiftUI
 import SceneKit
 
 struct RegisterPlantTypeView: View {
+    @State var isShowingOne = false
     
     var columns = Array(repeating: GridItem(.flexible(), spacing: 15), count: 2)
-    @State var selected: DropWaterModel = PlantsType[0]
-    @State var show = false
-    @State var idPlant: Int = 0
-    @State var typePlant: String = ""
-    @State var modelNamePlant: String = ""
-    @Namespace var namespace
-    
+    let components = PlantViewComponents()
+    var controller = PlantViewController()
+
     var body: some View {
-        ZStack {
-            ThemeEnum.secondary.ignoresSafeArea()
-            Spacer().frame(width: 30, height: 30)
-                .padding([.leading,.top])
-            VStack {
-                cabeçalhoView
-                choosePlantView
-                if show {
-                    VStack{
-                        scalePlantView
-                        nextView
-                    }
+        VStack{
+            titleView
+            if isShowingOne {
+                ScrollView(.vertical, showsIndicators: false){
+                    bigPlantView
+                    nextView
                 }
+            } else {
+                choosePlantView
             }
-        }
-        .background(.white)
+        }.background(ThemeEnum.secondary)
     }
     
-    var cabeçalhoView: some View {
+    var titleView: some View {
         Text("Choose your plant type")
             .multilineTextAlignment(.center)
+            .lineLimit(nil)
             .foregroundColor(ThemeEnum.primary)
-            .font(.system(size: 20, design: .rounded))
+            .font(.title3)
             .padding()
     }
     var choosePlantView: some View {
@@ -49,86 +42,66 @@ struct RegisterPlantTypeView: View {
             LazyVGrid(columns: columns, spacing: 15){
                 ForEach(PlantsType){ plant in
                     VStack (alignment: .center, spacing: 10){
-                        PlantViewRepresentable(scene: {
-                            let scene = SCNScene(named: plant.modelName)!
-                            scene.background.contents = UIColor.clear
-                            return scene
-                        }(),
-                        options: [.autoenablesDefaultLighting, .allowsCameraControl])
-                        .frame(width: UIScreen.main.bounds.width/1.5, height: UIScreen.main.bounds.height / 3.5 , alignment: .center)
-                        .cornerRadius(15)
-                        .onTapGesture {
-                            withAnimation(.easeOut){
-                                show.toggle()
-                                selected = plant
+                        components.plantViewConstructor(
+                            plant: plant,
+                            onTap: {
+                                isShowingOne.toggle()
+                                controller.selected = plant
                             }
-                        }
-                        //pesquisar pra que serve
-                        .matchedGeometryEffect(id: plant.id, in: namespace)
+                        )
                         Text(plant.type)
                             .multilineTextAlignment(.center)
+                            .lineLimit(nil)
                             .foregroundColor(ThemeEnum.primary)
-                            .font(.system(size: 20, design: .rounded))
+                            .font(.body)
                     }
                 }
             }
             .padding(.horizontal)
         }
     }
+
     var nextView: some View {
-        VStack (alignment: .center){
+
             NavigationLink (
                 destination : WateringView().navigationBarHidden(true),
                 label : {
                     Text ("Next")
                         .foregroundColor(ThemeEnum.primary)
-                        .frame(width: 200, height: 50)
-                        .font(.system(size: 20, design: .rounded))
+                        .frame(minWidth: 200, minHeight: 50)
+                        .font(.title3)
+                        .multilineTextAlignment(.center)
+                        .lineLimit(nil)
                         .overlay(RoundedRectangle(cornerRadius: 15)
                             .stroke(ThemeEnum.primary, lineWidth: 2))
                         .padding()
                 })
             .simultaneousGesture(TapGesture().onEnded{
-                self.idPlant = selected.id
-                self.typePlant = selected.type
-                self.modelNamePlant = selected.modelName
-                savePlantType()                
+                controller.savePlantType()
             })
             .navigationBarBackButtonHidden(true)
-        }
+
     }
-    var scalePlantView: some View {
+    var bigPlantView: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .center)){
-            PlantViewRepresentable(scene: {
-                let scene = SCNScene(named: selected.modelName)!
-                scene.background.contents = UIColor.clear
-                return scene
-            }(),
-                      options: [.autoenablesDefaultLighting, .allowsCameraControl])
-            .frame(width: UIScreen.main.bounds.width/0.8, height: UIScreen.main.bounds.height / 1.4 , alignment: .center)
-            .matchedGeometryEffect(id: selected.id, in: namespace)
-            HStack {
-                Button{
-                    withAnimation(.spring()){
-                        show.toggle()
-                    }
-                } label: {
-                    RoundedRectangle(cornerRadius: 30)
-                        .frame(width: 300, height: 490)
-                        .foregroundColor(.white.opacity(0))
+            components.plantViewConstructor(
+                plant: controller.selected,
+                isBigPlant: true
+            )
+            Button {
+                withAnimation(.spring()){
+                    isShowingOne.toggle()
                 }
+            } label: {
+                RoundedRectangle(cornerRadius: 30)
+//                    .frame(minWidth: 300, minHeight: 200)
+                    .foregroundColor(.clear)
             }
         }
     }
-    
-    func savePlantType() {
-        UserDefaults.standard.setPlantType(value: modelNamePlant)
-        UserDefaults.standard.setPlantTypeName(value: typePlant)
-        UserDefaults.standard.setPlantID(value: idPlant)
-    }
 }
 
-struct ChoosePlantView_Previews: PreviewProvider {
+struct RegisterPlantTypeView_Previews: PreviewProvider {
     static var previews: some View {
         RegisterPlantTypeView()
     }

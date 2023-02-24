@@ -24,6 +24,7 @@ struct WateringView: View {
     @State var dayWatering = ""
     @State var valueAnimation: Bool = false
     
+    @EnvironmentObject var userPlant: UserPlant
     
     var rainLightningScene: SKScene {
         let scene = RainSceneView()
@@ -37,10 +38,10 @@ struct WateringView: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
-                    VStack(spacing: 0){
-                        information
-                        treeView
-                    }
+                VStack(spacing: 0){
+                    information
+                    treeView
+                }
                 ZStack(alignment: .bottom){
                     if !isComplete {
                         waterWaveView
@@ -67,9 +68,9 @@ struct WateringView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: EditNameView(), label: { Text("Edit")
+                    NavigationLink(    destination: EditNameView().environmentObject(userPlant), label: { Text("Edit")
                         .foregroundColor(ThemeEnum.primary) })
-                        .animation(nil)
+                    .animation(nil)
                 }
             }
             .onReceive(timer) { _ in
@@ -88,7 +89,7 @@ struct WateringView: View {
             }
         }
         .accentColor(ThemeEnum.primary)
-//        .navigationBarBackButtonHidden()
+        //        .navigationBarBackButtonHidden()
     }
     var information: some View {
         VStack {
@@ -104,9 +105,9 @@ struct WateringView: View {
             .font(.title3)
             .frame(width: UIScreen.main.bounds.width * 0.95)
         }
-
+        
     }
-
+    
     var treeView: some View {
         //INSERÇÃO DO MODELO 3D
         PlantViewRepresentable(scene: {
@@ -115,7 +116,7 @@ struct WateringView: View {
             scene.background.contents = UIColor.clear
             return scene
         }(),
-                  options: [.autoenablesDefaultLighting, .allowsCameraControl])
+                               options: [.autoenablesDefaultLighting, .allowsCameraControl])
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.35 , alignment: .center)
     }
     
@@ -159,7 +160,7 @@ struct WateringView: View {
             .cornerRadius(50)
             .gesture(onHoldGesture)
     }
-
+    
     func animationRainView <valueAnimation>(_ animation: Animation?, value: valueAnimation) -> some View where valueAnimation : Equatable {
         SpriteView(scene: rainLightningScene, options: [.allowsTransparency])
             .ignoresSafeArea()
@@ -182,7 +183,7 @@ struct WateringView: View {
                     self.progress = 0.1
                     self.dayWatering = "\(Date.now.formatted(.dateTime.weekday(.wide).hour().minute().second()))"
                     saveLastDate()
-
+                    
                 }
             }
             .onDisappear() {
