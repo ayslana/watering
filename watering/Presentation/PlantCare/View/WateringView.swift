@@ -24,8 +24,8 @@ struct WateringView: View {
     @State var dayWatering = ""
     @State var valueAnimation: Bool = false
 
-    @EnvironmentObject var userPlant: UserPlant
-    
+    @StateObject var userPlant: UserPlant = UserPlant()
+
     var rainLightningScene: SKScene {
         let scene = RainSceneView()
         scene.size = UIScreen.screenSize

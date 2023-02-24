@@ -28,8 +28,8 @@ class UserPlant: ObservableObject {
 
     @Published var plant: DropWaterModel = DropWaterModel(
         id: UserDefaults.standard.getPlantID() ?? 0,
-        type: UserDefaults.standard.getPlantTypeName() ?? "",
-        modelName: UserDefaults.standard.getPlantType() ?? ""
+        type: UserDefaults.standard.getPlantTypeName() ?? "Flower",
+        modelName: UserDefaults.standard.getPlantType() ?? "flower.scn"
     )
 
     func savePlant(id: Int, type: String, modelName: String) {
