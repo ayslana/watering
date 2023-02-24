@@ -37,10 +37,10 @@ struct WelcomeView: View {
                         .offset(x: -70, y: 0)
                         .foregroundColor(Color(.white))
                     Text("Before we start, we need to ask three questions...")
-                        .font(.caption)
+                        .font(.body)
                         .fontWeight(.bold)
                         .foregroundColor(Color(.white))
-                        .offset(x: -18, y: 60)
+                        .offset(x: -18, y: 70)
 
                 }
 
