@@ -12,6 +12,7 @@
 		451495E628E5D648001DF3A8 /* ThemeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451495E528E5D648001DF3A8 /* ThemeEnum.swift */; };
 		45CBD11C28E5401F0015BA70 /* EditNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CBD11B28E5401F0015BA70 /* EditNameView.swift */; };
 		8521681C2996892600A409C7 /* RegisterUserNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8521681B2996892600A409C7 /* RegisterUserNameController.swift */; };
+		85286B2329A8E20C003B9E32 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85286B2229A8E20C003B9E32 /* VisualEffectBlur.swift */; };
 		85A19DC5299FA80000F7D31B /* TempFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A19DC3299FA7FD00F7D31B /* TempFiles.swift */; };
 		85A19DC8299FAE0E00F7D31B /* Liquid in Frameworks */ = {isa = PBXBuildFile; productRef = 85A19DC7299FAE0E00F7D31B /* Liquid */; };
 		85A19DCB299FAF6600F7D31B /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A19DCA299FAF6600F7D31B /* WelcomeController.swift */; };
@@ -73,6 +74,7 @@
 		45CBD11B28E5401F0015BA70 /* EditNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameView.swift; sourceTree = "<group>"; };
 		45F2827A28DDE090009B4875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8521681B2996892600A409C7 /* RegisterUserNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserNameController.swift; sourceTree = "<group>"; };
+		85286B2229A8E20C003B9E32 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		85A19DC3299FA7FD00F7D31B /* TempFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempFiles.swift; sourceTree = "<group>"; };
 		85A19DCA299FAF6600F7D31B /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantNameController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				85A19DCA299FAF6600F7D31B /* WelcomeController.swift */,
+				85286B2229A8E20C003B9E32 /* VisualEffectBlur.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85286B2329A8E20C003B9E32 /* VisualEffectBlur.swift in Sources */,
 				D4E8175228D9FF9800775EFA /* DropWaterModel.swift in Sources */,
 				45CBD11C28E5401F0015BA70 /* EditNameView.swift in Sources */,
 				D42A4E9128DCA44300B0ACA9 /* RouterController.swift in Sources */,
