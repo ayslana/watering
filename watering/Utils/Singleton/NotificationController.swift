@@ -1,3 +1,10 @@
+//
+//  NotificationController.swift
+//  watering
+//
+//  Created by Ayslana Riene on 14/02/23.
+//
+
 import UserNotifications
 
 struct NotificationController {
@@ -11,35 +18,27 @@ struct NotificationController {
             }
         }
     
-    func treatNotificationRequest() {
+    private func treatNotificationRequest() {
         UNUserNotificationCenter.current().getNotificationSettings { (notificationSettings) in
             switch notificationSettings.authorizationStatus {
-            case .notDetermined:
+            case .authorized, .provisional, .ephemeral:
+                doNotification()
+            case .notDetermined, .denied:
                 print("Application Not Allowed to Display Notifications")
-            case .authorized:
-                doNotification()
-            case .denied:
-                print("Application Not Allowed to Display Notifications")
-            case .provisional:
-                doNotification()
-            case .ephemeral:
-                doNotification()
             @unknown default:
                 print("Application Not Allowed to Display Notifications")
             }
         }
     }
-    func doNotification()  {
+    private func doNotification()  {
         let content = UNMutableNotificationContent()
         content.title = "\(UserDefaults.standard.getPlantName() ?? "Your plant") is thirsty 😟"
         content.body = "Remember to watering it today!"
-        var dateComponents = DateComponents()
-        dateComponents.calendar = Calendar.current
-        dateComponents.hour = 09
-        dateComponents.minute = 30
+        let dateComponents = DateComponents(calendar: .current, hour: 9, minute: 30)
         
         let trigger = UNCalendarNotificationTrigger(
-            dateMatching: dateComponents, repeats: true)
+            dateMatching: dateComponents, repeats: true
+        )
         let uuidString = UUID().uuidString
         let request = UNNotificationRequest(identifier: uuidString,
                                             content: content, trigger: trigger)

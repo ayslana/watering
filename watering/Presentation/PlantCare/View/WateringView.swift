@@ -36,28 +36,25 @@ struct WateringView: View {
     
     var body: some View {
         NavigationView {
-            ZStack(alignment: .bottom) {
-                ThemeEnum.secondary.ignoresSafeArea()
-                ZStack{
-                    information
-                    .offset(y: -UIScreen.main.bounds.height/2.4)
-                    .padding(5)
-                    VStack {
+            ZStack(alignment: .top) {
+                    VStack(spacing: 0){
+                        information
                         treeView
-                    } .offset(y: -UIScreen.main.bounds.height/6)
-                }
-                if !isComplete {
-                    waterWaveView
-                }
-                button
-                    .padding()
-                if isComplete {
-                    animationRainView(nil, value: true)
-                    if isSucess {
+                    }
+                ZStack(alignment: .bottom){
+                    if !isComplete {
+                        waterWaveView
+                    }
+                    button
+                    if isComplete {
                         animationRainView(nil, value: true)
+                        if isSucess {
+                            animationRainView(nil, value: true)
+                        }
                     }
                 }
             }
+            .background(ThemeEnum.secondary)
             .navigationBarBackButtonHidden(true)
             .onAppear {
                 //MUSICA DA AGUA SUBINDO
@@ -72,6 +69,7 @@ struct WateringView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: EditNameView(), label: { Text("Edit")
                         .foregroundColor(ThemeEnum.primary) })
+                        .animation(nil)
                 }
             }
             .onReceive(timer) { _ in
@@ -103,7 +101,8 @@ struct WateringView: View {
             }
             .multilineTextAlignment(.center)
             .foregroundColor(ThemeEnum.font)
-            .font(.system(size: 20, design: .rounded))
+            .font(.title3)
+            .frame(width: UIScreen.main.bounds.width * 0.95)
         }
 
     }
@@ -117,7 +116,7 @@ struct WateringView: View {
             return scene
         }(),
                   options: [.autoenablesDefaultLighting, .allowsCameraControl])
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.4 , alignment: .center)
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.35 , alignment: .center)
     }
     
     var waterWaveView: some View {
@@ -130,7 +129,7 @@ struct WateringView: View {
                 .ignoresSafeArea()
                 .frame(width: size.width, height: size.height, alignment: .center)
                 .onAppear{
-                    withAnimation(.linear(duration: 9).repeatForever(autoreverses: false)){
+                    withAnimation(.linear(duration: 8).repeatForever(autoreverses: false)){
                         startAnimation = size.width
                     }
                 }
@@ -153,7 +152,7 @@ struct WateringView: View {
     }
     var button: some View {
         Image(systemName: "drop")
-            .font(.system(size: 30))
+            .font(.title3)
             .foregroundColor(ThemeEnum.primary)
             .padding(25)
             .background(ThemeEnum.secondary)
@@ -163,7 +162,6 @@ struct WateringView: View {
 
     func animationRainView <valueAnimation>(_ animation: Animation?, value: valueAnimation) -> some View where valueAnimation : Equatable {
         SpriteView(scene: rainLightningScene, options: [.allowsTransparency])
-            .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
             .ignoresSafeArea()
             .onAppear {
                 //SOM DO DONE
