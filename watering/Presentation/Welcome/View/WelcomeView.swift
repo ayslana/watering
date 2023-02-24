@@ -14,11 +14,11 @@ import Foundation
 
 struct WelcomeView: View {
 
-    let minimalistEffect: Bool = true
-
     @State var offset: CGSize = .zero
 
     @State var showHome = false
+
+    @State private var placeholder: String = ""
 
     var body: some View {
 
@@ -26,6 +26,50 @@ struct WelcomeView: View {
         ZStack {
 
 
+            Image("Flower")
+                .resizable()
+                .alignmentGuide(.trailing) { dimension in
+                    dimension[.trailing] - 70
+                }
+                .frame(alignment: .trailing)
+
+//MARK: JUST A FAKEHOLDER TO SIMULATES THE SECOND SCREEN
+            VStack {
+                Spacer().frame(height: 50)
+
+                Text("What is your name?")
+                    .foregroundColor(ThemeEnum.font)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(nil)
+                    .font(.title2)
+                    .frame(
+                        width: UIScreen.main.bounds.width * 0.9
+                    )
+
+                TextField("Type Here", text: $placeholder)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(ThemeEnum.font)
+                    .font(.body)
+                    .frame(
+                        width: UIScreen.main.bounds.width * 0.8
+                    )
+
+                Divider()
+                    .background(ThemeEnum.primary)
+                    .frame(width: 300)
+
+                if (true){
+                    Text("Insert at least 5 characters")
+                        .foregroundColor(.red)
+                        .font(.caption2)
+                        .multilineTextAlignment(.center)
+                        .lineLimit(nil)
+                        .frame(
+                            width: UIScreen.main.bounds.width * 0.8
+                        )
+                }
+            }
+//MARK: END OF THE FAKEHOLDER
 
             Color("Primary")
                 .overlay() {
