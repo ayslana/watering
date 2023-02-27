@@ -20,6 +20,7 @@ struct PlantViewRepresentable: UIViewRepresentable {
         view.autoenablesDefaultLighting = options.contains(.autoenablesDefaultLighting)
         view.rendersContinuously = options.contains(.rendersContinuously)
         view.isJitteringEnabled = options.contains(.jitteringEnabled)
+        
         view.isTemporalAntialiasingEnabled = options.contains(.temporalAntialiasingEnabled)
         view.scene = scene
 

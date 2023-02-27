@@ -23,9 +23,9 @@ struct WateringView: View {
     @State var audioPlayer2: AVAudioPlayer?
     @State var dayWatering = ""
     @State var valueAnimation: Bool = false
-
+    
     @StateObject var userPlant: UserPlant = UserPlant()
-
+    
     var rainLightningScene: SKScene {
         let scene = RainSceneView()
         scene.size = UIScreen.screenSize
@@ -38,9 +38,11 @@ struct WateringView: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
-                VStack(spacing: 0){
-                    information
-                    treeView
+                ScrollView {
+                    VStack(spacing: 0){
+                        information
+                        treeView
+                    }
                 }
                 ZStack(alignment: .bottom){
                     if !isComplete {
@@ -117,7 +119,8 @@ struct WateringView: View {
             return scene
         }(),
                                options: [.autoenablesDefaultLighting, .allowsCameraControl])
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.35 , alignment: .center)
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.55 , alignment: .center)
+        
     }
     
     var waterWaveView: some View {
