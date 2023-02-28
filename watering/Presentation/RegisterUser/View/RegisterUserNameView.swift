@@ -18,9 +18,7 @@ struct RegisterUserNameView: View {
     var body: some View {
         ZStack {
             ThemeEnum.flower
-            //.resizable()
-                .fixedSize()
-                .scaledToFit()
+                .resizable()
                 .alignmentGuide(.trailing) { dimension in
                     dimension[.trailing] - 70
                 }

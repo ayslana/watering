@@ -15,9 +15,7 @@ struct RegisterPlantNameView: View {
             ZStack {
                 //ThemeEnum.secondary.ignoresSafeArea()
                 ThemeEnum.flower
-                //.offset(x: UIScreen.main.bounds.width/2.5)
-                    .fixedSize()
-                    .scaledToFit()
+                    .resizable()
                     .alignmentGuide(.trailing) { dimension in
                         dimension[.trailing] - 70
                     }
@@ -71,7 +69,7 @@ struct RegisterPlantNameView: View {
                             .padding()
                             .cornerRadius(20)
                     }
-                    ).offset(x: 0,y: 250)
+                    ).offset(x: 0,y: 230)
                 }
 
             }
