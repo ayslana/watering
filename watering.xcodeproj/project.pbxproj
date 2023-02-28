@@ -12,9 +12,9 @@
 		451495E628E5D648001DF3A8 /* ThemeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451495E528E5D648001DF3A8 /* ThemeEnum.swift */; };
 		45CBD11C28E5401F0015BA70 /* EditNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CBD11B28E5401F0015BA70 /* EditNameView.swift */; };
 		8521681C2996892600A409C7 /* RegisterUserNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8521681B2996892600A409C7 /* RegisterUserNameController.swift */; };
-		855CD0C729ACD32100C1FB87 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD0C329ACD32100C1FB87 /* VisualEffectBlur.swift */; };
-		855CD0C829ACD32100C1FB87 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD0C429ACD32100C1FB87 /* WelcomeController.swift */; };
-		855CD0C929ACD32100C1FB87 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD0C629ACD32100C1FB87 /* WelcomeView.swift */; };
+		855DBCA929AE1BE600F079F3 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DBCA829AE1BE600F079F3 /* WelcomeView.swift */; };
+		855DBCAC29AE1C4600F079F3 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DBCAB29AE1C4600F079F3 /* VisualEffectBlur.swift */; };
+		855DBCAE29AE1C8500F079F3 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DBCAD29AE1C8500F079F3 /* WelcomeController.swift */; };
 		85AB4DBD299A7C19009416FA /* RegisterPlantNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */; };
 		85AB4DBE299A7C1B009416FA /* RegisterPlantNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */; };
 		85AB4DBF299A7C1C009416FA /* RegisterPlantNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */; };
@@ -77,9 +77,9 @@
 		45CBD11B28E5401F0015BA70 /* EditNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameView.swift; sourceTree = "<group>"; };
 		45F2827A28DDE090009B4875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8521681B2996892600A409C7 /* RegisterUserNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserNameController.swift; sourceTree = "<group>"; };
-		855CD0C329ACD32100C1FB87 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
-		855CD0C429ACD32100C1FB87 /* WelcomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
-		855CD0C629ACD32100C1FB87 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		855DBCA829AE1BE600F079F3 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		855DBCAB29AE1C4600F079F3 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
+		855DBCAD29AE1C8500F079F3 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantNameController.swift; sourceTree = "<group>"; };
 		D42A4E8C28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantTypeView.swift; sourceTree = "<group>"; };
 		D42A4E8E28DCA3B700B0ACA9 /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
@@ -152,31 +152,38 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		855CD0C129ACD32100C1FB87 /* Welcome */ = {
+		855DBCA429AE1B9700F079F3 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
-				855CD0C229ACD32100C1FB87 /* Controller */,
-				855CD0C529ACD32100C1FB87 /* View */,
+				855DBCA629AE1BA700F079F3 /* View */,
+				855DBCA529AE1BA000F079F3 /* Controller */,
 			);
-			name = Welcome;
-			path = "../../../watering - cópia/watering/Presentation/Welcome";
+			path = Welcome;
 			sourceTree = "<group>";
 		};
-		855CD0C229ACD32100C1FB87 /* Controller */ = {
+		855DBCA529AE1BA000F079F3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				855CD0C329ACD32100C1FB87 /* VisualEffectBlur.swift */,
-				855CD0C429ACD32100C1FB87 /* WelcomeController.swift */,
+				855DBCAD29AE1C8500F079F3 /* WelcomeController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		855CD0C529ACD32100C1FB87 /* View */ = {
+		855DBCA629AE1BA700F079F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				855CD0C629ACD32100C1FB87 /* WelcomeView.swift */,
+				855DBCA729AE1BC700F079F3 /* Components */,
+				855DBCA829AE1BE600F079F3 /* WelcomeView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		855DBCA729AE1BC700F079F3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				855DBCAB29AE1C4600F079F3 /* VisualEffectBlur.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		85AB4DBB299A796A009416FA /* Controller */ = {
@@ -286,7 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				FE053DDD29928507006B233B /* Router */,
-				855CD0C129ACD32100C1FB87 /* Welcome */,
+				855DBCA429AE1B9700F079F3 /* Welcome */,
 				FE053DC629927EAD006B233B /* RegisterUser */,
 				FE053DCB29927F63006B233B /* RegisterPlantName */,
 				FE053DCE29927FC2006B233B /* RegisterPlantType */,
@@ -300,8 +307,8 @@
 		FE053DC629927EAD006B233B /* RegisterUser */ = {
 			isa = PBXGroup;
 			children = (
-				8521681A2996891500A409C7 /* Controller */,
 				FE053DC729927ED7006B233B /* View */,
+				8521681A2996891500A409C7 /* Controller */,
 			);
 			path = RegisterUser;
 			sourceTree = "<group>";
@@ -317,8 +324,8 @@
 		FE053DCB29927F63006B233B /* RegisterPlantName */ = {
 			isa = PBXGroup;
 			children = (
-				85AB4DBB299A796A009416FA /* Controller */,
 				FE053DCC29927FA3006B233B /* View */,
+				85AB4DBB299A796A009416FA /* Controller */,
 			);
 			path = RegisterPlantName;
 			sourceTree = "<group>";
@@ -678,23 +685,23 @@
 				45CBD11C28E5401F0015BA70 /* EditNameView.swift in Sources */,
 				D42A4E9128DCA44300B0ACA9 /* RouterController.swift in Sources */,
 				FED882622996799E00F6A02B /* PlantViewComponents.swift in Sources */,
+				855DBCA929AE1BE600F079F3 /* WelcomeView.swift in Sources */,
 				FEC15CAA299FBAA50064D1C9 /* EditPlantController.swift in Sources */,
 				D44B720D28E1ED6100FBD7A7 /* UserDefaults+.swift in Sources */,
+				855DBCAC29AE1C4600F079F3 /* VisualEffectBlur.swift in Sources */,
 				451495E428E5D14B001DF3A8 /* EditPlantView.swift in Sources */,
-				855CD0C929ACD32100C1FB87 /* WelcomeView.swift in Sources */,
 				D42A4E8D28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift in Sources */,
 				FEC15CA8299F9D590064D1C9 /* EditNameController.swift in Sources */,
 				D4E8174B28D9FC1500775EFA /* RegisterUserNameView.swift in Sources */,
 				FEC15CAE299FC9CD0064D1C9 /* PlantModalView.swift in Sources */,
-				855CD0C829ACD32100C1FB87 /* WelcomeController.swift in Sources */,
 				D4E8174928D9FBEF00775EFA /* RegisterPlantNameView.swift in Sources */,
 				D42A4E8F28DCA3B700B0ACA9 /* RouterView.swift in Sources */,
 				D4E8175B28DA00AD00775EFA /* RainSceneView.swift in Sources */,
 				D4E8175828DA007000775EFA /* WaterWaveView.swift in Sources */,
-				855CD0C729ACD32100C1FB87 /* VisualEffectBlur.swift in Sources */,
 				451495E628E5D648001DF3A8 /* ThemeEnum.swift in Sources */,
 				8521681C2996892600A409C7 /* RegisterUserNameController.swift in Sources */,
 				D4E8176828DA055300775EFA /* NotificationController.swift in Sources */,
+				855DBCAE29AE1C8500F079F3 /* WelcomeController.swift in Sources */,
 				FED8826429967BCF00F6A02B /* PlantViewController.swift in Sources */,
 				D4E8171928D9F7F600775EFA /* wateringApp.swift in Sources */,
 				D4E8175628DA004000775EFA /* PlantViewRepresentable.swift in Sources */,
