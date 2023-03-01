@@ -33,7 +33,6 @@ struct RegisterPlantTypeView: View {
         Text("Choose your plant type")
             .multilineTextAlignment(.center)
             .lineLimit(nil)
-            .foregroundColor(ThemeEnum.primary)
             .font(.title3)
             .padding()
     }
@@ -52,7 +51,6 @@ struct RegisterPlantTypeView: View {
                         Text(plant.type)
                             .multilineTextAlignment(.center)
                             .lineLimit(nil)
-                            .foregroundColor(ThemeEnum.primary)
                             .font(.body)
                     }
                     .accessibilityRepresentation {
@@ -75,13 +73,13 @@ struct RegisterPlantTypeView: View {
                 destination : WateringView().navigationBarHidden(true),
                 label : {
                     Text ("Next")
-                        .foregroundColor(ThemeEnum.primary)
+                        .foregroundColor(.accentColor)
                         .frame(minWidth: 200, minHeight: 50)
                         .font(.title3)
                         .multilineTextAlignment(.center)
                         .lineLimit(nil)
                         .overlay(RoundedRectangle(cornerRadius: 15)
-                            .stroke(ThemeEnum.primary, lineWidth: 2))
+                            .stroke(Color("AccentColor"), lineWidth: 2))
                         .padding()
                 })
             .simultaneousGesture(TapGesture().onEnded{
