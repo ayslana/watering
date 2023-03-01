@@ -13,36 +13,36 @@ import SwiftUI
 import Foundation
 
 struct WelcomeView: View {
-
+    
     @State var offset: CGSize = .zero
-
+    
     @State var showHome = false
-
+    
     @State private var placeholder: String = ""
-
+    
     var liquidSwipe: LiquidSwipe {
         get {
             return LiquidSwipe(offset: offset)
         }
     }
-
+    
     var body: some View {
-
-
+        
+        
         ZStack {
-
-
+            
+            
             Image("Flower")
                 .resizable()
                 .alignmentGuide(.trailing) { dimension in
                     dimension[.trailing] - 70
                 }
                 .frame(alignment: .trailing)
-
-//MARK: JUST A FAKEHOLDER TO SIMULATES THE SECOND SCREEN
+            
+            //MARK: JUST A FAKEHOLDER TO SIMULATES THE SECOND SCREEN
             VStack {
                 Spacer().frame(height: 50)
-
+                
                 Text("What is your name?")
                     .foregroundColor(ThemeEnum.font)
                     .multilineTextAlignment(.center)
@@ -51,7 +51,7 @@ struct WelcomeView: View {
                     .frame(
                         width: UIScreen.main.bounds.width * 0.9
                     )
-
+                
                 TextField("Type Here", text: $placeholder)
                     .multilineTextAlignment(.center)
                     .foregroundColor(ThemeEnum.font)
@@ -59,11 +59,11 @@ struct WelcomeView: View {
                     .frame(
                         width: UIScreen.main.bounds.width * 0.8
                     )
-
+                
                 Divider()
                     .background(ThemeEnum.primary)
                     .frame(width: 300)
-
+                
                 if (true){
                     Text("Insert at least 5 characters")
                         .foregroundColor(.red)
@@ -75,87 +75,93 @@ struct WelcomeView: View {
                         )
                 }
             }
+            //MARK: END OF THE FAKEHOLDER
             
-//MARK: END OF THE FAKEHOLDER
-
             Color("FirstView")
             //Color(.systemMint)
             //Color(.systemIndigo)
                 .overlay() {
                     VStack (alignment: .leading, spacing: 20 ){
-
+                        
                         Text("Welcome to Watering!")
                             .font(.largeTitle)
                             .fontWeight(.heavy)
                             .foregroundColor(Color(.white))
-
-
+                        
+                        
                         Text("Before we start, we need to ask three questions...")
                             .font(.body)
                             .fontWeight(.bold)
                             .foregroundColor(Color(.white))
-
+                        
                     }
                     .frame(maxWidth: UIScreen.main.bounds.width * 0.90)
-
-
+                    
+                    
                 }
-
-
+            
+            
                 .clipShape(liquidSwipe)
                 .ignoresSafeArea()
-                //Arrow
-                .overlay(
-                    Image(systemName: "arrowshape.turn.up.left")
+            //Arrow
+                .overlay(alignment: .topTrailing) {
+                    Image(systemName: "chevron.left")
                         .font(.title)
                         .foregroundColor(.accentColor)
-                        //.foregroundColor(Color.brown)
+                    //.foregroundColor(Color.brown)
                         .frame(width: 50, height: 100)
                         .ignoresSafeArea()
                         .gesture(DragGesture()
-
+                                 
                             .onChanged({ (value) in
-
+                                
                                 withAnimation(.interactiveSpring(response: 0.7, dampingFraction: 0.6, blendDuration: 0.6)) {
                                     offset = value.translation
                                 }
                             })
-
-                            .onEnded({ (value) in
-
-                                let screen = UIScreen.main.bounds
-
-                                withAnimation(.spring()){
-
-                                    if -offset.width > screen.width / 2 {
-                                        //removing view
-                                        offset.width = -screen.height
-                                        showHome.toggle()
-                                    } else {
-                                        offset = .zero
+                                 
+                                .onEnded({ (value) in
+                                    
+                                    let screen = UIScreen.main.bounds
+                                    
+                                    withAnimation(.spring()){
+                                        
+                                        if -offset.width > screen.width / 2 {
+                                            //removing view
+                                            offset.width = -screen.height
+                                            showHome.toggle()
+                                        } else {
+                                            offset = .zero
+                                        }
                                     }
-                                }
-                            }))
+                                }))
                         .offset(
                             x: 15,
                             y: UIScreen.main.bounds.height < 800 ? liquidSwipe.mid * 0.45 : liquidSwipe.mid * 0.3
                         )
                     // Hidding arrow while draggin starts
                         .opacity(offset == .zero ? 1 : 0)
-                    ,alignment: .topTrailing
-                )
+                    
+                        .accessibilityRepresentation {
+                            Button("Next") {
+                                let screen = UIScreen.main.bounds
+                                offset.width = -screen.height
+                                showHome.toggle()
+                            }
+                        }
+                        .disabled(showHome)
+                }
                 .padding(.trailing)
-
+            
             if showHome {
                 RegisterUserNameView().simultaneousGesture(TapGesture().onEnded{})
             }
-
-
+            
+            
         }
         .background(ThemeEnum.secondary)
-
     }
-
+    
 }
 
 
