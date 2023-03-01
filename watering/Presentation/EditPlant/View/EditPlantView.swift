@@ -59,7 +59,6 @@ struct EditPlantView: View {
             .multilineTextAlignment(.center)
             .font(.title3)
             .lineLimit(nil)
-            .foregroundColor(ThemeEnum.font)
             .padding()
     }
 
@@ -70,7 +69,7 @@ struct EditPlantView: View {
                     if (plant.id == controller.selected.id) && controller.isPlantSelected {
                         buildGridElement(plant: plant)
                             .overlay(RoundedRectangle(cornerRadius: 15)
-                            .stroke(ThemeEnum.primary, lineWidth: 2))
+                            .stroke(Color("AccentColor"), lineWidth: 2))
                     } else {
                         buildGridElement(plant: plant)
                     }

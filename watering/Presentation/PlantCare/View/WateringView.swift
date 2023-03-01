@@ -73,7 +73,7 @@ struct WateringView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(    destination: EditNameView().environmentObject(userPlant), label: { Text("Edit")
-                        .foregroundColor(ThemeEnum.primary) })
+                        .foregroundColor(.accentColor) })
                     .animation(nil)
                 }
             }
@@ -92,7 +92,6 @@ struct WateringView: View {
                 }
             }
         }
-        .accentColor(ThemeEnum.primary)
         //        .navigationBarBackButtonHidden()
     }
     private var teste: CGFloat {
@@ -101,14 +100,13 @@ struct WateringView: View {
     var information: some View {
         VStack {
             Group {
-                Text("Hello, ").foregroundColor(ThemeEnum.font) +
-                Text("\(UserDefaults.standard.getPersonName() ?? "Unset").").foregroundColor(ThemeEnum.primary)
-                Text(" \(UserDefaults.standard.getPlantName() ?? "Unset" ) ").foregroundColor(ThemeEnum.primary) +
-                Text("has not received water since: ").foregroundColor(ThemeEnum.primary)
+                Text("Hello, ") +
+                Text("\(UserDefaults.standard.getPersonName() ?? "Unset").")
+                Text(" \(UserDefaults.standard.getPlantName() ?? "Unset" ) ") +
+                Text("has not received water since: ")
                 Text("\(UserDefaults.standard.getLastDate() ?? "long time")" ).foregroundColor(ThemeEnum.primary)
             }
             .multilineTextAlignment(.center)
-            .foregroundColor(ThemeEnum.font)
             .font(.title3)
             .frame(width: UIScreen.main.bounds.width * 0.95)
         }
@@ -162,14 +160,14 @@ struct WateringView: View {
     var button: some View {
         Image(systemName: "drop")
             .font(.title3)
-            .foregroundColor(ThemeEnum.primary)
+            .foregroundColor(.accentColor)
             .padding(25)
             .background(ThemeEnum.secondary)
             .gesture(onHoldGesture)
             .clipShape(Circle())
             .overlay(
                 Circle()
-                    .stroke(ThemeEnum.primary, lineWidth: 2)
+                    .stroke(Color("AccentColor"), lineWidth: 2)
             )
         
     }
