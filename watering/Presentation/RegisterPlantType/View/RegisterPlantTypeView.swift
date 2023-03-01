@@ -55,6 +55,14 @@ struct RegisterPlantTypeView: View {
                             .foregroundColor(ThemeEnum.primary)
                             .font(.body)
                     }
+                    .accessibilityRepresentation {
+                         Button(plant.type) {
+                             withAnimation(.easeOut){
+                                 isShowingOne.toggle()
+                                 controller.selected = plant
+                             }
+                         }
+                     }
                 }
             }
             .padding(.horizontal)
