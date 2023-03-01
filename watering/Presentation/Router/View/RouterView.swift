@@ -20,7 +20,9 @@ struct RouterView: View {
             //se minha variavel currentPage, declarada na ViewRouter for igual
             //a string "FirstAccessView" eu chamo view FirstAccessView
             if viewRouter.currentPage == "FirstAccessView" {
-                WelcomeView()
+                NavigationView {
+                    WelcomeView()
+                }
             } else if viewRouter.currentPage == "WateringView" {
                 WateringView()
             }
