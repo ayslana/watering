@@ -14,6 +14,8 @@ import SpriteKit
 
 struct WateringView: View {
     
+    @Environment(\.dynamicTypeSize) var dynamicTypeSize
+    
     @State var progress: CGFloat = 0.1
     @State var startAnimation: CGFloat = 0
     @State var isComplete: Bool = false
@@ -42,13 +44,13 @@ struct WateringView: View {
                     VStack(spacing: 0){
                         information
                         treeView
+                        button
                     }
                 }
                 ZStack(alignment: .bottom){
                     if !isComplete {
                         waterWaveView
                     }
-                    button
                     if isComplete {
                         animationRainView(nil, value: true)
                         if isSucess {
@@ -93,6 +95,9 @@ struct WateringView: View {
         .accentColor(ThemeEnum.primary)
         //        .navigationBarBackButtonHidden()
     }
+    private var teste: CGFloat {
+        if dynamicTypeSize >= .accessibility1 { return 0.37 } else { return 0.55 }
+    }
     var information: some View {
         VStack {
             Group {
@@ -119,7 +124,7 @@ struct WateringView: View {
             return scene
         }(),
                                options: [.autoenablesDefaultLighting, .allowsCameraControl])
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.55 , alignment: .center)
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * teste , alignment: .center)
         
     }
     
@@ -160,8 +165,13 @@ struct WateringView: View {
             .foregroundColor(ThemeEnum.primary)
             .padding(25)
             .background(ThemeEnum.secondary)
-            .cornerRadius(50)
             .gesture(onHoldGesture)
+            .clipShape(Circle())
+            .overlay(
+                Circle()
+                    .stroke(ThemeEnum.primary, lineWidth: 2)
+            )
+        
     }
     
     func animationRainView <valueAnimation>(_ animation: Animation?, value: valueAnimation) -> some View where valueAnimation : Equatable {
