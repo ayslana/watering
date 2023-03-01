@@ -75,9 +75,12 @@ struct WelcomeView: View {
                         )
                 }
             }
+            
 //MARK: END OF THE FAKEHOLDER
 
-            Color("Primary")
+            Color("FirstView")
+            //Color(.systemMint)
+            //Color(.systemIndigo)
                 .overlay() {
                     VStack (alignment: .leading, spacing: 20 ){
 
@@ -103,9 +106,10 @@ struct WelcomeView: View {
                 .ignoresSafeArea()
                 //Arrow
                 .overlay(
-                    Image(systemName: "chevron.left")
-                        .font(.largeTitle)
+                    Image(systemName: "arrowshape.turn.up.left")
+                        .font(.title)
                         .foregroundColor(.accentColor)
+                        //.foregroundColor(Color.brown)
                         .frame(width: 50, height: 100)
                         .ignoresSafeArea()
                         .gesture(DragGesture()
@@ -148,6 +152,7 @@ struct WelcomeView: View {
 
 
         }
+        .background(ThemeEnum.secondary)
 
     }
 
