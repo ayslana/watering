@@ -77,7 +77,9 @@ struct WelcomeView: View {
             }
             //MARK: END OF THE FAKEHOLDER
             
-            Color("Primary")
+            Color("FirstView")
+            //Color(.systemMint)
+            //Color(.systemIndigo)
                 .overlay() {
                     VStack (alignment: .leading, spacing: 20 ){
                         
@@ -104,8 +106,9 @@ struct WelcomeView: View {
             //Arrow
                 .overlay(alignment: .topTrailing) {
                     Image(systemName: "chevron.left")
-                        .font(.largeTitle)
+                        .font(.title)
                         .foregroundColor(.accentColor)
+                    //.foregroundColor(Color.brown)
                         .frame(width: 50, height: 100)
                         .ignoresSafeArea()
                         .gesture(DragGesture()
@@ -147,7 +150,8 @@ struct WelcomeView: View {
                             }
                         }
                         .disabled(showHome)
-                }                .padding(.trailing)
+                }
+                .padding(.trailing)
             
             if showHome {
                 RegisterUserNameView().simultaneousGesture(TapGesture().onEnded{})
@@ -155,7 +159,7 @@ struct WelcomeView: View {
             
             
         }
-        
+        .background(ThemeEnum.secondary)
     }
     
 }
