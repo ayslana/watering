@@ -7,14 +7,16 @@
 
 import SwiftUI
 
-class PlantViewController {
-    var selected: DropWaterModel = PlantsType[0]
+class PlantViewController: ObservableObject {
+    @Published var selected: DropWaterModel = PlantsType[0]
+    @Published var isPlantSelected = false
+    @Published var isShowingPlant = false
 
     func savePlantType() {
-        
-        UserDefaults.standard.setPlantType(value: selected.modelName)
-        UserDefaults.standard.setPlantTypeName(value: selected.type)
-        UserDefaults.standard.setPlantID(value: selected.id)
+        UserPlant().savePlant(
+            id: selected.id,
+            type: selected.type,
+            modelName: selected.modelName
+        )
     }
-    init(){}
 }
