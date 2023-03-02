@@ -49,7 +49,6 @@
 		FEC15CA8299F9D590064D1C9 /* EditNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC15CA7299F9D580064D1C9 /* EditNameController.swift */; };
 		FEC15CAA299FBAA50064D1C9 /* EditPlantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC15CA9299FBAA50064D1C9 /* EditPlantController.swift */; };
 		FEC15CAE299FC9CD0064D1C9 /* PlantModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC15CAD299FC9CD0064D1C9 /* PlantModalView.swift */; };
-		FED882622996799E00F6A02B /* PlantViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED882612996799E00F6A02B /* PlantViewComponents.swift */; };
 		FED8826429967BCF00F6A02B /* PlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8826329967BCF00F6A02B /* PlantViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -115,7 +114,6 @@
 		FEC15CA7299F9D580064D1C9 /* EditNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditNameController.swift; path = watering/Presentation/RegisterPlantType/View/Components/EditNameController.swift; sourceTree = SOURCE_ROOT; };
 		FEC15CA9299FBAA50064D1C9 /* EditPlantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditPlantController.swift; path = watering/Presentation/RegisterPlantType/View/Components/EditPlantController.swift; sourceTree = SOURCE_ROOT; };
 		FEC15CAD299FC9CD0064D1C9 /* PlantModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantModalView.swift; sourceTree = "<group>"; };
-		FED882612996799E00F6A02B /* PlantViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantViewComponents.swift; sourceTree = "<group>"; };
 		FED8826329967BCF00F6A02B /* PlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlantViewController.swift; path = watering/Presentation/RegisterPlantType/View/Components/PlantViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -350,7 +348,6 @@
 		FE053DCF29928012006B233B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FED88260299678A800F6A02B /* Components */,
 				D42A4E8C28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift */,
 			);
 			path = View;
@@ -498,14 +495,6 @@
 				D42A4E9028DCA44300B0ACA9 /* RouterController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		FED88260299678A800F6A02B /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				FED882612996799E00F6A02B /* PlantViewComponents.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		FEFF6CC829928A2300FD050A /* Extensions */ = {
@@ -684,7 +673,6 @@
 				D4E8175228D9FF9800775EFA /* DropWaterModel.swift in Sources */,
 				45CBD11C28E5401F0015BA70 /* EditNameView.swift in Sources */,
 				D42A4E9128DCA44300B0ACA9 /* RouterController.swift in Sources */,
-				FED882622996799E00F6A02B /* PlantViewComponents.swift in Sources */,
 				855DBCA929AE1BE600F079F3 /* WelcomeView.swift in Sources */,
 				FEC15CAA299FBAA50064D1C9 /* EditPlantController.swift in Sources */,
 				D44B720D28E1ED6100FBD7A7 /* UserDefaults+.swift in Sources */,
