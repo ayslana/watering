@@ -9,13 +9,19 @@ import UserNotifications
 
 struct NotificationController {
         func requestPermission() {
-            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
-                if success {
-                    treatNotificationRequest()
-                } else if let error = error {
-                    print(error.localizedDescription)
+            
+            UNUserNotificationCenter.current().getPendingNotificationRequests { notifications in
+                if notifications.isEmpty {
+                    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                        if success {
+                            treatNotificationRequest()
+                        } else if let error = error {
+                            print(error.localizedDescription)
+                        }
+                    }
                 }
             }
+            
         }
     
     private func treatNotificationRequest() {
@@ -31,10 +37,11 @@ struct NotificationController {
         }
     }
     private func doNotification()  {
+        print(#function)
         let content = UNMutableNotificationContent()
         content.title = "\(UserDefaults.standard.getPlantName() ?? "Your plant") is thirsty 😟"
         content.body = "Remember to watering it today!"
-        let dateComponents = DateComponents(calendar: .current, hour: 9, minute: 30)
+        let dateComponents = DateComponents(calendar: .current, hour: 11, minute: 18)
         
         let trigger = UNCalendarNotificationTrigger(
             dateMatching: dateComponents, repeats: true
