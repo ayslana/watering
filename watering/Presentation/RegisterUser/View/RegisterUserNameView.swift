@@ -23,6 +23,7 @@ struct RegisterUserNameView: View {
                     dimension[.trailing] - 70
                 }
                 .frame(alignment: .trailing)
+                .accessibilityHidden(true)
             VStack {
                 Spacer().frame(height: 50)
 
