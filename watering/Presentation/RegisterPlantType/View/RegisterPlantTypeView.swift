@@ -77,7 +77,9 @@ struct RegisterPlantTypeView: View {
                                 selected = plant
                             }
                         }
+                        .accessibilityLabel(plant.accessibilityDescription)
                     }
+
                 }
             }
             .padding(.horizontal)
@@ -102,18 +104,29 @@ struct RegisterPlantTypeView: View {
                 self.modelNamePlant = selected.modelName
                 savePlantType()                
             })
+            
             .navigationBarBackButtonHidden(true)
         }
     }
     var scalePlantView: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .center)){
-            PlantViewRepresentable(scene: {
+            
+            
+            let scene: SCNScene = {
                 let scene = SCNScene(named: selected.modelName)!
                 scene.background.contents = UIColor.clear
                 return scene
-            }(),
-                      options: [.autoenablesDefaultLighting, .allowsCameraControl])
-            .frame(width: UIScreen.main.bounds.width/0.8, height: UIScreen.main.bounds.height / 1.4 , alignment: .center)
+            }()
+            
+            PlantViewRepresentable(
+                scene: scene,
+                options: [.autoenablesDefaultLighting, .allowsCameraControl]
+            )
+            .frame(
+                width: UIScreen.main.bounds.width/0.8,
+                height: UIScreen.main.bounds.height / 1.4 ,
+                alignment: .center
+            )
             .matchedGeometryEffect(id: selected.id, in: namespace)
             HStack {
                 Button{

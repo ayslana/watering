@@ -112,7 +112,7 @@ struct WateringView: View {
     var treeView: some View {
         //INSERÇÃO DO MODELO 3D
         PlantViewRepresentable(scene: {
-            let modelo = DropWaterModel(id: UserDefaults.standard.getPlantID() ?? 0, type: UserDefaults.standard.getPlantTypeName() ?? "", modelName: UserDefaults.standard.getPlantType() ?? "")
+            let modelo = DropWaterModel(id: UserDefaults.standard.getPlantID() ?? 0, type: UserDefaults.standard.getPlantTypeName() ?? "", modelName: UserDefaults.standard.getPlantType() ?? "", accessibilityDescription: "")
             let scene = SCNScene(named: modelo.modelName)!
             scene.background.contents = UIColor.clear
             return scene
