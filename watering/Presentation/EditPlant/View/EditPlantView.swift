@@ -32,9 +32,9 @@ struct EditPlantView: View {
                         showingAlert = true
                     }.alert(isPresented: $showingAlert) {
                         Alert(
-                            title: Text("Choose plant"),
-                            message: Text("Is this the plant you want?"),
-                            primaryButton: .default(Text("Yes")) {
+                            title: Text(LocalizedStringKey("l20")),
+                            message: Text(LocalizedStringKey("l21")),
+                            primaryButton: .default(Text(LocalizedStringKey("l18"))) {
                                 userPlant.savePlant(
                                     id: controller.selected.id,
                                     type: controller.selected.type,
@@ -46,7 +46,7 @@ struct EditPlantView: View {
                         )
                     }
                 } else {
-                    Text("Done")
+                    Text(LocalizedStringKey("label9"))
                         .foregroundColor(.secondary)
                 }
             }
@@ -55,7 +55,7 @@ struct EditPlantView: View {
     }
 
     var headerView: some View {
-        Text("Select your new plant type")
+        Text(LocalizedStringKey("l22"))
             .multilineTextAlignment(.center)
             .font(.title3)
             .lineLimit(nil)

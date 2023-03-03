@@ -19,10 +19,13 @@ struct EditNameView: View {
         ScrollView {
             VStack {
                 informations
+                Text(LocalizedStringKey("l19"))
+
                 NavigationLink(
                     destination: EditPlantView().environmentObject(userPlant)
                 ){
                     PlantViewRepresentable(
+
                         scene: {
                             let scene = SCNScene(named: userPlant.plant.modelName)!
                             scene.background.contents = UIColor.clear
@@ -41,18 +44,18 @@ struct EditNameView: View {
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 if controller.isSomeNameLessThan3Char() {
-                    Text("Save")
+                    Text(LocalizedStringKey("l15"))
                         .foregroundColor(.secondary)
                 } else {
-                    Button("Save") {
+                    Button(LocalizedStringKey("l15")) {
                         showingAlert = true
 
                     }
                     .alert(isPresented: $showingAlert) {
                         Alert(
-                            title: Text("Save the changes"),
-                            message: Text("Do you want to save the changes?"),
-                            primaryButton: .default(Text("Yes")) {
+                            title: Text(LocalizedStringKey("l16")),
+                            message: Text(LocalizedStringKey("l17")),
+                            primaryButton: .default(Text(LocalizedStringKey("l18"))) {
                                 controller.saveNames()
                                 userPlant.getPlant()
                                 dismiss()
@@ -68,10 +71,15 @@ struct EditNameView: View {
 
     var informations: some View {
         List{
+            Text("Escolha seu nome: ")
+
             buildTextField(
                 placeholder: controller.buildUserNamePlanceholder(),
                 text: $controller.userName
             )
+
+            Text("Escolha o nome de sua plantinha:")
+
             buildTextField(
                 placeholder: controller.buildPlantNamePlaceholder(),
                 text: $controller.plantName
@@ -81,22 +89,6 @@ struct EditNameView: View {
         .scrollContentBackground(.hidden)
         .frame(minHeight: UIScreen.main.bounds.height/3)
     }
-
-//    var treeView: some View {
-//        PlantViewRepresentable(
-//            scene: {
-//                let scene = SCNScene(named: userPlant.plant.modelName)!
-//                scene.background.contents = UIColor.clear
-//                return scene
-//            }(),
-//            options: [.autoenablesDefaultLighting]
-//        )
-//        .frame(
-//            maxWidth: UIScreen.main.bounds.width,
-//            minHeight: UIScreen.main.bounds.height/2,
-//            alignment: .center
-//        )
-//    }
 
     private func buildTextField(
         placeholder: String,

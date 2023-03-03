@@ -13,11 +13,11 @@
 		45CBD11C28E5401F0015BA70 /* EditNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CBD11B28E5401F0015BA70 /* EditNameView.swift */; };
 		8521681C2996892600A409C7 /* RegisterUserNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8521681B2996892600A409C7 /* RegisterUserNameController.swift */; };
 		855DBCA929AE1BE600F079F3 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DBCA829AE1BE600F079F3 /* WelcomeView.swift */; };
-		855DBCAC29AE1C4600F079F3 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DBCAB29AE1C4600F079F3 /* VisualEffectBlur.swift */; };
 		855DBCAE29AE1C8500F079F3 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DBCAD29AE1C8500F079F3 /* WelcomeController.swift */; };
 		85AB4DBD299A7C19009416FA /* RegisterPlantNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */; };
 		85AB4DBE299A7C1B009416FA /* RegisterPlantNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */; };
 		85AB4DBF299A7C1C009416FA /* RegisterPlantNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */; };
+		85C30D4929B0FA4300A55DA8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85C30D4B29B0FA4300A55DA8 /* Localizable.strings */; };
 		D42A4E8D28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E8C28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift */; };
 		D42A4E8F28DCA3B700B0ACA9 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E8E28DCA3B700B0ACA9 /* RouterView.swift */; };
 		D42A4E9128DCA44300B0ACA9 /* RouterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42A4E9028DCA44300B0ACA9 /* RouterController.swift */; };
@@ -77,9 +77,11 @@
 		45F2827A28DDE090009B4875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8521681B2996892600A409C7 /* RegisterUserNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserNameController.swift; sourceTree = "<group>"; };
 		855DBCA829AE1BE600F079F3 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		855DBCAB29AE1C4600F079F3 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		855DBCAD29AE1C8500F079F3 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantNameController.swift; sourceTree = "<group>"; };
+		85C30D4A29B0FA4300A55DA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		85C30D4C29B0FA5800A55DA8 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		85C30D4D29B0FA5E00A55DA8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D42A4E8C28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantTypeView.swift; sourceTree = "<group>"; };
 		D42A4E8E28DCA3B700B0ACA9 /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		D42A4E9028DCA44300B0ACA9 /* RouterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterController.swift; sourceTree = "<group>"; };
@@ -111,10 +113,10 @@
 		D4E8176728DA055300775EFA /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		D4F8943C28E3417800CD7216 /* succullent.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = succullent.dae; sourceTree = "<group>"; };
 		D4F8944028E3453E00CD7216 /* succullent.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = succullent.scn; sourceTree = "<group>"; };
-		FEC15CA7299F9D580064D1C9 /* EditNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditNameController.swift; path = watering/Presentation/RegisterPlantType/View/Components/EditNameController.swift; sourceTree = SOURCE_ROOT; };
-		FEC15CA9299FBAA50064D1C9 /* EditPlantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditPlantController.swift; path = watering/Presentation/RegisterPlantType/View/Components/EditPlantController.swift; sourceTree = SOURCE_ROOT; };
+		FEC15CA7299F9D580064D1C9 /* EditNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditNameController.swift; path = watering/Presentation/EditName/Controller/EditNameController.swift; sourceTree = SOURCE_ROOT; };
+		FEC15CA9299FBAA50064D1C9 /* EditPlantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditPlantController.swift; path = watering/Presentation/EditPlant/Controller/EditPlantController.swift; sourceTree = SOURCE_ROOT; };
 		FEC15CAD299FC9CD0064D1C9 /* PlantModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantModalView.swift; sourceTree = "<group>"; };
-		FED8826329967BCF00F6A02B /* PlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlantViewController.swift; path = watering/Presentation/RegisterPlantType/View/Components/PlantViewController.swift; sourceTree = SOURCE_ROOT; };
+		FED8826329967BCF00F6A02B /* PlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlantViewController.swift; path = watering/Presentation/RegisterPlantType/Controller/PlantViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,18 +172,9 @@
 		855DBCA629AE1BA700F079F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				855DBCA729AE1BC700F079F3 /* Components */,
 				855DBCA829AE1BE600F079F3 /* WelcomeView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		855DBCA729AE1BC700F079F3 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				855DBCAB29AE1C4600F079F3 /* VisualEffectBlur.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		85AB4DBB299A796A009416FA /* Controller */ = {
@@ -192,9 +185,34 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		85B67C1029B108E900DBB688 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FED8826329967BCF00F6A02B /* PlantViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		85B67C1129B2242400DBB688 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FEC15CA7299F9D580064D1C9 /* EditNameController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		85B67C1229B22B7300DBB688 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FEC15CA9299FBAA50064D1C9 /* EditPlantController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		D4E8170C28D9F7F600775EFA = {
 			isa = PBXGroup;
 			children = (
+				85C30D4B29B0FA4300A55DA8 /* Localizable.strings */,
 				D4E8171728D9F7F600775EFA /* watering */,
 				D4E8172D28D9F7F600775EFA /* wateringTests */,
 				D4E8173728D9F7F600775EFA /* wateringUITests */,
@@ -218,7 +236,6 @@
 				FE053DBF29927D0A006B233B /* Resources */,
 				FE053DC029927D2F006B233B /* Application */,
 				FE053DC129927D8D006B233B /* Presentation */,
-				FE053DDF29928586006B233B /* Data */,
 				FE053DDE2992856C006B233B /* Domain */,
 				FE053DD5299282CD006B233B /* Utils */,
 				45F2827A28DDE090009B4875 /* Info.plist */,
@@ -339,8 +356,8 @@
 		FE053DCE29927FC2006B233B /* RegisterPlantType */ = {
 			isa = PBXGroup;
 			children = (
+				85B67C1029B108E900DBB688 /* Controller */,
 				FE053DCF29928012006B233B /* View */,
-				FE053DD029928018006B233B /* Controller */,
 			);
 			path = RegisterPlantType;
 			sourceTree = "<group>";
@@ -353,28 +370,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		FE053DD029928018006B233B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				FED8826329967BCF00F6A02B /* PlantViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		FE053DD1299280C8006B233B /* PlantCare */ = {
 			isa = PBXGroup;
 			children = (
 				FE053DD329928120006B233B /* View */,
-				FE053DD229928119006B233B /* Controller */,
 			);
 			path = PlantCare;
-			sourceTree = "<group>";
-		};
-		FE053DD229928119006B233B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		FE053DD329928120006B233B /* View */ = {
@@ -409,8 +410,8 @@
 		FE053DD72992837F006B233B /* EditName */ = {
 			isa = PBXGroup;
 			children = (
+				85B67C1129B2242400DBB688 /* Controller */,
 				FE053DD829928386006B233B /* View */,
-				FE053DD92992838C006B233B /* Controller */,
 			);
 			path = EditName;
 			sourceTree = "<group>";
@@ -423,19 +424,11 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		FE053DD92992838C006B233B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				FEC15CA7299F9D580064D1C9 /* EditNameController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		FE053DDA299283B1006B233B /* EditPlant */ = {
 			isa = PBXGroup;
 			children = (
+				85B67C1229B22B7300DBB688 /* Controller */,
 				FE053DDB29928409006B233B /* View */,
-				FE053DDC2992840E006B233B /* Controller */,
 			);
 			path = EditPlant;
 			sourceTree = "<group>";
@@ -447,14 +440,6 @@
 				FEC15CAD299FC9CD0064D1C9 /* PlantModalView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		FE053DDC2992840E006B233B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				FEC15CA9299FBAA50064D1C9 /* EditPlantController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		FE053DDD29928507006B233B /* Router */ = {
@@ -472,13 +457,6 @@
 				D4E8174F28D9FDB700775EFA /* Models */,
 			);
 			path = Domain;
-			sourceTree = "<group>";
-		};
-		FE053DDF29928586006B233B /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		FE053DE0299286F4006B233B /* View */ = {
@@ -615,6 +593,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
+				es,
 			);
 			mainGroup = D4E8170C28D9F7F600775EFA;
 			productRefGroup = D4E8171628D9F7F600775EFA /* Products */;
@@ -636,6 +616,7 @@
 				D45D34A828DDB3480088EB65 /* cactus.dae in Resources */,
 				D45D34A628DDB32B0088EB65 /* flower.dae in Resources */,
 				D4F8943D28E3417800CD7216 /* succullent.dae in Resources */,
+				85C30D4929B0FA4300A55DA8 /* Localizable.strings in Resources */,
 				D4E8171D28D9F7F600775EFA /* Assets.xcassets in Resources */,
 				D4800ACE28E4755C00669263 /* plants.scn in Resources */,
 				D4E8176628DA026400775EFA /* DoneSound.mp3 in Resources */,
@@ -676,7 +657,6 @@
 				855DBCA929AE1BE600F079F3 /* WelcomeView.swift in Sources */,
 				FEC15CAA299FBAA50064D1C9 /* EditPlantController.swift in Sources */,
 				D44B720D28E1ED6100FBD7A7 /* UserDefaults+.swift in Sources */,
-				855DBCAC29AE1C4600F079F3 /* VisualEffectBlur.swift in Sources */,
 				451495E428E5D14B001DF3A8 /* EditPlantView.swift in Sources */,
 				D42A4E8D28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift in Sources */,
 				FEC15CA8299F9D590064D1C9 /* EditNameController.swift in Sources */,
@@ -732,11 +712,25 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		85C30D4B29B0FA4300A55DA8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85C30D4A29B0FA4300A55DA8 /* en */,
+				85C30D4C29B0FA5800A55DA8 /* pt-BR */,
+				85C30D4D29B0FA5E00A55DA8 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		D4E8173C28D9F7F600775EFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
@@ -798,6 +792,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
@@ -858,7 +853,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"watering/Assets\"";
-				DEVELOPMENT_TEAM = 37U5X9NN8C;
+				DEVELOPMENT_TEAM = 4742JJ9L6T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = watering/Info.plist;
@@ -895,7 +890,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"watering/Assets\"";
-				DEVELOPMENT_TEAM = 37U5X9NN8C;
+				DEVELOPMENT_TEAM = 4742JJ9L6T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = watering/Info.plist;

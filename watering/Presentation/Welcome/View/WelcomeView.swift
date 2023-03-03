@@ -31,7 +31,6 @@ struct WelcomeView: View {
         
         ZStack {
             
-            
             Image("Flower")
                 .resizable()
                 .alignmentGuide(.trailing) { dimension in
@@ -42,8 +41,9 @@ struct WelcomeView: View {
             //MARK: JUST A FAKEHOLDER TO SIMULATES THE SECOND SCREEN
             VStack {
                 Spacer().frame(height: 50)
-                
-                Text("What is your name?")
+
+
+                Text(LocalizedStringKey("label1"))
                     .foregroundColor(ThemeEnum.font)
                     .multilineTextAlignment(.center)
                     .lineLimit(nil)
@@ -52,7 +52,7 @@ struct WelcomeView: View {
                         width: UIScreen.main.bounds.width * 0.9
                     )
                 
-                TextField("Type Here", text: $placeholder)
+                TextField(LocalizedStringKey("label2"), text: $placeholder)
                     .multilineTextAlignment(.center)
                     .foregroundColor(ThemeEnum.font)
                     .font(.body)
@@ -65,7 +65,7 @@ struct WelcomeView: View {
                     .frame(width: 300)
                 
                 if (true){
-                    Text("Insert at least 5 characters")
+                    Text(LocalizedStringKey("label3"))
                         .foregroundColor(.red)
                         .font(.caption2)
                         .multilineTextAlignment(.center)
@@ -83,13 +83,13 @@ struct WelcomeView: View {
                 .overlay() {
                     VStack (alignment: .leading, spacing: 20 ){
                         
-                        Text("Welcome to Watering!")
+                        Text(LocalizedStringKey("label4"))
                             .font(.largeTitle)
                             .fontWeight(.heavy)
                             .foregroundColor(Color(.white))
                         
                         
-                        Text("Before we start, we need to ask three questions...")
+                        Text(LocalizedStringKey("label5"))
                             .font(.body)
                             .fontWeight(.bold)
                             .foregroundColor(Color(.white))
@@ -143,7 +143,7 @@ struct WelcomeView: View {
                         .opacity(offset == .zero ? 1 : 0)
                     
                         .accessibilityRepresentation {
-                            Button("Next") {
+                            Button(LocalizedStringKey("label6")) {
                                 let screen = UIScreen.main.bounds
                                 offset.width = -screen.height
                                 showHome.toggle()

@@ -26,7 +26,7 @@ struct RegisterUserNameView: View {
             VStack {
                 Spacer().frame(height: 50)
 
-                Text("What is your name?")
+                Text(LocalizedStringKey("label1"))
                     .foregroundColor(ThemeEnum.font)
                     .multilineTextAlignment(.center)
                     .lineLimit(nil)
@@ -35,7 +35,7 @@ struct RegisterUserNameView: View {
                         width: UIScreen.main.bounds.width * 0.9
                     )
 
-                TextField("Type Here", text: $controller.personName)
+                TextField(LocalizedStringKey("label2"), text: $controller.personName)
                     .multilineTextAlignment(.center)
                     .foregroundColor(ThemeEnum.font)
                     .font(.body)
@@ -51,7 +51,7 @@ struct RegisterUserNameView: View {
                     .frame(width: 300)
 
                 if controller.isSharingButton() == false{
-                    Text("Insert at least 5 characters")
+                    Text(LocalizedStringKey("label3"))
                         .foregroundColor(.red)
                         .font(.caption2)
                         .multilineTextAlignment(.center)
@@ -66,7 +66,7 @@ struct RegisterUserNameView: View {
                 NavigationLink(destination: RegisterPlantNameView()
                     .navigationBarHidden(false),
                                label: {
-                    Text("Next")
+                    Text(LocalizedStringKey("label6"))
                         .foregroundColor(.accentColor)
                         .padding()
                         .frame(minWidth: 200, minHeight: 50)

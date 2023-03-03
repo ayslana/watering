@@ -60,7 +60,7 @@ struct WateringView: View {
                 }
             }
             .background(ThemeEnum.secondary)
-            .accessibilityHint("Press the drop-shaped button to water your plant")
+            .accessibilityHint(LocalizedStringKey("label10"))
             .navigationBarBackButtonHidden(true)
             .onAppear {
                 //MUSICA DA AGUA SUBINDO
@@ -73,9 +73,9 @@ struct WateringView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(    destination: EditNameView().environmentObject(userPlant), label: { Text("Edit")
+                    NavigationLink(    destination: EditNameView().environmentObject(userPlant), label: { Text(LocalizedStringKey("l14"))
                         .foregroundColor(.accentColor) })
-                    .animation(nil)
+                    .animation(.easeInOut, value: 1) //Fixed By Tales Valente at 09:30:34 - sex. 03 de marco de 2023
                 }
             }
             .onReceive(timer) { _ in
@@ -101,11 +101,12 @@ struct WateringView: View {
     var information: some View {
         VStack {
             Group {
-                Text("Hello, ") +
+                Text(LocalizedStringKey("l11")) +
                 Text("\(UserDefaults.standard.getPersonName() ?? "Unset").")
                 Text(" \(UserDefaults.standard.getPlantName() ?? "Unset" ) ") +
-                Text("has not received water since: ")
-                Text("\(UserDefaults.standard.getLastDate() ?? "long time")" ).foregroundColor(ThemeEnum.primary)
+                Text("l12")
+                Text("\(UserDefaults.standard.getLastDate() ?? "long time" )" )
+                    .foregroundColor(ThemeEnum.primary)
             }
             .multilineTextAlignment(.center)
             .font(.title3)

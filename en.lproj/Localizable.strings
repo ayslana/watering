@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  watering
+
+  Created by Tales Valente on 02/03/23.
+  
+*/
+
+"label1" = "What is your name?";
+"label2" = "Type Here";
+"label3" = "Insert at least 5 characters";
+
+"label4" = "Welcome to Watering!";
+"label5" = "Before we start, we need to ask three questions...";
+
+"label6" = "Next";
+
+
+/*
+LocalizedStringKey("label2")
+*/

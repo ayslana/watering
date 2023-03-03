@@ -1,0 +1,52 @@
+/* 
+  Localizable.strings
+  watering
+
+  Created by Tales Valente on 02/03/23.
+  Text(LocalizedStringKey("label5"))
+  LocalizedStringKey("label5")
+
+*/
+
+"label1" = "Qual seu Nome?";
+"label2" = "Digite Aqui";
+"label3" = "Insira pelo menos 5 caracteres.";
+
+"label4" = "Bem-vindo ao Watering";
+"label5" = "Antes de continuarmos, preciso fazer 3 perguntinhas...";
+
+"label6" = "Próximo";
+
+"label7" = "Qual é o nome de sua platinha?";
+
+"label8" = "Escolha sua plantinha.";
+"label9" = "Feito";
+
+"label10" = "Pressione na gotinha pra aguar sua plantinha!";
+
+"l11" = "Olá, ";
+"l12" = "Não foi aguada desde: ";
+"l13" = "Muito Tempo...";
+"l14" = "Editar";
+
+//EditNameView Labels
+"l15" = "Salvar";
+"l16" = "Salvar Mudanças";
+"l17" = "Você gostaria de salvar as mudanças?";
+"l18" = "Sim";
+"l19" = "Toque na plantinha para substituí-la";
+
+//EditPlantView
+"l20" = "Escolha sua Plantinha";
+"l21" = "Esta é a plantinha que você quer?";
+"l22" = "Escolha o tipo de sua plantinha...";
+
+//RegisterPlantTypeView
+"l23" = "Você pode rotacionar a: ";
+
+//DropWaterModel
+"typeA" = "Flor";
+"typeB" = "Suculenta";
+"typeC" = "Frutífera";
+"typeD" = "Cactus";
+

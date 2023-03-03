@@ -15,7 +15,8 @@ struct PlantModalView: View {
     
     var body: some View {
         VStack {
-            Text("You can rotate the \(controller.selected.type)")
+            Text("You can rotate the ")
+            Text(LocalizedStringKey(controller.selected.type))
                 .font(.title3)
                 .multilineTextAlignment(.center)
                 .lineLimit(nil)

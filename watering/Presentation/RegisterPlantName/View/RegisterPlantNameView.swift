@@ -22,7 +22,7 @@ struct RegisterPlantNameView: View {
                     .frame(alignment: .trailing)
                 VStack {
                     Spacer().frame(height: 50)
-                    Text("What is the name of your plant?")
+                    Text(LocalizedStringKey("label7"))
                         .foregroundColor(ThemeEnum.font)
                         .multilineTextAlignment(.center)
                         .lineLimit(nil)
@@ -30,7 +30,7 @@ struct RegisterPlantNameView: View {
                         .frame(
                             width: UIScreen.main.bounds.width * 0.9
                         )
-                    TextField("Type Here", text: $controller.plantName)
+                    TextField(LocalizedStringKey("label2"), text: $controller.plantName)
                         .foregroundColor(ThemeEnum.font)
                         .multilineTextAlignment(.center)
                         .font(.body)
@@ -46,7 +46,7 @@ struct RegisterPlantNameView: View {
                         .frame(width: 300)
 
                     if controller.isSharingButton() == false{
-                        Text("Enter at least 5 characters")
+                        Text(LocalizedStringKey("label3"))
                             .foregroundColor(.red)
                             .font(.caption2)
                             .multilineTextAlignment(.center)
@@ -59,7 +59,7 @@ struct RegisterPlantNameView: View {
                 if (controller.isSharingButton()) {
 
                     NavigationLink(destination: RegisterPlantTypeView().navigationBarHidden(false), label: {
-                        Text("Next")
+                        Text(LocalizedStringKey("label6"))
                             .foregroundColor(.accentColor)
                             .padding()
                             .frame(minWidth: 200, minHeight: 50)

@@ -28,7 +28,7 @@ struct RegisterPlantTypeView: View {
     }
     
     var titleView: some View {
-        Text("Choose your plant type")
+        Text(LocalizedStringKey("label8"))
             .multilineTextAlignment(.center)
             .lineLimit(nil)
             .font(.title3)
@@ -55,7 +55,7 @@ struct RegisterPlantTypeView: View {
     func buildGridElement(plant: DropWaterModel) -> some View {
         return VStack (alignment: .center, spacing: 10){
             plantForChooseView(plant: plant)
-            Text(plant.type)
+            Text(LocalizedStringKey(plant.type))
                 .multilineTextAlignment(.center)
                 .font(.body)
                 .lineLimit(nil)
@@ -96,7 +96,7 @@ struct RegisterPlantTypeView: View {
             NavigationLink (
                 destination : WateringView().navigationBarHidden(true),
                 label : {
-                    Text ("Done")
+                    Text (LocalizedStringKey("label9"))
                         .foregroundColor(.accentColor)
                         .frame(minWidth: 200, minHeight: 50)
                         .font(.title3)
