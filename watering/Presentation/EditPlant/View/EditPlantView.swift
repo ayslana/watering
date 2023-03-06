@@ -113,7 +113,9 @@ struct EditPlantView: View {
                     .matchedGeometryEffect(id: plant.id, in: namespace)
                 })
         }.sheet(isPresented: $controller.isShowingPlant){
-            PlantModalView().environmentObject(controller)
+            NavigationStack {
+                PlantModalView().environmentObject(controller)
+            }
         }
 
     }

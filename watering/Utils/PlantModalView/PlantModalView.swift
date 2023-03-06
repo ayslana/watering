@@ -33,6 +33,15 @@ struct PlantModalView: View {
             )
             .matchedGeometryEffect(id: controller.selected.id, in: namespace)
         }
+        .toolbar {
+            Button(action: {
+                dismiss()
+            }) {
+                Image(systemName: "xmark.circle.fill")
+                    .font(.body)
+                    .foregroundColor(.accentColor)
+            }
+        }
     }
 }
 
