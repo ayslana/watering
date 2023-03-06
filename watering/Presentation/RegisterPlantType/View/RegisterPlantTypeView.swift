@@ -45,15 +45,7 @@ struct RegisterPlantTypeView: View {
                             .stroke(Color("AccentColor"), lineWidth: 2))
                     } else {
                         buildGridElement(plant: plant)
-                    }
-                    .accessibilityRepresentation {
-                        Button(plant.type) {
-                            withAnimation(.easeOut){
-                                show.toggle()
-                                selected = plant
-                            }
-                        }
-                        .accessibilityLabel(plant.accessibilityDescription)
+                                            .accessibilityLabel(plant.accessibilityDescription)
                     }
 
                 }
