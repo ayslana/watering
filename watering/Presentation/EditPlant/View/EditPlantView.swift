@@ -28,13 +28,13 @@ struct EditPlantView: View {
         }.toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 if controller.isPlantSelected {
-                    Button("Done") {
+                    Button("string_args_0009") {
                         showingAlert = true
                     }.alert(isPresented: $showingAlert) {
                         Alert(
-                            title: Text(LocalizedStringKey("l20")),
-                            message: Text(LocalizedStringKey("l21")),
-                            primaryButton: .default(Text(LocalizedStringKey("l18"))) {
+                            title: Text("string_args_0008"),
+                            message: Text("string_args_0021"),
+                            primaryButton: .default(Text("string_args_0018")) {
                                 userPlant.savePlant(
                                     id: controller.selected.id,
                                     type: controller.selected.type,
@@ -46,7 +46,7 @@ struct EditPlantView: View {
                         )
                     }
                 } else {
-                    Text(LocalizedStringKey("label9"))
+                    Text("string_args_0009")
                         .foregroundColor(.secondary)
                 }
             }
@@ -55,7 +55,7 @@ struct EditPlantView: View {
     }
 
     var headerView: some View {
-        Text(LocalizedStringKey("l22"))
+        Text("string_args_0008")
             .multilineTextAlignment(.center)
             .font(.title3)
             .lineLimit(nil)
@@ -82,7 +82,7 @@ struct EditPlantView: View {
     func buildGridElement(plant: DropWaterModel) -> some View {
         return VStack (alignment: .center, spacing: 10){
             plantForChooseView(plant: plant)
-            Text(plant.type)
+            Text(LocalizedStringKey(plant.type))
                 .multilineTextAlignment(.center)
                 .font(.body)
                 .lineLimit(nil)

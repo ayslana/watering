@@ -18,10 +18,10 @@ struct DropWaterModel : Identifiable {
 }
 
 var PlantsType = [
-    DropWaterModel(id: 0, type: "typeA", modelName: "flower.scn"),
-    DropWaterModel(id: 1, type: "typeB", modelName: "succullent.scn"),
-    DropWaterModel(id: 2, type: "typeC", modelName: "plants.scn"),
-    DropWaterModel(id: 3, type: "typeD", modelName: "cactus.scn")
+    DropWaterModel(id: 0, type: "string_args_0028", modelName: "flower.scn"),
+    DropWaterModel(id: 1, type: "string_args_0029", modelName: "succullent.scn"),
+    DropWaterModel(id: 2, type: "string_args_0030", modelName: "plants.scn"),
+    DropWaterModel(id: 3, type: "string_args_0031", modelName: "cactus.scn")
 ]
 
 class UserPlant: ObservableObject {

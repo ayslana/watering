@@ -16,21 +16,21 @@ struct WateringView: View {
     
     @Environment(\.dynamicTypeSize) var dynamicTypeSize
     
-    @State var progress: CGFloat = 0.1
-    @State var startAnimation: CGFloat = 0
-    @State var isComplete: Bool = false
-    @State var isSucess: Bool = false
-    @State var isPressed: Bool = false
+    @State var progress: CGFloat        = 0.1
+    @State var startAnimation: CGFloat  = 0
+    @State var isComplete: Bool         = false
+    @State var isSucess: Bool           = false
+    @State var isPressed: Bool          = false
     @State var audioPlayer: AVAudioPlayer?
     @State var audioPlayer2: AVAudioPlayer?
-    @State var dayWatering = ""
-    @State var valueAnimation: Bool = false
+    @State var dayWatering              = ""
+    @State var valueAnimation: Bool     = false
     
     @StateObject var userPlant: UserPlant = UserPlant()
     
     var rainLightningScene: SKScene {
-        let scene = RainSceneView()
-        scene.size = UIScreen.screenSize
+        let scene       = RainSceneView()
+        scene.size      = UIScreen.screenSize
         scene.scaleMode = .fill
         return scene
     }
@@ -60,7 +60,7 @@ struct WateringView: View {
                 }
             }
             .background(ThemeEnum.secondary)
-            .accessibilityHint(LocalizedStringKey("label10"))
+            .accessibilityHint("string_args_0010")
             .navigationBarBackButtonHidden(true)
             .onAppear {
                 //MUSICA DA AGUA SUBINDO
@@ -73,7 +73,7 @@ struct WateringView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(    destination: EditNameView().environmentObject(userPlant), label: { Text(LocalizedStringKey("l14"))
+                    NavigationLink(    destination: EditNameView().environmentObject(userPlant), label: { Text("string_args_0013")
                         .foregroundColor(.accentColor) })
                     .animation(.easeInOut, value: 1) //Fixed By Tales Valente at 09:30:34 - sex. 03 de marco de 2023
                 }
@@ -101,12 +101,29 @@ struct WateringView: View {
     var information: some View {
         VStack {
             Group {
-                Text(LocalizedStringKey("l11")) +
-                Text("\(UserDefaults.standard.getPersonName() ?? "Unset").")
-                Text(" \(UserDefaults.standard.getPlantName() ?? "Unset" ) ") +
-                Text("l12")
-                Text("\(UserDefaults.standard.getLastDate() ?? "long time" )" )
-                    .foregroundColor(ThemeEnum.primary)
+                if(UserDefaults.standard.getPersonName() != nil) {
+                    Text("string_args_0011") +
+                    Text(UserDefaults.standard.getPersonName()!) +
+                    Text("!")
+                } else {
+                    Text("string_args_0011") +
+                    Text("string_args_0025")
+                }
+
+                if (UserDefaults.standard.getPlantName() == nil) {
+                    Text("string_args_0025") +
+                    Text("string_args_0012")
+                } else {
+                    Text(UserDefaults.standard.getPlantName()!) +
+                    Text(" ") +
+                    Text("string_args_0012")
+                }
+
+                if (UserDefaults.standard.getLastDate() == nil ) {
+                    Text("string_args_0014")
+                } else {
+                    Text(UserDefaults.standard.getLastDate()!)
+                }
             }
             .multilineTextAlignment(.center)
             .font(.title3)

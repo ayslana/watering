@@ -28,7 +28,7 @@ struct RegisterPlantTypeView: View {
     }
     
     var titleView: some View {
-        Text(LocalizedStringKey("label8"))
+        Text("string_args_0008")
             .multilineTextAlignment(.center)
             .lineLimit(nil)
             .font(.title3)
@@ -96,7 +96,7 @@ struct RegisterPlantTypeView: View {
             NavigationLink (
                 destination : WateringView().navigationBarHidden(true),
                 label : {
-                    Text (LocalizedStringKey("label9"))
+                    Text("string_args_0009")
                         .foregroundColor(.accentColor)
                         .frame(minWidth: 200, minHeight: 50)
                         .font(.title3)

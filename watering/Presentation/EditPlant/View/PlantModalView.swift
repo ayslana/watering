@@ -15,11 +15,16 @@ struct PlantModalView: View {
     
     var body: some View {
         VStack {
-            Text("You can rotate the ")
+            Text("string_args_0023")
+                .font(.title3)
+                .multilineTextAlignment(.center)
+                .lineLimit(nil)
             Text(LocalizedStringKey(controller.selected.type))
                 .font(.title3)
                 .multilineTextAlignment(.center)
                 .lineLimit(nil)
+
+
             PlantViewRepresentable(
                 scene: {
                     let scene = SCNScene(named: controller.selected.modelName)!

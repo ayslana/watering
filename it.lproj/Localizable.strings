@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  watering
+
+  Created by Tales Valente on 02/03/23.
+  
+*/
+"string_args_0001" = "Come ti chiami?";
+"string_args_0002" = "Digita qui";
+"string_args_0003" = "Inserisci almeno 5 caratteri.";
+"string_args_0004" = "Benvenuto in Watering";
+"string_args_0005" = "Prima di continuare, devo fare 3 piccole domande...";
+"string_args_0006" = "Avanti";
+"string_args_0007" = "Come si chiama la tua pianta?";
+"string_args_0008" = "Scegli la tua pianta.";
+"string_args_0009" = "Fatto";
+"string_args_0010" = "Premi sulla gocciolina per annaffiare la tua pianta!";
+"string_args_0011" = "Ciao, ";
+"string_args_0012" = "Non è stato annaffiato da: ";
+"string_args_0013" = "Modifica";
+"string_args_0014" = "tanto tempo fa...";
+"string_args_0015" = "Salva";
+"string_args_0016" = "Salva modifiche";
+"string_args_0017" = "Vuoi salvare le modifiche?";
+"string_args_0018" = "Sì";
+"string_args_0019" = "Tocca la pianta per sostituirla";
+"string_args_0020" = "Scegli il tuo nome";
+"string_args_0021" = "È questa la pianta che vuoi?";
+"string_args_0022" = "Scegli il tipo di impianto...";
+"string_args_0023" = "Puoi spostarlo: ";
+"string_args_0024" = "Tocca e trascina per spostare";
+"string_args_0025" = "Non definito";
+"string_args_0026" = "Inserisci il tuo nome";
+"string_args_0027" = "Scegli il nome della tua pianta: ";
+"string_args_0028" = "Fiore";
+"string_args_0029" = "Succulente";
+"string_args_0030" = "Fruttiforme";
+"string_args_0031" = "Cactus";
+"string_args_0032" = "Inserisci un nome per la pianta.";

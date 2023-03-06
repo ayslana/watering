@@ -43,7 +43,7 @@ struct WelcomeView: View {
                 Spacer().frame(height: 50)
 
 
-                Text(LocalizedStringKey("label1"))
+                Text("string_args_0001")
                     .foregroundColor(ThemeEnum.font)
                     .multilineTextAlignment(.center)
                     .lineLimit(nil)
@@ -52,7 +52,7 @@ struct WelcomeView: View {
                         width: UIScreen.main.bounds.width * 0.9
                     )
                 
-                TextField(LocalizedStringKey("label2"), text: $placeholder)
+                TextField("string_args_0002", text: $placeholder)
                     .multilineTextAlignment(.center)
                     .foregroundColor(ThemeEnum.font)
                     .font(.body)
@@ -65,7 +65,7 @@ struct WelcomeView: View {
                     .frame(width: 300)
                 
                 if (true){
-                    Text(LocalizedStringKey("label3"))
+                    Text("string_args_0003")
                         .foregroundColor(.red)
                         .font(.caption2)
                         .multilineTextAlignment(.center)
@@ -83,13 +83,13 @@ struct WelcomeView: View {
                 .overlay() {
                     VStack (alignment: .leading, spacing: 20 ){
                         
-                        Text(LocalizedStringKey("label4"))
+                        Text("string_args_0004")
                             .font(.largeTitle)
                             .fontWeight(.heavy)
                             .foregroundColor(Color(.white))
                         
                         
-                        Text(LocalizedStringKey("label5"))
+                        Text("string_args_0005")
                             .font(.body)
                             .fontWeight(.bold)
                             .foregroundColor(Color(.white))
@@ -143,7 +143,7 @@ struct WelcomeView: View {
                         .opacity(offset == .zero ? 1 : 0)
                     
                         .accessibilityRepresentation {
-                            Button(LocalizedStringKey("label6")) {
+                            Button("string_args_0006") {
                                 let screen = UIScreen.main.bounds
                                 offset.width = -screen.height
                                 showHome.toggle()

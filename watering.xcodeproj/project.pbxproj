@@ -76,6 +76,10 @@
 		45CBD11B28E5401F0015BA70 /* EditNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameView.swift; sourceTree = "<group>"; };
 		45F2827A28DDE090009B4875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8521681B2996892600A409C7 /* RegisterUserNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserNameController.swift; sourceTree = "<group>"; };
+		8553E15C29B6258500EB70DD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8553E15D29B6258F00EB70DD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8553E15E29B6259800EB70DD /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8553E15F29B625BF00EB70DD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		855DBCA829AE1BE600F079F3 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		855DBCAD29AE1C8500F079F3 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantNameController.swift; sourceTree = "<group>"; };
@@ -595,6 +599,10 @@
 				Base,
 				"pt-BR",
 				es,
+				"zh-Hans",
+				de,
+				it,
+				ja,
 			);
 			mainGroup = D4E8170C28D9F7F600775EFA;
 			productRefGroup = D4E8171628D9F7F600775EFA /* Products */;
@@ -719,6 +727,10 @@
 				85C30D4A29B0FA4300A55DA8 /* en */,
 				85C30D4C29B0FA5800A55DA8 /* pt-BR */,
 				85C30D4D29B0FA5E00A55DA8 /* es */,
+				8553E15C29B6258500EB70DD /* zh-Hans */,
+				8553E15D29B6258F00EB70DD /* de */,
+				8553E15E29B6259800EB70DD /* it */,
+				8553E15F29B625BF00EB70DD /* ja */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

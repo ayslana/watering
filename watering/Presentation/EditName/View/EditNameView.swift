@@ -19,7 +19,7 @@ struct EditNameView: View {
         ScrollView {
             VStack {
                 informations
-                Text(LocalizedStringKey("l19"))
+                Text("string_args_0019")
 
                 NavigationLink(
                     destination: EditPlantView().environmentObject(userPlant)
@@ -44,18 +44,18 @@ struct EditNameView: View {
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 if controller.isSomeNameLessThan3Char() {
-                    Text(LocalizedStringKey("l15"))
+                    Text("string_args_0015")
                         .foregroundColor(.secondary)
                 } else {
-                    Button(LocalizedStringKey("l15")) {
+                    Button("string_args_0015") {
                         showingAlert = true
 
                     }
                     .alert(isPresented: $showingAlert) {
                         Alert(
-                            title: Text(LocalizedStringKey("l16")),
-                            message: Text(LocalizedStringKey("l17")),
-                            primaryButton: .default(Text(LocalizedStringKey("l18"))) {
+                            title: Text("string_args_0016"),
+                            message: Text("string_args_0017"),
+                            primaryButton: .default(Text("string_args_0018")) {
                                 controller.saveNames()
                                 userPlant.getPlant()
                                 dismiss()
@@ -71,14 +71,14 @@ struct EditNameView: View {
 
     var informations: some View {
         List{
-            Text("Escolha seu nome: ")
+            Text("string_args_0020")
 
             buildTextField(
                 placeholder: controller.buildUserNamePlanceholder(),
                 text: $controller.userName
             )
 
-            Text("Escolha o nome de sua plantinha:")
+            Text("string_args_0027")
 
             buildTextField(
                 placeholder: controller.buildPlantNamePlaceholder(),
