@@ -16,6 +16,6 @@ public class RegisterPlantNameController: ObservableObject {
     }
 
     func isSharingButton() -> Bool {
-        return !plantName.isEmpty && plantName.count >= 5
+        return !plantName.isEmpty && plantName.count >= 4
     }
 }

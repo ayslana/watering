@@ -46,7 +46,7 @@ struct RegisterPlantNameView: View {
                         .frame(width: 300)
 
                     if controller.isSharingButton() == false{
-                        Text("Enter at least 5 characters")
+                        Text("Enter at least 4 characters")
                             .foregroundColor(.red)
                             .font(.caption2)
                             .multilineTextAlignment(.center)
