@@ -52,7 +52,7 @@ struct RegisterUserNameView: View {
                     .frame(width: 300)
 
                 if controller.isSharingButton() == false{
-                    Text("Insert at least 5 characters")
+                    Text("Insert at least 4 characters")
                         .foregroundColor(.red)
                         .font(.caption2)
                         .multilineTextAlignment(.center)

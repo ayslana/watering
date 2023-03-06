@@ -41,7 +41,7 @@ struct NotificationController {
         let content = UNMutableNotificationContent()
         content.title = "\(UserDefaults.standard.getPlantName() ?? "Your plant") is thirsty 😟"
         content.body = "Remember to watering it today!"
-        let dateComponents = DateComponents(calendar: .current, hour: 11, minute: 18)
+        let dateComponents = DateComponents(calendar: .current, hour: 09, minute: 30)
         
         let trigger = UNCalendarNotificationTrigger(
             dateMatching: dateComponents, repeats: true
