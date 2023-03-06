@@ -46,6 +46,16 @@ struct RegisterPlantTypeView: View {
                     } else {
                         buildGridElement(plant: plant)
                     }
+                    .accessibilityRepresentation {
+                        Button(plant.type) {
+                            withAnimation(.easeOut){
+                                show.toggle()
+                                selected = plant
+                            }
+                        }
+                        .accessibilityLabel(plant.accessibilityDescription)
+                    }
+
                 }
             }
             .padding(.horizontal)
@@ -109,8 +119,8 @@ struct RegisterPlantTypeView: View {
             .simultaneousGesture(TapGesture().onEnded{
                 controller.savePlantType()
             })
+            
             .navigationBarBackButtonHidden(true)
-
     }
 }
 
