@@ -9,66 +9,42 @@ import SwiftUI
 import SceneKit
 
 struct RegisterPlantTypeView: View {
-    
-    var columns = Array(repeating: GridItem(.flexible(), spacing: 15), count: 2)
-    @State var selected: DropWaterModel = PlantsType[0]
-    @State var show = false
-    @State var idPlant: Int = 0
-    @State var typePlant: String = ""
-    @State var modelNamePlant: String = ""
+    @StateObject var controller = EditPlantController()
+    @State private var showingAlert = false
     @Namespace var namespace
-    
+
+    let columns = Array(
+        repeating: GridItem(.flexible(), spacing: 15),
+        count: 2
+    )
+
     var body: some View {
-        ZStack {
-            ThemeEnum.secondary.ignoresSafeArea()
-            Spacer().frame(width: 30, height: 30)
-                .padding([.leading,.top])
-            VStack {
-                cabeçalhoView
-                choosePlantView
-                if show {
-                    VStack{
-                        scalePlantView
-                        nextView
-                    }
-                }
-            }
-        }
-        .background(.white)
+        VStack{
+            titleView
+            choosePlantView
+            nextView
+        }.background(ThemeEnum.secondary)
+            .navigationBarBackButtonHidden(false)
     }
     
-    var cabeçalhoView: some View {
+    var titleView: some View {
         Text("Choose your plant type")
             .multilineTextAlignment(.center)
-            .foregroundColor(ThemeEnum.primary)
-            .font(.system(size: 20, design: .rounded))
+            .lineLimit(nil)
+            .font(.title3)
             .padding()
     }
+    
     var choosePlantView: some View {
         ScrollView(.vertical, showsIndicators: false){
             LazyVGrid(columns: columns, spacing: 15){
                 ForEach(PlantsType){ plant in
-                    VStack (alignment: .center, spacing: 10){
-                        PlantViewRepresentable(scene: {
-                            let scene = SCNScene(named: plant.modelName)!
-                            scene.background.contents = UIColor.clear
-                            return scene
-                        }(),
-                        options: [.autoenablesDefaultLighting, .allowsCameraControl])
-                        .frame(width: UIScreen.main.bounds.width/1.5, height: UIScreen.main.bounds.height / 3.5 , alignment: .center)
-                        .cornerRadius(15)
-                        .onTapGesture {
-                            withAnimation(.easeOut){
-                                show.toggle()
-                                selected = plant
-                            }
-                        }
-                        //pesquisar pra que serve
-                        .matchedGeometryEffect(id: plant.id, in: namespace)
-                        Text(plant.type)
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(ThemeEnum.primary)
-                            .font(.system(size: 20, design: .rounded))
+                    if (plant.id == controller.selected.id) && controller.isPlantSelected {
+                        buildGridElement(plant: plant)
+                            .overlay(RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color("AccentColor"), lineWidth: 2))
+                    } else {
+                        buildGridElement(plant: plant)
                     }
                     .accessibilityRepresentation {
                         Button(plant.type) {
@@ -85,71 +61,70 @@ struct RegisterPlantTypeView: View {
             .padding(.horizontal)
         }
     }
+
+    func buildGridElement(plant: DropWaterModel) -> some View {
+        return VStack (alignment: .center, spacing: 10){
+            plantForChooseView(plant: plant)
+            Text(plant.type)
+                .multilineTextAlignment(.center)
+                .font(.body)
+                .lineLimit(nil)
+                .foregroundColor(ThemeEnum.font)
+        }
+    }
+
+    func plantForChooseView(plant: DropWaterModel) -> some View {
+        return VStack{
+            Button(
+                action:  {
+                    controller.isShowingPlant = true
+                    controller.isPlantSelected = true
+                    controller.selected = plant
+                    controller.savePlantType()
+                }, label: {
+                    PlantViewRepresentable(scene: {
+                        let scene = SCNScene(named: plant.modelName)!
+                        scene.background.contents = UIColor.clear
+                        return scene
+                    }(),
+                                           options: [.autoenablesDefaultLighting])
+                    .frame(
+                        minWidth: UIScreen.main.bounds.width/1.8,
+                        minHeight: UIScreen.main.bounds.height / 3.5 ,
+                        alignment: .center
+                    )
+                    .matchedGeometryEffect(id: plant.id, in: namespace)
+                })
+        }.sheet(isPresented: $controller.isShowingPlant){
+            PlantModalView().environmentObject(controller)
+        }
+
+    }
+
     var nextView: some View {
-        VStack (alignment: .center){
+
             NavigationLink (
                 destination : WateringView().navigationBarHidden(true),
                 label : {
-                    Text ("Next")
-                        .foregroundColor(ThemeEnum.primary)
-                        .frame(width: 200, height: 50)
-                        .font(.system(size: 20, design: .rounded))
+                    Text ("Done")
+                        .foregroundColor(.accentColor)
+                        .frame(minWidth: 200, minHeight: 50)
+                        .font(.title3)
+                        .multilineTextAlignment(.center)
+                        .lineLimit(nil)
                         .overlay(RoundedRectangle(cornerRadius: 15)
-                            .stroke(ThemeEnum.primary, lineWidth: 2))
+                            .stroke(Color("AccentColor"), lineWidth: 2))
                         .padding()
                 })
             .simultaneousGesture(TapGesture().onEnded{
-                self.idPlant = selected.id
-                self.typePlant = selected.type
-                self.modelNamePlant = selected.modelName
-                savePlantType()                
+                controller.savePlantType()
             })
             
             .navigationBarBackButtonHidden(true)
-        }
-    }
-    var scalePlantView: some View {
-        ZStack(alignment: Alignment(horizontal: .center, vertical: .center)){
-            
-            
-            let scene: SCNScene = {
-                let scene = SCNScene(named: selected.modelName)!
-                scene.background.contents = UIColor.clear
-                return scene
-            }()
-            
-            PlantViewRepresentable(
-                scene: scene,
-                options: [.autoenablesDefaultLighting, .allowsCameraControl]
-            )
-            .frame(
-                width: UIScreen.main.bounds.width/0.8,
-                height: UIScreen.main.bounds.height / 1.4 ,
-                alignment: .center
-            )
-            .matchedGeometryEffect(id: selected.id, in: namespace)
-            HStack {
-                Button{
-                    withAnimation(.spring()){
-                        show.toggle()
-                    }
-                } label: {
-                    RoundedRectangle(cornerRadius: 30)
-                        .frame(width: 300, height: 490)
-                        .foregroundColor(.white.opacity(0))
-                }
-            }
-        }
-    }
-    
-    func savePlantType() {
-        UserDefaults.standard.setPlantType(value: modelNamePlant)
-        UserDefaults.standard.setPlantTypeName(value: typePlant)
-        UserDefaults.standard.setPlantID(value: idPlant)
     }
 }
 
-struct ChoosePlantView_Previews: PreviewProvider {
+struct RegisterPlantTypeView_Previews: PreviewProvider {
     static var previews: some View {
         RegisterPlantTypeView()
     }

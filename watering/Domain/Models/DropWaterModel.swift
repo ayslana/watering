@@ -5,7 +5,7 @@
 //  Created by Ayslana Riene on 20/09/22.
 //
 
-import Foundation
+import SwiftUI
 
 // É a struct que contem o modelo para conseguir categorizar nossos modelos 3D
 // Por ser parecido com um dicionario, nós conseguimos trabalhar com os itens
@@ -24,4 +24,28 @@ var PlantsType = [
     DropWaterModel(id: 2, type: "Sapling", modelName: "plants.scn", accessibilityDescription: "Tree Seedling similar to a branch of eucalyptus, which has small leaves that are more rounded and completely green"),
     DropWaterModel(id: 3, type: "Cactus", modelName: "cactus.scn", accessibilityDescription: "Small-sized oval cactus, fully green and flowerless, with pointed ends")
 ]
-    
+
+class UserPlant: ObservableObject {
+
+    @Published var plant: DropWaterModel = DropWaterModel(
+        id: UserDefaults.standard.getPlantID() ?? 0,
+        type: UserDefaults.standard.getPlantTypeName() ?? "Flower",
+        modelName: UserDefaults.standard.getPlantType() ?? "flower.scn"
+    )
+
+    func savePlant(id: Int, type: String, modelName: String) {
+        plant.id = id
+        plant.type = type
+        plant.modelName = modelName
+
+        UserDefaults.standard.setPlantID(value: id)
+        UserDefaults.standard.setPlantTypeName(value: type)
+        UserDefaults.standard.setPlantType(value: modelName)
+    }
+
+    func getPlant() {
+        plant.id = UserDefaults.standard.getPlantID() ?? 0
+        plant.type = UserDefaults.standard.getPlantTypeName() ?? ""
+        plant.modelName = UserDefaults.standard.getPlantType() ?? ""
+    }
+}

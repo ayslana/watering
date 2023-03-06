@@ -14,6 +14,8 @@ import SpriteKit
 
 struct WateringView: View {
     
+    @Environment(\.dynamicTypeSize) var dynamicTypeSize
+    
     @State var progress: CGFloat = 0.1
     @State var startAnimation: CGFloat = 0
     @State var isComplete: Bool = false
@@ -24,6 +26,7 @@ struct WateringView: View {
     @State var dayWatering = ""
     @State var valueAnimation: Bool = false
     
+    @StateObject var userPlant: UserPlant = UserPlant()
     
     var rainLightningScene: SKScene {
         let scene = RainSceneView()
@@ -36,28 +39,27 @@ struct WateringView: View {
     
     var body: some View {
         NavigationView {
-            ZStack(alignment: .bottom) {
-                ThemeEnum.secondary.ignoresSafeArea()
-                ZStack{
-                    information
-                    .offset(y: -UIScreen.main.bounds.height/2.4)
-                    .padding(5)
-                    VStack {
+            ZStack(alignment: .top) {
+                ScrollView {
+                    VStack(spacing: 0){
+                        information
                         treeView
-                    } .offset(y: -UIScreen.main.bounds.height/6)
+                        button
+                    }
                 }
-                if !isComplete {
-                    waterWaveView
-                }
-                button
-                    .padding()
-                if isComplete {
-                    animationRainView(nil, value: true)
-                    if isSucess {
+                ZStack(alignment: .bottom){
+                    if !isComplete {
+                        waterWaveView
+                    }
+                    if isComplete {
                         animationRainView(nil, value: true)
+                        if isSucess {
+                            animationRainView(nil, value: true)
+                        }
                     }
                 }
             }
+            .background(ThemeEnum.secondary)
             .accessibilityHint("Press the drop-shaped button to water your plant")
             .navigationBarBackButtonHidden(true)
             .onAppear {
@@ -71,8 +73,9 @@ struct WateringView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: EditNameView(), label: { Text("Edit")
-                        .foregroundColor(ThemeEnum.primary) })
+                    NavigationLink(    destination: EditNameView().environmentObject(userPlant), label: { Text("Edit")
+                        .foregroundColor(.accentColor) })
+                    .animation(nil)
                 }
             }
             .onReceive(timer) { _ in
@@ -90,25 +93,27 @@ struct WateringView: View {
                 }
             }
         }
-        .accentColor(ThemeEnum.primary)
-//        .navigationBarBackButtonHidden()
+        //        .navigationBarBackButtonHidden()
+    }
+    private var teste: CGFloat {
+        if dynamicTypeSize >= .accessibility1 { return 0.37 } else { return 0.55 }
     }
     var information: some View {
         VStack {
             Group {
-                Text("Hello, ").foregroundColor(ThemeEnum.font) +
-                Text("\(UserDefaults.standard.getPersonName() ?? "Unset").").foregroundColor(ThemeEnum.primary)
-                Text(" \(UserDefaults.standard.getPlantName() ?? "Unset" ) ").foregroundColor(ThemeEnum.primary) +
-                Text("has not received water since: ").foregroundColor(ThemeEnum.primary)
+                Text("Hello, ") +
+                Text("\(UserDefaults.standard.getPersonName() ?? "Unset").")
+                Text(" \(UserDefaults.standard.getPlantName() ?? "Unset" ) ") +
+                Text("has not received water since: ")
                 Text("\(UserDefaults.standard.getLastDate() ?? "long time")" ).foregroundColor(ThemeEnum.primary)
             }
             .multilineTextAlignment(.center)
-            .foregroundColor(ThemeEnum.font)
-            .font(.system(size: 20, design: .rounded))
+            .font(.title3)
+            .frame(width: UIScreen.main.bounds.width * 0.95)
         }
-
+        
     }
-
+    
     var treeView: some View {
         //INSERÇÃO DO MODELO 3D
         PlantViewRepresentable(scene: {
@@ -117,8 +122,9 @@ struct WateringView: View {
             scene.background.contents = UIColor.clear
             return scene
         }(),
-                  options: [.autoenablesDefaultLighting, .allowsCameraControl])
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.4 , alignment: .center)
+                               options: [.autoenablesDefaultLighting, .allowsCameraControl])
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * teste , alignment: .center)
+        
     }
     
     var waterWaveView: some View {
@@ -131,7 +137,7 @@ struct WateringView: View {
                 .ignoresSafeArea()
                 .frame(width: size.width, height: size.height, alignment: .center)
                 .onAppear{
-                    withAnimation(.linear(duration: 9).repeatForever(autoreverses: false)){
+                    withAnimation(.linear(duration: 8).repeatForever(autoreverses: false)){
                         startAnimation = size.width
                     }
                 }
@@ -154,17 +160,21 @@ struct WateringView: View {
     }
     var button: some View {
         Image(systemName: "drop")
-            .font(.system(size: 30))
-            .foregroundColor(ThemeEnum.primary)
+            .font(.title3)
+            .foregroundColor(.accentColor)
             .padding(25)
             .background(ThemeEnum.secondary)
-            .cornerRadius(50)
             .gesture(onHoldGesture)
+            .clipShape(Circle())
+            .overlay(
+                Circle()
+                    .stroke(Color("AccentColor"), lineWidth: 2)
+            )
+        
     }
-
+    
     func animationRainView <valueAnimation>(_ animation: Animation?, value: valueAnimation) -> some View where valueAnimation : Equatable {
         SpriteView(scene: rainLightningScene, options: [.allowsTransparency])
-            .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
             .ignoresSafeArea()
             .onAppear {
                 //SOM DO DONE
@@ -185,7 +195,7 @@ struct WateringView: View {
                     self.progress = 0.1
                     self.dayWatering = "\(Date.now.formatted(.dateTime.weekday(.wide).hour().minute().second()))"
                     saveLastDate()
-
+                    
                 }
             }
             .onDisappear() {

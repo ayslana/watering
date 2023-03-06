@@ -18,13 +18,12 @@ struct RegisterUserNameView: View {
     var body: some View {
         ZStack {
             ThemeEnum.flower
-            //.resizable()
-                .fixedSize()
-                .scaledToFit()
+                .resizable()
                 .alignmentGuide(.trailing) { dimension in
                     dimension[.trailing] - 70
                 }
                 .frame(alignment: .trailing)
+                .accessibilityHidden(true)
             VStack {
                 Spacer().frame(height: 50)
 
@@ -69,12 +68,12 @@ struct RegisterUserNameView: View {
                     .navigationBarHidden(false),
                                label: {
                     Text("Next")
-                        .foregroundColor(ThemeEnum.primary)
+                        .foregroundColor(.accentColor)
                         .padding()
                         .frame(minWidth: 200, minHeight: 50)
                         .font(.title3)
                         .overlay(RoundedRectangle(cornerRadius: 15)
-                            .stroke(ThemeEnum.primary, lineWidth: 2))
+                            .stroke(Color("AccentColor"), lineWidth: 2))
                         .padding()
                         .cornerRadius(20)
                 }

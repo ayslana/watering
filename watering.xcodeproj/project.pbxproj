@@ -10,9 +10,11 @@
 		4502B0B428DD50D700F54CD2 /* plants.dae in Resources */ = {isa = PBXBuildFile; fileRef = 4502B0B328DD50D700F54CD2 /* plants.dae */; };
 		451495E428E5D14B001DF3A8 /* EditPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451495E328E5D14B001DF3A8 /* EditPlantView.swift */; };
 		451495E628E5D648001DF3A8 /* ThemeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451495E528E5D648001DF3A8 /* ThemeEnum.swift */; };
-		4518986128E62934009D3B4D /* LiquidSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518986028E62934009D3B4D /* LiquidSwipe.swift */; };
 		45CBD11C28E5401F0015BA70 /* EditNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CBD11B28E5401F0015BA70 /* EditNameView.swift */; };
 		8521681C2996892600A409C7 /* RegisterUserNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8521681B2996892600A409C7 /* RegisterUserNameController.swift */; };
+		855DBCA929AE1BE600F079F3 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DBCA829AE1BE600F079F3 /* WelcomeView.swift */; };
+		855DBCAC29AE1C4600F079F3 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DBCAB29AE1C4600F079F3 /* VisualEffectBlur.swift */; };
+		855DBCAE29AE1C8500F079F3 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DBCAD29AE1C8500F079F3 /* WelcomeController.swift */; };
 		85AB4DBD299A7C19009416FA /* RegisterPlantNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */; };
 		85AB4DBE299A7C1B009416FA /* RegisterPlantNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */; };
 		85AB4DBF299A7C1C009416FA /* RegisterPlantNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */; };
@@ -32,7 +34,6 @@
 		D4E8173B28D9F7F600775EFA /* wateringUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8173A28D9F7F600775EFA /* wateringUITestsLaunchTests.swift */; };
 		D4E8174928D9FBEF00775EFA /* RegisterPlantNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8174828D9FBEF00775EFA /* RegisterPlantNameView.swift */; };
 		D4E8174B28D9FC1500775EFA /* RegisterUserNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8174A28D9FC1500775EFA /* RegisterUserNameView.swift */; };
-		D4E8174D28D9FC3E00775EFA /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8174C28D9FC3E00775EFA /* WelcomeView.swift */; };
 		D4E8175228D9FF9800775EFA /* DropWaterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8175128D9FF9800775EFA /* DropWaterModel.swift */; };
 		D4E8175428D9FFE300775EFA /* WateringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8175328D9FFE300775EFA /* WateringView.swift */; };
 		D4E8175628DA004000775EFA /* PlantViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8175528DA004000775EFA /* PlantViewRepresentable.swift */; };
@@ -45,6 +46,10 @@
 		D4E8176828DA055300775EFA /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8176728DA055300775EFA /* NotificationController.swift */; };
 		D4F8943D28E3417800CD7216 /* succullent.dae in Resources */ = {isa = PBXBuildFile; fileRef = D4F8943C28E3417800CD7216 /* succullent.dae */; };
 		D4F8944128E3453E00CD7216 /* succullent.scn in Resources */ = {isa = PBXBuildFile; fileRef = D4F8944028E3453E00CD7216 /* succullent.scn */; };
+		FEC15CA8299F9D590064D1C9 /* EditNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC15CA7299F9D580064D1C9 /* EditNameController.swift */; };
+		FEC15CAA299FBAA50064D1C9 /* EditPlantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC15CA9299FBAA50064D1C9 /* EditPlantController.swift */; };
+		FEC15CAE299FC9CD0064D1C9 /* PlantModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC15CAD299FC9CD0064D1C9 /* PlantModalView.swift */; };
+		FED8826429967BCF00F6A02B /* PlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8826329967BCF00F6A02B /* PlantViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,10 +73,12 @@
 		4502B0B328DD50D700F54CD2 /* plants.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = plants.dae; sourceTree = "<group>"; };
 		451495E328E5D14B001DF3A8 /* EditPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlantView.swift; sourceTree = "<group>"; };
 		451495E528E5D648001DF3A8 /* ThemeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEnum.swift; sourceTree = "<group>"; };
-		4518986028E62934009D3B4D /* LiquidSwipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiquidSwipe.swift; sourceTree = "<group>"; };
 		45CBD11B28E5401F0015BA70 /* EditNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameView.swift; sourceTree = "<group>"; };
 		45F2827A28DDE090009B4875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8521681B2996892600A409C7 /* RegisterUserNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserNameController.swift; sourceTree = "<group>"; };
+		855DBCA829AE1BE600F079F3 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		855DBCAB29AE1C4600F079F3 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
+		855DBCAD29AE1C8500F079F3 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		85AB4DBC299A796F009416FA /* RegisterPlantNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantNameController.swift; sourceTree = "<group>"; };
 		D42A4E8C28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantTypeView.swift; sourceTree = "<group>"; };
 		D42A4E8E28DCA3B700B0ACA9 /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
@@ -92,7 +99,6 @@
 		D4E8173A28D9F7F600775EFA /* wateringUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wateringUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D4E8174828D9FBEF00775EFA /* RegisterPlantNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlantNameView.swift; sourceTree = "<group>"; };
 		D4E8174A28D9FC1500775EFA /* RegisterUserNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserNameView.swift; sourceTree = "<group>"; };
-		D4E8174C28D9FC3E00775EFA /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		D4E8175128D9FF9800775EFA /* DropWaterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropWaterModel.swift; sourceTree = "<group>"; };
 		D4E8175328D9FFE300775EFA /* WateringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WateringView.swift; sourceTree = "<group>"; };
 		D4E8175528DA004000775EFA /* PlantViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantViewRepresentable.swift; sourceTree = "<group>"; };
@@ -105,6 +111,10 @@
 		D4E8176728DA055300775EFA /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		D4F8943C28E3417800CD7216 /* succullent.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = succullent.dae; sourceTree = "<group>"; };
 		D4F8944028E3453E00CD7216 /* succullent.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = succullent.scn; sourceTree = "<group>"; };
+		FEC15CA7299F9D580064D1C9 /* EditNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditNameController.swift; path = watering/Presentation/RegisterPlantType/View/Components/EditNameController.swift; sourceTree = SOURCE_ROOT; };
+		FEC15CA9299FBAA50064D1C9 /* EditPlantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditPlantController.swift; path = watering/Presentation/RegisterPlantType/View/Components/EditPlantController.swift; sourceTree = SOURCE_ROOT; };
+		FEC15CAD299FC9CD0064D1C9 /* PlantModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantModalView.swift; sourceTree = "<group>"; };
+		FED8826329967BCF00F6A02B /* PlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlantViewController.swift; path = watering/Presentation/RegisterPlantType/View/Components/PlantViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +148,40 @@
 				8521681B2996892600A409C7 /* RegisterUserNameController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		855DBCA429AE1B9700F079F3 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				855DBCA629AE1BA700F079F3 /* View */,
+				855DBCA529AE1BA000F079F3 /* Controller */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		855DBCA529AE1BA000F079F3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				855DBCAD29AE1C8500F079F3 /* WelcomeController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		855DBCA629AE1BA700F079F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				855DBCA729AE1BC700F079F3 /* Components */,
+				855DBCA829AE1BE600F079F3 /* WelcomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		855DBCA729AE1BC700F079F3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				855DBCAB29AE1C4600F079F3 /* VisualEffectBlur.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		85AB4DBB299A796A009416FA /* Controller */ = {
@@ -247,7 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				FE053DDD29928507006B233B /* Router */,
-				FE053DC229927DD1006B233B /* Welcome */,
+				855DBCA429AE1B9700F079F3 /* Welcome */,
 				FE053DC629927EAD006B233B /* RegisterUser */,
 				FE053DCB29927F63006B233B /* RegisterPlantName */,
 				FE053DCE29927FC2006B233B /* RegisterPlantType */,
@@ -258,44 +302,11 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		FE053DC229927DD1006B233B /* Welcome */ = {
-			isa = PBXGroup;
-			children = (
-				FE053DC329927DE6006B233B /* View */,
-				FE053DC429927DEF006B233B /* Controller */,
-			);
-			path = Welcome;
-			sourceTree = "<group>";
-		};
-		FE053DC329927DE6006B233B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FE053DC529927DF9006B233B /* Components */,
-				D4E8174C28D9FC3E00775EFA /* WelcomeView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		FE053DC429927DEF006B233B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		FE053DC529927DF9006B233B /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				4518986028E62934009D3B4D /* LiquidSwipe.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		FE053DC629927EAD006B233B /* RegisterUser */ = {
 			isa = PBXGroup;
 			children = (
-				8521681A2996891500A409C7 /* Controller */,
 				FE053DC729927ED7006B233B /* View */,
+				8521681A2996891500A409C7 /* Controller */,
 			);
 			path = RegisterUser;
 			sourceTree = "<group>";
@@ -311,8 +322,8 @@
 		FE053DCB29927F63006B233B /* RegisterPlantName */ = {
 			isa = PBXGroup;
 			children = (
-				85AB4DBB299A796A009416FA /* Controller */,
 				FE053DCC29927FA3006B233B /* View */,
+				85AB4DBB299A796A009416FA /* Controller */,
 			);
 			path = RegisterPlantName;
 			sourceTree = "<group>";
@@ -345,6 +356,7 @@
 		FE053DD029928018006B233B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FED8826329967BCF00F6A02B /* PlantViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -414,6 +426,7 @@
 		FE053DD92992838C006B233B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FEC15CA7299F9D580064D1C9 /* EditNameController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -431,6 +444,7 @@
 			isa = PBXGroup;
 			children = (
 				451495E328E5D14B001DF3A8 /* EditPlantView.swift */,
+				FEC15CAD299FC9CD0064D1C9 /* PlantModalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -438,6 +452,7 @@
 		FE053DDC2992840E006B233B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FEC15CA9299FBAA50064D1C9 /* EditPlantController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -578,7 +593,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					D4E8171428D9F7F600775EFA = {
 						CreatedOnToolsVersion = 14.0;
@@ -655,22 +670,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4518986128E62934009D3B4D /* LiquidSwipe.swift in Sources */,
 				D4E8175228D9FF9800775EFA /* DropWaterModel.swift in Sources */,
 				45CBD11C28E5401F0015BA70 /* EditNameView.swift in Sources */,
 				D42A4E9128DCA44300B0ACA9 /* RouterController.swift in Sources */,
+				855DBCA929AE1BE600F079F3 /* WelcomeView.swift in Sources */,
+				FEC15CAA299FBAA50064D1C9 /* EditPlantController.swift in Sources */,
 				D44B720D28E1ED6100FBD7A7 /* UserDefaults+.swift in Sources */,
+				855DBCAC29AE1C4600F079F3 /* VisualEffectBlur.swift in Sources */,
 				451495E428E5D14B001DF3A8 /* EditPlantView.swift in Sources */,
 				D42A4E8D28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift in Sources */,
+				FEC15CA8299F9D590064D1C9 /* EditNameController.swift in Sources */,
 				D4E8174B28D9FC1500775EFA /* RegisterUserNameView.swift in Sources */,
+				FEC15CAE299FC9CD0064D1C9 /* PlantModalView.swift in Sources */,
 				D4E8174928D9FBEF00775EFA /* RegisterPlantNameView.swift in Sources */,
 				D42A4E8F28DCA3B700B0ACA9 /* RouterView.swift in Sources */,
 				D4E8175B28DA00AD00775EFA /* RainSceneView.swift in Sources */,
 				D4E8175828DA007000775EFA /* WaterWaveView.swift in Sources */,
 				451495E628E5D648001DF3A8 /* ThemeEnum.swift in Sources */,
-				D4E8174D28D9FC3E00775EFA /* WelcomeView.swift in Sources */,
 				8521681C2996892600A409C7 /* RegisterUserNameController.swift in Sources */,
 				D4E8176828DA055300775EFA /* NotificationController.swift in Sources */,
+				855DBCAE29AE1C8500F079F3 /* WelcomeController.swift in Sources */,
+				FED8826429967BCF00F6A02B /* PlantViewController.swift in Sources */,
 				D4E8171928D9F7F600775EFA /* wateringApp.swift in Sources */,
 				D4E8175628DA004000775EFA /* PlantViewRepresentable.swift in Sources */,
 				D4E8175428D9FFE300775EFA /* WateringView.swift in Sources */,
@@ -824,7 +844,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -837,9 +856,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"watering/Assets\"";
-				DEVELOPMENT_TEAM = 3H7DXWC2V3;
+				DEVELOPMENT_TEAM = 37U5X9NN8C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = watering/Info.plist;
@@ -848,19 +867,21 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = co.ayslana.watering;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -874,7 +895,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"watering/Assets\"";
-				DEVELOPMENT_TEAM = 3H7DXWC2V3;
+				DEVELOPMENT_TEAM = 37U5X9NN8C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = watering/Info.plist;
@@ -883,20 +904,22 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = co.ayslana.watering;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
