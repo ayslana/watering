@@ -46,9 +46,9 @@
 		D4E8176828DA055300775EFA /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8176728DA055300775EFA /* NotificationController.swift */; };
 		D4F8943D28E3417800CD7216 /* succullent.dae in Resources */ = {isa = PBXBuildFile; fileRef = D4F8943C28E3417800CD7216 /* succullent.dae */; };
 		D4F8944128E3453E00CD7216 /* succullent.scn in Resources */ = {isa = PBXBuildFile; fileRef = D4F8944028E3453E00CD7216 /* succullent.scn */; };
+		FE40BF4029B61EF300F7D25F /* PlantModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE40BF3F29B61EF300F7D25F /* PlantModalView.swift */; };
 		FEC15CA8299F9D590064D1C9 /* EditNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC15CA7299F9D580064D1C9 /* EditNameController.swift */; };
 		FEC15CAA299FBAA50064D1C9 /* EditPlantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC15CA9299FBAA50064D1C9 /* EditPlantController.swift */; };
-		FEC15CAE299FC9CD0064D1C9 /* PlantModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC15CAD299FC9CD0064D1C9 /* PlantModalView.swift */; };
 		FED8826429967BCF00F6A02B /* PlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8826329967BCF00F6A02B /* PlantViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -111,9 +111,9 @@
 		D4E8176728DA055300775EFA /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		D4F8943C28E3417800CD7216 /* succullent.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = succullent.dae; sourceTree = "<group>"; };
 		D4F8944028E3453E00CD7216 /* succullent.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = succullent.scn; sourceTree = "<group>"; };
+		FE40BF3F29B61EF300F7D25F /* PlantModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantModalView.swift; sourceTree = "<group>"; };
 		FEC15CA7299F9D580064D1C9 /* EditNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditNameController.swift; path = watering/Presentation/RegisterPlantType/View/Components/EditNameController.swift; sourceTree = SOURCE_ROOT; };
 		FEC15CA9299FBAA50064D1C9 /* EditPlantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditPlantController.swift; path = watering/Presentation/RegisterPlantType/View/Components/EditPlantController.swift; sourceTree = SOURCE_ROOT; };
-		FEC15CAD299FC9CD0064D1C9 /* PlantModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantModalView.swift; sourceTree = "<group>"; };
 		FED8826329967BCF00F6A02B /* PlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlantViewController.swift; path = watering/Presentation/RegisterPlantType/View/Components/PlantViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -398,6 +398,7 @@
 		FE053DD5299282CD006B233B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FE40BF3E29B61EDC00F7D25F /* PlantModalView */,
 				FEFF6CCB29928C2C00FD050A /* Representable */,
 				FEFF6CCA29928C1700FD050A /* Singleton */,
 				FEFF6CC929928BB300FD050A /* Enums */,
@@ -444,7 +445,6 @@
 			isa = PBXGroup;
 			children = (
 				451495E328E5D14B001DF3A8 /* EditPlantView.swift */,
-				FEC15CAD299FC9CD0064D1C9 /* PlantModalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -495,6 +495,14 @@
 				D42A4E9028DCA44300B0ACA9 /* RouterController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE40BF3E29B61EDC00F7D25F /* PlantModalView */ = {
+			isa = PBXGroup;
+			children = (
+				FE40BF3F29B61EF300F7D25F /* PlantModalView.swift */,
+			);
+			path = PlantModalView;
 			sourceTree = "<group>";
 		};
 		FEFF6CC829928A2300FD050A /* Extensions */ = {
@@ -681,7 +689,7 @@
 				D42A4E8D28DBFAD900B0ACA9 /* RegisterPlantTypeView.swift in Sources */,
 				FEC15CA8299F9D590064D1C9 /* EditNameController.swift in Sources */,
 				D4E8174B28D9FC1500775EFA /* RegisterUserNameView.swift in Sources */,
-				FEC15CAE299FC9CD0064D1C9 /* PlantModalView.swift in Sources */,
+				FE40BF4029B61EF300F7D25F /* PlantModalView.swift in Sources */,
 				D4E8174928D9FBEF00775EFA /* RegisterPlantNameView.swift in Sources */,
 				D42A4E8F28DCA3B700B0ACA9 /* RouterView.swift in Sources */,
 				D4E8175B28DA00AD00775EFA /* RainSceneView.swift in Sources */,
