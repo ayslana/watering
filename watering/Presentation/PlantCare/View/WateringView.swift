@@ -93,7 +93,6 @@ struct WateringView: View {
                 }
             }
         }
-        //        .navigationBarBackButtonHidden()
     }
     private var teste: CGFloat {
         if dynamicTypeSize >= .accessibility1 { return 0.37 } else { return 0.55 }

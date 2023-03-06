@@ -3,12 +3,8 @@
   watering
 
   Created by Tales Valente on 02/03/23.
-  Text(LocalizedStringKey("label5"))
-  LocalizedStringKey("label5")
 
 */
-
-//MARK: WelcomeView
 "string_args_0001" = "Qual seu Nome?";
 "string_args_0002" = "Digite Aqui";
 "string_args_0003" = "Insira pelo menos 5 caracteres.";
