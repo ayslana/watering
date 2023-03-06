@@ -17,6 +17,6 @@ public class RegisterUserNameController: ObservableObject {
     }
 
     func isSharingButton() -> Bool{
-        return !personName.isEmpty && personName.count >= 5
+        return !personName.isEmpty && personName.count >= 4
     }
 }
