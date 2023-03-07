@@ -24,14 +24,14 @@
 "string_args_0017" = "Would you like to save the changes?";
 "string_args_0018" = "Yes";
 "string_args_0019" = "Tap on the plant to replace it";
-"string_args_0020" = "Choose your name";
+"string_args_0020" = "Your name";
 "string_args_0021" = "Is this the plant you want?";
 "string_args_0022" = "Choose your plant type...";
 "string_args_0023" = "You can move it: ";
 "string_args_0024" = "Tap and drag to move";
 "string_args_0025" = "Not Defined";
 "string_args_0026" = "Enter your name";
-"string_args_0027" = "Choose your plant's name: ";
+"string_args_0027" = "Your plant's name ";
 "string_args_0028" = "Flower";
 "string_args_0029" = "Succulent";
 "string_args_0030" = "Fruit-bearing";
