@@ -1,0 +1,43 @@
+/* 
+  Localizable.strings
+  watering
+
+  Created by Tales Valente on 07/03/23.
+  
+*/
+"string_args_0001" = "¿Cuál es tu nombre?";
+"string_args_0002" = "Escriba aquí";
+"string_args_0003" = "Ingrese al menos 4 caracteres.";
+"string_args_0004" = "Bienvenido a Watering";
+"string_args_0005" = "Antes de continuar, necesito hacer 3 preguntas...";
+"string_args_0006" = "Siguiente";
+"string_args_0007" = "¿Cuál es el nombre de tu planta?";
+"string_args_0008" = "Elige tu planta.";
+"string_args_0009" = "Hecho";
+"string_args_0010" = "¡Presiona la gota para regar tu planta!";
+"string_args_0011" = "Hola, ";
+"string_args_0012" = "No se ha regado desde: ";
+"string_args_0013" = "Editar";
+"string_args_0014" = "hace mucho tiempo...";
+"string_args_0015" = "Guardar";
+"string_args_0016" = "Guardar cambios";
+"string_args_0017" = "¿Te gustaría guardar los cambios?";
+"string_args_0018" = "Sí";
+"string_args_0019" = "Toca la planta para reemplazarla";
+"string_args_0020" = "Elige tu nombre";
+"string_args_0021" = "¿Es esta la planta que quieres?";
+"string_args_0022" = "Elige el tipo de tu planta...";
+"string_args_0023" = "Puedes moverla: ";
+"string_args_0024" = "Toca y arrastra para mover";
+"string_args_0025" = "No definido";
+"string_args_0026" = "Escribe tu nombre";
+"string_args_0027" = "Elige el nombre de tu planta: ";
+"string_args_0028" = "Flor";
+"string_args_0029" = "Suculenta";
+"string_args_0030" = "Frutal";
+"string_args_0031" = "Cactus";
+"string_args_0032" = "Escribe un nombre para la planta.";
+"string_args_0033" = "Representación de dos ranúnculos que contienen pétalos verdes, unidos por una rama verde";
+"string_args_0034" = "Suculenta, originaria de México que crece en forma de pequeña rosa, alcanzando hasta 12,5 cm de diámetro, contiene hojas alargadas de color verde grisáceo, y si reciben mucha luz pueden tornarse rojizas e incluso ligeramente moradas";
+"string_args_0035" = "Árbol Plántula similar a una rama de eucalipto, que tiene hojas pequeñas más redondeadas y completamente verdes";
+"string_args_0036" = "Cactus ovalado de tamaño pequeño, completamente verde y sin flores, con extremos puntiagudos";

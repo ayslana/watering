@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  watering
+
+  Created by Tales Valente on 07/03/23.
+  
+*/
+
+"string_args_0001" = "你叫什么名字？";
+"string_args_0002" = "在这里输入";
+"string_args_0003" = "至少输入 4 个字符。";
+"string_args_0004" = "欢迎浇水";
+"string_args_0005" = "在我们继续之前，我需要问 3 个小问题......";
+"string_args_0006" = "下一个";
+"string_args_0007" = "你的植物叫什么名字？";
+"string_args_0008" = "选择你的植物。";
+"string_args_0009" = "完成"；
+"string_args_0010" = "按下水滴给植物浇水！";
+"string_args_0011" = "你好，";
+"string_args_0012" = "从那以后就没有浇水了：";
+"string_args_0013" = "编辑";
+"string_args_0014" = "很久以前...";
+"string_args_0015" = "保存";
+"string_args_0016" = "保存更改";
+"string_args_0017" = "你想保存更改吗？";
+"string_args_0018" = "是";
+"string_args_0019" = "点击植物来替换它";
+"string_args_0020" = "选择你的名字";
+"string_args_0021" = "这是你想要的植物吗？";
+"string_args_0022" = "选择你的植物类型...";
+"string_args_0023" = "你可以移动它：";
+"string_args_0024" = "点击并拖动移动";
+"string_args_0025" = "未定义";
+"string_args_0026" = "输入你的名字";
+"string_args_0027" = "选择你的植物名称：";
+"string_args_0028" = "花";
+"string_args_0029" = "多肉植物";
+"string_args_0030" = "结果";
+"string_args_0031" = "仙人掌";
+"string_args_0032" = "输入植物的名称。";
+
