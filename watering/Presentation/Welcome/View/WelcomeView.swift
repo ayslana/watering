@@ -13,47 +13,46 @@ import SwiftUI
 import Foundation
 
 struct WelcomeView: View {
-    
+
     @State var offset: CGSize = .zero
-    
+
     @State var showHome = false
-    
+
     @State private var placeholder: String = ""
-    
+
     var liquidSwipe: LiquidSwipe {
         get {
             return LiquidSwipe(offset: offset)
         }
     }
-    
+
     var body: some View {
-        
+
         ZStack {
 
             RegisterUserNameView().accessibilityHidden(true)
-            
+
             Color("FirstView")
                 .overlay() {
                     VStack (alignment: .leading, spacing: 20 ){
-                        
-                        Text("Welcome to Watering!")
+
+                        Text("string_args_0001")
                             .font(.largeTitle)
                             .fontWeight(.heavy)
                             .foregroundColor(Color(.white))
-                        
-                        
-                        Text("Before we start, we need to ask three questions...")
+
+                        Text("string_args_0005")
                             .font(.body)
                             .fontWeight(.bold)
                             .foregroundColor(Color(.white))
-                        
+
                     }
                     .frame(maxWidth: UIScreen.main.bounds.width * 0.90)
-                    
-                    
+
+
                 }
-            
-            
+
+
                 .clipShape(liquidSwipe)
                 .ignoresSafeArea()
             //Arrow
@@ -64,20 +63,20 @@ struct WelcomeView: View {
                         .frame(width: 50, height: 100)
                         .ignoresSafeArea()
                         .gesture(DragGesture()
-                                 
+
                             .onChanged({ (value) in
-                                
+
                                 withAnimation(.interactiveSpring(response: 0.7, dampingFraction: 0.6, blendDuration: 0.6)) {
                                     offset = value.translation
                                 }
                             })
-                                 
+
                                 .onEnded({ (value) in
-                                    
+
                                     let screen = UIScreen.main.bounds
-                                    
+
                                     withAnimation(.spring()){
-                                        
+
                                         if -offset.width > screen.width / 2 {
                                             //removing view
                                             offset.width = -screen.height
@@ -93,9 +92,9 @@ struct WelcomeView: View {
                         )
                     // Hidding arrow while draggin starts
                         .opacity(offset == .zero ? 1 : 0)
-                    
+
                         .accessibilityRepresentation {
-                            Button("Next") {
+                            Button("string_args_0006") {
                                 let screen = UIScreen.main.bounds
                                 offset.width = -screen.height
                                 showHome.toggle()
@@ -105,15 +104,13 @@ struct WelcomeView: View {
                 }
                 .padding(.trailing)
 
-            NavigationLink(
-                destination: RegisterUserNameView().navigationBarBackButtonHidden(),
-                isActive: $showHome
-            ){}
-            
+            if showHome {
+                RegisterUserNameView().simultaneousGesture(TapGesture().onEnded{})
+            }
         }
         .background(ThemeEnum.secondary)
     }
-    
+
 }
 
 

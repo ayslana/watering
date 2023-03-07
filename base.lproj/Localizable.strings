@@ -1,0 +1,43 @@
+/*
+  Localizable.strings
+  watering
+
+  Created by Tales Valente on 07/03/23.
+
+*/
+"string_args_0001" = "Wie ist Ihr Name?";
+"string_args_0002" = "Hier eingeben";
+"string_args_0003" = "Geben Sie mindestens 4 Zeichen ein.";
+"string_args_0004" = "Willkommen beim Gießen";
+"string_args_0005" = "Bevor wir fortfahren, muss ich 3 kleine Fragen stellen...";
+"string_args_0006" = "Weiter";
+"string_args_0007" = "Wie heißt Ihre Pflanze?";
+"string_args_0008" = "Wähle deine Pflanze.";
+"string_args_0009" = "Fertig";
+"string_args_0010" = "Drücke auf den Tropfen, um deine Pflanze zu gießen!";
+"string_args_0011" = "Hallo, ";
+"string_args_0012" = "Wurde nicht bewässert seit: ";
+"string_args_0013" = "Bearbeiten";
+"string_args_0014" = "vor langer Zeit...";
+"string_args_0015" = "Speichern";
+"string_args_0016" = "Änderungen speichern";
+"string_args_0017" = "Möchten Sie die Änderungen speichern?";
+"string_args_0018" = "Ja";
+"string_args_0019" = "Tippe auf die Pflanze, um sie zu ersetzen";
+"string_args_0020" = "Wähle deinen Namen";
+"string_args_0021" = "Ist das die gewünschte Pflanze?";
+"string_args_0022" = "Wählen Sie Ihren Pflanzentyp ...";
+"string_args_0023" = "Sie können es verschieben: ";
+"string_args_0024" = "Zum Verschieben tippen und ziehen";
+"string_args_0025" = "Nicht definiert";
+"string_args_0026" = "Geben Sie Ihren Namen ein";
+"string_args_0027" = "Wählen Sie den Namen Ihrer Pflanze: ";
+"string_args_0028" = "Blume";
+"string_args_0029" = "Sukkulente";
+"string_args_0030" = "Fruchttragend";
+"string_args_0031" = "Kaktus";
+"string_args_0032" = "Geben Sie einen Namen für die Pflanze ein.";
+"string_args_0033" = "Darstellung zweier Butterblumen mit grünen Blütenblättern, verbunden durch einen grünen Zweig";
+"string_args_0034" = "Sukkulente, ursprünglich aus Mexiko, die in Form einer kleinen Rose wächst und einen Durchmesser von bis zu 12,5 cm erreicht, enthält lange Blätter in graugrüner Farbe, und wenn sie viel Licht erhalten, können sie rötlich und sogar leicht violett werden.";
+"string_args_0035" = "Baumsetzling ähnlich einem Eukalyptuszweig, der kleine Blätter hat, die runder und vollständig grün sind";
+"string_args_0036" = "Kleiner ovaler Kaktus, vollständig grün und blütenlos, mit spitzen Enden";

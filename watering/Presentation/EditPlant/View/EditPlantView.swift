@@ -12,15 +12,15 @@ struct EditPlantView: View {
     @StateObject var controller = EditPlantController()
     @EnvironmentObject var userPlant: UserPlant
     @State private var showingAlert = false
-
+    
     @Namespace var namespace
     @Environment(\.dismiss) var dismiss
-
+    
     var columns = Array(
         repeating: GridItem(.flexible(), spacing: 15),
         count: 2
     )
-
+    
     var body: some View {
         VStack {
             headerView
@@ -28,13 +28,13 @@ struct EditPlantView: View {
         }.toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 if controller.isPlantSelected {
-                    Button("Done") {
+                    Button("string_args_0009") {
                         showingAlert = true
                     }.alert(isPresented: $showingAlert) {
                         Alert(
-                            title: Text("Choose plant"),
-                            message: Text("Is this the plant you want?"),
-                            primaryButton: .default(Text("Yes")) {
+                            title: Text("string_args_0008"),
+                            message: Text("string_args_0021"),
+                            primaryButton: .default(Text("string_args_0018")) {
                                 userPlant.savePlant(
                                     id: controller.selected.id,
                                     type: controller.selected.type,
@@ -46,22 +46,22 @@ struct EditPlantView: View {
                         )
                     }
                 } else {
-                    Text("Done")
+                    Text("string_args_0009")
                         .foregroundColor(.secondary)
                 }
             }
         }
         .background(ThemeEnum.secondary)
     }
-
+    
     var headerView: some View {
-        Text("Select your new plant type")
+        Text("string_args_0008")
             .multilineTextAlignment(.center)
             .font(.title3)
             .lineLimit(nil)
             .padding()
     }
-
+    
     var choosePlantView: some View {
         ScrollView(.vertical, showsIndicators: false){
             LazyVGrid(columns: columns, spacing: 15){
@@ -69,7 +69,7 @@ struct EditPlantView: View {
                     if (plant.id == controller.selected.id) && controller.isPlantSelected {
                         buildGridElement(plant: plant)
                             .overlay(RoundedRectangle(cornerRadius: 15)
-                            .stroke(Color("AccentColor"), lineWidth: 2))
+                                .stroke(Color("AccentColor"), lineWidth: 2))
                     } else {
                         buildGridElement(plant: plant)
                     }
@@ -78,18 +78,18 @@ struct EditPlantView: View {
             .padding(.horizontal)
         }
     }
-
+    
     func buildGridElement(plant: DropWaterModel) -> some View {
         return VStack (alignment: .center, spacing: 10){
             plantForChooseView(plant: plant)
-            Text(plant.type)
+            Text(LocalizedStringKey(plant.type))
                 .multilineTextAlignment(.center)
                 .font(.body)
                 .lineLimit(nil)
                 .foregroundColor(ThemeEnum.font)
         }
     }
-
+    
     func plantForChooseView(plant: DropWaterModel) -> some View {
         return VStack{
             Button(
@@ -117,7 +117,7 @@ struct EditPlantView: View {
                 PlantModalView().environmentObject(controller)
             }
         }
-
+        
     }
 }
 

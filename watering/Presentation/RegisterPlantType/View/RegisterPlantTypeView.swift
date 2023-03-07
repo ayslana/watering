@@ -26,15 +26,15 @@ struct RegisterPlantTypeView: View {
         }.background(ThemeEnum.secondary)
             .navigationBarBackButtonHidden(false)
     }
-    
+
     var titleView: some View {
-        Text("Choose your plant type")
+        Text("string_args_0008")
             .multilineTextAlignment(.center)
             .lineLimit(nil)
             .font(.title3)
             .padding()
     }
-    
+
     var choosePlantView: some View {
         ScrollView(.vertical, showsIndicators: false){
             LazyVGrid(columns: columns, spacing: 15){
@@ -57,7 +57,7 @@ struct RegisterPlantTypeView: View {
     func buildGridElement(plant: DropWaterModel) -> some View {
         return VStack (alignment: .center, spacing: 10){
             plantForChooseView(plant: plant)
-            Text(plant.type)
+            Text(LocalizedStringKey(plant.type))
                 .multilineTextAlignment(.center)
                 .font(.body)
                 .lineLimit(nil)
@@ -98,9 +98,9 @@ struct RegisterPlantTypeView: View {
     var nextView: some View {
 
             NavigationLink (
-                destination : WateringView().navigationBarHidden(true),
+                destination : PlantCareView().navigationBarHidden(true),
                 label : {
-                    Text ("Done")
+                    Text ("string_args_0009")
                         .foregroundColor(.accentColor)
                         .frame(minWidth: 200, minHeight: 50)
                         .font(.title3)
@@ -113,7 +113,7 @@ struct RegisterPlantTypeView: View {
             .simultaneousGesture(TapGesture().onEnded{
                 controller.savePlantType()
             })
-            
+
             .navigationBarBackButtonHidden(true)
     }
 }
