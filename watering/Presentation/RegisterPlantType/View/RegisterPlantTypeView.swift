@@ -42,7 +42,9 @@ struct RegisterPlantTypeView: View {
                     if (plant.id == controller.selected.id) && controller.isPlantSelected {
                         buildGridElement(plant: plant)
                             .overlay(RoundedRectangle(cornerRadius: 15)
-                            .stroke(Color("AccentColor"), lineWidth: 2))
+                            .stroke(Color("AccentColor"), lineWidth: 2)
+                            .frame(maxWidth: 170, maxHeight: 460)
+)
                     } else {
                         buildGridElement(plant: plant)
                                             .accessibilityLabel(plant.accessibilityDescription)
