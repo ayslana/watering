@@ -8,9 +8,6 @@
 import Foundation
 import SwiftUI
 
-// State -> Binding (structs)
-// StateObject -> ObservedObject (classes) //Primeira vez StateObject, outras vezes ObservedObject
-
 struct RegisterUserNameView: View {
 
     @StateObject var controller = RegisterUserNameController()
@@ -27,7 +24,7 @@ struct RegisterUserNameView: View {
             VStack {
                 Spacer().frame(height: 50)
 
-                Text("What is your name?")
+                Text("string_args_0001")
                     .foregroundColor(ThemeEnum.font)
                     .multilineTextAlignment(.center)
                     .lineLimit(nil)
@@ -36,7 +33,7 @@ struct RegisterUserNameView: View {
                         width: UIScreen.main.bounds.width * 0.9
                     )
 
-                TextField("Type Here", text: $controller.personName)
+                TextField("string_args_0002", text: $controller.personName)
                     .multilineTextAlignment(.center)
                     .foregroundColor(ThemeEnum.font)
                     .font(.body)
@@ -52,7 +49,7 @@ struct RegisterUserNameView: View {
                     .frame(width: 300)
 
                 if controller.isSharingButton() == false{
-                    Text("Insert at least 4 characters")
+                    Text("string_args_0003")
                         .foregroundColor(.red)
                         .font(.caption2)
                         .multilineTextAlignment(.center)
@@ -67,7 +64,7 @@ struct RegisterUserNameView: View {
                 NavigationLink(destination: RegisterPlantNameView()
                     .navigationBarHidden(false),
                                label: {
-                    Text("Next")
+                    Text("string_args_0006")
                         .foregroundColor(.accentColor)
                         .padding()
                         .frame(minWidth: 200, minHeight: 50)
@@ -81,6 +78,7 @@ struct RegisterUserNameView: View {
             }
         }
         .background(ThemeEnum.secondary)
+        .animation(nil)
     }
 
     struct RegisterUserNameView_Preview : PreviewProvider {
@@ -89,6 +87,6 @@ struct RegisterUserNameView: View {
         }
     }
 
-    
+
 
 }

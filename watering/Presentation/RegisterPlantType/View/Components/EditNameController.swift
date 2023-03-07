@@ -13,7 +13,7 @@ class EditNameController: ObservableObject {
 
     func buildUserNamePlanceholder() -> String {
         if (userName == "") {
-            return "Write your name"
+            return String(localized: "string_args_0026")
         } else {
             return userName
         }
@@ -21,7 +21,7 @@ class EditNameController: ObservableObject {
 
     func buildPlantNamePlaceholder() -> String {
         if (plantName == "") {
-            return "Write a name for the plant"
+            return String(localized: "string_args_0027")
         } else {
             return plantName
         }

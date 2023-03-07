@@ -24,7 +24,7 @@ struct RouterView: View {
                     WelcomeView()
                 }
             } else if viewRouter.currentPage == "WateringView" {
-                WateringView()
+                PlantCareView()
             }
         }
     }

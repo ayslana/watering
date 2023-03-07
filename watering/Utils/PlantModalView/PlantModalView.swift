@@ -12,10 +12,15 @@ struct PlantModalView: View {
     @EnvironmentObject var controller: EditPlantController
     @Namespace var namespace
     @Environment(\.dismiss) var dismiss
-    
+
     var body: some View {
         VStack {
-            Text("You can rotate the \(controller.selected.type)")
+            Text("string_args_0023")
+                .font(.title3)
+                .multilineTextAlignment(.center)
+                .lineLimit(nil)
+
+            Text(LocalizedStringKey(controller.selected.type))
                 .font(.title3)
                 .multilineTextAlignment(.center)
                 .lineLimit(nil)

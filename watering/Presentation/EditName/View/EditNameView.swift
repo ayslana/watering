@@ -18,7 +18,11 @@ struct EditNameView: View {
     var body: some View {
         ScrollView {
             VStack {
+
                 informations
+
+                Text("string_args_0019")
+
                 NavigationLink(
                     destination: EditPlantView().environmentObject(userPlant)
                 ){
@@ -41,18 +45,18 @@ struct EditNameView: View {
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 if controller.isSomeNameLessThan3Char() {
-                    Text("Save")
+                    Text("string_args_0015")
                         .foregroundColor(.secondary)
                 } else {
-                    Button("Save") {
+                    Button("string_args_0015") {
                         showingAlert = true
 
                     }
                     .alert(isPresented: $showingAlert) {
                         Alert(
-                            title: Text("Save the changes"),
-                            message: Text("Do you want to save the changes?"),
-                            primaryButton: .default(Text("Yes")) {
+                            title: Text("string_args_0016"),
+                            message: Text("string_args_0017"),
+                            primaryButton: .default(Text("string_args_0018")) {
                                 controller.saveNames()
                                 userPlant.getPlant()
                                 dismiss()
@@ -68,10 +72,15 @@ struct EditNameView: View {
 
     var informations: some View {
         List{
+            Text("string_args_0020")
+
             buildTextField(
                 placeholder: controller.buildUserNamePlanceholder(),
                 text: $controller.userName
             )
+
+            Text("string_args_0027")
+
             buildTextField(
                 placeholder: controller.buildPlantNamePlaceholder(),
                 text: $controller.plantName
@@ -82,21 +91,6 @@ struct EditNameView: View {
         .frame(minHeight: UIScreen.main.bounds.height/3)
     }
 
-//    var treeView: some View {
-//        PlantViewRepresentable(
-//            scene: {
-//                let scene = SCNScene(named: userPlant.plant.modelName)!
-//                scene.background.contents = UIColor.clear
-//                return scene
-//            }(),
-//            options: [.autoenablesDefaultLighting]
-//        )
-//        .frame(
-//            maxWidth: UIScreen.main.bounds.width,
-//            minHeight: UIScreen.main.bounds.height/2,
-//            alignment: .center
-//        )
-//    }
 
     private func buildTextField(
         placeholder: String,

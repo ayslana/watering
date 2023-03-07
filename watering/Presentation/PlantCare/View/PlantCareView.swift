@@ -12,10 +12,10 @@ import AVFoundation
 import SpriteKit
 
 
-struct WateringView: View {
-    
+struct PlantCareView: View {
+
     @Environment(\.dynamicTypeSize) var dynamicTypeSize
-    
+
     @State var progress: CGFloat = 0.1
     @State var startAnimation: CGFloat = 0
     @State var isComplete: Bool = false
@@ -25,9 +25,10 @@ struct WateringView: View {
     @State var audioPlayer2: AVAudioPlayer?
     @State var dayWatering = ""
     @State var valueAnimation: Bool = false
-    
+    @State private var isButtonPressed = false
+
     @StateObject var userPlant: UserPlant = UserPlant()
-    
+
     var rainLightningScene: SKScene {
         let scene = RainSceneView()
         scene.size = UIScreen.screenSize
@@ -36,7 +37,7 @@ struct WateringView: View {
     }
     //    var items = [InfoUser]()
     let timer = Timer.publish(every: 0.003, on: .main, in: .common).autoconnect()
-    
+
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
@@ -73,7 +74,7 @@ struct WateringView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(    destination: EditNameView().environmentObject(userPlant), label: { Text("Edit")
+                    NavigationLink(    destination: EditNameView().environmentObject(userPlant), label: { Text("string_args_0013")
                         .foregroundColor(.accentColor) })
                     .animation(nil)
                 }
@@ -101,19 +102,38 @@ struct WateringView: View {
     var information: some View {
         VStack {
             Group {
-                Text("Hello, ") +
-                Text("\(UserDefaults.standard.getPersonName() ?? "Unset").")
-                Text(" \(UserDefaults.standard.getPlantName() ?? "Unset" ) ") +
-                Text("has not received water since: ")
-                Text("\(UserDefaults.standard.getLastDate() ?? "long time")" ).foregroundColor(ThemeEnum.primary)
+
+                if(UserDefaults.standard.getPersonName() != nil) {
+                    Text("string_args_0011") +
+                    Text(UserDefaults.standard.getPersonName()!) +
+                    Text("!")
+                } else {
+                    Text("string_args_0011") +
+                    Text("string_args_0025")
+                }
+
+                if (UserDefaults.standard.getPlantName() == nil) {
+                    Text("string_args_0025") +
+                    Text("string_args_0012")
+                } else {
+                    Text(UserDefaults.standard.getPlantName()!) +
+                    Text(" ") +
+                    Text("string_args_0012")
+                }
+
+                if (UserDefaults.standard.getLastDate() == nil ) {
+                    Text("string_args_0014")
+                } else {
+                    Text(UserDefaults.standard.getLastDate()!).foregroundColor(ThemeEnum.primary)
+                }
             }
             .multilineTextAlignment(.center)
             .font(.title3)
             .frame(width: UIScreen.main.bounds.width * 0.95)
         }
-        
+
     }
-    
+
     var treeView: some View {
         //INSERÇÃO DO MODELO 3D
         PlantViewRepresentable(scene: {
@@ -124,9 +144,9 @@ struct WateringView: View {
         }(),
                                options: [.autoenablesDefaultLighting, .allowsCameraControl])
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * teste , alignment: .center)
-        
+
     }
-    
+
     var waterWaveView: some View {
         GeometryReader{ proxy in
             let size = proxy.size
@@ -159,20 +179,22 @@ struct WateringView: View {
             })
     }
     var button: some View {
-        Image(systemName: "drop")
-            .font(.title3)
-            .foregroundColor(.accentColor)
-            .padding(25)
-            .background(ThemeEnum.secondary)
-            .gesture(onHoldGesture)
-            .clipShape(Circle())
-            .overlay(
-                Circle()
-                    .stroke(Color("AccentColor"), lineWidth: 2)
-            )
-        
+        Button(action: {
+            self.isPressed = true
+        }, label: {
+            Image(systemName: "drop")
+                .font(.title3)
+                .foregroundColor(.accentColor)
+                .padding(25)
+                .gesture(onHoldGesture)
+                .clipShape(Circle())
+                .overlay(
+                    Circle()
+                        .stroke(Color("AccentColor"), lineWidth: 2)
+                )
+        })
     }
-    
+
     func animationRainView <valueAnimation>(_ animation: Animation?, value: valueAnimation) -> some View where valueAnimation : Equatable {
         SpriteView(scene: rainLightningScene, options: [.allowsTransparency])
             .ignoresSafeArea()
@@ -195,7 +217,7 @@ struct WateringView: View {
                     self.progress = 0.1
                     self.dayWatering = "\(Date.now.formatted(.dateTime.weekday(.wide).hour().minute().second()))"
                     saveLastDate()
-                    
+
                 }
             }
             .onDisappear() {
@@ -205,12 +227,12 @@ struct WateringView: View {
     func saveLastDate() {
         UserDefaults.standard.setLastDate(value: dayWatering)
     }
-    
+
 }
 
 struct WateringView_Previews: PreviewProvider {
     static var previews: some View {
-        WateringView()
+        PlantCareView()
     }
 }
 
