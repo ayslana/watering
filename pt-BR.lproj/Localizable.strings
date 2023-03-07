@@ -5,18 +5,18 @@
   Created by Tales Valente on 07/03/23.
 
 */
-"string_args_0001" = "Qual seu Nome?";
+"string_args_0001" = "Qual é o seu nome?";
 "string_args_0002" = "Digite Aqui";
 "string_args_0003" = "Insira pelo menos 4 caracteres.";
 "string_args_0004" = "Bem-vindo ao Watering";
-"string_args_0005" = "Antes de continuarmos, preciso fazer 3 perguntinhas...";
+"string_args_0005" = "Antes de continuarmos, precisamos fazer 3 perguntinhas...";
 "string_args_0006" = "Próximo";
-"string_args_0007" = "Qual é o nome de sua platinha?";
+"string_args_0007" = "Qual é o nome da sua plantinha?";
 "string_args_0008" = "Escolha sua plantinha.";
 "string_args_0009" = "Feito";
 "string_args_0010" = "Pressione na gotinha pra regar sua plantinha!";
 "string_args_0011" = "Olá, ";
-"string_args_0012" = "Não foi regada desde: ";
+"string_args_0012" = "não foi regada desde: ";
 "string_args_0013" = "Editar";
 "string_args_0014" = "muito tempo...";
 "string_args_0015" = "Salvar";
@@ -24,14 +24,14 @@
 "string_args_0017" = "Você gostaria de salvar as modificações?";
 "string_args_0018" = "Sim";
 "string_args_0019" = "Toque na plantinha para substituí-la";
-"string_args_0020" = "Escolha seu nome";
+"string_args_0020" = "Nome:";
 "string_args_0021" = "Esta é a plantinha que você quer?";
 "string_args_0022" = "Escolha o tipo de sua plantinha...";
-"string_args_0023" = "Você pode movimentar a: ";
+"string_args_0023" = "Você pode movimentar a ";
 "string_args_0024" = "Toque e arraste para movimentar ";
 "string_args_0025" = "Não Definido";
 "string_args_0026" = "Digite seu nome";
-"string_args_0027" = "Escolha o nome de sua plantinha: ";
+"string_args_0027" = "Nome da sua plantinha:";
 "string_args_0028" = "Flor";
 "string_args_0029" = "Suculenta";
 "string_args_0030" = "Frutífera";

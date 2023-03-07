@@ -270,7 +270,6 @@
 			isa = PBXGroup;
 			children = (
 				D4E8176228DA01C500775EFA /* Sounds */,
-				D4E8176028DA018500775EFA /* RainDrops.sks */,
 				D4E8175D28DA014C00775EFA /* Assets.xcassets */,
 				D4E8171C28D9F7F600775EFA /* Assets.xcassets */,
 			);
@@ -387,6 +386,7 @@
 		FE053DD429928142006B233B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D4E8176028DA018500775EFA /* RainDrops.sks */,
 				D4E8175A28DA00AD00775EFA /* RainSceneView.swift */,
 				D4E8175728DA007000775EFA /* WaterWaveView.swift */,
 			);

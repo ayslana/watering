@@ -36,18 +36,23 @@ struct WelcomeView: View {
                 .overlay() {
                     VStack (alignment: .leading, spacing: 20 ){
 
-                        Text("string_args_0001")
+                        Text("string_args_0004")
                             .font(.largeTitle)
                             .fontWeight(.heavy)
                             .foregroundColor(Color(.white))
+                            .lineLimit(nil)
+                            
 
                         Text("string_args_0005")
                             .font(.body)
                             .fontWeight(.bold)
                             .foregroundColor(Color(.white))
+                            .lineLimit(nil)
+
+                            
 
                     }
-                    .frame(maxWidth: UIScreen.main.bounds.width * 0.90)
+                    .frame(width: UIScreen.main.bounds.width * 0.90)
 
 
                 }
